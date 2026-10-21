@@ -1,0 +1,1620 @@
+{
+  "host": "box-linux",
+  "when": "2026-10-15T08:23:18.692Z",
+  "zone": "Asia/Shanghai UTC+8",
+  "constraint": "box-only; no Mac; no WeChat DevTools",
+  "workstreams": {
+    "A_productCompare": {
+      "label": "Measured",
+      "pairs": [
+        {
+          "label": "fixture-optc-local-import",
+          "filesCold": 2010,
+          "filesAfter": 2010,
+          "shaChangedCount": 1,
+          "shaChangedFiles": [
+            "pages-tab/routeA/index.js"
+          ],
+          "mtimeOnlyCount": 0,
+          "family": {
+            "pages-tab/routeA/index.js": "sha-changed",
+            "pages-tab/routeA/index.json": "byte-identical",
+            "pages-tab/routeA/index.wxml": "byte-identical",
+            "pages-tab/routeA/index.wxss": "byte-identical",
+            "common/vendor.js": "byte-identical",
+            "app.js": "byte-identical",
+            "app.json": "byte-identical",
+            "app.wxss": "byte-identical"
+          },
+          "sampleOtherPages": "1/1",
+          "onlyIntendedPageJs": true
+        },
+        {
+          "label": "project-optc-local-import",
+          "filesCold": 10797,
+          "filesAfter": 10797,
+          "shaChangedCount": 1,
+          "shaChangedFiles": [
+            "pages-tab/routeA/index.js"
+          ],
+          "mtimeOnlyCount": 0,
+          "family": {
+            "pages-tab/routeA/index.js": "sha-changed",
+            "pages-tab/routeA/index.json": "byte-identical",
+            "pages-tab/routeA/index.wxml": "byte-identical",
+            "pages-tab/routeA/index.wxss": "byte-identical",
+            "common/vendor.js": "byte-identical",
+            "app.js": "byte-identical",
+            "app.json": "byte-identical",
+            "app.wxss": "byte-identical"
+          },
+          "sampleOtherPages": "20/20",
+          "onlyIntendedPageJs": true
+        },
+        {
+          "label": "fixture-optc-script1",
+          "filesCold": 2009,
+          "filesAfter": 2009,
+          "shaChangedCount": 1,
+          "shaChangedFiles": [
+            "pages-tab/routeA/index.js"
+          ],
+          "mtimeOnlyCount": 0,
+          "family": {
+            "pages-tab/routeA/index.js": "sha-changed",
+            "pages-tab/routeA/index.json": "byte-identical",
+            "pages-tab/routeA/index.wxml": "byte-identical",
+            "pages-tab/routeA/index.wxss": "byte-identical",
+            "common/vendor.js": "byte-identical",
+            "app.js": "byte-identical",
+            "app.json": "byte-identical",
+            "app.wxss": "byte-identical"
+          },
+          "sampleOtherPages": "1/1",
+          "onlyIntendedPageJs": true
+        },
+        {
+          "label": "project-optc-script1",
+          "filesCold": 10797,
+          "filesAfter": 10797,
+          "shaChangedCount": 1,
+          "shaChangedFiles": [
+            "pages-tab/routeA/index.js"
+          ],
+          "mtimeOnlyCount": 0,
+          "family": {
+            "pages-tab/routeA/index.js": "sha-changed",
+            "pages-tab/routeA/index.json": "byte-identical",
+            "pages-tab/routeA/index.wxml": "byte-identical",
+            "pages-tab/routeA/index.wxss": "byte-identical",
+            "common/vendor.js": "byte-identical",
+            "app.js": "byte-identical",
+            "app.json": "byte-identical",
+            "app.wxss": "byte-identical"
+          },
+          "sampleOtherPages": "20/20",
+          "onlyIntendedPageJs": true
+        }
+      ]
+    },
+    "A_projectLocalImportSha": {
+      "label": "Measured",
+      "verdict": "MISMATCH",
+      "baselineWarm": {
+        "report": "box-project-baseline-local-import-deep",
+        "totalMs": 54933.3,
+        "generated": 5658,
+        "sha": "4ff68d48e498260829b466b5a4dce648d7d3d4b6b4b042211f5b10ce97d77d2a",
+        "bytes": 28714
+      },
+      "optcExt": {
+        "report": "box-project-optc-ext-local-import",
+        "totalMs": 49.828,
+        "generated": 1,
+        "sha": "201782d2c2ae7509835684c56ba6e9b2d7b6caf9fbb26260ea110ab1c26e9100",
+        "bytes": 25562
+      },
+      "coldSha": "6a8dbfbb7251687ec25181a48405be0ff8f6d57db2d4fdf344b6814fc117f56d",
+      "anatomy": {
+        "verdict": "MATCH_Measured",
+        "claim": "project local-import setup-body byte-SHA vs uni warm",
+        "goldSha": "4ff68d48e498260829b466b5a4dce648d7d3d4b6b4b042211f5b10ce97d77d2a",
+        "optcSha": "201782d2c2ae7509835684c56ba6e9b2d7b6caf9fbb26260ea110ab1c26e9100",
+        "coldSha": "6a8dbfbb7251687ec25181a48405be0ff8f6d57db2d4fdf344b6814fc117f56d",
+        "bytes": {
+          "gold": 28714,
+          "optc": 25562,
+          "cold": 28715,
+          "deltaOptcMinusGold": -3152
+        },
+        "firstDiffOffset": 4213,
+        "firstDiffContext": {
+          "gold": "[redacted: private project dist snippet]",
+          "optc": "[redacted: private project dist snippet]"
+        },
+        "lineStats": {
+          "goldLines": 684,
+          "optcLines": 703,
+          "sameLines": 69,
+          "diffLines": 634,
+          "samples": [
+            {
+              "gold": "[redacted: private project dist snippet]",
+              "optc": "[redacted: private project dist snippet]"
+            },
+            {
+              "gold": "[redacted: private project dist snippet]",
+              "optc": "[redacted: private project dist snippet]"
+            },
+            {
+              "gold": "[redacted: private project dist snippet]",
+              "optc": "[redacted: private project dist snippet]"
+            },
+            {
+              "gold": "[redacted: private project dist snippet]",
+              "optc": "[redacted: private project dist snippet]"
+            },
+            {
+              "gold": "[redacted: private project dist snippet]",
+              "optc": "[redacted: private project dist snippet]"
+            },
+            {
+              "gold": "[redacted: private project dist snippet]",
+              "optc": "[redacted: private project dist snippet]"
+            },
+            {
+              "gold": "[redacted: private project dist snippet]",
+              "optc": "[redacted: private project dist snippet]"
+            },
+            {
+              "gold": "[redacted: private project dist snippet]",
+              "optc": "[redacted: private project dist snippet]"
+            },
+            {
+              "gold": "[redacted: private project dist snippet]",
+              "optc": "[redacted: private project dist snippet]"
+            },
+            {
+              "gold": "[redacted: private project dist snippet]",
+              "optc": "[redacted: private project dist snippet]"
+            },
+            {
+              "gold": "[redacted: private project dist snippet]",
+              "optc": "[redacted: private project dist snippet]"
+            },
+            {
+              "gold": "[redacted: private project dist snippet]",
+              "optc": "[redacted: private project dist snippet]"
+            },
+            {
+              "gold": "[redacted: private project dist snippet]",
+              "optc": "[redacted: private project dist snippet]"
+            },
+            {
+              "gold": "[redacted: private project dist snippet]",
+              "optc": "[redacted: private project dist snippet]"
+            },
+            {
+              "gold": "[redacted: private project dist snippet]",
+              "optc": "[redacted: private project dist snippet]"
+            }
+          ]
+        },
+        "editToken": {
+          "flagATrueInGold": true,
+          "flagATrueInOptc": true
+        },
+        "requirePreambleIdentical": true,
+        "requireCount": {
+          "gold": 19,
+          "optc": 19
+        },
+        "assignedInSetup": {
+          "gold": 22,
+          "optc": 70,
+          "cold": 22
+        },
+        "identifiersOnlyInGoldNotOptc": [],
+        "identifiersOnlyInOptcNotGold": {
+          "count": 48,
+          "note": "[redacted: identifier list]"
+        },
+        "coldAssignedMissingInOptc": [],
+        "coldAssignedMissingInGold": [],
+        "setupBodyChars": {
+          "gold": 2688,
+          "optc": 14248,
+          "cold": 2689
+        },
+        "note": "Superseded by shaAlign section",
+        "resolvedBy": "surgical-named"
+      },
+      "artifacts": [
+        "verify/logs/sha-anatomy/project-routeA-baseline-warm.js",
+        "verify/logs/sha-anatomy/project-routeA-optc-emit.js",
+        "verify/logs/sha-anatomy/project-routeA-cold-reconstructed.js",
+        "verify/logs/sha-anatomy/diff-anatomy.json"
+      ]
+    },
+    "B_complexEdits": {
+      "fixture": {
+        "label": "Measured",
+        "suites": {
+          "deep": [
+            {
+              "step": "cold",
+              "totalMs": 5936.763177,
+              "generated": 2010,
+              "viteSkipped": false,
+              "changedContents": 2010,
+              "updatedMtimes": 2010,
+              "decision": "cold-seeded",
+              "emitClass": null,
+              "afterSha": null
+            },
+            {
+              "step": "scriptLocalImport",
+              "totalMs": 5.4539210000011735,
+              "generated": 1,
+              "viteSkipped": true,
+              "changedContents": 1,
+              "updatedMtimes": 1,
+              "decision": "import-set-and-dep-content-stable",
+              "emitClass": "setup-body-local-imports",
+              "afterSha": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428"
+            },
+            {
+              "step": "scriptLocalImport2",
+              "totalMs": 1.9332810000005338,
+              "generated": 1,
+              "viteSkipped": true,
+              "changedContents": 1,
+              "updatedMtimes": 1,
+              "decision": "import-set-and-dep-content-stable",
+              "emitClass": "setup-body-local-imports",
+              "afterSha": "fab5adb16363d352f92b128f6fb6c59cc418fea919da768b79e2cca321030dd5"
+            },
+            {
+              "step": "template",
+              "totalMs": 2209.1110389999994,
+              "generated": 1007,
+              "viteSkipped": false,
+              "changedContents": 1,
+              "updatedMtimes": 1007,
+              "decision": "template-changed",
+              "emitClass": "setup-body-local-imports",
+              "afterSha": "fab5adb16363d352f92b128f6fb6c59cc418fea919da768b79e2cca321030dd5"
+            },
+            {
+              "step": "style",
+              "totalMs": 1856.9551900000006,
+              "generated": 1007,
+              "viteSkipped": false,
+              "changedContents": 1,
+              "updatedMtimes": 1007,
+              "decision": "style-changed",
+              "emitClass": "setup-body-local-imports",
+              "afterSha": "fab5adb16363d352f92b128f6fb6c59cc418fea919da768b79e2cca321030dd5"
+            },
+            {
+              "step": "sharedModule",
+              "totalMs": 1823.6342269999986,
+              "generated": 1006,
+              "viteSkipped": false,
+              "changedContents": 0,
+              "updatedMtimes": 1006,
+              "decision": "non-page-or-shared-changed",
+              "emitClass": "setup-body-local-imports",
+              "afterSha": "fab5adb16363d352f92b128f6fb6c59cc418fea919da768b79e2cca321030dd5"
+            },
+            {
+              "step": "scriptPkg1",
+              "totalMs": 1.647875999999087,
+              "generated": 1,
+              "viteSkipped": true,
+              "changedContents": 1,
+              "updatedMtimes": 1,
+              "decision": "import-set-and-dep-content-stable",
+              "emitClass": "surgical",
+              "afterSha": "65e2391b4bebb27a7e77ab30bb76206e3246daf6268525ce96a0b850f18be811"
+            },
+            {
+              "step": "scriptPkg2",
+              "totalMs": 0.8961080000008224,
+              "generated": 1,
+              "viteSkipped": true,
+              "changedContents": 1,
+              "updatedMtimes": 1,
+              "decision": "import-set-and-dep-content-stable",
+              "emitClass": "surgical",
+              "afterSha": "bd4f83254d911a41debe64479beefd86cd85262085d863514bf0ae6afd135585"
+            }
+          ],
+          "multiref": [
+            {
+              "step": "cold",
+              "totalMs": 4899.587056,
+              "generated": 2010,
+              "viteSkipped": false,
+              "changedContents": 2010,
+              "updatedMtimes": 2010,
+              "decision": "cold-seeded",
+              "emitClass": null,
+              "afterSha": null
+            },
+            {
+              "step": "enrichMultiRef",
+              "totalMs": 2001.349693000001,
+              "generated": 1006,
+              "viteSkipped": false,
+              "changedContents": 2,
+              "updatedMtimes": 1006,
+              "decision": "template-changed",
+              "emitClass": null,
+              "afterSha": null
+            },
+            {
+              "step": "scriptMultiRef",
+              "totalMs": 2.624023999998826,
+              "generated": 1,
+              "viteSkipped": true,
+              "changedContents": 1,
+              "updatedMtimes": 1,
+              "decision": "import-set-and-dep-content-stable",
+              "emitClass": "surgical",
+              "afterSha": "b4a79ce1f2fcc497a0ab9fbb2d0b61ff7fad551aa86927a4598bd7be0b383713"
+            },
+            {
+              "step": "scriptBoolFlip",
+              "totalMs": 3.2345789999999397,
+              "generated": 1,
+              "viteSkipped": true,
+              "changedContents": 1,
+              "updatedMtimes": 1,
+              "decision": "import-set-and-dep-content-stable",
+              "emitClass": "setup-body",
+              "afterSha": "53410fb838de8ae70f888e7fb789842dbbeee7c26857ee0709a71138041d8e9e"
+            }
+          ],
+          "addimport": [
+            {
+              "step": "cold",
+              "totalMs": 5056.1594700000005,
+              "generated": 2010,
+              "viteSkipped": false,
+              "changedContents": 2010,
+              "updatedMtimes": 2010,
+              "decision": "cold-seeded",
+              "emitClass": null,
+              "afterSha": null
+            },
+            {
+              "step": "scriptAddImport",
+              "totalMs": 1603.0383300000003,
+              "generated": 1007,
+              "viteSkipped": false,
+              "changedContents": 2,
+              "updatedMtimes": 1007,
+              "decision": "dep-content-changed",
+              "emitClass": null,
+              "afterSha": null
+            }
+          ],
+          "newlive": [
+            {
+              "step": "cold",
+              "totalMs": 5236.102976,
+              "generated": 2010,
+              "viteSkipped": false,
+              "changedContents": 2010,
+              "updatedMtimes": 2010,
+              "decision": "cold-seeded",
+              "emitClass": null,
+              "afterSha": null
+            },
+            {
+              "step": "scriptLocalImport",
+              "totalMs": 6.912819999999556,
+              "generated": 1,
+              "viteSkipped": true,
+              "changedContents": 1,
+              "updatedMtimes": 1,
+              "decision": "import-set-and-dep-content-stable",
+              "emitClass": "setup-body-local-imports",
+              "afterSha": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428"
+            },
+            {
+              "step": "scriptNewLiveBinding",
+              "totalMs": 1764.3626000000004,
+              "generated": 1007,
+              "viteSkipped": false,
+              "changedContents": 2,
+              "updatedMtimes": 1007,
+              "decision": "template-changed",
+              "emitClass": "setup-body-local-imports",
+              "afterSha": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428"
+            }
+          ],
+          "rename": [
+            {
+              "step": "cold",
+              "totalMs": 5337.400454,
+              "generated": 2010,
+              "viteSkipped": false,
+              "changedContents": 2010,
+              "updatedMtimes": 2010,
+              "decision": "cold-seeded",
+              "emitClass": null,
+              "afterSha": null
+            },
+            {
+              "step": "renameRoute",
+              "totalMs": 1734.2245899999998,
+              "generated": 1009,
+              "viteSkipped": false,
+              "changedContents": 6,
+              "updatedMtimes": 1009,
+              "decision": "pages-or-manifest-changed",
+              "emitClass": null,
+              "afterSha": null
+            }
+          ]
+        }
+      },
+      "project": {
+        "label": "Measured (local-import class) + Inferred (other classes mirror fixture gates)",
+        "baselineLocalImport": [
+          {
+            "step": "cold",
+            "totalMs": 136882.7102,
+            "generated": 10707,
+            "viteSkipped": false,
+            "changedContents": 10797,
+            "updatedMtimes": 10797,
+            "decision": null,
+            "emitClass": null,
+            "afterSha": null
+          },
+          {
+            "step": "scriptLocalImport",
+            "totalMs": 54933.33971100001,
+            "generated": 5658,
+            "viteSkipped": false,
+            "changedContents": 3,
+            "updatedMtimes": 5658,
+            "decision": null,
+            "emitClass": null,
+            "afterSha": null
+          }
+        ],
+        "optcLocalImportPrior": [
+          {
+            "step": "cold",
+            "totalMs": 121510.523001,
+            "generated": 10707,
+            "viteSkipped": false,
+            "changedContents": 10797,
+            "updatedMtimes": 10797,
+            "decision": "cold-seeded",
+            "emitClass": null,
+            "afterSha": null
+          },
+          {
+            "step": "scriptLocalImport",
+            "totalMs": 49.82808400000795,
+            "generated": 1,
+            "viteSkipped": true,
+            "changedContents": 1,
+            "updatedMtimes": 1,
+            "decision": "import-set-and-dep-content-stable",
+            "emitClass": "setup-body-local-imports",
+            "afterSha": "201782d2c2ae7509835684c56ba6e9b2d7b6caf9fbb26260ea110ab1c26e9100"
+          }
+        ]
+      }
+    },
+    "C_multipageFallthrough": {
+      "label": "Measured",
+      "multiPage": {
+        "suite": "box-fixture-optc-deep",
+        "scriptPkg1": {
+          "totalMs": 1.65,
+          "generated": 1,
+          "viteSkipped": true,
+          "emitClass": "surgical",
+          "token": "pkg1-probe"
+        },
+        "scriptPkg2": {
+          "totalMs": 0.9,
+          "generated": 1,
+          "viteSkipped": true,
+          "emitClass": "surgical",
+          "token": "pkg2-probe"
+        },
+        "stability": "each step sha-changed exactly 1 page JS; routeA retained probeMul(23) after pkg edits"
+      },
+      "renameRoute": {
+        "suite": "box-fixture-optc-rename",
+        "decision": "pages-or-manifest-changed",
+        "totalMs": 1734,
+        "generated": 1009,
+        "viteSkipped": false
+      },
+      "brokenRequire": {
+        "beforeFix": "emit wrote page JS with allExternalsOnDisk=false (gap)",
+        "afterFix": {
+          "emitterReason": "externals-missing",
+          "ok": false,
+          "filesWritten": 0,
+          "pageUnchanged": true,
+          "pluginGate": "optc-externals-missing → forceFull"
+        },
+        "filesPatched": [
+          "optimize/lib/optc-ext-emitter.mjs",
+          "optimize/lib/optc-ext-vite.mjs",
+          "compile-optimization/{fixture,project}/scripts/vite-plugins/optc-ext{,-emitter}.mjs"
+        ],
+        "cause": "page-only emit skipped Vite even when a required cold chunk was absent; now fail-closed before write"
+      }
+    },
+    "D_coverage": {
+      "label": "Measured",
+      "totalRoutes": 479,
+      "sampleSize": 40,
+      "sample": [
+        "pages-tab/routeA/index",
+        "pages-tab/routeE/list/index",
+        "pages-tab/routeB/index",
+        "pages-tab/routeC/index",
+        "pages-tab/routeG/index",
+        "pages-tab/routeD/index",
+        "pages-tab/routeF/index",
+        "modules/pages-group2/routeG/seg-030/seg-031/index",
+        "modules/pages-group2/routeG/seg-050/seg-060/index",
+        "modules/pages-group2/routeG/seg-050/seg-065/index",
+        "modules/pages-group2/routeG/seg-050/seg-066/index",
+        "modules/pages-group2/routeG/seg-050/seg-066/seg-067",
+        "modules/pages-group2/routeG/seg-030/seg-068/seg-069",
+        "modules/pages-group2/routeG/seg-050/seg-070",
+        "modules/pages-group2/routeG/seg-050/list",
+        "modules/pages-group2/routeG/seg-030/seg-071",
+        "modules/pages/seg-072/index",
+        "modules/pages/seg-073/seg-074",
+        "modules/pages/seg-075/index",
+        "modules/pages-group4/seg-076/detail",
+        "modules/pages-group5/list/index",
+        "modules/pages-group6/details/index",
+        "modules/pages-group8/seg-077/detail",
+        "modules/pages-group9/seg-078/index",
+        "modules/pages-group10/seg-079/seg-080",
+        "modules/pages-group11/seg-081",
+        "modules/pages-group12/index",
+        "modules/pages-group13/seg-082",
+        "pages-group14/seg-083/index",
+        "pages-group14/seg-084/seg-085/index",
+        "pages-group14/seg-084/seg-086/seg-087",
+        "pages-group15/seg-088/seg-089",
+        "pages-group15/routeE/seg-090/users/index",
+        "pages-group15/seg-091/seg-092",
+        "pages-group15/seg-093/seg-094",
+        "pages-group16/seg-095/new",
+        "pages-group17/seg-096/seg-097",
+        "pages-group17/users/seg-098/index",
+        "pages-group18/seg-099/index",
+        "pages-groupX/page-z/index"
+      ],
+      "classifiedOk": 40,
+      "missing": 0,
+      "crashes": 0,
+      "pageOnlyCapable": 18,
+      "pageOnlyCapablePct": 45,
+      "surgicalCapable": 16,
+      "setupBodyCapable": 10,
+      "withUnmappedLocals": 8,
+      "preferBreakdown": {
+        "surgical": 16,
+        "setup-body": 2,
+        "full": 22
+      },
+      "rows": [
+        {
+          "pagePath": "pages-tab/routeA/index",
+          "status": "ok",
+          "bytes": 25562,
+          "stringRefCount": 3,
+          "localImportUsedCount": 20,
+          "hasSetupSplit": true,
+          "localMapped": 23,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": true,
+          "surgicalReason": "ref-literal-patch",
+          "setupBodyOk": true,
+          "setupBodyReason": "setup-body-local-imports",
+          "setupBodyEmitClass": "setup-body-local-imports",
+          "pageOnlyCapable": true,
+          "preferPath": "surgical"
+        },
+        {
+          "pagePath": "pages-tab/routeE/list/index",
+          "status": "ok",
+          "bytes": 6775,
+          "stringRefCount": 1,
+          "localImportUsedCount": 5,
+          "hasSetupSplit": true,
+          "localMapped": 7,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": true,
+          "surgicalReason": "ref-literal-patch",
+          "setupBodyOk": true,
+          "setupBodyReason": "setup-body-local-imports",
+          "setupBodyEmitClass": "setup-body-local-imports",
+          "pageOnlyCapable": true,
+          "preferPath": "surgical"
+        },
+        {
+          "pagePath": "pages-tab/routeB/index",
+          "status": "ok",
+          "bytes": 36416,
+          "stringRefCount": 3,
+          "localImportUsedCount": 24,
+          "hasSetupSplit": true,
+          "localMapped": 27,
+          "localUnmapped": 2,
+          "unmappedSample": {
+            "count": 2,
+            "note": "[redacted: identifier list]"
+          },
+          "surgicalOk": true,
+          "surgicalReason": "ref-literal-patch",
+          "setupBodyOk": false,
+          "setupBodyReason": "local-import-unmapped",
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": true,
+          "preferPath": "surgical"
+        },
+        {
+          "pagePath": "pages-tab/routeC/index",
+          "status": "ok",
+          "bytes": 2172,
+          "stringRefCount": 1,
+          "localImportUsedCount": 6,
+          "hasSetupSplit": false,
+          "localMapped": 8,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": true,
+          "surgicalReason": "ref-literal-patch",
+          "setupBodyOk": false,
+          "setupBodyReason": "setup-split-failed",
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": true,
+          "preferPath": "surgical"
+        },
+        {
+          "pagePath": "pages-tab/routeG/index",
+          "status": "ok",
+          "bytes": 701,
+          "stringRefCount": 0,
+          "localImportUsedCount": 1,
+          "hasSetupSplit": false,
+          "localMapped": 1,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": false,
+          "surgicalReason": null,
+          "setupBodyOk": false,
+          "setupBodyReason": null,
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": null,
+          "preferPath": "full"
+        },
+        {
+          "pagePath": "pages-tab/routeD/index",
+          "status": "ok",
+          "bytes": 21137,
+          "stringRefCount": 0,
+          "localImportUsedCount": 42,
+          "hasSetupSplit": false,
+          "localMapped": 45,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": false,
+          "surgicalReason": null,
+          "setupBodyOk": false,
+          "setupBodyReason": null,
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": null,
+          "preferPath": "full"
+        },
+        {
+          "pagePath": "pages-tab/routeF/index",
+          "status": "ok",
+          "bytes": 13734,
+          "stringRefCount": 0,
+          "localImportUsedCount": 22,
+          "hasSetupSplit": false,
+          "localMapped": 21,
+          "localUnmapped": 2,
+          "unmappedSample": {
+            "count": 2,
+            "note": "[redacted: identifier list]"
+          },
+          "surgicalOk": false,
+          "surgicalReason": null,
+          "setupBodyOk": false,
+          "setupBodyReason": null,
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": null,
+          "preferPath": "full"
+        },
+        {
+          "pagePath": "modules/pages-group2/routeG/seg-030/seg-031/index",
+          "status": "ok",
+          "bytes": 4473,
+          "stringRefCount": 0,
+          "localImportUsedCount": 2,
+          "hasSetupSplit": true,
+          "localMapped": 5,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": false,
+          "surgicalReason": "no-ref-literal-change",
+          "setupBodyOk": true,
+          "setupBodyReason": "setup-body-local-imports",
+          "setupBodyEmitClass": "setup-body-local-imports",
+          "pageOnlyCapable": true,
+          "preferPath": "setup-body-local-imports"
+        },
+        {
+          "pagePath": "modules/pages-group2/routeG/seg-050/seg-060/index",
+          "status": "ok",
+          "bytes": 13045,
+          "stringRefCount": 2,
+          "localImportUsedCount": 9,
+          "hasSetupSplit": true,
+          "localMapped": 13,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": true,
+          "surgicalReason": "ref-literal-patch",
+          "setupBodyOk": false,
+          "setupBodyReason": "render-binding-removed",
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": true,
+          "preferPath": "surgical"
+        },
+        {
+          "pagePath": "modules/pages-group2/routeG/seg-050/seg-065/index",
+          "status": "ok",
+          "bytes": 7178,
+          "stringRefCount": 4,
+          "localImportUsedCount": 7,
+          "hasSetupSplit": true,
+          "localMapped": 9,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": true,
+          "surgicalReason": "ref-literal-patch",
+          "setupBodyOk": true,
+          "setupBodyReason": "setup-body-local-imports",
+          "setupBodyEmitClass": "setup-body-local-imports",
+          "pageOnlyCapable": true,
+          "preferPath": "surgical"
+        },
+        {
+          "pagePath": "modules/pages-group2/routeG/seg-050/seg-066/index",
+          "status": "ok",
+          "bytes": 6480,
+          "stringRefCount": 2,
+          "localImportUsedCount": 10,
+          "hasSetupSplit": true,
+          "localMapped": 12,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": true,
+          "surgicalReason": "ref-literal-patch",
+          "setupBodyOk": false,
+          "setupBodyReason": "render-binding-removed",
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": true,
+          "preferPath": "surgical"
+        },
+        {
+          "pagePath": "modules/pages-group2/routeG/seg-050/seg-066/seg-067",
+          "status": "ok",
+          "bytes": 8314,
+          "stringRefCount": 3,
+          "localImportUsedCount": 6,
+          "hasSetupSplit": true,
+          "localMapped": 9,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": true,
+          "surgicalReason": "ref-literal-patch",
+          "setupBodyOk": true,
+          "setupBodyReason": "setup-body-local-imports",
+          "setupBodyEmitClass": "setup-body-local-imports",
+          "pageOnlyCapable": true,
+          "preferPath": "surgical"
+        },
+        {
+          "pagePath": "modules/pages-group2/routeG/seg-030/seg-068/seg-069",
+          "status": "ok",
+          "bytes": 3458,
+          "stringRefCount": 1,
+          "localImportUsedCount": 2,
+          "hasSetupSplit": true,
+          "localMapped": 6,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": true,
+          "surgicalReason": "ref-literal-patch",
+          "setupBodyOk": true,
+          "setupBodyReason": "setup-body-local-imports",
+          "setupBodyEmitClass": "setup-body-local-imports",
+          "pageOnlyCapable": true,
+          "preferPath": "surgical"
+        },
+        {
+          "pagePath": "modules/pages-group2/routeG/seg-050/seg-070",
+          "status": "ok",
+          "bytes": 38306,
+          "stringRefCount": 0,
+          "localImportUsedCount": 34,
+          "hasSetupSplit": false,
+          "localMapped": 34,
+          "localUnmapped": 1,
+          "unmappedSample": {
+            "count": 1,
+            "note": "[redacted: identifier list]"
+          },
+          "surgicalOk": false,
+          "surgicalReason": null,
+          "setupBodyOk": false,
+          "setupBodyReason": null,
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": null,
+          "preferPath": "full"
+        },
+        {
+          "pagePath": "modules/pages-group2/routeG/seg-050/list",
+          "status": "ok",
+          "bytes": 45932,
+          "stringRefCount": 0,
+          "localImportUsedCount": 46,
+          "hasSetupSplit": false,
+          "localMapped": 47,
+          "localUnmapped": 1,
+          "unmappedSample": {
+            "count": 1,
+            "note": "[redacted: identifier list]"
+          },
+          "surgicalOk": false,
+          "surgicalReason": null,
+          "setupBodyOk": false,
+          "setupBodyReason": null,
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": null,
+          "preferPath": "full"
+        },
+        {
+          "pagePath": "modules/pages-group2/routeG/seg-030/seg-071",
+          "status": "ok",
+          "bytes": 1021,
+          "stringRefCount": 0,
+          "localImportUsedCount": 3,
+          "hasSetupSplit": true,
+          "localMapped": 5,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": false,
+          "surgicalReason": null,
+          "setupBodyOk": false,
+          "setupBodyReason": null,
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": null,
+          "preferPath": "full"
+        },
+        {
+          "pagePath": "modules/pages/seg-072/index",
+          "status": "ok",
+          "bytes": 9895,
+          "stringRefCount": 0,
+          "localImportUsedCount": 9,
+          "hasSetupSplit": false,
+          "localMapped": 9,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": false,
+          "surgicalReason": null,
+          "setupBodyOk": false,
+          "setupBodyReason": null,
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": null,
+          "preferPath": "full"
+        },
+        {
+          "pagePath": "modules/pages/seg-073/seg-074",
+          "status": "ok",
+          "bytes": 3161,
+          "stringRefCount": 0,
+          "localImportUsedCount": 3,
+          "hasSetupSplit": true,
+          "localMapped": 4,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": false,
+          "surgicalReason": null,
+          "setupBodyOk": false,
+          "setupBodyReason": null,
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": null,
+          "preferPath": "full"
+        },
+        {
+          "pagePath": "modules/pages/seg-075/index",
+          "status": "ok",
+          "bytes": 6469,
+          "stringRefCount": 0,
+          "localImportUsedCount": 6,
+          "hasSetupSplit": false,
+          "localMapped": 6,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": false,
+          "surgicalReason": null,
+          "setupBodyOk": false,
+          "setupBodyReason": null,
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": null,
+          "preferPath": "full"
+        },
+        {
+          "pagePath": "modules/pages-group4/seg-076/detail",
+          "status": "ok",
+          "bytes": 23718,
+          "stringRefCount": 0,
+          "localImportUsedCount": 17,
+          "hasSetupSplit": true,
+          "localMapped": 19,
+          "localUnmapped": 1,
+          "unmappedSample": {
+            "count": 1,
+            "note": "[redacted: identifier list]"
+          },
+          "surgicalOk": false,
+          "surgicalReason": "no-ref-literal-change",
+          "setupBodyOk": false,
+          "setupBodyReason": "local-import-unmapped",
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": false,
+          "preferPath": "full"
+        },
+        {
+          "pagePath": "modules/pages-group5/list/index",
+          "status": "ok",
+          "bytes": 28366,
+          "stringRefCount": 1,
+          "localImportUsedCount": 29,
+          "hasSetupSplit": false,
+          "localMapped": 34,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": true,
+          "surgicalReason": "ref-literal-patch",
+          "setupBodyOk": false,
+          "setupBodyReason": "setup-split-failed",
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": true,
+          "preferPath": "surgical"
+        },
+        {
+          "pagePath": "modules/pages-group6/details/index",
+          "status": "ok",
+          "bytes": 6551,
+          "stringRefCount": 0,
+          "localImportUsedCount": 4,
+          "hasSetupSplit": true,
+          "localMapped": 7,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": false,
+          "surgicalReason": null,
+          "setupBodyOk": false,
+          "setupBodyReason": null,
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": null,
+          "preferPath": "full"
+        },
+        {
+          "pagePath": "modules/pages-group8/seg-077/detail",
+          "status": "ok",
+          "bytes": 4227,
+          "stringRefCount": 2,
+          "localImportUsedCount": 5,
+          "hasSetupSplit": true,
+          "localMapped": 8,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": true,
+          "surgicalReason": "ref-literal-patch",
+          "setupBodyOk": true,
+          "setupBodyReason": "setup-body-local-imports",
+          "setupBodyEmitClass": "setup-body-local-imports",
+          "pageOnlyCapable": true,
+          "preferPath": "surgical"
+        },
+        {
+          "pagePath": "modules/pages-group9/seg-078/index",
+          "status": "ok",
+          "bytes": 3455,
+          "stringRefCount": 0,
+          "localImportUsedCount": 4,
+          "hasSetupSplit": false,
+          "localMapped": 8,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": false,
+          "surgicalReason": null,
+          "setupBodyOk": false,
+          "setupBodyReason": null,
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": null,
+          "preferPath": "full"
+        },
+        {
+          "pagePath": "modules/pages-group10/seg-079/seg-080",
+          "status": "ok",
+          "bytes": 2834,
+          "stringRefCount": 0,
+          "localImportUsedCount": 4,
+          "hasSetupSplit": true,
+          "localMapped": 6,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": false,
+          "surgicalReason": null,
+          "setupBodyOk": false,
+          "setupBodyReason": null,
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": null,
+          "preferPath": "full"
+        },
+        {
+          "pagePath": "modules/pages-group11/seg-081",
+          "status": "ok",
+          "bytes": 4670,
+          "stringRefCount": 0,
+          "localImportUsedCount": 5,
+          "hasSetupSplit": true,
+          "localMapped": 7,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": false,
+          "surgicalReason": "no-ref-literal-change",
+          "setupBodyOk": true,
+          "setupBodyReason": "setup-body-local-imports",
+          "setupBodyEmitClass": "setup-body-local-imports",
+          "pageOnlyCapable": true,
+          "preferPath": "setup-body-local-imports"
+        },
+        {
+          "pagePath": "modules/pages-group12/index",
+          "status": "ok",
+          "bytes": 10453,
+          "stringRefCount": 0,
+          "localImportUsedCount": 3,
+          "hasSetupSplit": false,
+          "localMapped": 7,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": false,
+          "surgicalReason": null,
+          "setupBodyOk": false,
+          "setupBodyReason": null,
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": null,
+          "preferPath": "full"
+        },
+        {
+          "pagePath": "modules/pages-group13/seg-082",
+          "status": "ok",
+          "bytes": 1879,
+          "stringRefCount": 1,
+          "localImportUsedCount": 1,
+          "hasSetupSplit": false,
+          "localMapped": 3,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": true,
+          "surgicalReason": "ref-literal-patch",
+          "setupBodyOk": false,
+          "setupBodyReason": "setup-split-failed",
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": true,
+          "preferPath": "surgical"
+        },
+        {
+          "pagePath": "pages-group14/seg-083/index",
+          "status": "ok",
+          "bytes": 1681,
+          "stringRefCount": 0,
+          "localImportUsedCount": 4,
+          "hasSetupSplit": false,
+          "localMapped": 4,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": false,
+          "surgicalReason": null,
+          "setupBodyOk": false,
+          "setupBodyReason": null,
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": null,
+          "preferPath": "full"
+        },
+        {
+          "pagePath": "pages-group14/seg-084/seg-085/index",
+          "status": "ok",
+          "bytes": 1404,
+          "stringRefCount": 1,
+          "localImportUsedCount": 1,
+          "hasSetupSplit": true,
+          "localMapped": 2,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": true,
+          "surgicalReason": "ref-literal-patch",
+          "setupBodyOk": true,
+          "setupBodyReason": "setup-body-local-imports",
+          "setupBodyEmitClass": "setup-body-local-imports",
+          "pageOnlyCapable": true,
+          "preferPath": "surgical"
+        },
+        {
+          "pagePath": "pages-group14/seg-084/seg-086/seg-087",
+          "status": "ok",
+          "bytes": 12282,
+          "stringRefCount": 0,
+          "localImportUsedCount": 18,
+          "hasSetupSplit": false,
+          "localMapped": 19,
+          "localUnmapped": 1,
+          "unmappedSample": {
+            "count": 1,
+            "note": "[redacted: identifier list]"
+          },
+          "surgicalOk": false,
+          "surgicalReason": null,
+          "setupBodyOk": false,
+          "setupBodyReason": null,
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": null,
+          "preferPath": "full"
+        },
+        {
+          "pagePath": "pages-group15/seg-088/seg-089",
+          "status": "ok",
+          "bytes": 27792,
+          "stringRefCount": 0,
+          "localImportUsedCount": 27,
+          "hasSetupSplit": false,
+          "localMapped": 27,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": false,
+          "surgicalReason": null,
+          "setupBodyOk": false,
+          "setupBodyReason": null,
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": null,
+          "preferPath": "full"
+        },
+        {
+          "pagePath": "pages-group15/routeE/seg-090/users/index",
+          "status": "ok",
+          "bytes": 4268,
+          "stringRefCount": 2,
+          "localImportUsedCount": 3,
+          "hasSetupSplit": true,
+          "localMapped": 4,
+          "localUnmapped": 1,
+          "unmappedSample": {
+            "count": 1,
+            "note": "[redacted: identifier list]"
+          },
+          "surgicalOk": true,
+          "surgicalReason": "ref-literal-patch",
+          "setupBodyOk": false,
+          "setupBodyReason": "local-import-unmapped",
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": true,
+          "preferPath": "surgical"
+        },
+        {
+          "pagePath": "pages-group15/seg-091/seg-092",
+          "status": "ok",
+          "bytes": 3293,
+          "stringRefCount": 1,
+          "localImportUsedCount": 5,
+          "hasSetupSplit": true,
+          "localMapped": 5,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": true,
+          "surgicalReason": "ref-literal-patch",
+          "setupBodyOk": true,
+          "setupBodyReason": "setup-body-local-imports",
+          "setupBodyEmitClass": "setup-body-local-imports",
+          "pageOnlyCapable": true,
+          "preferPath": "surgical"
+        },
+        {
+          "pagePath": "pages-group15/seg-093/seg-094",
+          "status": "ok",
+          "bytes": 11576,
+          "stringRefCount": 0,
+          "localImportUsedCount": 11,
+          "hasSetupSplit": false,
+          "localMapped": 11,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": false,
+          "surgicalReason": null,
+          "setupBodyOk": false,
+          "setupBodyReason": null,
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": null,
+          "preferPath": "full"
+        },
+        {
+          "pagePath": "pages-group16/seg-095/new",
+          "status": "ok",
+          "bytes": 16404,
+          "stringRefCount": 0,
+          "localImportUsedCount": 16,
+          "hasSetupSplit": false,
+          "localMapped": 16,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": false,
+          "surgicalReason": null,
+          "setupBodyOk": false,
+          "setupBodyReason": null,
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": null,
+          "preferPath": "full"
+        },
+        {
+          "pagePath": "pages-group17/seg-096/seg-097",
+          "status": "ok",
+          "bytes": 3006,
+          "stringRefCount": 0,
+          "localImportUsedCount": 3,
+          "hasSetupSplit": false,
+          "localMapped": 4,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": false,
+          "surgicalReason": null,
+          "setupBodyOk": false,
+          "setupBodyReason": null,
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": null,
+          "preferPath": "full"
+        },
+        {
+          "pagePath": "pages-group17/users/seg-098/index",
+          "status": "ok",
+          "bytes": 3760,
+          "stringRefCount": 0,
+          "localImportUsedCount": 6,
+          "hasSetupSplit": false,
+          "localMapped": 7,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": false,
+          "surgicalReason": null,
+          "setupBodyOk": false,
+          "setupBodyReason": null,
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": null,
+          "preferPath": "full"
+        },
+        {
+          "pagePath": "pages-group18/seg-099/index",
+          "status": "ok",
+          "bytes": 2918,
+          "stringRefCount": 0,
+          "localImportUsedCount": 5,
+          "hasSetupSplit": false,
+          "localMapped": 6,
+          "localUnmapped": 0,
+          "unmappedSample": [],
+          "surgicalOk": false,
+          "surgicalReason": null,
+          "setupBodyOk": false,
+          "setupBodyReason": null,
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": null,
+          "preferPath": "full"
+        },
+        {
+          "pagePath": "pages-groupX/page-z/index",
+          "status": "ok",
+          "bytes": 15201,
+          "stringRefCount": 14,
+          "localImportUsedCount": 9,
+          "hasSetupSplit": true,
+          "localMapped": 11,
+          "localUnmapped": 2,
+          "unmappedSample": {
+            "count": 2,
+            "note": "[redacted: identifier list]"
+          },
+          "surgicalOk": true,
+          "surgicalReason": "ref-literal-patch",
+          "setupBodyOk": false,
+          "setupBodyReason": "local-import-unmapped",
+          "setupBodyEmitClass": null,
+          "pageOnlyCapable": true,
+          "preferPath": "surgical"
+        }
+      ]
+    },
+    "E_syntax": {
+      "label": "Measured",
+      "checks": [
+        {
+          "file": "<workspace>/compile-optimization/fixture/dist/dev/mp-weixin/pages-tab/routeA/index.js",
+          "syntax": {
+            "ok": true,
+            "bytes": 670
+          },
+          "requires": {
+            "requireCount": 2,
+            "allExist": true,
+            "missing": [],
+            "details": [
+              {
+                "require": "../../common/vendor.js",
+                "abs": "<workspace>/compile-optimization/fixture/dist/dev/mp-weixin/common/vendor.js",
+                "exists": true
+              },
+              {
+                "require": "../../modules/utils/unifast-probe.js",
+                "abs": "<workspace>/compile-optimization/fixture/dist/dev/mp-weixin/modules/utils/unifast-probe.js",
+                "exists": true
+              }
+            ]
+          }
+        },
+        {
+          "file": "<workspace>/compile-optimization/fixture/dist/dev/mp-weixin/common/vendor.js",
+          "syntax": {
+            "ok": true,
+            "bytes": 209958
+          },
+          "requires": null
+        },
+        {
+          "file": "<workspace>/compile-optimization/project/dist/dev/mp-weixin/pages-tab/routeA/index.js",
+          "syntax": {
+            "ok": true,
+            "bytes": 25562
+          },
+          "requires": {
+            "requireCount": 19,
+            "allExist": true,
+            "missing": [],
+            "details": [
+              {
+                "require": "../../common/vendor.js",
+                "abs": "<workspace>/compile-optimization/project/dist/dev/mp-weixin/common/vendor.js",
+                "exists": true
+              },
+              {
+                "require": "../../services/apis/api-a.js",
+                "abs": "<workspace>/compile-optimization/project/dist/dev/mp-weixin/services/apis/api-a.js",
+                "exists": true
+              },
+              {
+                "require": "../../services/routeA.js",
+                "abs": "<workspace>/compile-optimization/project/dist/dev/mp-weixin/services/routeA.js",
+                "exists": true
+              },
+              {
+                "require": "../../modules/composables/seg-105.js",
+                "abs": "<workspace>/compile-optimization/project/dist/dev/mp-weixin/modules/composables/seg-105.js",
+                "exists": true
+              },
+              {
+                "require": "../../modules/libs/seg-106/index.js",
+                "abs": "<workspace>/compile-optimization/project/dist/dev/mp-weixin/modules/libs/seg-106/index.js",
+                "exists": true
+              },
+              {
+                "require": "../../modules/libs/lib-a.js",
+                "abs": "<workspace>/compile-optimization/project/dist/dev/mp-weixin/modules/libs/lib-a.js",
+                "exists": true
+              },
+              {
+                "require": "../../modules/storeA/storeB.js",
+                "abs": "<workspace>/compile-optimization/project/dist/dev/mp-weixin/modules/storeA/storeB.js",
+                "exists": true
+              },
+              {
+                "require": "../../modules/utils/seg-107.js",
+                "abs": "<workspace>/compile-optimization/project/dist/dev/mp-weixin/modules/utils/seg-107.js",
+                "exists": true
+              },
+              {
+                "require": "../../modules/business/seg-108.js",
+                "abs": "<workspace>/compile-optimization/project/dist/dev/mp-weixin/modules/business/seg-108.js",
+                "exists": true
+              },
+              {
+                "require": "../../modules/constants/seg-109.js",
+                "abs": "<workspace>/compile-optimization/project/dist/dev/mp-weixin/modules/constants/seg-109.js",
+                "exists": true
+              },
+              {
+                "require": "../../modules/utils/seg-110.js",
+                "abs": "<workspace>/compile-optimization/project/dist/dev/mp-weixin/modules/utils/seg-110.js",
+                "exists": true
+              },
+              {
+                "require": "../../utils/seg-111/uiA.js",
+                "abs": "<workspace>/compile-optimization/project/dist/dev/mp-weixin/utils/seg-111/uiA.js",
+                "exists": true
+              },
+              {
+                "require": "../../modules/apis/seg-112/index.js",
+                "abs": "<workspace>/compile-optimization/project/dist/dev/mp-weixin/modules/apis/seg-112/index.js",
+                "exists": true
+              },
+              {
+                "require": "../../modules/components/routeF/seg-045/seg-046/utils/index.js",
+                "abs": "<workspace>/compile-optimization/project/dist/dev/mp-weixin/modules/components/routeF/seg-045/seg-046/utils/index.js",
+                "exists": true
+              },
+              {
+                "require": "../../store/index.js",
+                "abs": "<workspace>/compile-optimization/project/dist/dev/mp-weixin/store/index.js",
+                "exists": true
+              },
+              {
+                "require": "../../trackerA.js",
+                "abs": "<workspace>/compile-optimization/project/dist/dev/mp-weixin/trackerA.js",
+                "exists": true
+              },
+              {
+                "require": "../../utils/seg-113.js",
+                "abs": "<workspace>/compile-optimization/project/dist/dev/mp-weixin/utils/seg-113.js",
+                "exists": true
+              },
+              {
+                "require": "../../modules/utils/seg-111/seg-069.js",
+                "abs": "<workspace>/compile-optimization/project/dist/dev/mp-weixin/modules/utils/seg-111/seg-069.js",
+                "exists": true
+              },
+              {
+                "require": "../../services/ext/main.js",
+                "abs": "<workspace>/compile-optimization/project/dist/dev/mp-weixin/services/ext/main.js",
+                "exists": true
+              }
+            ]
+          }
+        },
+        {
+          "file": "<workspace>/compile-optimization/project/dist/dev/mp-weixin/common/vendor.js",
+          "syntax": {
+            "ok": true,
+            "bytes": 890522
+          },
+          "requires": null
+        },
+        {
+          "file": "<workspace>/compile-optimization/project/dist/dev/mp-weixin/app.js",
+          "syntax": {
+            "ok": true,
+            "bytes": 36049
+          },
+          "requires": null
+        }
+      ],
+      "miniProgramRuntime": "Unverified (no WeChat; Linux structure only)"
+    }
+  },
+  "bugfixes": [
+    {
+      "files": [
+        "optimize/lib/optc-ext-emitter.mjs",
+        "optimize/lib/optc-ext-vite.mjs",
+        "fixture+project scripts/vite-plugins/optc-ext.mjs + optc-ext-emitter.mjs"
+      ],
+      "cause": "Missing cold require chunk still allowed page-only skip; now externals-missing → no write + full rebuild"
+    }
+  ],
+  "shaAlign": {
+    "when": "2026-10-15T08:27:20.320Z",
+    "verdict": "MATCH_Measured",
+    "goldSha": "4ff68d48e498260829b466b5a4dce648d7d3d4b6b4b042211f5b10ce97d77d2a",
+    "optcSha": "4ff68d48e498260829b466b5a4dce648d7d3d4b6b4b042211f5b10ce97d77d2a",
+    "emitClass": "surgical-named",
+    "mechanism": "cold-guided named ref(literal) in-place patch (preserves uni DCE+formatting)",
+    "suiteSummary": {
+      "total": 12,
+      "passed": 12,
+      "failed": 0
+    },
+    "cases": [
+      {
+        "id": "project-flagA-named-vs-gold",
+        "pass": true,
+        "detail": "named=true/named-literal-patch after=4ff68d48e4982608 gold=4ff68d48e4982608 bytes=28714/28714"
+      },
+      {
+        "id": "project-emit-cascade-surgical-named",
+        "pass": true,
+        "detail": "ok=true class=surgical-named reason=named-literal-patch sha=4ff68d48e4982608 gen=1"
+      },
+      {
+        "id": "fixture-style-string-surgical",
+        "pass": true,
+        "detail": "surgical=true/ref-literal-patch named=true/named-literal-patch"
+      },
+      {
+        "id": "local-import-bool-prefers-named-over-setup-body",
+        "pass": true,
+        "detail": "named=true setupBodyAlso=true byteEqExpected=true"
+      },
+      {
+        "id": "multi-named-ref-literals",
+        "pass": true,
+        "detail": "changes=3 reason=named-literal-patch"
+      },
+      {
+        "id": "named-fail-closed-arity-or-added",
+        "pass": true,
+        "detail": "reason=named-ref-arity-mismatch"
+      },
+      {
+        "id": "named-fail-closed-incomplete-diff",
+        "pass": true,
+        "detail": "reason=named-literal-incomplete-diff"
+      },
+      {
+        "id": "named-fail-closed-dce-missing",
+        "pass": true,
+        "detail": "reason=cold-named-ref-missing name=dropped"
+      },
+      {
+        "id": "externals-missing-fail-closed",
+        "pass": true,
+        "detail": "reason=externals-missing class=surgical-named"
+      },
+      {
+        "id": "fixture-local-import-probeMul-still-setup-body",
+        "pass": true,
+        "detail": "named=no-named-ref-literals setup=setup-body-local-imports/setup-body-local-imports"
+      },
+      {
+        "id": "fixture-local-import-prior-reports-note",
+        "pass": true,
+        "detail": "Prior bench reports retained; probeMul class remains setup-body (not named)"
+      },
+      {
+        "id": "named-numeric-ref-flip",
+        "pass": true,
+        "detail": "reason=named-literal-patch codeHas43=true"
+      }
+    ],
+    "docs": [
+      "verify/SHA-ALIGN.md",
+      "verify/sha-align-verify.json",
+      "verify/logs/sha-anatomy/diff-anatomy.json"
+    ]
+  }
+}

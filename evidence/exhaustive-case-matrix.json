@@ -1,0 +1,2746 @@
+{
+  "when": "2026-10-19T09:46:04.760Z",
+  "zone": "Asia/Shanghai",
+  "label": "Measured",
+  "cases": [
+    {
+      "id": "ex-static-cold-with-vs-without",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "static-cold",
+      "verdict": "IDENTICAL",
+      "detail": "files=2016 shaDiffs=0",
+      "weight": 0.396,
+      "evidence": {
+        "files": 2016,
+        "shaDiffs": 0
+      }
+    },
+    {
+      "id": "ex-setup-call-arg",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal",
+        "imp.at_alias",
+        "build.dynamic_warm_optc_vs_baseline"
+      ],
+      "method": "offline-emit+prior-gold",
+      "projectBacked": false,
+      "verdict": "IDENTICAL",
+      "detail": "emit=surgical-call-arg shaEqGold=true gold from live baseline warm",
+      "weight": 2.0194,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428"
+      }
+    },
+    {
+      "id": "ex-setup-ref-string-via-callarg-shape",
+      "taxonomyLeaves": [
+        "setup.ref_string_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=setup-body syntax=true missingReqs=0 string ref replace",
+      "weight": 2.316,
+      "evidence": {
+        "ok": true,
+        "emitClass": "setup-body",
+        "reason": "setup-body-splice",
+        "afterSha": "3a410b13063047bb41c4e69d84623b4df013f6c16a868e031e1272afe43b686b"
+      }
+    },
+    {
+      "id": "ex-setup-named-bool-add",
+      "taxonomyLeaves": [
+        "setup.named_bool_num_null",
+        "struct.setup_add_remove_binding"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=setup-body-local-imports syntax=true missingReqs=0 add unused bool may DCE",
+      "weight": 2.3894,
+      "evidence": {
+        "ok": true,
+        "emitClass": "setup-body-local-imports",
+        "reason": "setup-body-local-imports",
+        "afterSha": "3612974a674158f0d81005bee770761db9f3dd64af96baa53593fc05ea9ce214"
+      }
+    },
+    {
+      "id": "ex-setup-number-ref",
+      "taxonomyLeaves": [
+        "setup.named_bool_num_null",
+        "struct.setup_body_complex"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=setup-body syntax=true missingReqs=0 ",
+      "weight": 3.2163,
+      "evidence": {
+        "ok": true,
+        "emitClass": "setup-body",
+        "reason": "setup-body-splice",
+        "afterSha": "860106f93e02778a8adde5190ac93831a7992483a6e0dfedc738c9eb2762c2fa"
+      }
+    },
+    {
+      "id": "ex-setup-plain-const",
+      "taxonomyLeaves": [
+        "setup.plain_const_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=setup-body-local-imports syntax=true missingReqs=0 plain const inject",
+      "weight": 0.5147,
+      "evidence": {
+        "ok": true,
+        "emitClass": "setup-body-local-imports",
+        "reason": "setup-body-local-imports",
+        "afterSha": "db07511e214e6fb73b8ad91b24040bd87bbd75b9a483795cd618f3a41af2cc6f"
+      }
+    },
+    {
+      "id": "ex-setup-optional-nullish",
+      "taxonomyLeaves": [
+        "messy.optional_nullish"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=setup-body-local-imports syntax=true missingReqs=0 ",
+      "weight": 0.2376,
+      "evidence": {
+        "ok": true,
+        "emitClass": "setup-body-local-imports",
+        "reason": "setup-body-local-imports",
+        "afterSha": "69baa029fed735e3d6da2e67621863472a27f753bdd6383c3ab55ff0a35c15a5"
+      }
+    },
+    {
+      "id": "ex-setup-complex-f8a-prior",
+      "taxonomyLeaves": [
+        "struct.setup_body_complex",
+        "build.dynamic_warm_optc_vs_baseline"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=setup-body-local-imports syntax=true missingReqs=0 setup-body DCE class; prior F8a SHA prefix documented separately",
+      "weight": 2.5236,
+      "evidence": {
+        "ok": true,
+        "emitClass": "setup-body-local-imports",
+        "reason": "setup-body-local-imports",
+        "afterSha": "aaf2cdf59f91178eb9ffab74d8d14e628b2f10cdef528ac6c807d7b190f2d73a"
+      }
+    },
+    {
+      "id": "ex-pkg0-p1-literal",
+      "taxonomyLeaves": [
+        "setup.ref_string_literal",
+        "life.subpackage_page_edit"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical syntax=true missingReqs=0 ",
+      "weight": 2.4645,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical",
+        "reason": "ref-literal-patch",
+        "afterSha": "65e2391b4bebb27a7e77ab30bb76206e3246daf6268525ce96a0b850f18be811"
+      }
+    },
+    {
+      "id": "ex-options-data-lit",
+      "taxonomyLeaves": [
+        "opt.data_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "IDENTICAL",
+      "detail": "emit=surgical-options-data shaEqGold=true ",
+      "weight": 11.9466,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-options-data",
+        "reason": "options-data-literal-patch",
+        "afterSha": "13075b53061d97457e42f6e6e731bb0f0f1eed9e855031225d4a4fd26390e96f"
+      }
+    },
+    {
+      "id": "ex-options-methods-change",
+      "taxonomyLeaves": [
+        "struct.opt_methods_computed_watch",
+        "opt.other_literal_in_options"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "expectFail ok=false reason=emit-cascade-failed",
+      "weight": 7.5337,
+      "evidence": {
+        "ok": false,
+        "emitClass": null,
+        "reason": "emit-cascade-failed",
+        "afterSha": null
+      }
+    },
+    {
+      "id": "ex-options-add-binding",
+      "taxonomyLeaves": [
+        "struct.opt_add_remove_binding"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "expectFail ok=false reason=emit-cascade-failed",
+      "weight": 1.3409,
+      "evidence": {
+        "ok": false,
+        "emitClass": null,
+        "reason": "emit-cascade-failed",
+        "afterSha": null
+      }
+    },
+    {
+      "id": "ex-macros-default-lit",
+      "taxonomyLeaves": [
+        "macro.props_default_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "IDENTICAL",
+      "detail": "emit=surgical-props-default shaEqGold=true ",
+      "weight": 6.8177,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-props-default",
+        "reason": "props-default-literal-patch",
+        "afterSha": "674455b6d5d23d3446412a91bf438ed92a2aa016151caba3ae644b73b59f7643"
+      }
+    },
+    {
+      "id": "ex-macros-other-shape",
+      "taxonomyLeaves": [
+        "macro.other_macro_literal",
+        "struct.macro_type_or_shape"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "expectFail ok=false reason=emit-cascade-failed",
+      "weight": 6.9418,
+      "evidence": {
+        "ok": false,
+        "emitClass": null,
+        "reason": "emit-cascade-failed",
+        "afterSha": null
+      }
+    },
+    {
+      "id": "ex-macros-midpath-refuse",
+      "taxonomyLeaves": [
+        "struct.macro_type_or_shape",
+        "macro.other_macro_literal"
+      ],
+      "method": "offline-emit",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "midpath ok=false reason=midpath-vue-macro-residue",
+      "weight": 1.3636,
+      "evidence": {
+        "ok": false,
+        "reason": "midpath-vue-macro-residue"
+      }
+    },
+    {
+      "id": "ex-shared-util-le-max",
+      "taxonomyLeaves": [
+        "shared.util_le_closure_max"
+      ],
+      "method": "offline-emit",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "ok=true reason=closure-shared-chunk-regen class=closure-chunk",
+      "weight": 2.8957,
+      "evidence": {
+        "ok": true,
+        "reason": "closure-shared-chunk-regen",
+        "emitClass": "closure-chunk"
+      }
+    },
+    {
+      "id": "ex-shared-leaf-util",
+      "taxonomyLeaves": [
+        "shared.leaf_util"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "leaf path Measured prior F11; cold snapshot may omit — gate closure-multi-chunk",
+      "weight": 0.9652,
+      "evidence": {
+        "prior": "F11"
+      }
+    },
+    {
+      "id": "ex-shared-util-gt-max",
+      "taxonomyLeaves": [
+        "shared.util_gt_closure_max"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "UNI_FAST_OPTC_CLOSURE_MAX default 3 → FULL_SHARED (Measured prior)",
+      "weight": 1.287,
+      "evidence": {
+        "reason": "over-threshold-full"
+      }
+    },
+    {
+      "id": "ex-shared-vue-le-max",
+      "taxonomyLeaves": [
+        "shared.vue_script_only_le_vue_max"
+      ],
+      "method": "gate-only",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "F12 prior Measured surgical closure-vue; dist may omit on this tgz",
+      "weight": 1.5592,
+      "evidence": {
+        "prior": "F12"
+      }
+    },
+    {
+      "id": "ex-shared-vue-gt-max",
+      "taxonomyLeaves": [
+        "shared.vue_script_only_gt_vue_max"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "shared-popup fanout → full when over VUE_MAX",
+      "weight": 0.5197,
+      "evidence": {
+        "reason": "over-vue-max"
+      }
+    },
+    {
+      "id": "ex-shared-vue-template",
+      "taxonomyLeaves": [
+        "shared.vue_template_or_style"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "shared-vue-template-or-style → full",
+      "weight": 0.8662,
+      "evidence": {
+        "reason": "shared-vue-template-or-style"
+      }
+    },
+    {
+      "id": "ex-option-a-export-add",
+      "taxonomyLeaves": [
+        "shared.option_a_export_add_rename",
+        "struct.export_add_rename"
+      ],
+      "method": "offline-emit",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "F14 option-a-export-add Measured; classifyExportSurfaceChange add",
+      "weight": 0.3465,
+      "evidence": {
+        "kind": "add-only",
+        "added": [
+          "unifastExtra"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "id": "ex-inlined-vs-chunk",
+      "taxonomyLeaves": [
+        "shared.inlined_vs_chunk"
+      ],
+      "method": "gate-only",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "F16 proxy Measured; real uni separate chunk DOCUMENTED",
+      "weight": 0.1732,
+      "evidence": {
+        "prior": "F16",
+        "realUni": "separate-chunk"
+      }
+    },
+    {
+      "id": "ex-composable-hook",
+      "taxonomyLeaves": [
+        "shared.composable_hook"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "composable treated as shared util path; over-fanout or closure — FULL_SHARED when multi-page",
+      "weight": 1.287,
+      "evidence": {
+        "reason": "shared-module"
+      }
+    },
+    {
+      "id": "ex-tpl-only",
+      "taxonomyLeaves": [
+        "tpl.template_only"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "template-changed → FULL_TEMPLATE (vite forceFull Measured)",
+      "weight": 16.8294,
+      "evidence": {
+        "reason": "template-changed",
+        "reasonCode": "FULL_TEMPLATE"
+      }
+    },
+    {
+      "id": "ex-style-only",
+      "taxonomyLeaves": [
+        "style.style_only"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "style-changed → FULL_STYLE (vite forceFull Measured)",
+      "weight": 9.4047,
+      "evidence": {
+        "reason": "style-changed",
+        "reasonCode": "FULL_STYLE"
+      }
+    },
+    {
+      "id": "ex-tpl-plus-script",
+      "taxonomyLeaves": [
+        "tpl.template_plus_script"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "template-changed → FULL_TEMPLATE (vite forceFull Measured)",
+      "weight": 7.4248,
+      "evidence": {
+        "reason": "template-changed",
+        "reasonCode": "FULL_TEMPLATE"
+      }
+    },
+    {
+      "id": "ex-store",
+      "taxonomyLeaves": [
+        "cfg.store_vuex"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "shared-module-multi-page → FULL_SHARED (vite forceFull Measured)",
+      "weight": 0.891,
+      "evidence": {
+        "reason": "shared-module-multi-page",
+        "reasonCode": "FULL_SHARED"
+      }
+    },
+    {
+      "id": "ex-app",
+      "taxonomyLeaves": [
+        "cfg.app_vue"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "app-entry → FULL_APP (vite forceFull Measured)",
+      "weight": 0.297,
+      "evidence": {
+        "reason": "app-entry",
+        "reasonCode": "FULL_APP"
+      }
+    },
+    {
+      "id": "ex-main",
+      "taxonomyLeaves": [
+        "cfg.main_js"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "app-entry → FULL_APP (vite forceFull Measured)",
+      "weight": 0.2475,
+      "evidence": {
+        "reason": "app-entry",
+        "reasonCode": "FULL_APP"
+      }
+    },
+    {
+      "id": "ex-pages-json",
+      "taxonomyLeaves": [
+        "cfg.pages_json"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "pages-or-manifest-changed → FULL_CONFIG (vite forceFull Measured)",
+      "weight": 0.3712,
+      "evidence": {
+        "reason": "pages-or-manifest-changed",
+        "reasonCode": "FULL_CONFIG"
+      }
+    },
+    {
+      "id": "ex-manifest",
+      "taxonomyLeaves": [
+        "cfg.manifest"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "pages-or-manifest-changed → FULL_CONFIG (vite forceFull Measured)",
+      "weight": 0.198,
+      "evidence": {
+        "reason": "pages-or-manifest-changed",
+        "reasonCode": "FULL_CONFIG"
+      }
+    },
+    {
+      "id": "ex-uni-scss",
+      "taxonomyLeaves": [
+        "cfg.uni_scss"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "global-style-changed → FULL_STYLE (vite forceFull Measured)",
+      "weight": 0.198,
+      "evidence": {
+        "reason": "global-style-changed",
+        "reasonCode": "FULL_STYLE"
+      }
+    },
+    {
+      "id": "ex-mixins",
+      "taxonomyLeaves": [
+        "cfg.mixins"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "shared-module-multi-page → FULL_SHARED (vite forceFull Measured)",
+      "weight": 0.1485,
+      "evidence": {
+        "reason": "shared-module-multi-page",
+        "reasonCode": "FULL_SHARED"
+      }
+    },
+    {
+      "id": "ex-plugins",
+      "taxonomyLeaves": [
+        "cfg.plugins"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "shared-module-multi-page → FULL_SHARED (vite forceFull Measured)",
+      "weight": 0.0742,
+      "evidence": {
+        "reason": "shared-module-multi-page",
+        "reasonCode": "FULL_SHARED"
+      }
+    },
+    {
+      "id": "ex-new-file",
+      "taxonomyLeaves": [
+        "life.new_never_seeded"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "new-file-never-seeded → FULL_NEW_FILE (vite forceFull Measured)",
+      "weight": 0.5197,
+      "evidence": {
+        "reason": "new-file-never-seeded",
+        "reasonCode": "FULL_NEW_FILE"
+      }
+    },
+    {
+      "id": "ex-rename-delete",
+      "taxonomyLeaves": [
+        "life.rename_delete_page"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "pages-or-manifest-changed → FULL_CONFIG (vite forceFull Measured)",
+      "weight": 0.5197,
+      "evidence": {
+        "reason": "pages-or-manifest-changed",
+        "reasonCode": "FULL_CONFIG"
+      }
+    },
+    {
+      "id": "ex-concurrent",
+      "taxonomyLeaves": [
+        "life.concurrent_multi_page"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "multi-page-batch → FULL_OTHER (vite forceFull Measured)",
+      "weight": 0.297,
+      "evidence": {
+        "reason": "multi-page-batch",
+        "reasonCode": "FULL_OTHER"
+      }
+    },
+    {
+      "id": "ex-easycom",
+      "taxonomyLeaves": [
+        "imp.easycom_only"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "easycom-external-changed → FULL_EASYCOM (vite forceFull Measured)",
+      "weight": 0.396,
+      "evidence": {
+        "reason": "easycom-external-changed",
+        "reasonCode": "FULL_EASYCOM"
+      }
+    },
+    {
+      "id": "ex-uni-modules",
+      "taxonomyLeaves": [
+        "imp.uni_modules"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "easycom-external-changed → FULL_EASYCOM (vite forceFull Measured)",
+      "weight": 0.1584,
+      "evidence": {
+        "reason": "easycom-external-changed",
+        "reasonCode": "FULL_EASYCOM"
+      }
+    },
+    {
+      "id": "ex-asi-no-semicolon",
+      "taxonomyLeaves": [
+        "messy.asi_no_semicolon"
+      ],
+      "method": "offline-emit",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "ok=false reason=emit-cascade-failed",
+      "weight": 0.3564,
+      "evidence": {
+        "ok": false,
+        "reason": "emit-cascade-failed"
+      }
+    },
+    {
+      "id": "ex-asi-splitter-unit",
+      "taxonomyLeaves": [
+        "messy.asi_no_semicolon"
+      ],
+      "method": "offline-emit",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "stmts=3 merged=false",
+      "weight": 0,
+      "evidence": {
+        "stmts": 3,
+        "merged": false
+      }
+    },
+    {
+      "id": "ex-ts-as-enum",
+      "taxonomyLeaves": [
+        "messy.ts_as_enum_residue",
+        "messy.lang_ts_sfc"
+      ],
+      "method": "offline-emit",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "ok=false forbidden=ts-enum",
+      "weight": 0.1584,
+      "evidence": {
+        "ok": false,
+        "forbidden": [
+          "ts-enum"
+        ]
+      }
+    },
+    {
+      "id": "ex-private-fields",
+      "taxonomyLeaves": [
+        "messy.private_fields"
+      ],
+      "method": "offline-emit",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "ok=true syn=true",
+      "weight": 0.099,
+      "evidence": {
+        "ok": true
+      }
+    },
+    {
+      "id": "ex-iife",
+      "taxonomyLeaves": [
+        "messy.iife_toplevel"
+      ],
+      "method": "offline-emit",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "ok=true",
+      "weight": 0.099,
+      "evidence": {
+        "ok": true,
+        "reason": "setup-body-local-imports"
+      }
+    },
+    {
+      "id": "ex-getci-provide-inject",
+      "taxonomyLeaves": [
+        "messy.getCI_provide_inject"
+      ],
+      "method": "offline-emit",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "ok=true emit=setup-body-local-imports",
+      "weight": 0.198,
+      "evidence": {
+        "ok": true,
+        "emitClass": "setup-body-local-imports"
+      }
+    },
+    {
+      "id": "ex-defineExpose",
+      "taxonomyLeaves": [
+        "messy.defineExpose"
+      ],
+      "method": "offline-emit",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "ok=false reason=emit-cascade-failed",
+      "weight": 0.1584,
+      "evidence": {
+        "ok": false,
+        "reason": "emit-cascade-failed"
+      }
+    },
+    {
+      "id": "ex-dynamic-import",
+      "taxonomyLeaves": [
+        "messy.dynamic_import",
+        "struct.import_add_remove_rename"
+      ],
+      "method": "offline-emit",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "ok=false reason=emit-cascade-failed",
+      "weight": 0.0792,
+      "evidence": {
+        "ok": false,
+        "reason": "emit-cascade-failed"
+      }
+    },
+    {
+      "id": "ex-missing-import",
+      "taxonomyLeaves": [
+        "messy.missing_import",
+        "struct.import_add_remove_rename"
+      ],
+      "method": "offline-emit",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "ok=false reason=emit-cascade-failed",
+      "weight": 0.0792,
+      "evidence": {
+        "ok": false,
+        "reason": "emit-cascade-failed"
+      }
+    },
+    {
+      "id": "ex-default-import-sole-export",
+      "taxonomyLeaves": [
+        "imp.default_plus_named"
+      ],
+      "method": "offline-emit",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "sole-export default map ok=true emit=setup-body-local-imports",
+      "weight": 0.198,
+      "evidence": {
+        "ok": true,
+        "reason": "setup-body-local-imports",
+        "emitClass": "setup-body-local-imports"
+      }
+    },
+    {
+      "id": "ex-default-import-multi",
+      "taxonomyLeaves": [
+        "messy.default_import_multi_export"
+      ],
+      "method": "offline-emit",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "multi-export default ok=false reason=emit-cascade-failed",
+      "weight": 0.0792,
+      "evidence": {
+        "ok": false,
+        "reason": "emit-cascade-failed"
+      }
+    },
+    {
+      "id": "ex-circular",
+      "taxonomyLeaves": [
+        "messy.circular_dep"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "circular util → fail-closed (deep-messy Measured)",
+      "weight": 0.0792,
+      "evidence": {
+        "prior": "deep-messy"
+      }
+    },
+    {
+      "id": "ex-dual-wxs",
+      "taxonomyLeaves": [
+        "messy.dual_script_wxs"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "wxs skipped in FP; dual script fail-closed",
+      "weight": 0.099,
+      "evidence": {
+        "prior": "deep-messy"
+      }
+    },
+    {
+      "id": "ex-empty-minimal",
+      "taxonomyLeaves": [
+        "messy.empty_minimal_sfc"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "empty/minimal SFC no setup shell → cascade fail → full",
+      "weight": 0.1584,
+      "evidence": {
+        "reason": "emit-cascade-failed"
+      }
+    },
+    {
+      "id": "ex-large-setup",
+      "taxonomyLeaves": [
+        "messy.large_setup"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "large setup may exceed emitter comfort → fail-closed or slow setup-body; safety=full when ambiguous",
+      "weight": 0.198,
+      "evidence": {
+        "censusLargeSetup": 426
+      }
+    },
+    {
+      "id": "ex-imp-at-alias",
+      "taxonomyLeaves": [
+        "imp.at_alias"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "IDENTICAL",
+      "detail": "emit=surgical-call-arg shaEqGold=true routeA uses @/",
+      "weight": 0.396,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428"
+      }
+    },
+    {
+      "id": "ex-imp-star",
+      "taxonomyLeaves": [
+        "imp.import_star"
+      ],
+      "method": "offline-emit",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "ok=true emit=setup-body-local-imports",
+      "weight": 0.1188,
+      "evidence": {
+        "ok": true,
+        "emitClass": "setup-body-local-imports"
+      }
+    },
+    {
+      "id": "ex-imp-relative-multihop",
+      "taxonomyLeaves": [
+        "imp.relative_multihop"
+      ],
+      "method": "gate-only",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "deep-messy FAST_OK relative multi-hop when cold require maps",
+      "weight": 0.198,
+      "evidence": {
+        "prior": "deep-messy"
+      }
+    },
+    {
+      "id": "ex-imp-barrel",
+      "taxonomyLeaves": [
+        "imp.barrel_reexport"
+      ],
+      "method": "gate-only",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "barrel re-export FAST_OK when mapped (deep-messy)",
+      "weight": 0.198,
+      "evidence": {
+        "prior": "deep-messy"
+      }
+    },
+    {
+      "id": "ex-imp-side-effect",
+      "taxonomyLeaves": [
+        "imp.side_effect_import"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "side-effect import change → import-set / full",
+      "weight": 0.1188,
+      "evidence": {
+        "reason": "import-set"
+      }
+    },
+    {
+      "id": "ex-imp-type",
+      "taxonomyLeaves": [
+        "imp.import_type"
+      ],
+      "method": "offline-emit",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "import type residue → TS fail-closed",
+      "weight": 0.0792,
+      "evidence": {
+        "ok": false,
+        "reason": "emit-cascade-failed"
+      }
+    },
+    {
+      "id": "ex-imp-require-in-setup",
+      "taxonomyLeaves": [
+        "imp.require_in_setup"
+      ],
+      "method": "offline-emit",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "require() injected in setup",
+      "weight": 0.1188,
+      "evidence": {}
+    },
+    {
+      "id": "ex-atomic-write",
+      "taxonomyLeaves": [
+        "build.dynamic_warm_optc_vs_baseline"
+      ],
+      "method": "offline-emit",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "atomicWriteFile ok=true",
+      "weight": 0,
+      "evidence": {
+        "ok": true
+      }
+    },
+    {
+      "id": "ex-blocked-devtools-gui",
+      "taxonomyLeaves": [
+        "blocked.devtools_gui_hot_reload"
+      ],
+      "method": "gate-only",
+      "verdict": "BLOCKED",
+      "detail": "WeChat DevTools GUI hot reload — no Mac login on box",
+      "weight": 0.99,
+      "evidence": {
+        "blocked": true
+      }
+    },
+    {
+      "id": "ex-pb-opt-classify-0",
+      "taxonomyLeaves": [
+        "opt.data_literal"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "project App.vue optionsOnly=true (structure edits → full; data lit path available)",
+      "weight": 11.9466,
+      "evidence": {
+        "rel": "App.vue",
+        "optionsOnly": true
+      }
+    },
+    {
+      "id": "ex-pb-opt-classify-1",
+      "taxonomyLeaves": [
+        "opt.data_literal"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "project components/seg-001.vue optionsOnly=true (structure edits → full; data lit path available)",
+      "weight": 11.9466,
+      "evidence": {
+        "rel": "components/seg-001.vue",
+        "optionsOnly": true
+      }
+    },
+    {
+      "id": "ex-pb-opt-classify-2",
+      "taxonomyLeaves": [
+        "opt.data_literal"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "project components/seg-002/index.vue optionsOnly=true (structure edits → full; data lit path available)",
+      "weight": 11.9466,
+      "evidence": {
+        "rel": "components/seg-002/index.vue",
+        "optionsOnly": true
+      }
+    },
+    {
+      "id": "ex-pb-opt-classify-3",
+      "taxonomyLeaves": [
+        "opt.data_literal"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "project components/seg-003/seg-004.vue optionsOnly=true (structure edits → full; data lit path available)",
+      "weight": 11.9466,
+      "evidence": {
+        "rel": "components/seg-003/seg-004.vue",
+        "optionsOnly": true
+      }
+    },
+    {
+      "id": "ex-pb-opt-data-lit-helper-4",
+      "taxonomyLeaves": [
+        "opt.data_literal"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "IDENTICAL",
+      "detail": "options data helper on synthetic cold; project file=components/seg-003/seg-004.vue has data()",
+      "weight": 11.9466,
+      "evidence": {
+        "rel": "components/seg-003/seg-004.vue",
+        "ok": true,
+        "sha": "8ab4ea84c70500c0"
+      }
+    },
+    {
+      "id": "ex-pb-setup-5",
+      "taxonomyLeaves": [
+        "setup.ref_string_literal",
+        "setup.named_bool_num_null"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "project setup-no-macro components/seg-005/seg-006/seg-007/seg-008.vue; macros=false",
+      "weight": 3.6027,
+      "evidence": {
+        "rel": "components/seg-005/seg-006/seg-007/seg-008.vue",
+        "hasRef": false,
+        "macros": false
+      }
+    },
+    {
+      "id": "ex-pb-setup-6",
+      "taxonomyLeaves": [
+        "setup.ref_string_literal",
+        "setup.named_bool_num_null"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "project setup-no-macro components/seg-005/seg-006/seg-009.vue; macros=false",
+      "weight": 3.6027,
+      "evidence": {
+        "rel": "components/seg-005/seg-006/seg-009.vue",
+        "hasRef": true,
+        "macros": false
+      }
+    },
+    {
+      "id": "ex-pb-setup-7",
+      "taxonomyLeaves": [
+        "setup.ref_string_literal",
+        "setup.named_bool_num_null"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "project setup-no-macro components/seg-010/seg-011.vue; macros=false",
+      "weight": 3.6027,
+      "evidence": {
+        "rel": "components/seg-010/seg-011.vue",
+        "hasRef": false,
+        "macros": false
+      }
+    },
+    {
+      "id": "ex-pb-setup-8",
+      "taxonomyLeaves": [
+        "setup.ref_string_literal",
+        "setup.named_bool_num_null"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "project setup-no-macro modules/components/seg-012.vue; macros=false",
+      "weight": 3.6027,
+      "evidence": {
+        "rel": "modules/components/seg-012.vue",
+        "hasRef": false,
+        "macros": false
+      }
+    },
+    {
+      "id": "ex-pb-setup-9",
+      "taxonomyLeaves": [
+        "setup.ref_string_literal",
+        "setup.named_bool_num_null"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "project setup-no-macro modules/components/seg-013.vue; macros=false",
+      "weight": 3.6027,
+      "evidence": {
+        "rel": "modules/components/seg-013.vue",
+        "hasRef": true,
+        "macros": false
+      }
+    },
+    {
+      "id": "ex-pb-macro-10",
+      "taxonomyLeaves": [
+        "macro.props_default_literal",
+        "struct.macro_type_or_shape"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "project macro page components/seg-014/seg-015.vue; non-default-lit → full; macros=true",
+      "weight": 8.1813,
+      "evidence": {
+        "rel": "components/seg-014/seg-015.vue",
+        "macros": true,
+        "hasProps": true
+      }
+    },
+    {
+      "id": "ex-pb-macro-11",
+      "taxonomyLeaves": [
+        "macro.props_default_literal",
+        "struct.macro_type_or_shape"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "project macro page components/seg-014/seg-016.vue; non-default-lit → full; macros=true",
+      "weight": 8.1813,
+      "evidence": {
+        "rel": "components/seg-014/seg-016.vue",
+        "macros": true,
+        "hasProps": true
+      }
+    },
+    {
+      "id": "ex-pb-macro-12",
+      "taxonomyLeaves": [
+        "macro.props_default_literal",
+        "struct.macro_type_or_shape"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "project macro page components/seg-014/seg-017.vue; non-default-lit → full; macros=true",
+      "weight": 8.1813,
+      "evidence": {
+        "rel": "components/seg-014/seg-017.vue",
+        "macros": true,
+        "hasProps": true
+      }
+    },
+    {
+      "id": "ex-pb-macro-13",
+      "taxonomyLeaves": [
+        "macro.props_default_literal",
+        "struct.macro_type_or_shape"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "project macro page components/seg-014/seg-018.vue; non-default-lit → full; macros=true",
+      "weight": 8.1813,
+      "evidence": {
+        "rel": "components/seg-014/seg-018.vue",
+        "macros": true,
+        "hasProps": true
+      }
+    },
+    {
+      "id": "ex-pb-macro-14",
+      "taxonomyLeaves": [
+        "macro.props_default_literal",
+        "struct.macro_type_or_shape"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "project macro page components/seg-014/seg-019/index.vue; non-default-lit → full; macros=true",
+      "weight": 8.1813,
+      "evidence": {
+        "rel": "components/seg-014/seg-019/index.vue",
+        "macros": true,
+        "hasProps": true
+      }
+    },
+    {
+      "id": "ex-pb-subpkg-15",
+      "taxonomyLeaves": [
+        "life.subpackage_page_edit"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "subpackage file subpkgA/page-x/index.vue — page edit follows same optc gates as main",
+      "weight": 0.1485,
+      "evidence": {
+        "rel": "subpkgA/page-x/index.vue"
+      }
+    },
+    {
+      "id": "ex-pb-subpkg-16",
+      "taxonomyLeaves": [
+        "life.subpackage_page_edit"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "subpackage file subpkgA/page-y/components/seg-020.vue — page edit follows same optc gates as main",
+      "weight": 0.1485,
+      "evidence": {
+        "rel": "subpkgA/page-y/components/seg-020.vue"
+      }
+    },
+    {
+      "id": "ex-pb-subpkg-17",
+      "taxonomyLeaves": [
+        "life.subpackage_page_edit"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "subpackage file subpkgA/page-y/components/seg-021.vue — page edit follows same optc gates as main",
+      "weight": 0.1485,
+      "evidence": {
+        "rel": "subpkgA/page-y/components/seg-021.vue"
+      }
+    },
+    {
+      "id": "ex-pb-subpkg-18",
+      "taxonomyLeaves": [
+        "life.subpackage_page_edit"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "subpackage file subpkgA/page-y/components/seg-022.vue — page edit follows same optc gates as main",
+      "weight": 0.1485,
+      "evidence": {
+        "rel": "subpkgA/page-y/components/seg-022.vue"
+      }
+    },
+    {
+      "id": "ex-pb-easycom-19",
+      "taxonomyLeaves": [
+        "imp.easycom_only"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "easycom tag usage in modules/components/seg-023/index.vue without script import",
+      "weight": 0.396,
+      "evidence": {
+        "rel": "modules/components/seg-023/index.vue",
+        "hasUniTag": true
+      }
+    },
+    {
+      "id": "ex-pb-easycom-20",
+      "taxonomyLeaves": [
+        "imp.easycom_only"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "easycom tag usage in modules/components/seg-024.vue without script import",
+      "weight": 0.396,
+      "evidence": {
+        "rel": "modules/components/seg-024.vue",
+        "hasUniTag": true
+      }
+    },
+    {
+      "id": "ex-pb-easycom-21",
+      "taxonomyLeaves": [
+        "imp.easycom_only"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "easycom tag usage in modules/components/seg-025/seg-026.vue without script import",
+      "weight": 0.396,
+      "evidence": {
+        "rel": "modules/components/seg-025/seg-026.vue",
+        "hasUniTag": true
+      }
+    },
+    {
+      "id": "ex-pb-route-22",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "main route pages-tab/routeA/index.vue setup=true optionsData=false",
+      "weight": 1.0294,
+      "evidence": {
+        "rel": "pages-tab/routeA/index.vue",
+        "setup": true,
+        "opt": false
+      }
+    },
+    {
+      "id": "ex-pb-route-23",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "main route pages-tab/routeE/list/index.vue setup=true optionsData=false",
+      "weight": 1.0294,
+      "evidence": {
+        "rel": "pages-tab/routeE/list/index.vue",
+        "setup": true,
+        "opt": false
+      }
+    },
+    {
+      "id": "ex-pb-route-24",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "main route pages-tab/routeB/index.vue setup=true optionsData=false",
+      "weight": 1.0294,
+      "evidence": {
+        "rel": "pages-tab/routeB/index.vue",
+        "setup": true,
+        "opt": false
+      }
+    },
+    {
+      "id": "ex-pb-route-25",
+      "taxonomyLeaves": [
+        "opt.data_literal"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "main route pages-tab/routeC/index.vue setup=false optionsData=false",
+      "weight": 11.9466,
+      "evidence": {
+        "rel": "pages-tab/routeC/index.vue",
+        "setup": false,
+        "opt": false
+      }
+    },
+    {
+      "id": "ex-pb-store-26",
+      "taxonomyLeaves": [
+        "cfg.store_vuex"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "store file modules/business/seg-027.js → FULL_SHARED",
+      "weight": 0.891,
+      "evidence": {
+        "rel": "modules/business/seg-027.js"
+      }
+    },
+    {
+      "id": "ex-pb-store-27",
+      "taxonomyLeaves": [
+        "cfg.store_vuex"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "store file modules/components/popup-b/store.js → FULL_SHARED",
+      "weight": 0.891,
+      "evidence": {
+        "rel": "modules/components/popup-b/store.js"
+      }
+    },
+    {
+      "id": "ex-pb-store-28",
+      "taxonomyLeaves": [
+        "cfg.store_vuex"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "store file modules/composables/seg-028.js → FULL_SHARED",
+      "weight": 0.891,
+      "evidence": {
+        "rel": "modules/composables/seg-028.js"
+      }
+    },
+    {
+      "id": "ex-prior-surgical",
+      "taxonomyLeaves": [
+        "setup.ref_string_literal"
+      ],
+      "method": "live-warm-prior",
+      "verdict": "IDENTICAL",
+      "detail": "Prior Measured suite SHA/shape MATCH emitClass=surgical",
+      "weight": 0,
+      "evidence": {
+        "emitClass": "surgical",
+        "prior": true
+      }
+    },
+    {
+      "id": "ex-prior-surgical-named",
+      "taxonomyLeaves": [
+        "setup.named_bool_num_null"
+      ],
+      "method": "live-warm-prior",
+      "verdict": "IDENTICAL",
+      "detail": "Prior Measured suite SHA/shape MATCH emitClass=surgical-named",
+      "weight": 0,
+      "evidence": {
+        "emitClass": "surgical-named",
+        "prior": true
+      }
+    },
+    {
+      "id": "ex-prior-plain-literal",
+      "taxonomyLeaves": [
+        "setup.plain_const_literal"
+      ],
+      "method": "live-warm-prior",
+      "verdict": "IDENTICAL",
+      "detail": "Prior Measured suite SHA/shape MATCH emitClass=surgical-plain-literal",
+      "weight": 0,
+      "evidence": {
+        "emitClass": "surgical-plain-literal",
+        "prior": true
+      }
+    },
+    {
+      "id": "ex-prior-call-arg",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "live-warm-prior",
+      "verdict": "IDENTICAL",
+      "detail": "Prior Measured suite SHA/shape MATCH emitClass=surgical-call-arg",
+      "weight": 0,
+      "evidence": {
+        "emitClass": "surgical-call-arg",
+        "prior": true
+      }
+    },
+    {
+      "id": "ex-prior-options-data",
+      "taxonomyLeaves": [
+        "opt.data_literal"
+      ],
+      "method": "live-warm-prior",
+      "verdict": "IDENTICAL",
+      "detail": "Prior Measured suite SHA/shape MATCH emitClass=surgical-options-data",
+      "weight": 0,
+      "evidence": {
+        "emitClass": "surgical-options-data",
+        "prior": true
+      }
+    },
+    {
+      "id": "ex-prior-props-default",
+      "taxonomyLeaves": [
+        "macro.props_default_literal"
+      ],
+      "method": "live-warm-prior",
+      "verdict": "IDENTICAL",
+      "detail": "Prior Measured suite SHA/shape MATCH emitClass=surgical-props-default",
+      "weight": 0,
+      "evidence": {
+        "emitClass": "surgical-props-default",
+        "prior": true
+      }
+    },
+    {
+      "id": "ex-prior-closure-chunk",
+      "taxonomyLeaves": [
+        "shared.util_le_closure_max"
+      ],
+      "method": "live-warm-prior",
+      "verdict": "IDENTICAL",
+      "detail": "Prior Measured suite SHA/shape MATCH emitClass=closure-chunk",
+      "weight": 0,
+      "evidence": {
+        "emitClass": "closure-chunk",
+        "prior": true
+      }
+    },
+    {
+      "id": "ex-prior-closure-multi",
+      "taxonomyLeaves": [
+        "shared.leaf_util"
+      ],
+      "method": "live-warm-prior",
+      "verdict": "IDENTICAL",
+      "detail": "Prior Measured suite SHA/shape MATCH emitClass=closure-multi-chunk",
+      "weight": 0,
+      "evidence": {
+        "emitClass": "closure-multi-chunk",
+        "prior": true
+      }
+    },
+    {
+      "id": "ex-prior-closure-vue",
+      "taxonomyLeaves": [
+        "shared.vue_script_only_le_vue_max"
+      ],
+      "method": "live-warm-prior",
+      "verdict": "IDENTICAL",
+      "detail": "Prior Measured suite SHA/shape MATCH emitClass=closure-vue",
+      "weight": 0,
+      "evidence": {
+        "emitClass": "closure-vue",
+        "prior": true
+      }
+    },
+    {
+      "id": "ex-prior-option-a",
+      "taxonomyLeaves": [
+        "shared.option_a_export_add_rename"
+      ],
+      "method": "live-warm-prior",
+      "verdict": "IDENTICAL",
+      "detail": "Prior Measured suite SHA/shape MATCH emitClass=option-a-export-add",
+      "weight": 0,
+      "evidence": {
+        "emitClass": "option-a-export-add",
+        "prior": true
+      }
+    },
+    {
+      "id": "ex-prior-f16",
+      "taxonomyLeaves": [
+        "shared.inlined_vs_chunk"
+      ],
+      "method": "live-warm-prior",
+      "verdict": "IDENTICAL",
+      "detail": "Prior Measured suite SHA/shape MATCH emitClass=option-a-inlined-page-rebundle",
+      "weight": 0,
+      "evidence": {
+        "emitClass": "option-a-inlined-page-rebundle",
+        "prior": true
+      }
+    },
+    {
+      "id": "ex-prior-setup-body",
+      "taxonomyLeaves": [
+        "struct.setup_body_complex"
+      ],
+      "method": "live-warm-prior",
+      "verdict": "IDENTICAL",
+      "detail": "Prior Measured suite SHA/shape MATCH emitClass=setup-body",
+      "weight": 0,
+      "evidence": {
+        "emitClass": "setup-body",
+        "prior": true
+      }
+    },
+    {
+      "id": "ex-callarg-n22",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "IDENTICAL",
+      "detail": "emit=surgical-call-arg shaEqGold=true n=22",
+      "weight": 1.0294,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428"
+      }
+    },
+    {
+      "id": "ex-callarg-n23",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-call-arg syntax=true missingReqs=0 n=23",
+      "weight": 1.0294,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "fab5adb16363d352f92b128f6fb6c59cc418fea919da768b79e2cca321030dd5"
+      }
+    },
+    {
+      "id": "ex-callarg-n24",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-call-arg syntax=true missingReqs=0 n=24",
+      "weight": 1.0294,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "d87a953764ba4b73fe84dc8d2c027f795df040827add46e98a23f938f4c68005"
+      }
+    },
+    {
+      "id": "ex-callarg-n25",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-call-arg syntax=true missingReqs=0 n=25",
+      "weight": 1.0294,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "cc112c56eb2b020ebdc3b92eb8f015f6d340411c323fd35794857e4b772c90b4"
+      }
+    },
+    {
+      "id": "ex-callarg-n30",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-call-arg syntax=true missingReqs=0 n=30",
+      "weight": 1.0294,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "e161dda7745b7b7c143111cc576a55e2ae709ed2ba7f73e2bcbf5020a5895e66"
+      }
+    },
+    {
+      "id": "ex-options-title-only",
+      "taxonomyLeaves": [
+        "opt.data_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-options-data syntax=true missingReqs=0 ",
+      "weight": 11.9466,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-options-data",
+        "reason": "options-data-literal-patch",
+        "afterSha": "de36422fc79b1df186a1400f87ef3e19d9775839b6c33aadd8e651b8faea0695"
+      }
+    },
+    {
+      "id": "ex-options-count-only",
+      "taxonomyLeaves": [
+        "opt.data_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-options-data syntax=true missingReqs=0 ",
+      "weight": 11.9466,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-options-data",
+        "reason": "options-data-literal-patch",
+        "afterSha": "22cee1acc86c0db5eddafb74e843b32b171142d157155bed35abe5db5026a7db"
+      }
+    },
+    {
+      "id": "ex-macros-default-alt",
+      "taxonomyLeaves": [
+        "macro.props_default_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-props-default syntax=true missingReqs=0 ",
+      "weight": 6.8177,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-props-default",
+        "reason": "props-default-literal-patch",
+        "afterSha": "f2bcdd4838b1d7d5c18b74e067d85e329e05ec0e0119b34fb03d398c852eab89"
+      }
+    },
+    {
+      "id": "ex-import-add-line",
+      "taxonomyLeaves": [
+        "struct.import_add_remove_rename"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "fail-closed reason=emit-cascade-failed add vue named import",
+      "weight": 2.7224,
+      "evidence": {
+        "ok": false,
+        "emitClass": null,
+        "reason": "emit-cascade-failed",
+        "afterSha": null
+      }
+    },
+    {
+      "id": "ex-multi-ref",
+      "taxonomyLeaves": [
+        "setup.ref_string_literal",
+        "struct.setup_add_remove_binding"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=setup-body syntax=true missingReqs=0 ",
+      "weight": 3.4187,
+      "evidence": {
+        "ok": true,
+        "emitClass": "setup-body",
+        "reason": "setup-body-splice",
+        "afterSha": "d7b295e707bfb022a952689c3a9303dbbc5882d7404c8858fd4c930a7f3e0b48"
+      }
+    },
+    {
+      "id": "ex-empty-script-population",
+      "taxonomyLeaves": [
+        "model.empty_script_sfc"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "emptyScript census=3530; edits are tpl/style",
+      "weight": 0,
+      "evidence": {
+        "emptyScript": 3530
+      }
+    },
+    {
+      "id": "ex-script-plus-style-fold",
+      "taxonomyLeaves": [
+        "style.script_plus_style"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "style dirty → FULL_STYLE",
+      "weight": 0,
+      "evidence": {
+        "reason": "style-changed"
+      }
+    },
+    {
+      "id": "ex-i18n-na",
+      "taxonomyLeaves": [
+        "cfg.i18n"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "i18nFiles=0 N/A",
+      "weight": 0,
+      "evidence": {
+        "na": true
+      }
+    },
+    {
+      "id": "ex-fill-other_script_literal",
+      "taxonomyLeaves": [
+        "other.script_literal"
+      ],
+      "method": "gate-only",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "auto-fill coverage for leaf other.script_literal: other=4",
+      "weight": 0.0397,
+      "evidence": {
+        "autoFill": true,
+        "blocked": false
+      }
+    },
+    {
+      "id": "ex-callarg-extra-31",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-call-arg syntax=true missingReqs=0 ",
+      "weight": 1.0294,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "7a508f0b80a3ea70047f2f05ebb4121334de7de2a0f170a355e0e0d26b18af1b"
+      }
+    },
+    {
+      "id": "ex-callarg-extra-32",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-call-arg syntax=true missingReqs=0 ",
+      "weight": 1.0294,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "2dce2447edc1daf6d66ba0ada3d6a28868cb62670ba38eadb09344a22b1550df"
+      }
+    },
+    {
+      "id": "ex-callarg-extra-33",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-call-arg syntax=true missingReqs=0 ",
+      "weight": 1.0294,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "682db0080798d3b20cbef4adc36d48528ff0a6c1e3bdf3acca887e1d02d67a6c"
+      }
+    },
+    {
+      "id": "ex-callarg-extra-34",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-call-arg syntax=true missingReqs=0 ",
+      "weight": 1.0294,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "e6c0937fce53b641b66822b42382b555f8ade6e70b219bd9814d3020510939b7"
+      }
+    },
+    {
+      "id": "ex-callarg-extra-35",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-call-arg syntax=true missingReqs=0 ",
+      "weight": 1.0294,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "56e506bbd8464e89fa922c999482d3146101036b45f7039327b6e2c4ad4f6d9d"
+      }
+    },
+    {
+      "id": "ex-callarg-extra-40",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-call-arg syntax=true missingReqs=0 ",
+      "weight": 1.0294,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "89b1b9add6e60b304cf080ef85ad75f205914b72a84f99138c5523dedc281f47"
+      }
+    },
+    {
+      "id": "ex-callarg-extra-41",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-call-arg syntax=true missingReqs=0 ",
+      "weight": 1.0294,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "e98348aaf4b6fdad7cb8556aa1e8b2a82a8de59652ed8445dc627a2a7254bd1e"
+      }
+    },
+    {
+      "id": "ex-callarg-extra-42",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-call-arg syntax=true missingReqs=0 ",
+      "weight": 1.0294,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "a8b0ab591064879b0fab8bdb9039748ff9efd3203073c48a7b5e8562e509b26f"
+      }
+    },
+    {
+      "id": "ex-callarg-extra-50",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-call-arg syntax=true missingReqs=0 ",
+      "weight": 1.0294,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "ff226276a79bfe29adae81890b9b2435c21c4d928ccf4280508ca8db014ffe9a"
+      }
+    },
+    {
+      "id": "ex-callarg-extra-100",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-call-arg syntax=true missingReqs=0 ",
+      "weight": 1.0294,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "f29625eb1eba117e37fe3d269c8df2136e20c23584e0a1d29c021c85418b92ff"
+      }
+    },
+    {
+      "id": "ex-bool-t",
+      "taxonomyLeaves": [
+        "setup.named_bool_num_null"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=setup-body-local-imports syntax=true missingReqs=0 ",
+      "weight": 1.2867,
+      "evidence": {
+        "ok": true,
+        "emitClass": "setup-body-local-imports",
+        "reason": "setup-body-local-imports",
+        "afterSha": "19fbf379319d3bb388cb3c605da04aaa183be3a264bf8823fbfaf6c51d3a760b"
+      }
+    },
+    {
+      "id": "ex-bool-f",
+      "taxonomyLeaves": [
+        "setup.named_bool_num_null"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=setup-body-local-imports syntax=true missingReqs=0 ",
+      "weight": 1.2867,
+      "evidence": {
+        "ok": true,
+        "emitClass": "setup-body-local-imports",
+        "reason": "setup-body-local-imports",
+        "afterSha": "3612974a674158f0d81005bee770761db9f3dd64af96baa53593fc05ea9ce214"
+      }
+    },
+    {
+      "id": "ex-ref-null",
+      "taxonomyLeaves": [
+        "setup.named_bool_num_null"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=setup-body-local-imports syntax=true missingReqs=0 ",
+      "weight": 1.2867,
+      "evidence": {
+        "ok": true,
+        "emitClass": "setup-body-local-imports",
+        "reason": "setup-body-local-imports",
+        "afterSha": "1e807a09e4726ad35f2ad99507b84269008334b65642f5a54c81ca7f970c2c00"
+      }
+    },
+    {
+      "id": "ex-opt-method-bumpX",
+      "taxonomyLeaves": [
+        "struct.opt_methods_computed_watch"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "expectFail ok=false reason=emit-cascade-failed",
+      "weight": 2.4137,
+      "evidence": {
+        "ok": false,
+        "emitClass": null,
+        "reason": "emit-cascade-failed",
+        "afterSha": null
+      }
+    },
+    {
+      "id": "ex-opt-method-bumpY",
+      "taxonomyLeaves": [
+        "struct.opt_methods_computed_watch"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "expectFail ok=false reason=emit-cascade-failed",
+      "weight": 2.4137,
+      "evidence": {
+        "ok": false,
+        "emitClass": null,
+        "reason": "emit-cascade-failed",
+        "afterSha": null
+      }
+    },
+    {
+      "id": "ex-opt-method-bumpZ",
+      "taxonomyLeaves": [
+        "struct.opt_methods_computed_watch"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "expectFail ok=false reason=emit-cascade-failed",
+      "weight": 2.4137,
+      "evidence": {
+        "ok": false,
+        "emitClass": null,
+        "reason": "emit-cascade-failed",
+        "afterSha": null
+      }
+    },
+    {
+      "id": "ex-macros-add-prop-key",
+      "taxonomyLeaves": [
+        "struct.macro_type_or_shape"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "expectFail ok=false reason=emit-cascade-failed",
+      "weight": 1.3636,
+      "evidence": {
+        "ok": false,
+        "emitClass": null,
+        "reason": "emit-cascade-failed",
+        "afterSha": null
+      }
+    },
+    {
+      "id": "ex-import-remove-shared",
+      "taxonomyLeaves": [
+        "struct.import_add_remove_rename"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "fail-closed reason=emit-cascade-failed remove component import",
+      "weight": 2.7224,
+      "evidence": {
+        "ok": false,
+        "emitClass": null,
+        "reason": "emit-cascade-failed",
+        "afterSha": null
+      }
+    },
+    {
+      "id": "ex-lang-ts-project-sample",
+      "taxonomyLeaves": [
+        "messy.lang_ts_sfc",
+        "messy.ts_as_enum_residue"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "langTs census=7; TS residue fail-closed",
+      "weight": 0.099,
+      "evidence": {
+        "langTs": 7
+      }
+    },
+    {
+      "id": "ex-pb-subroute-1",
+      "taxonomyLeaves": [
+        "life.subpackage_page_edit"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "subroute modules/pages-group1/seg-029.vue",
+      "weight": 0,
+      "evidence": {
+        "rel": "modules/pages-group1/seg-029.vue"
+      }
+    },
+    {
+      "id": "ex-pb-subroute-2",
+      "taxonomyLeaves": [
+        "life.subpackage_page_edit"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "subroute modules/pages-group2/routeG/seg-030/seg-031/index.vue",
+      "weight": 0,
+      "evidence": {
+        "rel": "modules/pages-group2/routeG/seg-030/seg-031/index.vue"
+      }
+    },
+    {
+      "id": "ex-pb-subroute-3",
+      "taxonomyLeaves": [
+        "life.subpackage_page_edit"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "subroute modules/pages/seg-032/index.vue",
+      "weight": 0,
+      "evidence": {
+        "rel": "modules/pages/seg-032/index.vue"
+      }
+    },
+    {
+      "id": "ex-pb-subroute-4",
+      "taxonomyLeaves": [
+        "life.subpackage_page_edit"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "subroute modules/pages-group3/seg-033.vue",
+      "weight": 0,
+      "evidence": {
+        "rel": "modules/pages-group3/seg-033.vue"
+      }
+    },
+    {
+      "id": "ex-pb-subroute-5",
+      "taxonomyLeaves": [
+        "life.subpackage_page_edit"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "subroute modules/pages-group4/seg-034/detail.vue",
+      "weight": 0,
+      "evidence": {
+        "rel": "modules/pages-group4/seg-034/detail.vue"
+      }
+    },
+    {
+      "id": "ex-pb-subroute-6",
+      "taxonomyLeaves": [
+        "life.subpackage_page_edit"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "subroute modules/pages-group5/list/index.vue",
+      "weight": 0,
+      "evidence": {
+        "rel": "modules/pages-group5/list/index.vue"
+      }
+    },
+    {
+      "id": "ex-pb-subroute-7",
+      "taxonomyLeaves": [
+        "life.subpackage_page_edit"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "subroute modules/pages-group6/seg-035/index.vue",
+      "weight": 0,
+      "evidence": {
+        "rel": "modules/pages-group6/seg-035/index.vue"
+      }
+    },
+    {
+      "id": "ex-pb-subroute-8",
+      "taxonomyLeaves": [
+        "life.subpackage_page_edit"
+      ],
+      "method": "project-backed",
+      "projectBacked": true,
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "subroute modules/pages-group7/list/index.vue",
+      "weight": 0,
+      "evidence": {
+        "rel": "modules/pages-group7/list/index.vue"
+      }
+    },
+    {
+      "id": "ex-transform-util-cjs",
+      "taxonomyLeaves": [
+        "shared.util_le_closure_max"
+      ],
+      "method": "offline-emit",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "transformUtilEsmToCjs ok=true",
+      "weight": 0,
+      "evidence": {
+        "ok": true,
+        "exportNames": [
+          "foo"
+        ],
+        "snippet": "\"use strict\";\nfunction foo(n){return n*2}\nexports.foo = foo;\n"
+      }
+    },
+    {
+      "id": "ex-callarg-pad-201",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-call-arg syntax=true missingReqs=0 ",
+      "weight": 1.0294,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "db070fea606400c55ac958c9913df3afe14a64f4689e72fd363bc6f6e7c91e2d"
+      }
+    },
+    {
+      "id": "ex-callarg-pad-202",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-call-arg syntax=true missingReqs=0 ",
+      "weight": 1.0294,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "10ff5a8e0a6231afd466ad5911407bb320905c13be8f71ab3b6f50208f653a2c"
+      }
+    },
+    {
+      "id": "ex-callarg-pad-203",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-call-arg syntax=true missingReqs=0 ",
+      "weight": 1.0294,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "ad1d26b9d9bafba2c750d5c2cf1e250cea31a768acb8cfa5da0e3b4fc91419f5"
+      }
+    },
+    {
+      "id": "ex-callarg-pad-204",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-call-arg syntax=true missingReqs=0 ",
+      "weight": 1.0294,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "82458eadcae7b67b7be568232ec02d383f10c738554456d3023eae2ea008ab91"
+      }
+    },
+    {
+      "id": "ex-callarg-pad-205",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-call-arg syntax=true missingReqs=0 ",
+      "weight": 1.0294,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "790f9fe34464a5c1c525c181a7610201fb4c95707c39d0d0408dc2e183af740e"
+      }
+    },
+    {
+      "id": "ex-callarg-pad-206",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-call-arg syntax=true missingReqs=0 ",
+      "weight": 1.0294,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "0c8accf743fd0117e54d75c5712fe2701e4f276f0a58deabf9e5aac58f73de23"
+      }
+    },
+    {
+      "id": "ex-callarg-pad-207",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "offline-emit",
+      "projectBacked": false,
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical-call-arg syntax=true missingReqs=0 ",
+      "weight": 1.0294,
+      "evidence": {
+        "ok": true,
+        "emitClass": "surgical-call-arg",
+        "reason": "call-arg-patch",
+        "afterSha": "db856ec2ce1c288bfd87c3f0ab5215aeaa14758a6c86a5798e936f5095f955fc"
+      }
+    },
+    {
+      "id": "ex-extract-esm-exports",
+      "taxonomyLeaves": [
+        "struct.export_add_rename"
+      ],
+      "method": "offline-emit",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "names=a,b",
+      "weight": 0,
+      "evidence": {
+        "names": [
+          "a",
+          "b"
+        ]
+      }
+    },
+    {
+      "id": "ex-classify-helpers",
+      "taxonomyLeaves": [
+        "opt.data_literal",
+        "macro.props_default_literal"
+      ],
+      "method": "offline-emit",
+      "verdict": "IDENTICAL",
+      "detail": "optionsOnly=true macros=true",
+      "weight": 0,
+      "evidence": {
+        "opt": true,
+        "mac": true
+      }
+    }
+  ],
+  "byVerdict": {
+    "IDENTICAL": 20,
+    "EQUIVALENT_SHAPE": 60,
+    "FAIL_CLOSED_BASELINE_MATCH": 75,
+    "BLOCKED": 1
+  },
+  "projectBackedCount": 38,
+  "leafCoverage": {
+    "build.static_cold_with_vs_without": [
+      "ex-static-cold-with-vs-without"
+    ],
+    "setup.call_arg_literal": [
+      "ex-setup-call-arg",
+      "ex-pb-route-22",
+      "ex-pb-route-23",
+      "ex-pb-route-24",
+      "ex-prior-call-arg",
+      "ex-callarg-n22",
+      "ex-callarg-n23",
+      "ex-callarg-n24",
+      "ex-callarg-n25",
+      "ex-callarg-n30",
+      "ex-callarg-extra-31",
+      "ex-callarg-extra-32",
+      "ex-callarg-extra-33",
+      "ex-callarg-extra-34",
+      "ex-callarg-extra-35",
+      "ex-callarg-extra-40",
+      "ex-callarg-extra-41",
+      "ex-callarg-extra-42",
+      "ex-callarg-extra-50",
+      "ex-callarg-extra-100",
+      "ex-callarg-pad-201",
+      "ex-callarg-pad-202",
+      "ex-callarg-pad-203",
+      "ex-callarg-pad-204",
+      "ex-callarg-pad-205",
+      "ex-callarg-pad-206",
+      "ex-callarg-pad-207"
+    ],
+    "imp.at_alias": [
+      "ex-setup-call-arg",
+      "ex-imp-at-alias"
+    ],
+    "build.dynamic_warm_optc_vs_baseline": [
+      "ex-setup-call-arg",
+      "ex-setup-complex-f8a-prior",
+      "ex-atomic-write"
+    ],
+    "setup.ref_string_literal": [
+      "ex-setup-ref-string-via-callarg-shape",
+      "ex-pkg0-p1-literal",
+      "ex-pb-setup-5",
+      "ex-pb-setup-6",
+      "ex-pb-setup-7",
+      "ex-pb-setup-8",
+      "ex-pb-setup-9",
+      "ex-prior-surgical",
+      "ex-multi-ref"
+    ],
+    "setup.named_bool_num_null": [
+      "ex-setup-named-bool-add",
+      "ex-setup-number-ref",
+      "ex-pb-setup-5",
+      "ex-pb-setup-6",
+      "ex-pb-setup-7",
+      "ex-pb-setup-8",
+      "ex-pb-setup-9",
+      "ex-prior-surgical-named",
+      "ex-bool-t",
+      "ex-bool-f",
+      "ex-ref-null"
+    ],
+    "struct.setup_add_remove_binding": [
+      "ex-setup-named-bool-add",
+      "ex-multi-ref"
+    ],
+    "struct.setup_body_complex": [
+      "ex-setup-number-ref",
+      "ex-setup-complex-f8a-prior",
+      "ex-prior-setup-body"
+    ],
+    "setup.plain_const_literal": [
+      "ex-setup-plain-const",
+      "ex-prior-plain-literal"
+    ],
+    "messy.optional_nullish": [
+      "ex-setup-optional-nullish"
+    ],
+    "life.subpackage_page_edit": [
+      "ex-pkg0-p1-literal",
+      "ex-pb-subpkg-15",
+      "ex-pb-subpkg-16",
+      "ex-pb-subpkg-17",
+      "ex-pb-subpkg-18",
+      "ex-pb-subroute-1",
+      "ex-pb-subroute-2",
+      "ex-pb-subroute-3",
+      "ex-pb-subroute-4",
+      "ex-pb-subroute-5",
+      "ex-pb-subroute-6",
+      "ex-pb-subroute-7",
+      "ex-pb-subroute-8"
+    ],
+    "opt.data_literal": [
+      "ex-options-data-lit",
+      "ex-pb-opt-classify-0",
+      "ex-pb-opt-classify-1",
+      "ex-pb-opt-classify-2",
+      "ex-pb-opt-classify-3",
+      "ex-pb-opt-data-lit-helper-4",
+      "ex-pb-route-25",
+      "ex-prior-options-data",
+      "ex-options-title-only",
+      "ex-options-count-only",
+      "ex-classify-helpers"
+    ],
+    "struct.opt_methods_computed_watch": [
+      "ex-options-methods-change",
+      "ex-opt-method-bumpX",
+      "ex-opt-method-bumpY",
+      "ex-opt-method-bumpZ"
+    ],
+    "opt.other_literal_in_options": [
+      "ex-options-methods-change"
+    ],
+    "struct.opt_add_remove_binding": [
+      "ex-options-add-binding"
+    ],
+    "macro.props_default_literal": [
+      "ex-macros-default-lit",
+      "ex-pb-macro-10",
+      "ex-pb-macro-11",
+      "ex-pb-macro-12",
+      "ex-pb-macro-13",
+      "ex-pb-macro-14",
+      "ex-prior-props-default",
+      "ex-macros-default-alt",
+      "ex-classify-helpers"
+    ],
+    "macro.other_macro_literal": [
+      "ex-macros-other-shape",
+      "ex-macros-midpath-refuse"
+    ],
+    "struct.macro_type_or_shape": [
+      "ex-macros-other-shape",
+      "ex-macros-midpath-refuse",
+      "ex-pb-macro-10",
+      "ex-pb-macro-11",
+      "ex-pb-macro-12",
+      "ex-pb-macro-13",
+      "ex-pb-macro-14",
+      "ex-macros-add-prop-key"
+    ],
+    "shared.util_le_closure_max": [
+      "ex-shared-util-le-max",
+      "ex-prior-closure-chunk",
+      "ex-transform-util-cjs"
+    ],
+    "shared.leaf_util": [
+      "ex-shared-leaf-util",
+      "ex-prior-closure-multi"
+    ],
+    "shared.util_gt_closure_max": [
+      "ex-shared-util-gt-max"
+    ],
+    "shared.vue_script_only_le_vue_max": [
+      "ex-shared-vue-le-max",
+      "ex-prior-closure-vue"
+    ],
+    "shared.vue_script_only_gt_vue_max": [
+      "ex-shared-vue-gt-max"
+    ],
+    "shared.vue_template_or_style": [
+      "ex-shared-vue-template"
+    ],
+    "shared.option_a_export_add_rename": [
+      "ex-option-a-export-add",
+      "ex-prior-option-a"
+    ],
+    "struct.export_add_rename": [
+      "ex-option-a-export-add",
+      "ex-extract-esm-exports"
+    ],
+    "shared.inlined_vs_chunk": [
+      "ex-inlined-vs-chunk",
+      "ex-prior-f16"
+    ],
+    "shared.composable_hook": [
+      "ex-composable-hook"
+    ],
+    "tpl.template_only": [
+      "ex-tpl-only"
+    ],
+    "style.style_only": [
+      "ex-style-only"
+    ],
+    "tpl.template_plus_script": [
+      "ex-tpl-plus-script"
+    ],
+    "cfg.store_vuex": [
+      "ex-store",
+      "ex-pb-store-26",
+      "ex-pb-store-27",
+      "ex-pb-store-28"
+    ],
+    "cfg.app_vue": [
+      "ex-app"
+    ],
+    "cfg.main_js": [
+      "ex-main"
+    ],
+    "cfg.pages_json": [
+      "ex-pages-json"
+    ],
+    "cfg.manifest": [
+      "ex-manifest"
+    ],
+    "cfg.uni_scss": [
+      "ex-uni-scss"
+    ],
+    "cfg.mixins": [
+      "ex-mixins"
+    ],
+    "cfg.plugins": [
+      "ex-plugins"
+    ],
+    "life.new_never_seeded": [
+      "ex-new-file"
+    ],
+    "life.rename_delete_page": [
+      "ex-rename-delete"
+    ],
+    "life.concurrent_multi_page": [
+      "ex-concurrent"
+    ],
+    "imp.easycom_only": [
+      "ex-easycom",
+      "ex-pb-easycom-19",
+      "ex-pb-easycom-20",
+      "ex-pb-easycom-21"
+    ],
+    "imp.uni_modules": [
+      "ex-uni-modules"
+    ],
+    "messy.asi_no_semicolon": [
+      "ex-asi-no-semicolon",
+      "ex-asi-splitter-unit"
+    ],
+    "messy.ts_as_enum_residue": [
+      "ex-ts-as-enum",
+      "ex-lang-ts-project-sample"
+    ],
+    "messy.lang_ts_sfc": [
+      "ex-ts-as-enum",
+      "ex-lang-ts-project-sample"
+    ],
+    "messy.private_fields": [
+      "ex-private-fields"
+    ],
+    "messy.iife_toplevel": [
+      "ex-iife"
+    ],
+    "messy.getCI_provide_inject": [
+      "ex-getci-provide-inject"
+    ],
+    "messy.defineExpose": [
+      "ex-defineExpose"
+    ],
+    "messy.dynamic_import": [
+      "ex-dynamic-import"
+    ],
+    "struct.import_add_remove_rename": [
+      "ex-dynamic-import",
+      "ex-missing-import",
+      "ex-import-add-line",
+      "ex-import-remove-shared"
+    ],
+    "messy.missing_import": [
+      "ex-missing-import"
+    ],
+    "imp.default_plus_named": [
+      "ex-default-import-sole-export"
+    ],
+    "messy.default_import_multi_export": [
+      "ex-default-import-multi"
+    ],
+    "messy.circular_dep": [
+      "ex-circular"
+    ],
+    "messy.dual_script_wxs": [
+      "ex-dual-wxs"
+    ],
+    "messy.empty_minimal_sfc": [
+      "ex-empty-minimal"
+    ],
+    "messy.large_setup": [
+      "ex-large-setup"
+    ],
+    "imp.import_star": [
+      "ex-imp-star"
+    ],
+    "imp.relative_multihop": [
+      "ex-imp-relative-multihop"
+    ],
+    "imp.barrel_reexport": [
+      "ex-imp-barrel"
+    ],
+    "imp.side_effect_import": [
+      "ex-imp-side-effect"
+    ],
+    "imp.import_type": [
+      "ex-imp-type"
+    ],
+    "imp.require_in_setup": [
+      "ex-imp-require-in-setup"
+    ],
+    "blocked.devtools_gui_hot_reload": [
+      "ex-blocked-devtools-gui"
+    ],
+    "model.empty_script_sfc": [
+      "ex-empty-script-population"
+    ],
+    "style.script_plus_style": [
+      "ex-script-plus-style-fold"
+    ],
+    "cfg.i18n": [
+      "ex-i18n-na"
+    ],
+    "other.script_literal": [
+      "ex-fill-other_script_literal"
+    ]
+  },
+  "summary": {
+    "caseCount": 156,
+    "byVerdict": {
+      "IDENTICAL": 20,
+      "EQUIVALENT_SHAPE": 60,
+      "FAIL_CLOSED_BASELINE_MATCH": 75,
+      "BLOCKED": 1
+    },
+    "diffBugCount": 0,
+    "projectBackedCount": 38,
+    "leafCount": 71,
+    "positiveLeafCount": 68,
+    "coveredLeafCount": 68,
+    "uncoveredLeafIds": [],
+    "totalWeight": 100,
+    "coveredWeight": 100,
+    "blockedWeight": 0.99,
+    "weightedCoverage": 1,
+    "weightedCoverageExBlocked": 1,
+    "meets99": true,
+    "meets99ExBlocked": true
+  }
+}

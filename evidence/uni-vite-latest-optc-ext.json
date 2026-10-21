@@ -1,0 +1,425 @@
+{
+  "mode": "optc-ext",
+  "toolchain": {
+    "vitePluginUni": "3.0.0-alpha-5030220261016001",
+    "uniMpWeixin": "3.0.0-alpha-5030220261016001",
+    "vite": "5.2.8",
+    "vue": "3.5.44",
+    "node": "v20.19.2",
+    "compilerBanner": "5.32（vue3）"
+  },
+  "coldMs": 2768,
+  "warm": {
+    "wallEditMs": 11,
+    "bench": {
+      "round": 2,
+      "mode": "optc-ext",
+      "rollupVersion": "4.64.9",
+      "totalMs": 2.312709000000268,
+      "graphMs": 1.2168980000001284,
+      "outputMs": 1.0958110000001398,
+      "transformedModules": 0,
+      "generated": 1,
+      "viteSkipped": true,
+      "abortedRebuild": true,
+      "memory": {
+        "rss": 254136320,
+        "heapUsed": 111781304,
+        "processPeakRss": 267083776
+      },
+      "pageInc": {
+        "path": "optc-ext",
+        "reason": "import-set-and-dep-content-stable",
+        "dirtyPages": [
+          "pages/index/index"
+        ],
+        "active": true,
+        "pageCount": 1,
+        "lastDecision": {
+          "path": "optc-ext",
+          "reason": "import-set-and-dep-content-stable",
+          "reasonCode": "FAST_PAGE",
+          "dirtyPages": [
+            "pages/index/index"
+          ],
+          "pagePath": "pages/index/index",
+          "pathStable": true,
+          "contentStable": true,
+          "emitReason": "ref-literal-patch",
+          "emitClass": "surgical",
+          "filesWritten": 1,
+          "afterSha": "aa424b2e24cb6d38058b91699c7c51f8b8d4ca79b73198cd1bc80939f49ee0de",
+          "allExternalsOnDisk": true,
+          "requireCount": 1,
+          "viteSkipped": true,
+          "at": "2026-10-18T10:18:18.517Z"
+        }
+      },
+      "optcExt": {
+        "path": "optc-ext",
+        "reason": "import-set-and-dep-content-stable",
+        "viteSkipped": true,
+        "dirtyPages": [
+          "pages/index/index"
+        ],
+        "lastEmit": {
+          "filesWritten": 1,
+          "emitMs": 1.2168980000001284,
+          "afterSha": "aa424b2e24cb6d38058b91699c7c51f8b8d4ca79b73198cd1bc80939f49ee0de",
+          "changes": [
+            {
+              "from": "unifast-compile-probe-0",
+              "to": "unifast-compile-probe-1"
+            }
+          ],
+          "allExternalsOnDisk": true,
+          "requireCount": 1,
+          "reason": "ref-literal-patch",
+          "emitClass": "surgical",
+          "midpath": false,
+          "closure": false
+        }
+      }
+    },
+    "emit": {
+      "type": "emit",
+      "pagePath": "pages/index/index",
+      "filesWritten": 1,
+      "emitMs": 1.2168980000001284,
+      "emitClass": "surgical",
+      "reason": "ref-literal-patch",
+      "changes": [
+        {
+          "from": "unifast-compile-probe-0",
+          "to": "unifast-compile-probe-1"
+        }
+      ],
+      "afterSha": "aa424b2e24cb6d38058b91699c7c51f8b8d4ca79b73198cd1bc80939f49ee0de",
+      "allExternalsOnDisk": true,
+      "requireCount": 1
+    },
+    "decision": {
+      "type": "decision",
+      "round": 2,
+      "path": "optc-ext",
+      "reason": "import-set-and-dep-content-stable",
+      "reasonCode": "FAST_PAGE",
+      "dirtyPages": [
+        "pages/index/index"
+      ],
+      "active": true,
+      "seeded": true,
+      "pageCount": 1,
+      "viteSkipped": false,
+      "pathStats": {
+        "full": 2,
+        "optc-ext": 1,
+        "incremental": 0
+      },
+      "reasonCounts": {
+        "FULL_OTHER": 2,
+        "FAST_PAGE": 1
+      },
+      "pageOnlyEmitCount": 1,
+      "integrityChecks": 0,
+      "integrityForcedFull": 0,
+      "lastIntegrity": null,
+      "vendorShaAtSeed": "79a35cf8ffa8b31e",
+      "lastEmit": {
+        "filesWritten": 1,
+        "emitMs": 1.2168980000001284,
+        "afterSha": "aa424b2e24cb6d38058b91699c7c51f8b8d4ca79b73198cd1bc80939f49ee0de",
+        "changes": [
+          {
+            "from": "unifast-compile-probe-0",
+            "to": "unifast-compile-probe-1"
+          }
+        ],
+        "allExternalsOnDisk": true,
+        "requireCount": 1,
+        "emitClass": "surgical"
+      },
+      "lastDecision": {
+        "path": "optc-ext",
+        "reason": "import-set-and-dep-content-stable",
+        "reasonCode": "FAST_PAGE",
+        "dirtyPages": [
+          "pages/index/index"
+        ],
+        "pagePath": "pages/index/index",
+        "pathStable": true,
+        "contentStable": true,
+        "emitReason": "ref-literal-patch",
+        "emitClass": "surgical",
+        "filesWritten": 1,
+        "afterSha": "aa424b2e24cb6d38058b91699c7c51f8b8d4ca79b73198cd1bc80939f49ee0de",
+        "allExternalsOnDisk": true,
+        "requireCount": 1,
+        "viteSkipped": true,
+        "at": "2026-10-18T10:18:18.517Z"
+      }
+    }
+  },
+  "product": {
+    "cold": {
+      "hasPageJs": true,
+      "hasVendor": true,
+      "pageBytes": 447,
+      "vendorBytes": 211375,
+      "pageSha": "3b7c7981ae403dda",
+      "vendorSha": "79a35cf8ffa8b31e",
+      "requires": [
+        "../../common/vendor.js"
+      ],
+      "hasCommonVendorAlias": true,
+      "hasProbe": true,
+      "probeMatch": "unifast-compile-probe-0",
+      "pageHead": "\"use strict\";\nconst common_vendor = require(\"../../common/vendor.js\");\nconst _sfc_main = {\n  __name: \"index\",\n  setup(__props) {\n    const label = common_vendor.ref(\"unifast-compile-probe-0\");\n    return (_ctx, _cache) => {\n      return {\n        a: common_vendor.t(label.value)\n      };\n    };\n  }\n};\nconst MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [[\"__scopeId\", \"data-v"
+    },
+    "warm": {
+      "hasPageJs": true,
+      "hasVendor": true,
+      "pageBytes": 447,
+      "vendorBytes": 211375,
+      "pageSha": "aa424b2e24cb6d38",
+      "vendorSha": "79a35cf8ffa8b31e",
+      "requires": [
+        "../../common/vendor.js"
+      ],
+      "hasCommonVendorAlias": true,
+      "hasProbe": true,
+      "probeMatch": "unifast-compile-probe-1",
+      "pageHead": "\"use strict\";\nconst common_vendor = require(\"../../common/vendor.js\");\nconst _sfc_main = {\n  __name: \"index\",\n  setup(__props) {\n    const label = common_vendor.ref(\"unifast-compile-probe-1\");\n    return (_ctx, _cache) => {\n      return {\n        a: common_vendor.t(label.value)\n      };\n    };\n  }\n};\nconst MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [[\"__scopeId\", \"data-v"
+    },
+    "vendorUnchanged": true,
+    "pageChanged": true
+  },
+  "allResults": [
+    {
+      "type": "bench",
+      "round": 1,
+      "mode": "optc-ext",
+      "rollupVersion": "4.64.9",
+      "totalMs": 1722.4715740000001,
+      "graphMs": 615.65203,
+      "outputMs": 1106.8195440000002,
+      "transformedModules": 14,
+      "generated": 9,
+      "viteSkipped": false,
+      "memory": {
+        "rss": 254005248,
+        "heapUsed": 110975328,
+        "processPeakRss": 267083776
+      },
+      "pageInc": {
+        "path": "full",
+        "reason": "cold-seeded",
+        "dirtyPages": [],
+        "active": false,
+        "pageCount": 1,
+        "lastDecision": {
+          "path": "full",
+          "reason": "cold-seeded",
+          "reasonCode": "FULL_OTHER",
+          "dirtyPages": [],
+          "seededPages": 1,
+          "seededOk": 1,
+          "seededErr": 0,
+          "at": "2026-10-18T10:18:16.996Z"
+        }
+      },
+      "optcExt": {
+        "path": "full",
+        "reason": "cold-seeded",
+        "viteSkipped": false,
+        "dirtyPages": [],
+        "lastEmit": null
+      }
+    },
+    {
+      "type": "decision",
+      "round": 1,
+      "path": "full",
+      "reason": "cold-seeded",
+      "reasonCode": "FULL_OTHER",
+      "dirtyPages": [],
+      "active": false,
+      "seeded": true,
+      "pageCount": 1,
+      "viteSkipped": false,
+      "pathStats": {
+        "full": 2,
+        "optc-ext": 0,
+        "incremental": 0
+      },
+      "reasonCounts": {
+        "FULL_OTHER": 2
+      },
+      "pageOnlyEmitCount": 0,
+      "integrityChecks": 0,
+      "integrityForcedFull": 0,
+      "lastIntegrity": null,
+      "vendorShaAtSeed": "79a35cf8ffa8b31e",
+      "lastEmit": null,
+      "lastDecision": {
+        "path": "full",
+        "reason": "cold-seeded",
+        "reasonCode": "FULL_OTHER",
+        "dirtyPages": [],
+        "seededPages": 1,
+        "seededOk": 1,
+        "seededErr": 0,
+        "at": "2026-10-18T10:18:16.996Z"
+      }
+    },
+    {
+      "type": "emit",
+      "pagePath": "pages/index/index",
+      "filesWritten": 1,
+      "emitMs": 1.2168980000001284,
+      "emitClass": "surgical",
+      "reason": "ref-literal-patch",
+      "changes": [
+        {
+          "from": "unifast-compile-probe-0",
+          "to": "unifast-compile-probe-1"
+        }
+      ],
+      "afterSha": "aa424b2e24cb6d38058b91699c7c51f8b8d4ca79b73198cd1bc80939f49ee0de",
+      "allExternalsOnDisk": true,
+      "requireCount": 1
+    },
+    {
+      "type": "bench",
+      "round": 2,
+      "mode": "optc-ext",
+      "rollupVersion": "4.64.9",
+      "totalMs": 2.312709000000268,
+      "graphMs": 1.2168980000001284,
+      "outputMs": 1.0958110000001398,
+      "transformedModules": 0,
+      "generated": 1,
+      "viteSkipped": true,
+      "abortedRebuild": true,
+      "memory": {
+        "rss": 254136320,
+        "heapUsed": 111781304,
+        "processPeakRss": 267083776
+      },
+      "pageInc": {
+        "path": "optc-ext",
+        "reason": "import-set-and-dep-content-stable",
+        "dirtyPages": [
+          "pages/index/index"
+        ],
+        "active": true,
+        "pageCount": 1,
+        "lastDecision": {
+          "path": "optc-ext",
+          "reason": "import-set-and-dep-content-stable",
+          "reasonCode": "FAST_PAGE",
+          "dirtyPages": [
+            "pages/index/index"
+          ],
+          "pagePath": "pages/index/index",
+          "pathStable": true,
+          "contentStable": true,
+          "emitReason": "ref-literal-patch",
+          "emitClass": "surgical",
+          "filesWritten": 1,
+          "afterSha": "aa424b2e24cb6d38058b91699c7c51f8b8d4ca79b73198cd1bc80939f49ee0de",
+          "allExternalsOnDisk": true,
+          "requireCount": 1,
+          "viteSkipped": true,
+          "at": "2026-10-18T10:18:18.517Z"
+        }
+      },
+      "optcExt": {
+        "path": "optc-ext",
+        "reason": "import-set-and-dep-content-stable",
+        "viteSkipped": true,
+        "dirtyPages": [
+          "pages/index/index"
+        ],
+        "lastEmit": {
+          "filesWritten": 1,
+          "emitMs": 1.2168980000001284,
+          "afterSha": "aa424b2e24cb6d38058b91699c7c51f8b8d4ca79b73198cd1bc80939f49ee0de",
+          "changes": [
+            {
+              "from": "unifast-compile-probe-0",
+              "to": "unifast-compile-probe-1"
+            }
+          ],
+          "allExternalsOnDisk": true,
+          "requireCount": 1,
+          "reason": "ref-literal-patch",
+          "emitClass": "surgical",
+          "midpath": false,
+          "closure": false
+        }
+      }
+    },
+    {
+      "type": "decision",
+      "round": 2,
+      "path": "optc-ext",
+      "reason": "import-set-and-dep-content-stable",
+      "reasonCode": "FAST_PAGE",
+      "dirtyPages": [
+        "pages/index/index"
+      ],
+      "active": true,
+      "seeded": true,
+      "pageCount": 1,
+      "viteSkipped": false,
+      "pathStats": {
+        "full": 2,
+        "optc-ext": 1,
+        "incremental": 0
+      },
+      "reasonCounts": {
+        "FULL_OTHER": 2,
+        "FAST_PAGE": 1
+      },
+      "pageOnlyEmitCount": 1,
+      "integrityChecks": 0,
+      "integrityForcedFull": 0,
+      "lastIntegrity": null,
+      "vendorShaAtSeed": "79a35cf8ffa8b31e",
+      "lastEmit": {
+        "filesWritten": 1,
+        "emitMs": 1.2168980000001284,
+        "afterSha": "aa424b2e24cb6d38058b91699c7c51f8b8d4ca79b73198cd1bc80939f49ee0de",
+        "changes": [
+          {
+            "from": "unifast-compile-probe-0",
+            "to": "unifast-compile-probe-1"
+          }
+        ],
+        "allExternalsOnDisk": true,
+        "requireCount": 1,
+        "emitClass": "surgical"
+      },
+      "lastDecision": {
+        "path": "optc-ext",
+        "reason": "import-set-and-dep-content-stable",
+        "reasonCode": "FAST_PAGE",
+        "dirtyPages": [
+          "pages/index/index"
+        ],
+        "pagePath": "pages/index/index",
+        "pathStable": true,
+        "contentStable": true,
+        "emitReason": "ref-literal-patch",
+        "emitClass": "surgical",
+        "filesWritten": 1,
+        "afterSha": "aa424b2e24cb6d38058b91699c7c51f8b8d4ca79b73198cd1bc80939f49ee0de",
+        "allExternalsOnDisk": true,
+        "requireCount": 1,
+        "viteSkipped": true,
+        "at": "2026-10-18T10:18:18.517Z"
+      }
+    }
+  ]
+}

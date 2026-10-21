@@ -1,0 +1,101 @@
+{
+  "checkedAt": "2026-10-15T06:43:04.610Z",
+  "host": "box",
+  "label": "measured",
+  "routes": 479,
+  "BENCH_MODE": "page-inc",
+  "suite": "perf-script",
+  "heapMb": 8192,
+  "baseline_ref": "verify/project-real.json",
+  "measured": {
+    "cold": {
+      "totalMs": 127042.00328199999,
+      "generated": 10707,
+      "transforms": 8577,
+      "pageInc": {
+        "path": "full",
+        "reason": "cold-seeded",
+        "dirtyPages": [],
+        "active": false,
+        "pageCount": 479,
+        "lastDecision": {
+          "path": "full",
+          "reason": "cold-seeded",
+          "dirtyPages": [],
+          "seededPages": 479,
+          "seededOk": 479,
+          "seededErr": 0,
+          "at": "2026-10-15T06:41:25.791Z"
+        }
+      }
+    },
+    "script1": {
+      "totalMs": 54489.905854,
+      "graphMs": 4724.457787999985,
+      "outputMs": 49765.44806600001,
+      "generated": 546,
+      "transforms": 2,
+      "changedContents": 96,
+      "updatedMtimes": 546,
+      "pageInc": {
+        "path": "incremental",
+        "reason": "import-set-and-dep-content-stable",
+        "dirtyPages": [
+          "pages-tab/routeA/index"
+        ],
+        "active": true,
+        "pageCount": 479,
+        "lastDecision": {
+          "path": "incremental",
+          "reason": "import-set-and-dep-content-stable",
+          "dirtyPages": [
+            "pages-tab/routeA/index"
+          ],
+          "pagePath": "pages-tab/routeA/index",
+          "pathStable": true,
+          "contentStable": true,
+          "at": "2026-10-15T06:41:27.684Z",
+          "pagesJsonFastPath": true,
+          "filteredImportCount": 1
+        }
+      },
+      "decisionPath": "incremental"
+    }
+  },
+  "vsBaseline": {
+    "warmMs": {
+      "baseline": 58721.11573199998,
+      "pageInc": 54489.905854,
+      "deltaMs": -4231.20987799998
+    },
+    "graphMs": {
+      "baseline": 43853.01685799999,
+      "pageInc": 4724.457787999985
+    },
+    "outputMs": {
+      "baseline": 14868.098873999988,
+      "pageInc": 49765.44806600001
+    },
+    "generated": {
+      "baseline": 5658,
+      "pageInc": 546
+    }
+  },
+  "correctness": {
+    "pageEditPresent": true,
+    "vendorShaStable": false,
+    "routeAWxmlUntouched": true,
+    "routeAJsonUntouched": true,
+    "otherPagesShaStable_sample": true
+  },
+  "analysis": {
+    "measured": "incremental path fired (filteredImportCount=1, pagesJsonFastPath=true); generated 5658→546; graphMs 44s→4.7s; wall only 58.7s→54.5s",
+    "inferred": "RouteA page static/closure still emits ~546 chunks (components/apis/vendor). Filtering importPagesCode removes unrelated pages but not the dirty page dependency closure. outputMs dominated (~50s).",
+    "blocker_for_seconds_scale": "Need true Opt C emit that externalizes existing dist common/* + component chunks and writes only dirty page JS — not a filtered full Vite rebuild of the page subgraph."
+  },
+  "verdict": "PARTIAL_ON_PROJECT: path fires and cuts generate/graph, but wall clock still ~54s (not ≪58s target) because routeA closure remains large",
+  "artifacts": {
+    "metrics": "compile-optimization/reports/box-project-page-inc-v2/",
+    "prior_failed_seed": "reports/box-project-page-inc/ (EISDIR seed failure, timed out) — superseded"
+  }
+}

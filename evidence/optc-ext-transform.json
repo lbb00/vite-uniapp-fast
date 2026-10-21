@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-10-15T07:18:26.337Z",
+  "host": "box",
+  "label": "Measured",
+  "BENCH_MODE": "optc-ext",
+  "suite": "perf-optc-transform (cold + scriptSetupBody)",
+  "report": "box-fixture-optc-ext-transform-v3",
+  "emitClass": "setup-body",
+  "edit": "pages-tab/routeA: ref('routeA') → ref(42)",
+  "measured": {
+    "cold": {
+      "totalMs": 5544.468580000001,
+      "generated": 2009
+    },
+    "scriptSetupBody": {
+      "totalMs": 3.6190459999997984,
+      "generated": 1,
+      "viteSkipped": true,
+      "abortedRebuild": true,
+      "path": "optc-ext",
+      "emitReason": "setup-body-splice",
+      "emitClass": "setup-body",
+      "afterSha": "0dd2dfc330bd1bdd0cb17afdae8497b9e9dfa92f976477b8047c33fc90e5329c",
+      "changedContents": 1,
+      "updatedMtimes": 1
+    }
+  },
+  "vsBaselineWarmSameEdit": {
+    "baselineReport": "box-fixture-baseline-setupbody-v2",
+    "baselineWallMs": 1697.9661619999997,
+    "baselineGenerated": 1006,
+    "speedup": 469.1750704467681,
+    "byteShaMatch": true
+  },
+  "projectNote": "Unverified on full <private-app> routeA: setup references many non-vue imports → local-import-in-setup → full (surgical still covers string-literal ref class).",
+  "verdict": "ENABLE for vue-api-only page scripts (no local imports used in setup)"
+}

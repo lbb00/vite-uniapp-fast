@@ -1,0 +1,48 @@
+{
+  "when": "2026-10-20T09:08:20.000Z",
+  "whenAsiaShanghai": "2026-10-20 17:08:20 CST (Asia/Shanghai)",
+  "zone": "Asia/Shanghai",
+  "implementer": "fix-imp-require-cjs-gate-2026-10-20",
+  "hashWeightedCoverageMechanical": 100,
+  "hashWeightedCoverageHonest": 100,
+  "HASH_DIFF_BUG": 0,
+  "HASH_DIFF_BUG_ids": [],
+  "HASH_DIFF_BUG_cause": null,
+  "reuseCounting": 0,
+  "projectBackedStratifiedHash": 16,
+  "uncoveredLeaves": [],
+  "uncoveredWeightHonest": 0,
+  "static": {
+    "equalCount": 2024,
+    "diffCount": 0
+  },
+  "closedThisRun": [
+    "imp.require_in_setup"
+  ],
+  "priorHonest": 99.88,
+  "fix": {
+    "leaf": "imp.require_in_setup",
+    "suite": "perf-hash-imp-require",
+    "reason": "cjs-require-set-changed",
+    "reasonCode": "FULL_IMPORT_SET",
+    "viteSkipped": false,
+    "diff": 0,
+    "vsCold": 1,
+    "routeAJsBytes": {
+      "baseline": 804,
+      "optc": 804
+    },
+    "verdict": "FAIL_CLOSED_HASH_MATCH"
+  },
+  "artifacts": [
+    "verify/hash-paired-matrix.json",
+    "verify/HASH-PAIRED-MATRIX.md",
+    "verify/HASH-COVERAGE.md",
+    "verify/hash-honest-score.json",
+    "verify/EXHAUSTIVE-COVERAGE-GAPS.md",
+    "verify/EXHAUSTIVE-COVERAGE-SCORE.md",
+    "verify/IMP-LEAF-CLOSE.md",
+    "verify/logs/imp-require-fix.log",
+    "verify/logs/imp-require-fix-fold.log"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "checkedAt": "2026-10-15T07:18:26.337Z",
+  "host": "box",
+  "label": "Measured",
+  "method": "Parallel bench artifacts: cold+script1 under BENCH_MODE=baseline vs BENCH_MODE=optc-ext; compare pages-tab/routeA/index.js sha256. Plus offline surgical patch reconstruct for fixture.",
+  "page": "pages-tab/routeA/index.js",
+  "fixture": {
+    "baselineReport": "box-fixture-baseline-real",
+    "optcReport": "box-fixture-optc-ext-v4",
+    "coldShaMatch": true,
+    "coldSha": "d4f3244ce3780b0f308827133252dee71dc1c9d6e8cb63005b90fc60ef6d150c",
+    "pathA_optcExt_script1Sha": "2819d949fad409bc4c1d6688728efcc79fbf41475c6910f3639562a4f584bd8f",
+    "pathB_baselineWarm_script1Sha": "2819d949fad409bc4c1d6688728efcc79fbf41475c6910f3639562a4f584bd8f",
+    "byteShaEqual": true,
+    "bytes": {
+      "optc": 573,
+      "baseline": 573
+    },
+    "offlineSurgicalReconstructSha": "2819d949fad409bc4c1d6688728efcc79fbf41475c6910f3639562a4f584bd8f",
+    "offlineMatchesArtifacts": true,
+    "verdict": "match",
+    "quotingNote": "Surgical patches only the string value inside existing quotes; uni warm emit for this edit class uses the same common_vendor.ref(\"…\") shape — no quoting/interop drift observed."
+  },
+  "project": {
+    "baselineReport": "box-project-baseline-real",
+    "optcReport": "box-project-optc-ext-v3",
+    "coldShaMatch": true,
+    "coldSha": "6a8dbfbb7251687ec25181a48405be0ff8f6d57db2d4fdf344b6814fc117f56d",
+    "pathA_optcExt_script1Sha": "d20dacc5c11cae58b44dac1a046145d871638c8b3d7eff118c6f5e8947980e7c",
+    "pathB_baselineWarm_script1Sha": "d20dacc5c11cae58b44dac1a046145d871638c8b3d7eff118c6f5e8947980e7c",
+    "byteShaEqual": true,
+    "bytes": {
+      "optc": 28841,
+      "baseline": 28841
+    },
+    "liveDistSha": "d20dacc5c11cae58b44dac1a046145d871638c8b3d7eff118c6f5e8947980e7c",
+    "verdict": "match",
+    "quotingNote": "First string-literal ref() (refA ref(\"\")) patched to unifast-compile-probe-1; artifact SHAs identical across baseline warm and optc-ext."
+  },
+  "overallVerdict": "match",
+  "setupBodyLiveRef42": {
+    "label": "Measured",
+    "edit": "ref('routeA') → ref(42) (string-literal arity breaks surgical; setup-body splice)",
+    "optcReport": "box-fixture-optc-ext-transform-v3",
+    "baselineReport": "box-fixture-baseline-setupbody-v2",
+    "pathA_optcExt_sha": "0dd2dfc330bd1bdd0cb17afdae8497b9e9dfa92f976477b8047c33fc90e5329c",
+    "pathB_baselineWarm_sha": "0dd2dfc330bd1bdd0cb17afdae8497b9e9dfa92f976477b8047c33fc90e5329c",
+    "byteShaEqual": true,
+    "bytes": {
+      "optc": 551,
+      "baseline": 551
+    },
+    "optcWallMs": 3.6190459999997984,
+    "baselineWallMs": 1697.9661619999997,
+    "optcGenerated": 1,
+    "baselineGenerated": 1006,
+    "verdict": "match",
+    "note": "After spacing normalize (`const label = …`), setup-body emit is byte-identical to uni warm for this edit class."
+  }
+}

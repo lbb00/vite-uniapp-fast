@@ -1,0 +1,74 @@
+{
+  "verdict": "ENABLE",
+  "notes": [
+    "Classic uni-app Vue3 Vite toolchain (NOT uni-app-x).",
+    "vue3 dist-tag latest alpha 3.0.0-alpha-5030220261016001 installs and builds on Node 20 despite engines>=22.12 warning.",
+    "Product shape unchanged vs <private-app> pin 40204: pages/**/*.js + require(.../common/vendor.js) + common_vendor.ref.",
+    "optc-ext surgical path works; baseline warm ~350ms on 1-page fixture (not unifast-scale)."
+  ],
+  "baseline": {
+    "mode": "baseline",
+    "toolchain": {
+      "vitePluginUni": "3.0.0-alpha-5030220261016001",
+      "uniMpWeixin": "3.0.0-alpha-5030220261016001",
+      "vite": "5.2.8",
+      "vue": "3.5.44",
+      "node": "v20.19.2",
+      "compilerBanner": "5.32\uff08vue3\uff09"
+    },
+    "coldMs": 2833,
+    "warmWallMs": 355,
+    "benchTotalMs": 349.7,
+    "generated": 6,
+    "transformed": 1,
+    "viteSkipped": false,
+    "emitClass": null,
+    "productShapeOk": true,
+    "requires": [
+      "../../common/vendor.js"
+    ],
+    "vendorUnchanged": true,
+    "pageChanged": true,
+    "probe": "unifast-compile-probe-1"
+  },
+  "optcExt": {
+    "mode": "optc-ext",
+    "toolchain": {
+      "vitePluginUni": "3.0.0-alpha-5030220261016001",
+      "uniMpWeixin": "3.0.0-alpha-5030220261016001",
+      "vite": "5.2.8",
+      "vue": "3.5.44",
+      "node": "v20.19.2",
+      "compilerBanner": "5.32\uff08vue3\uff09"
+    },
+    "coldMs": 2768,
+    "warmWallMs": 11,
+    "benchTotalMs": 2.31,
+    "generated": 1,
+    "transformed": 0,
+    "viteSkipped": true,
+    "emitClass": "surgical",
+    "productShapeOk": true,
+    "requires": [
+      "../../common/vendor.js"
+    ],
+    "vendorUnchanged": true,
+    "pageChanged": true,
+    "probe": "unifast-compile-probe-1"
+  },
+  "speedupApprox": 151.2,
+  "shapeCompare": {
+    "oldUnifastPin": "3.0.0-4020420240722002",
+    "latestRan": "3.0.0-alpha-5030220261016001",
+    "pageJsLayout": "pages/<path>/index.js",
+    "vendorRequire": "../../common/vendor.js",
+    "alias": "common_vendor",
+    "breakages": []
+  },
+  "nodeEngineWarning": {
+    "required": ">=22.12.0",
+    "box": "v20.19.2",
+    "impact": "npm EBADENGINE warn only; cold+warm succeeded"
+  },
+  "fallbackTried": null
+}

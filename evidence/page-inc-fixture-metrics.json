@@ -1,0 +1,80 @@
+[
+  {
+    "round": 1,
+    "mode": "page-inc",
+    "rollupVersion": "4.64.6",
+    "totalMs": 5327.622372,
+    "graphMs": 4243.088908,
+    "outputMs": 1084.533464,
+    "transformedModules": 1515,
+    "generated": 2009,
+    "memory": {
+      "rss": 523214848,
+      "heapUsed": 343883368,
+      "processPeakRss": 523345920
+    },
+    "pageInc": {
+      "path": "full",
+      "reason": "cold-seeded",
+      "dirtyPages": [],
+      "active": false,
+      "pageCount": 500,
+      "lastDecision": {
+        "path": "full",
+        "reason": "cold-seeded",
+        "dirtyPages": [],
+        "seededPages": 500,
+        "seededOk": 500,
+        "seededErr": 0,
+        "at": "2026-10-15T06:39:11.374Z"
+      }
+    },
+    "step": "cold",
+    "outputFiles": 2009,
+    "outputBytes": 632546,
+    "changedContents": 2009,
+    "updatedMtimes": 2009
+  },
+  {
+    "round": 2,
+    "mode": "page-inc",
+    "rollupVersion": "4.64.6",
+    "totalMs": 610.2104959999997,
+    "graphMs": 440.2604259999998,
+    "outputMs": 169.95006999999987,
+    "transformedModules": 2,
+    "generated": 8,
+    "memory": {
+      "rss": 608247808,
+      "heapUsed": 427387144,
+      "processPeakRss": 608247808
+    },
+    "pageInc": {
+      "path": "incremental",
+      "reason": "import-set-and-dep-content-stable",
+      "dirtyPages": [
+        "pages-tab/routeA/index"
+      ],
+      "active": true,
+      "pageCount": 500,
+      "lastDecision": {
+        "path": "incremental",
+        "reason": "import-set-and-dep-content-stable",
+        "dirtyPages": [
+          "pages-tab/routeA/index"
+        ],
+        "pagePath": "pages-tab/routeA/index",
+        "pathStable": true,
+        "contentStable": true,
+        "at": "2026-10-15T06:39:11.711Z",
+        "pagesJsonFastPath": true,
+        "filteredImportCount": 1
+      }
+    },
+    "step": "script1",
+    "outputFiles": 2009,
+    "outputBytes": 623182,
+    "changedContents": 2,
+    "updatedMtimes": 8
+  }
+]

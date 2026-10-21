@@ -1,0 +1,48 @@
+{
+  "when": "2026-10-15T17:19:33.757242+08:00",
+  "host": "box-linux",
+  "zone": "Asia/Shanghai",
+  "label": "Measured",
+  "fixture": "500 pages",
+  "edit": "probeMul(21\u219222) via scriptLocalImport",
+  "baseline": {
+    "run": "box-fixture-f6-baseline-callarg",
+    "totalMs": 1627.9255380000004,
+    "generated": 1007,
+    "viteSkipped": false,
+    "routeASha": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+    "routeABytes": 670
+  },
+  "optc_surgical_call_arg": {
+    "run": "box-fixture-f6-optc-callarg",
+    "totalMs": 12.899631000000227,
+    "generated": 1,
+    "viteSkipped": true,
+    "emitClass": "surgical-call-arg",
+    "emitReason": "call-arg-patch",
+    "routeASha": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+    "shaEqBaseline": true,
+    "requireCount": 2,
+    "allExternalsOnDisk": true
+  },
+  "optc_midpath_forced": {
+    "run": "box-fixture-f6-optc-midpath",
+    "env": "UNI_FAST_OPTC_FORCE_MIDPATH=1",
+    "note": "Forced midpath to exercise path when F2 would otherwise win; same edit as call-arg",
+    "totalMs": 4.475038000000495,
+    "generated": 1,
+    "viteSkipped": true,
+    "decisionReason": "midpath-forced",
+    "emitClass": "midpath-sync",
+    "emitReason": "midpath-sync-shell-splice",
+    "routeASha": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+    "shaEqBaseline": true,
+    "shaEqCallArg": true,
+    "requireCount": 2,
+    "anatomy": "For this literal call-arg edit, midpath shell-splice produced BYTE-IDENTICAL page JS to uni baseline and surgical-call-arg (SHA match). Expect mismatch on complex setup rewrites with formatting/DCE drift \u2014 Unverified on harder edits this push."
+  },
+  "speedup_vs_baseline": {
+    "callArg": 126.2,
+    "midpath": 363.8
+  }
+}

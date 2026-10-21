@@ -1,0 +1,87 @@
+{
+  "host": "box",
+  "when": "2026-10-15T15:26:24.471219+08:00",
+  "mode": "optc-ext",
+  "editClass": "scriptLocalImport",
+  "mechanism": "setup-body-local-imports: map SFC locals → cold requireBinding.export; splice setup; skip Vite",
+  "fixture": {
+    "pages": 500,
+    "cold": {
+      "totalMs": 5367.506646,
+      "generated": 2010
+    },
+    "scriptLocalImport": {
+      "totalMs": 6.6611540000003515,
+      "generated": 1,
+      "viteSkipped": true,
+      "abortedRebuild": true,
+      "changedContents": 1,
+      "updatedMtimes": 1,
+      "emitClass": "setup-body-local-imports",
+      "emitReason": "setup-body-local-imports",
+      "requireCount": 2,
+      "allExternalsOnDisk": true,
+      "afterSha": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428"
+    },
+    "baselineSameEdit": {
+      "totalMs": 1636.4928790000004,
+      "generated": 1007,
+      "changedContents": 1,
+      "updatedMtimes": 1007
+    },
+    "speedupVsBaseline": 245.7,
+    "byteShaMatchVsBaselineWarm": true,
+    "correctness": {
+      "pageEditPresent": true,
+      "vendorShaStable": true,
+      "probeChunkStable": true,
+      "requireMapped": "modules_utils_unifastProbe.probeMul(22)",
+      "filesWritten": 1
+    }
+  },
+  "project": {
+    "routes": 479,
+    "heapMb": 8192,
+    "cold": {
+      "totalMs": 121510.523001,
+      "generated": 10707
+    },
+    "scriptLocalImport": {
+      "totalMs": 49.82808400000795,
+      "generated": 1,
+      "viteSkipped": true,
+      "abortedRebuild": true,
+      "changedContents": 1,
+      "updatedMtimes": 1,
+      "emitClass": "setup-body-local-imports",
+      "emitReason": "setup-body-local-imports",
+      "requireCount": 19,
+      "allExternalsOnDisk": true,
+      "afterSha": "201782d2c2ae7509835684c56ba6e9b2d7b6caf9fbb26260ea110ab1c26e9100",
+      "emitMs": 48.71590500000457
+    },
+    "baselineScript1Ref": {
+      "totalMs": 58721,
+      "generated": 5658,
+      "note": "prior Measured surgical-class baseline; local-import class expected similar full-rebuild wall"
+    },
+    "speedupVsBaselineScript1": 1178.5,
+    "correctness": {
+      "pageEditPresent": "flagA = common_vendor.ref(true)",
+      "vendorShaStable": true,
+      "all19RequiresOnDisk": true,
+      "lazyComponentsPreserved": true,
+      "wxmlJsonWxssUntouched": true,
+      "sampleOtherPagesStable": "8/8",
+      "localMappedCount": 23,
+      "filesWritten": 1
+    },
+    "byteShaVsUniWarm": "Unverified — full setup-body splice; expected drift vs uni DCE/optional-chaining helpers; runtime-shape Measured"
+  },
+  "guardrailsStillInForce": [
+    "surgical ref-literal fast-path unchanged",
+    "render-binding-removed → full",
+    "local-import-unmapped → full",
+    "import-set / dep-content / template / style → full"
+  ]
+}

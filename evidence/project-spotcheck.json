@@ -1,0 +1,55 @@
+{
+  "when": "2026-10-15T09:55:07.979Z",
+  "host": "box-linux",
+  "zone": "Asia/Shanghai",
+  "heapNote": "offline emitters; no Vite cold (reuse dist)",
+  "cases": [
+    {
+      "id": "f15-precheck-dist",
+      "pass": true,
+      "detail": "routeAJs=110 bytes on disk ok"
+    },
+    {
+      "id": "f15-surgical-named-routeA",
+      "pass": true,
+      "detail": "dir=true→false class=surgical-named reason=named-literal-patch ms=5.59 sha=6a8dbfbb7251687e goldMatch=false",
+      "wallMs": 5.585280999999995,
+      "afterSha": "6a8dbfbb7251687ec25181a48405be0ff8f6d57db2d4fdf344b6814fc117f56d",
+      "emitClass": "surgical-named",
+      "goldMatch": false
+    },
+    {
+      "id": "f15-surgical-named-roundtrip-gold",
+      "pass": true,
+      "detail": "ms=3.67 eFalse=surgical-named eTrue=surgical-named sha=4ff68d48e4982608 ==gold=true",
+      "wallMs": 3.6746109999999987,
+      "afterSha": "4ff68d48e498260829b466b5a4dce648d7d3d4b6b4b042211f5b10ce97d77d2a"
+    },
+    {
+      "id": "f15-closure-spot-probe",
+      "pass": true,
+      "detail": "ms=2.04 reason=closure-shared-chunk-regen writeMode=cold-body-patch",
+      "wallMs": 2.041823999999991,
+      "emitClass": "closure-chunk"
+    },
+    {
+      "id": "f15-option-a-export-add-spot",
+      "pass": true,
+      "detail": "ms=2.39 mode=add-only reason=closure-shared-chunk-regen",
+      "wallMs": 2.3932530000000014
+    }
+  ],
+  "walls": {
+    "surgicalNamedMs": 5.585280999999995,
+    "surgicalNamedRoundtripMs": 3.6746109999999987,
+    "closureSpotMs": 2.041823999999991,
+    "optionASpotMs": 2.3932530000000014
+  },
+  "failReasons": [],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "verdict": "ENABLE"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "checkedAt": "2026-10-15T06:10:38.028Z",
+  "host": "box",
+  "pages": 500,
+  "suite": "perf-script",
+  "measured": {
+    "baseline": {
+      "mode": "baseline",
+      "coldMs": 5740.184512,
+      "coldGenerated": 2009,
+      "coldTransforms": 1515,
+      "warmMs": 1646.120988999999,
+      "warmGraphMs": 1050.7373329999991,
+      "warmOutputMs": 595.383656,
+      "warmTransforms": 1,
+      "warmGenerated": 1006,
+      "warmChangedContents": 1,
+      "warmUpdatedMtimes": 1006,
+      "disk": null,
+      "cache": null
+    },
+    "fs": {
+      "mode": "fs",
+      "coldMs": 5157.589316,
+      "coldGenerated": 2009,
+      "coldTransforms": 1515,
+      "warmMs": 1621.9126619999997,
+      "warmGraphMs": 1039.7354910000004,
+      "warmOutputMs": 582.1771709999994,
+      "warmTransforms": 1,
+      "warmGenerated": 1006,
+      "warmChangedContents": 1,
+      "warmUpdatedMtimes": 1,
+      "disk": {
+        "attempts": 1006,
+        "written": 1,
+        "skipped": 1005,
+        "bytesWritten": 573,
+        "firstWriteChecksSkipped": 0
+      },
+      "cache": {
+        "hits": 0,
+        "misses": 0,
+        "bypasses": 0,
+        "evictions": 0,
+        "bytes": 0,
+        "entries": 0
+      }
+    },
+    "both": {
+      "mode": "both",
+      "coldMs": 5378.741843,
+      "coldGenerated": 2009,
+      "coldTransforms": 1515,
+      "warmMs": 1817.809584999999,
+      "warmGraphMs": 1276.4454690000002,
+      "warmOutputMs": 541.3641159999988,
+      "warmTransforms": 1,
+      "warmGenerated": 1006,
+      "warmChangedContents": 1,
+      "warmUpdatedMtimes": 1,
+      "disk": {
+        "attempts": 1006,
+        "written": 1,
+        "skipped": 1005,
+        "bytesWritten": 573,
+        "firstWriteChecksSkipped": 0
+      },
+      "cache": {
+        "hits": 502,
+        "misses": 1,
+        "bypasses": 0,
+        "evictions": 1,
+        "bytes": 1814690,
+        "entries": 503
+      }
+    },
+    "warmMsDeltaVsBaseline": {
+      "fs": -24.20832699999937,
+      "both": 171.68859599999996
+    },
+    "wallClockImproved": false,
+    "note": "fs/both reduce disk writes (written=1, skipped=1005) and mtime churn (updatedMtimes 1006→1) but warm wall stays ~1.6–1.8s; generate remains 1006. Fewer writes alone ≠ speedup."
+  },
+  "optAC_against_real_uni": {
+    "attempted": false,
+    "status": "unverified_blocked",
+    "blocker": "optimize/lib DevCompiler Opt A/C targets synthetic plain-JS pages with common/* externalized. Fixture pages are Vue SFCs compiled via @dcloudio/vite-plugin-uni (uniPage:// virtual modules, WXML/WXSS/JSON emit, vendor/common coupling). Wiring page-only Rollup emit into that pipeline is not a quick drop-in; no invented timings."
+  },
+  "verdictSentence": "On real uni mp-weixin fixture (500 pages), ordinary script edit is ~1.6s warm with transform=1 but full generate≈1006; write-skip modes do not make it seconds-independent of page count."
+}

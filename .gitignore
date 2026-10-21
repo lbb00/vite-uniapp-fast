@@ -1,0 +1,11 @@
+node_modules/
+**/node_modules/
+*.log
+logs/
+work/
+.DS_Store
+*.tgz
+*.zip
+.env
+.env.*
+# 注意：package/dist/ 是最终产物，刻意不忽略

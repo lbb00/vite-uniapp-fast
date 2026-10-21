@@ -1,0 +1,106 @@
+{
+  "when": "2026-10-15T10:00:58.353Z",
+  "host": "box-linux",
+  "zone": "Asia/Shanghai",
+  "f14": "ENABLE",
+  "cases": [
+    {
+      "id": "f14-classify-add-only",
+      "pass": true,
+      "detail": "{\"kind\":\"add-only\",\"added\":[\"b\"],\"removed\":[]}"
+    },
+    {
+      "id": "f14-classify-rename",
+      "pass": true,
+      "detail": "{\"kind\":\"rename-or-mixed\",\"added\":[\"b\"],\"removed\":[\"a\"]}"
+    },
+    {
+      "id": "f14-export-add-chunk",
+      "pass": true,
+      "detail": "ms=3.34 mode=add-only reason=closure-shared-chunk-regen",
+      "wallMs": 3.3405070000000023
+    },
+    {
+      "id": "f14-export-add-fail-closed-without-flag",
+      "pass": true,
+      "detail": "closure-export-surface-changed"
+    },
+    {
+      "id": "f14-extract-named-imports",
+      "pass": true,
+      "detail": "probeMul,probeAdd"
+    },
+    {
+      "id": "f14-option-a-batch-add-plus-page",
+      "pass": true,
+      "detail": "ms=9.06 files=2 pages=[{\"pagePath\":\"pages-tab/routeA/index\",\"ok\":true,\"reason\":\"setup-body-local-imports\",\"emitClass\":\"setup-body-local-imports\",\"afterSha\":\"9c488e0d2637934ee30eaa45cb549cbfa1e1eb98c3ddfbbee486c49a7256fd57\",\"allExternalsOnDisk\":true}] chunkMode=add-only",
+      "wallMs": 9.063016000000005,
+      "afterSha": "5fe0678973181023b1f26a7c4d0cf0c09a1f8ed08dff64bd28f3e1c10d40b16c"
+    },
+    {
+      "id": "f14-option-a-rename-plus-page",
+      "pass": true,
+      "detail": "ms=2.07 surface=rename-or-mixed pages=[\"setup-body-local-imports\"]",
+      "wallMs": 2.0722029999999734
+    },
+    {
+      "id": "f14-option-a-rename-page-stale-fail-closed",
+      "pass": true,
+      "detail": "option-a-page-imports-missing-export"
+    },
+    {
+      "id": "f14-fixture-export-add-chunk",
+      "pass": true,
+      "detail": "ms=0.41 mode=add-only reason=closure-shared-chunk-regen",
+      "wallMs": 0.407178000000016
+    },
+    {
+      "id": "f16-no-dist-detected",
+      "pass": true,
+      "detail": "resolveSharedDistChunk=null"
+    },
+    {
+      "id": "f16-inlined-util-page-rebundle",
+      "pass": true,
+      "detail": "ms=1.31 files=2 reason=option-a-inlined-page-rebundle pages=[[\"inlineHint\"],[\"inlineHint\"]]",
+      "wallMs": 1.3057329999999752
+    },
+    {
+      "id": "f16-only-page-js-changed",
+      "pass": true,
+      "detail": "vendor sha stable"
+    },
+    {
+      "id": "f16-no-anchor-fail-closed",
+      "pass": true,
+      "detail": "option-a-inlined-no-anchor"
+    },
+    {
+      "id": "f16-dist-exists-fail-closed",
+      "pass": true,
+      "detail": "option-a-inlined-dist-exists"
+    },
+    {
+      "id": "f16-patch-helper",
+      "pass": true,
+      "detail": "patched=inlineHint"
+    }
+  ],
+  "walls": {
+    "exportAddChunkMs": 3.3405070000000023,
+    "optionABatchMs": 9.063016000000005,
+    "optionARenameMs": 2.0722029999999734,
+    "fixtureExportAddMs": 0.407178000000016,
+    "f16InlinedTwoPagesMs": 1.3057329999999752
+  },
+  "f16": "ENABLE",
+  "summary": {
+    "passed": 15,
+    "failed": 0,
+    "total": 15,
+    "verdict": "ENABLE",
+    "f16": "ENABLE",
+    "f16pass": 6,
+    "f16total": 6
+  }
+}

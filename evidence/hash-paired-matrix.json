@@ -1,0 +1,4405 @@
+{
+  "when": "2026-10-20T09:08:08.269Z",
+  "zone": "Asia/Shanghai",
+  "label": "Measured",
+  "bar": "paired-output-SHA-required",
+  "static": {
+    "kind": "cold_full_build",
+    "baselineFiles": 2024,
+    "optcFiles": 2024,
+    "equalCount": 2024,
+    "diffCount": 0,
+    "identical": true,
+    "merkleBaseline": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+    "merkleOptc": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+    "fileHashesPaths": {
+      "baseline": "verify/logs/hash-static-cold-baseline.json",
+      "optc": "verify/logs/hash-static-cold-optc.json"
+    },
+    "diffPaths": []
+  },
+  "cases": [
+    {
+      "id": "hash-static-cold-with-vs-without",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "live-files.json-sha256",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "files=2024 equal=2024 diff=0 merkleEq=true",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "equalCount": 2024,
+        "diffCount": 0,
+        "baselineFiles": 2024,
+        "optcFiles": 2024,
+        "fileHashesBaselinePath": "verify/logs/hash-static-cold-baseline.json",
+        "fileHashesOptcPath": "verify/logs/hash-static-cold-optc.json",
+        "merkleBaseline": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "merkleOptc": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7"
+      }
+    },
+    {
+      "id": "hash-tpl",
+      "taxonomyLeaves": [
+        "tpl.template_only",
+        "tpl.slot_vfor_vif_complex"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=template compared=2 eq=2 viteSkipped=false reason=template-changed",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.wxml",
+          "baselineSha256": "f26b249976036fa3659240f5bf14d7e70f3212d88f7423101a121e1082c6f076",
+          "optcSha256": "f26b249976036fa3659240f5bf14d7e70f3212d88f7423101a121e1082c6f076",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "69baa029fed735e3d6da2e67621863472a27f753bdd6383c3ab55ff0a35c15a5",
+          "optcSha256": "69baa029fed735e3d6da2e67621863472a27f753bdd6383c3ab55ff0a35c15a5",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-tpl-baseline",
+        "optcReport": "box-hash-tpl-optc-ext",
+        "step": "template",
+        "viteSkipped": false,
+        "reason": "template-changed",
+        "baselineMs": 1306.9270379999998,
+        "optcMs": 1410.2853169999998
+      }
+    },
+    {
+      "id": "hash-style",
+      "taxonomyLeaves": [
+        "style.style_only"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=style compared=2 eq=2 viteSkipped=false reason=style-changed",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.wxss",
+          "baselineSha256": "98b1ae8ccaca7440473aa9154600b71820319f8e81da850df7baa371c605f659",
+          "optcSha256": "98b1ae8ccaca7440473aa9154600b71820319f8e81da850df7baa371c605f659",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "69baa029fed735e3d6da2e67621863472a27f753bdd6383c3ab55ff0a35c15a5",
+          "optcSha256": "69baa029fed735e3d6da2e67621863472a27f753bdd6383c3ab55ff0a35c15a5",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-style-baseline",
+        "optcReport": "box-hash-style-optc-ext",
+        "step": "style",
+        "viteSkipped": false,
+        "reason": "style-changed",
+        "baselineMs": 1289.4319420000002,
+        "optcMs": 1581.02563
+      }
+    },
+    {
+      "id": "hash-scss",
+      "taxonomyLeaves": [
+        "style.style_only",
+        "style.scss_lang_deep",
+        "cfg.uni_scss"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=sharedStyle compared=3 eq=3 viteSkipped=false reason=new-file-never-seeded",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.wxss",
+          "baselineSha256": "4e7e57183d6fb058041ad37970cb273124a187b6f26782e41760483926011703",
+          "optcSha256": "4e7e57183d6fb058041ad37970cb273124a187b6f26782e41760483926011703",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "69baa029fed735e3d6da2e67621863472a27f753bdd6383c3ab55ff0a35c15a5",
+          "optcSha256": "69baa029fed735e3d6da2e67621863472a27f753bdd6383c3ab55ff0a35c15a5",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "app.wxss",
+          "baselineSha256": "82dac8e1cc13495f7a8aca28782bf6013bb52d0f0a18081182d16c979b88da6c",
+          "optcSha256": "82dac8e1cc13495f7a8aca28782bf6013bb52d0f0a18081182d16c979b88da6c",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-scss-baseline",
+        "optcReport": "box-hash-scss-optc-ext",
+        "step": "sharedStyle",
+        "viteSkipped": false,
+        "reason": "new-file-never-seeded",
+        "baselineMs": 2237.3316480000003,
+        "optcMs": 2397.1331410000003
+      }
+    },
+    {
+      "id": "hash-combo",
+      "taxonomyLeaves": [
+        "tpl.template_plus_script"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=templatePlusScript compared=2 eq=2 viteSkipped=false reason=template-changed",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.wxml",
+          "baselineSha256": "538d79182cb3d07b4d6b82db0a4ac89ecdf8e013ac62408aa0eb1f98a6b08d33",
+          "optcSha256": "538d79182cb3d07b4d6b82db0a4ac89ecdf8e013ac62408aa0eb1f98a6b08d33",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "8d3e25ffd2ed0becaad35b3ffe7226a91c5ee04c1ad4ef96ba7a5998c9fdf2e8",
+          "optcSha256": "8d3e25ffd2ed0becaad35b3ffe7226a91c5ee04c1ad4ef96ba7a5998c9fdf2e8",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-combo-baseline",
+        "optcReport": "box-hash-combo-optc-ext",
+        "step": "templatePlusScript",
+        "viteSkipped": false,
+        "reason": "template-changed",
+        "baselineMs": 1251.024542,
+        "optcMs": 1493.352946
+      }
+    },
+    {
+      "id": "hash-opt-data",
+      "taxonomyLeaves": [
+        "opt.data_literal"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=optionsDataLit compared=1 eq=1 viteSkipped=true reason=import-set-and-dep-content-stable",
+      "outputs": [
+        {
+          "path": "pkg-risk/options-lit.js",
+          "baselineSha256": "13075b53061d97457e42f6e6e731bb0f0f1eed9e855031225d4a4fd26390e96f",
+          "optcSha256": "13075b53061d97457e42f6e6e731bb0f0f1eed9e855031225d4a4fd26390e96f",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-opt-data-baseline",
+        "optcReport": "box-hash-opt-data-optc-ext",
+        "step": "optionsDataLit",
+        "viteSkipped": true,
+        "reason": "import-set-and-dep-content-stable",
+        "baselineMs": 1347.1747910000004,
+        "optcMs": 4.5105350000003455
+      }
+    },
+    {
+      "id": "hash-opt-methods",
+      "taxonomyLeaves": [
+        "opt.other_literal_in_options",
+        "struct.opt_methods_computed_watch",
+        "struct.opt_add_remove_binding"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=optionsMethods compared=1 eq=1 viteSkipped=false reason=optc-emit-failed",
+      "outputs": [
+        {
+          "path": "pkg-risk/options-lit.js",
+          "baselineSha256": "97020164e5680bc32a2087ea1d48a39488585ecf11dd42155221a3712e59802e",
+          "optcSha256": "97020164e5680bc32a2087ea1d48a39488585ecf11dd42155221a3712e59802e",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-opt-methods-baseline",
+        "optcReport": "box-hash-opt-methods-optc-ext",
+        "step": "optionsMethods",
+        "viteSkipped": false,
+        "reason": "optc-emit-failed",
+        "baselineMs": 1261.8394749999998,
+        "optcMs": 1535.5832640000008
+      }
+    },
+    {
+      "id": "hash-macro",
+      "taxonomyLeaves": [
+        "macro.props_default_literal"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=macrosDefaultLit compared=1 eq=1 viteSkipped=true reason=import-set-and-dep-content-stable",
+      "outputs": [
+        {
+          "path": "pkg-risk/macros-props.js",
+          "baselineSha256": "674455b6d5d23d3446412a91bf438ed92a2aa016151caba3ae644b73b59f7643",
+          "optcSha256": "674455b6d5d23d3446412a91bf438ed92a2aa016151caba3ae644b73b59f7643",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-macro-baseline",
+        "optcReport": "box-hash-macro-optc-ext",
+        "step": "macrosDefaultLit",
+        "viteSkipped": true,
+        "reason": "import-set-and-dep-content-stable",
+        "baselineMs": 1328.7192919999998,
+        "optcMs": 5.816348999999718
+      }
+    },
+    {
+      "id": "hash-macro-emits",
+      "taxonomyLeaves": [
+        "macro.other_macro_literal",
+        "struct.macro_type_or_shape",
+        "messy.defineExpose"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=macrosEmitsShape compared=1 eq=1 viteSkipped=false reason=optc-emit-failed",
+      "outputs": [
+        {
+          "path": "pkg-risk/macros-props.js",
+          "baselineSha256": "d3a1b0a8026361f9a5d171303aa0cf7b6ac291e66a3f91adb6e88c5e827e26c0",
+          "optcSha256": "d3a1b0a8026361f9a5d171303aa0cf7b6ac291e66a3f91adb6e88c5e827e26c0",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-macro-emits-baseline",
+        "optcReport": "box-hash-macro-emits-optc-ext",
+        "step": "macrosEmitsShape",
+        "viteSkipped": false,
+        "reason": "optc-emit-failed",
+        "baselineMs": 1206.9144569999999,
+        "optcMs": 1431.0256909999998
+      }
+    },
+    {
+      "id": "hash-script1",
+      "taxonomyLeaves": [
+        "setup.ref_string_literal"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=script1 compared=1 eq=1 viteSkipped=true reason=import-set-and-dep-content-stable",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "76824488b6159358cb5ab7afd4e61bf899868df444071f3898715d46bc0740da",
+          "optcSha256": "76824488b6159358cb5ab7afd4e61bf899868df444071f3898715d46bc0740da",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-script1-baseline",
+        "optcReport": "box-hash-script1-optc-ext",
+        "step": "script1",
+        "viteSkipped": true,
+        "reason": "import-set-and-dep-content-stable",
+        "baselineMs": 1147.1994439999999,
+        "optcMs": 1.7656200000001263
+      }
+    },
+    {
+      "id": "hash-callarg",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=scriptLocalImport compared=1 eq=1 viteSkipped=true reason=import-set-and-dep-content-stable",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+          "optcSha256": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-callarg-baseline",
+        "optcReport": "box-hash-callarg-optc-ext",
+        "step": "scriptLocalImport",
+        "viteSkipped": true,
+        "reason": "import-set-and-dep-content-stable",
+        "baselineMs": 1244.748012,
+        "optcMs": 5.764669999999569
+      }
+    },
+    {
+      "id": "hash-setupbody",
+      "taxonomyLeaves": [
+        "setup.named_bool_num_null",
+        "struct.setup_body_complex"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=scriptSetupBody compared=1 eq=1 viteSkipped=true reason=import-set-and-dep-content-stable",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "38cbe333a1123649deb203f3cb6ecf02b8e8f6a6ad6eb0320ef0edaf8af5b1fa",
+          "optcSha256": "38cbe333a1123649deb203f3cb6ecf02b8e8f6a6ad6eb0320ef0edaf8af5b1fa",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-setupbody-baseline",
+        "optcReport": "box-hash-setupbody-optc-ext",
+        "step": "scriptSetupBody",
+        "viteSkipped": true,
+        "reason": "import-set-and-dep-content-stable",
+        "baselineMs": 1159.2373580000003,
+        "optcMs": 2.8113219999995636
+      }
+    },
+    {
+      "id": "hash-complex",
+      "taxonomyLeaves": [
+        "struct.setup_body_complex",
+        "setup.plain_const_literal",
+        "messy.optional_nullish",
+        "messy.iife_toplevel",
+        "messy.large_setup"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=scriptComplexSetup compared=1 eq=1 viteSkipped=true reason=import-set-and-dep-content-stable",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "a0bfb44b9bafe7d51ef4fd52ff515ac91181bd564161915e13f5c1184bcde9d2",
+          "optcSha256": "a0bfb44b9bafe7d51ef4fd52ff515ac91181bd564161915e13f5c1184bcde9d2",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-complex-baseline",
+        "optcReport": "box-hash-complex-optc-ext",
+        "step": "scriptComplexSetup",
+        "viteSkipped": true,
+        "reason": "import-set-and-dep-content-stable",
+        "baselineMs": 1189.3927709999998,
+        "optcMs": 9.614686000000802
+      }
+    },
+    {
+      "id": "hash-shared",
+      "taxonomyLeaves": [
+        "shared.util_le_closure_max",
+        "shared.leaf_util",
+        "shared.composable_hook"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=sharedModule compared=1 eq=1 viteSkipped=true reason=closure-shared-chunk",
+      "outputs": [
+        {
+          "path": "modules/utils/unifast-probe.js",
+          "baselineSha256": "eab8221e163f96655483d20ae5c67f09ea142865af021eef8f4546d230e76c74",
+          "optcSha256": "eab8221e163f96655483d20ae5c67f09ea142865af021eef8f4546d230e76c74",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-shared-baseline",
+        "optcReport": "box-hash-shared-optc-ext",
+        "step": "sharedModule",
+        "viteSkipped": true,
+        "reason": "closure-shared-chunk",
+        "baselineMs": 1059.4273990000002,
+        "optcMs": 1.879848000000493
+      }
+    },
+    {
+      "id": "hash-pkg",
+      "taxonomyLeaves": [
+        "life.subpackage_page_edit",
+        "setup.ref_string_literal"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=scriptPkg1 compared=1 eq=1 viteSkipped=true reason=import-set-and-dep-content-stable",
+      "outputs": [
+        {
+          "path": "pkg0/p1.js",
+          "baselineSha256": "6a0079d2967ec73b39914c89878421be7b305c7846f248e5b408de2f6c8449c6",
+          "optcSha256": "6a0079d2967ec73b39914c89878421be7b305c7846f248e5b408de2f6c8449c6",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-pkg-baseline",
+        "optcReport": "box-hash-pkg-optc-ext",
+        "step": "scriptPkg1",
+        "viteSkipped": true,
+        "reason": "import-set-and-dep-content-stable",
+        "baselineMs": 1290.0419970000003,
+        "optcMs": 2.0897589999995034
+      }
+    },
+    {
+      "id": "hash-vue-script",
+      "taxonomyLeaves": [
+        "shared.vue_script_only_le_vue_max"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=miniSharedScript compared=1 eq=1 viteSkipped=true reason=closure-vue-script",
+      "outputs": [
+        {
+          "path": "modules/components/mini-shared/index.js",
+          "baselineSha256": "6d04e127f73ecdbd2d0e779c864deb8173cf9f73df0cd081f975accbed2bef33",
+          "optcSha256": "6d04e127f73ecdbd2d0e779c864deb8173cf9f73df0cd081f975accbed2bef33",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-vue-script-baseline",
+        "optcReport": "box-hash-vue-script-optc-ext",
+        "step": "miniSharedScript",
+        "viteSkipped": true,
+        "reason": "closure-vue-script",
+        "baselineMs": 1565.989512,
+        "optcMs": 2.2279889999999796
+      }
+    },
+    {
+      "id": "hash-vue-tpl",
+      "taxonomyLeaves": [
+        "shared.vue_template_or_style"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=miniSharedTemplate compared=2 eq=2 viteSkipped=false reason=shared-vue-template-or-style",
+      "outputs": [
+        {
+          "path": "modules/components/mini-shared/index.wxml",
+          "baselineSha256": "9d7a9e165368ab89adb37c26017b285b151f6c46d04d313ef7e9d32a1f1105b6",
+          "optcSha256": "9d7a9e165368ab89adb37c26017b285b151f6c46d04d313ef7e9d32a1f1105b6",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "modules/components/mini-shared/index.js",
+          "baselineSha256": "442ba33e22d0fc600fa17aefe727a69dd7cde156c063c2f9955cce4df552210d",
+          "optcSha256": "442ba33e22d0fc600fa17aefe727a69dd7cde156c063c2f9955cce4df552210d",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-vue-tpl-baseline",
+        "optcReport": "box-hash-vue-tpl-optc-ext",
+        "step": "miniSharedTemplate",
+        "viteSkipped": false,
+        "reason": "shared-vue-template-or-style",
+        "baselineMs": 1411.93689,
+        "optcMs": 1738.3088200000002
+      }
+    },
+    {
+      "id": "hash-nonlit",
+      "taxonomyLeaves": [
+        "struct.setup_add_remove_binding",
+        "messy.asi_no_semicolon",
+        "messy.empty_minimal_sfc"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=scriptNonLiteral compared=1 eq=1 viteSkipped=false reason=optc-emit-failed",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "431fb6878c40bda21882bc05de652026cf6eb84d23c5492a50ceff42e27f1781",
+          "optcSha256": "431fb6878c40bda21882bc05de652026cf6eb84d23c5492a50ceff42e27f1781",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-nonlit-baseline",
+        "optcReport": "box-hash-nonlit-optc-ext",
+        "step": "scriptNonLiteral",
+        "viteSkipped": false,
+        "reason": "optc-emit-failed",
+        "baselineMs": 1357.688282,
+        "optcMs": 1572.8961210000007
+      }
+    },
+    {
+      "id": "hash-pages",
+      "taxonomyLeaves": [
+        "cfg.pages_json",
+        "cfg.manifest",
+        "life.new_never_seeded",
+        "life.rename_delete_page"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=pages compared=1 eq=1 viteSkipped=false reason=pages-or-manifest-changed",
+      "outputs": [
+        {
+          "path": "app.json",
+          "baselineSha256": "c2b1f43389e91404580006c07c36eee6f4ecdc92c695ad74e3f105b0b2696359",
+          "optcSha256": "c2b1f43389e91404580006c07c36eee6f4ecdc92c695ad74e3f105b0b2696359",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-pages-baseline",
+        "optcReport": "box-hash-pages-optc-ext",
+        "step": "pages",
+        "viteSkipped": false,
+        "reason": "pages-or-manifest-changed",
+        "baselineMs": 1272.0565299999998,
+        "optcMs": 1414.0832890000001
+      }
+    },
+    {
+      "id": "hash-ifdef",
+      "taxonomyLeaves": [
+        "build.ifdef_conditional_compile",
+        "struct.setup_lifecycle_hooks"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=ifdefTouch compared=1 eq=1 viteSkipped=false reason=conditional-compile-changed",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "7a508f0b80a3ea70047f2f05ebb4121334de7de2a0f170a355e0e0d26b18af1b",
+          "optcSha256": "7a508f0b80a3ea70047f2f05ebb4121334de7de2a0f170a355e0e0d26b18af1b",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-ifdef-baseline",
+        "optcReport": "box-hash-ifdef-optc-ext",
+        "step": "ifdefTouch",
+        "viteSkipped": false,
+        "reason": "conditional-compile-changed",
+        "baselineMs": 1104.3829400000004,
+        "optcMs": 1325.36593
+      }
+    },
+    {
+      "id": "hash-slot",
+      "taxonomyLeaves": [
+        "tpl.slot_vfor_vif_complex",
+        "tpl.template_only"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=slotVforTpl compared=2 eq=2 viteSkipped=false reason=template-changed",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.wxml",
+          "baselineSha256": "948c948e484b4b11ce3be372d4779c5bc2defc23044e667cc90ee8c601aaa89a",
+          "optcSha256": "948c948e484b4b11ce3be372d4779c5bc2defc23044e667cc90ee8c601aaa89a",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "9abf9f44409343d63e8c139e34cdd3ce15756e5326da8edef450e3aa343b9b6b",
+          "optcSha256": "9abf9f44409343d63e8c139e34cdd3ce15756e5326da8edef450e3aa343b9b6b",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-slot-baseline",
+        "optcReport": "box-hash-slot-optc-ext",
+        "step": "slotVforTpl",
+        "viteSkipped": false,
+        "reason": "template-changed",
+        "baselineMs": 1354.8509999999997,
+        "optcMs": 1394.6021040000005
+      }
+    },
+    {
+      "id": "hash-onload",
+      "taxonomyLeaves": [
+        "life.page_onload_onshow_literal",
+        "struct.setup_lifecycle_hooks",
+        "life.form_submit_handler_literal"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=onLoadLiteral compared=1 eq=1 viteSkipped=false reason=import-set-changed",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "44765e4e3f3825369afa69837e67ac8a145ad6d7f17c0ecc8a1575a10dae5c1e",
+          "optcSha256": "44765e4e3f3825369afa69837e67ac8a145ad6d7f17c0ecc8a1575a10dae5c1e",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-onload-baseline",
+        "optcReport": "box-hash-onload-optc-ext",
+        "step": "onLoadLiteral",
+        "viteSkipped": false,
+        "reason": "import-set-changed",
+        "baselineMs": 1165.005142,
+        "optcMs": 1305.11629
+      }
+    },
+    {
+      "id": "hash-store",
+      "taxonomyLeaves": [
+        "cfg.store_vuex",
+        "cfg.vuex_mapstate_edit",
+        "shared.mixin_options_merge"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=storeTouch compared=1 eq=1 viteSkipped=true reason=option-a-export-add",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "7ba4d08bc86a0c26a8e8912d9faeccd3b7e0fd9eaf5dc0dc05a7525a9f378a6f",
+          "optcSha256": "7ba4d08bc86a0c26a8e8912d9faeccd3b7e0fd9eaf5dc0dc05a7525a9f378a6f",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-store-baseline",
+        "optcReport": "box-hash-store-optc-ext",
+        "step": "storeTouch",
+        "viteSkipped": true,
+        "reason": "option-a-export-add",
+        "baselineMs": 1136.1450999999997,
+        "optcMs": 1.588821999999709
+      }
+    },
+    {
+      "id": "hash-addimport",
+      "taxonomyLeaves": [
+        "struct.import_add_remove_rename",
+        "struct.export_add_rename",
+        "shared.option_a_export_add_rename"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=scriptAddImport compared=2 eq=2 viteSkipped=false reason=shared-module-option-a-blocked",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "c9e52521a3dbaf6713217f6c004c530075cf90d5f2572f7b0b8eb5efabfbc4a1",
+          "optcSha256": "c9e52521a3dbaf6713217f6c004c530075cf90d5f2572f7b0b8eb5efabfbc4a1",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "modules/utils/unifast-probe.js",
+          "baselineSha256": "b2f6fa9517586a24a93712a87ddda4922b28f4c26cac9ae3ff103bc27c609606",
+          "optcSha256": "b2f6fa9517586a24a93712a87ddda4922b28f4c26cac9ae3ff103bc27c609606",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-addimport-baseline",
+        "optcReport": "box-hash-addimport-optc-ext",
+        "step": "scriptAddImport",
+        "viteSkipped": false,
+        "reason": "shared-module-option-a-blocked",
+        "baselineMs": 1312.8535860000002,
+        "optcMs": 1576.6136209999995
+      }
+    },
+    {
+      "id": "hash-app",
+      "taxonomyLeaves": [
+        "cfg.app_vue",
+        "cfg.main_js",
+        "cfg.plugins"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=appVueTouch compared=2 eq=2 viteSkipped=false reason=app-entry-changed",
+      "outputs": [
+        {
+          "path": "app.js",
+          "baselineSha256": "35ce993219ec525adf042376a07b2a205ebb059f17b58fc027d1b31a8595fcc4",
+          "optcSha256": "35ce993219ec525adf042376a07b2a205ebb059f17b58fc027d1b31a8595fcc4",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "app.json",
+          "baselineSha256": "75879d16179c104d87b5e2baa489cce4d8fecd147433e76a43f05e36929eb0fe",
+          "optcSha256": "75879d16179c104d87b5e2baa489cce4d8fecd147433e76a43f05e36929eb0fe",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-app-baseline",
+        "optcReport": "box-hash-app-optc-ext",
+        "step": "appVueTouch",
+        "viteSkipped": false,
+        "reason": "app-entry-changed",
+        "baselineMs": 1246.272202,
+        "optcMs": 1387.8207950000005
+      }
+    },
+    {
+      "id": "hash-easycom",
+      "taxonomyLeaves": [
+        "imp.easycom_only",
+        "shared.vue_template_or_style",
+        "messy.chart_canvas_map"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=easycomTouch compared=2 eq=2 viteSkipped=false reason=shared-vue-template-or-style",
+      "outputs": [
+        {
+          "path": "modules/components/shared-popup/index.wxml",
+          "baselineSha256": "646e954088b18161358f7bc216bebe752ec0905d0a49bbe14041bd00f4094e2b",
+          "optcSha256": "646e954088b18161358f7bc216bebe752ec0905d0a49bbe14041bd00f4094e2b",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "modules/components/shared-popup/index.js",
+          "baselineSha256": "4d4d6743b07cef5d2ef83714768e1e6f37945f30d80e2d075d7eee97f2fd5c10",
+          "optcSha256": "4d4d6743b07cef5d2ef83714768e1e6f37945f30d80e2d075d7eee97f2fd5c10",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-easycom-baseline",
+        "optcReport": "box-hash-easycom-optc-ext",
+        "step": "easycomTouch",
+        "viteSkipped": false,
+        "reason": "shared-vue-template-or-style",
+        "baselineMs": 1289.8796730000004,
+        "optcMs": 1622.588592
+      }
+    },
+    {
+      "id": "hash-concurrent",
+      "taxonomyLeaves": [
+        "life.concurrent_multi_page",
+        "life.subpackage_page_edit"
+      ],
+      "method": "live-dual-bench-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=concurrentTwoPages compared=2 eq=2 viteSkipped=true reason=import-set-and-dep-content-stable",
+      "outputs": [
+        {
+          "path": "pkg0/p1.js",
+          "baselineSha256": "7f8ba99503a2a1d382752162a1e230238110bc94057bc4093d95e7ac49c26546",
+          "optcSha256": "7f8ba99503a2a1d382752162a1e230238110bc94057bc4093d95e7ac49c26546",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "pkg0/p2.js",
+          "baselineSha256": "17773b99af6f9087bf0871cba29effff0b438d08cc04e6593051f627ef3c438d",
+          "optcSha256": "17773b99af6f9087bf0871cba29effff0b438d08cc04e6593051f627ef3c438d",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-concurrent-baseline",
+        "optcReport": "box-hash-concurrent-optc-ext",
+        "step": "concurrentTwoPages",
+        "viteSkipped": true,
+        "reason": "import-set-and-dep-content-stable",
+        "baselineMs": 1210.0339510000003,
+        "optcMs": 0.9246460000003935
+      }
+    },
+    {
+      "id": "hash-gap-ifdef",
+      "taxonomyLeaves": [
+        "build.ifdef_conditional_compile",
+        "struct.setup_lifecycle_hooks"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=ifdefTouch compared=1 eq=1 vsCold=1 viteSkipped=false reason=conditional-compile-changed reasonCode=FULL_OTHER closureRebuild=",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "7a508f0b80a3ea70047f2f05ebb4121334de7de2a0f170a355e0e0d26b18af1b",
+          "optcSha256": "7a508f0b80a3ea70047f2f05ebb4121334de7de2a0f170a355e0e0d26b18af1b",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-ifdef-baseline",
+        "optcReport": "box-hash-ifdef-optc-ext",
+        "step": "ifdefTouch",
+        "viteSkipped": false,
+        "reason": "conditional-compile-changed",
+        "reasonCode": "FULL_OTHER",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pages-tab/routeA/index.js"
+        ],
+        "baselineMs": 1104.3829400000004,
+        "optcMs": 1325.36593
+      }
+    },
+    {
+      "id": "hash-gap-closure-over",
+      "taxonomyLeaves": [
+        "shared.util_gt_closure_max"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=sharedModule compared=4 eq=4 vsCold=1 viteSkipped=false reason=shared-module-multi-page reasonCode=FULL_SHARED closureRebuild=over-threshold-full",
+      "outputs": [
+        {
+          "path": "modules/utils/unifast-probe.js",
+          "baselineSha256": "eab8221e163f96655483d20ae5c67f09ea142865af021eef8f4546d230e76c74",
+          "optcSha256": "eab8221e163f96655483d20ae5c67f09ea142865af021eef8f4546d230e76c74",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "69baa029fed735e3d6da2e67621863472a27f753bdd6383c3ab55ff0a35c15a5",
+          "optcSha256": "69baa029fed735e3d6da2e67621863472a27f753bdd6383c3ab55ff0a35c15a5",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "pkg0/p1.js",
+          "baselineSha256": "4d02edf4cf5848ed70f7abe62a3337aab8fdd2ca3df34f403e251079e98e1a5e",
+          "optcSha256": "4d02edf4cf5848ed70f7abe62a3337aab8fdd2ca3df34f403e251079e98e1a5e",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "pkg0/p2.js",
+          "baselineSha256": "bd83d6a3708728a8479def2eae6d54943407b7c97ad8c0ed43a161a4b60f4d65",
+          "optcSha256": "bd83d6a3708728a8479def2eae6d54943407b7c97ad8c0ed43a161a4b60f4d65",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-closure-over-baseline",
+        "optcReport": "box-hash-closure-over-optc-ext",
+        "step": "sharedModule",
+        "viteSkipped": false,
+        "reason": "shared-module-multi-page",
+        "reasonCode": "FULL_SHARED",
+        "closureRebuild": "over-threshold-full",
+        "vueMax": 2,
+        "closureMax": 2,
+        "importerCount": 3,
+        "changedVsCold": [
+          "modules/utils/unifast-probe.js"
+        ],
+        "baselineMs": 1150.7397810000002,
+        "optcMs": 1444.9585379999999
+      }
+    },
+    {
+      "id": "hash-gap-vue-gt",
+      "taxonomyLeaves": [
+        "shared.vue_script_only_gt_vue_max"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=sharedPopupScript compared=1 eq=1 vsCold=1 viteSkipped=false reason=shared-module-multi-page reasonCode=FULL_SHARED closureRebuild=over-threshold-full",
+      "outputs": [
+        {
+          "path": "modules/components/shared-popup/index.js",
+          "baselineSha256": "aaea503c06fbcce479e949c6cda783c524ef960b108f919c914b867cced57041",
+          "optcSha256": "aaea503c06fbcce479e949c6cda783c524ef960b108f919c914b867cced57041",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-vue-gt-baseline",
+        "optcReport": "box-hash-vue-gt-optc-ext",
+        "step": "sharedPopupScript",
+        "viteSkipped": false,
+        "reason": "shared-module-multi-page",
+        "reasonCode": "FULL_SHARED",
+        "closureRebuild": "over-threshold-full",
+        "vueMax": 10,
+        "closureMax": 3,
+        "importerCount": 500,
+        "changedVsCold": [
+          "modules/components/shared-popup/index.js"
+        ],
+        "baselineMs": 1161.2799880000002,
+        "optcMs": 1321.2097150000009
+      }
+    },
+    {
+      "id": "hash-gap-messy-ts",
+      "taxonomyLeaves": [
+        "messy.ts_as_enum_residue"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=messyTsAs compared=1 eq=1 vsCold=1 viteSkipped=false reason=script-lang-changed reasonCode=FULL_OTHER closureRebuild=",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "4511c4e2cc6255b54d3cb0a9f121db4a9fdf6492346f63174d95bbb512797364",
+          "optcSha256": "4511c4e2cc6255b54d3cb0a9f121db4a9fdf6492346f63174d95bbb512797364",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-messy-ts-baseline",
+        "optcReport": "box-hash-messy-ts-optc-ext",
+        "step": "messyTsAs",
+        "viteSkipped": false,
+        "reason": "script-lang-changed",
+        "reasonCode": "FULL_OTHER",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pages-tab/routeA/index.js"
+        ],
+        "baselineMs": 1236.011681,
+        "optcMs": 1331.8129840000001
+      }
+    },
+    {
+      "id": "hash-gap-messy-priv",
+      "taxonomyLeaves": [
+        "messy.private_fields"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=messyPrivateField compared=1 eq=1 vsCold=1 viteSkipped=true reason=import-set-and-dep-content-stable reasonCode=FAST_PAGE closureRebuild=",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "8c6119a50420864086ecf89bbb227d1e6cf827799d757e1a96eee8be759c820d",
+          "optcSha256": "8c6119a50420864086ecf89bbb227d1e6cf827799d757e1a96eee8be759c820d",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-messy-priv-baseline",
+        "optcReport": "box-hash-messy-priv-optc-ext",
+        "step": "messyPrivateField",
+        "viteSkipped": true,
+        "reason": "import-set-and-dep-content-stable",
+        "reasonCode": "FAST_PAGE",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pages-tab/routeA/index.js"
+        ],
+        "baselineMs": 1364.828265,
+        "optcMs": 1.8086040000007415
+      }
+    },
+    {
+      "id": "hash-gap-messy-dyn",
+      "taxonomyLeaves": [
+        "messy.dynamic_import"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=messyDynamicImport compared=1 eq=1 vsCold=1 viteSkipped=true reason=import-set-and-dep-content-stable reasonCode=FAST_PAGE closureRebuild=",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "8c6119a50420864086ecf89bbb227d1e6cf827799d757e1a96eee8be759c820d",
+          "optcSha256": "8c6119a50420864086ecf89bbb227d1e6cf827799d757e1a96eee8be759c820d",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-messy-dyn-baseline",
+        "optcReport": "box-hash-messy-dyn-optc-ext",
+        "step": "messyDynamicImport",
+        "viteSkipped": true,
+        "reason": "import-set-and-dep-content-stable",
+        "reasonCode": "FAST_PAGE",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pages-tab/routeA/index.js"
+        ],
+        "baselineMs": 1315.4861419999997,
+        "optcMs": 2.253555000000233
+      }
+    },
+    {
+      "id": "hash-gap-messy-circ",
+      "taxonomyLeaves": [
+        "messy.circular_dep"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=messyCircular compared=3 eq=3 vsCold=1 viteSkipped=false reason=import-set-changed reasonCode=FULL_IMPORT_SET closureRebuild=",
+      "outputs": [
+        {
+          "path": "modules/utils/unifast-circ-a.js",
+          "baselineSha256": "77f5eec38c5ef075e11892244ccf9e249d82937e07401398df98319568775a17",
+          "optcSha256": "77f5eec38c5ef075e11892244ccf9e249d82937e07401398df98319568775a17",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "modules/utils/unifast-circ-b.js",
+          "baselineSha256": "77f5eec38c5ef075e11892244ccf9e249d82937e07401398df98319568775a17",
+          "optcSha256": "77f5eec38c5ef075e11892244ccf9e249d82937e07401398df98319568775a17",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "8c6119a50420864086ecf89bbb227d1e6cf827799d757e1a96eee8be759c820d",
+          "optcSha256": "8c6119a50420864086ecf89bbb227d1e6cf827799d757e1a96eee8be759c820d",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-messy-circ-baseline",
+        "optcReport": "box-hash-messy-circ-optc-ext",
+        "step": "messyCircular",
+        "viteSkipped": false,
+        "reason": "import-set-changed",
+        "reasonCode": "FULL_IMPORT_SET",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pages-tab/routeA/index.js"
+        ],
+        "baselineMs": 1318.081338,
+        "optcMs": 1531.3598860000002
+      }
+    },
+    {
+      "id": "hash-gap-messy-missing",
+      "taxonomyLeaves": [
+        "messy.missing_import",
+        "life.new_never_seeded"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=messyMissingImport compared=2 eq=2 vsCold=1 viteSkipped=false reason=import-set-changed reasonCode=FULL_IMPORT_SET closureRebuild=",
+      "outputs": [
+        {
+          "path": "modules/utils/unifast-new-unseeded.js",
+          "baselineSha256": "77f5eec38c5ef075e11892244ccf9e249d82937e07401398df98319568775a17",
+          "optcSha256": "77f5eec38c5ef075e11892244ccf9e249d82937e07401398df98319568775a17",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "8c6119a50420864086ecf89bbb227d1e6cf827799d757e1a96eee8be759c820d",
+          "optcSha256": "8c6119a50420864086ecf89bbb227d1e6cf827799d757e1a96eee8be759c820d",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-messy-missing-baseline",
+        "optcReport": "box-hash-messy-missing-optc-ext",
+        "step": "messyMissingImport",
+        "viteSkipped": false,
+        "reason": "import-set-changed",
+        "reasonCode": "FULL_IMPORT_SET",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pages-tab/routeA/index.js"
+        ],
+        "baselineMs": 1447.938768,
+        "optcMs": 1550.2944619999998
+      }
+    },
+    {
+      "id": "hash-gap-messy-defmulti",
+      "taxonomyLeaves": [
+        "messy.default_import_multi_export"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=messyDefaultMulti compared=2 eq=2 vsCold=1 viteSkipped=false reason=import-set-changed reasonCode=FULL_IMPORT_SET closureRebuild=",
+      "outputs": [
+        {
+          "path": "modules/utils/unifast-multi-export.js",
+          "baselineSha256": "77f5eec38c5ef075e11892244ccf9e249d82937e07401398df98319568775a17",
+          "optcSha256": "77f5eec38c5ef075e11892244ccf9e249d82937e07401398df98319568775a17",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "8c6119a50420864086ecf89bbb227d1e6cf827799d757e1a96eee8be759c820d",
+          "optcSha256": "8c6119a50420864086ecf89bbb227d1e6cf827799d757e1a96eee8be759c820d",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-messy-defmulti-baseline",
+        "optcReport": "box-hash-messy-defmulti-optc-ext",
+        "step": "messyDefaultMulti",
+        "viteSkipped": false,
+        "reason": "import-set-changed",
+        "reasonCode": "FULL_IMPORT_SET",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pages-tab/routeA/index.js"
+        ],
+        "baselineMs": 1329.4170480000002,
+        "optcMs": 1593.5188420000004
+      }
+    },
+    {
+      "id": "hash-gap-messy-langts",
+      "taxonomyLeaves": [
+        "messy.lang_ts_sfc"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=messyLangTs compared=1 eq=1 vsCold=1 viteSkipped=false reason=script-lang-changed reasonCode=FULL_OTHER closureRebuild=",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "4511c4e2cc6255b54d3cb0a9f121db4a9fdf6492346f63174d95bbb512797364",
+          "optcSha256": "4511c4e2cc6255b54d3cb0a9f121db4a9fdf6492346f63174d95bbb512797364",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-messy-langts-baseline",
+        "optcReport": "box-hash-messy-langts-optc-ext",
+        "step": "messyLangTs",
+        "viteSkipped": false,
+        "reason": "script-lang-changed",
+        "reasonCode": "FULL_OTHER",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pages-tab/routeA/index.js"
+        ],
+        "baselineMs": 1229.2382909999997,
+        "optcMs": 1393.06164
+      }
+    },
+    {
+      "id": "hash-gap-messy-wxs",
+      "taxonomyLeaves": [
+        "messy.dual_script_wxs"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=messyDualWxs compared=2 eq=2 vsCold=2 viteSkipped=false reason=script-lang-changed reasonCode=FULL_OTHER closureRebuild=",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "dc1a7329031e7dcc68a9f2ed15b0d64a918e5f130c5b290a4d5bf1147dc4c7aa",
+          "optcSha256": "dc1a7329031e7dcc68a9f2ed15b0d64a918e5f130c5b290a4d5bf1147dc4c7aa",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "pages-tab/routeA/index.wxml",
+          "baselineSha256": "a865201e22661c578e22eec413cfb6cb0dbcb6c9200064ded9b53302e4ab6062",
+          "optcSha256": "a865201e22661c578e22eec413cfb6cb0dbcb6c9200064ded9b53302e4ab6062",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-messy-wxs-baseline",
+        "optcReport": "box-hash-messy-wxs-optc-ext",
+        "step": "messyDualWxs",
+        "viteSkipped": false,
+        "reason": "script-lang-changed",
+        "reasonCode": "FULL_OTHER",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pages-tab/routeA/index.js",
+          "pages-tab/routeA/index.wxml"
+        ],
+        "baselineMs": 1214.705736,
+        "optcMs": 1363.6256199999998
+      }
+    },
+    {
+      "id": "hash-gap-messy-getci",
+      "taxonomyLeaves": [
+        "messy.getCI_provide_inject"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=messyGetCI compared=1 eq=1 vsCold=1 viteSkipped=true reason=import-set-and-dep-content-stable reasonCode=FAST_PAGE closureRebuild=",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "8c6119a50420864086ecf89bbb227d1e6cf827799d757e1a96eee8be759c820d",
+          "optcSha256": "8c6119a50420864086ecf89bbb227d1e6cf827799d757e1a96eee8be759c820d",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-messy-getci-baseline",
+        "optcReport": "box-hash-messy-getci-optc-ext",
+        "step": "messyGetCI",
+        "viteSkipped": true,
+        "reason": "import-set-and-dep-content-stable",
+        "reasonCode": "FAST_PAGE",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pages-tab/routeA/index.js"
+        ],
+        "baselineMs": 1236.2226890000002,
+        "optcMs": 2.334128999999848
+      }
+    },
+    {
+      "id": "hash-gap-messy-side",
+      "taxonomyLeaves": [
+        "imp.side_effect_import"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=messySideEffectImport compared=1 eq=1 vsCold=1 viteSkipped=false reason=optc-emit-failed reasonCode=FULL_FAIL_CLOSED closureRebuild=",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "b19202fd61051da53af547c7cb0c1f9ffe053c700ad877609f31110b403949d7",
+          "optcSha256": "b19202fd61051da53af547c7cb0c1f9ffe053c700ad877609f31110b403949d7",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-messy-side-baseline",
+        "optcReport": "box-hash-messy-side-optc-ext",
+        "step": "messySideEffectImport",
+        "viteSkipped": false,
+        "reason": "optc-emit-failed",
+        "reasonCode": "FULL_FAIL_CLOSED",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pages-tab/routeA/index.js"
+        ],
+        "baselineMs": 1207.990941,
+        "optcMs": 1313.8034740000003
+      }
+    },
+    {
+      "id": "hash-gap-messy-imptype",
+      "taxonomyLeaves": [
+        "imp.import_type"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=messyImportType compared=1 eq=1 vsCold=1 viteSkipped=false reason=script-lang-changed reasonCode=FULL_OTHER closureRebuild=",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "4511c4e2cc6255b54d3cb0a9f121db4a9fdf6492346f63174d95bbb512797364",
+          "optcSha256": "4511c4e2cc6255b54d3cb0a9f121db4a9fdf6492346f63174d95bbb512797364",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-messy-imptype-baseline",
+        "optcReport": "box-hash-messy-imptype-optc-ext",
+        "step": "messyImportType",
+        "viteSkipped": false,
+        "reason": "script-lang-changed",
+        "reasonCode": "FULL_OTHER",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pages-tab/routeA/index.js"
+        ],
+        "baselineMs": 1214.7012589999995,
+        "optcMs": 1460.1844130000009
+      }
+    },
+    {
+      "id": "hash-gap-messy-uni",
+      "taxonomyLeaves": [
+        "imp.uni_modules"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=messyUniModules compared=3 eq=3 vsCold=2 viteSkipped=false reason=template-changed reasonCode=FULL_TEMPLATE closureRebuild=",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "82309c607304199047aff1944868629838037592d2136f013a49c9dbc51f0633",
+          "optcSha256": "82309c607304199047aff1944868629838037592d2136f013a49c9dbc51f0633",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "pages-tab/routeA/index.wxml",
+          "baselineSha256": "83d81e8078f8da631891a30b9ecff49ac5706c409de915004e181ea1d32f3d4d",
+          "optcSha256": "83d81e8078f8da631891a30b9ecff49ac5706c409de915004e181ea1d32f3d4d",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "uni_modules/unifast-probe/components/demo/demo.js",
+          "baselineSha256": "aee86e3afa639481c11a78234f16e4182bf565e795d0dd3deaa1f1558296c939",
+          "optcSha256": "aee86e3afa639481c11a78234f16e4182bf565e795d0dd3deaa1f1558296c939",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-messy-uni-baseline",
+        "optcReport": "box-hash-messy-uni-optc-ext",
+        "step": "messyUniModules",
+        "viteSkipped": false,
+        "reason": "template-changed",
+        "reasonCode": "FULL_TEMPLATE",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pages-tab/routeA/index.js",
+          "pages-tab/routeA/index.wxml"
+        ],
+        "baselineMs": 1202.143459,
+        "optcMs": 1401.2256470000002
+      }
+    },
+    {
+      "id": "hash-gap-messy-mixins",
+      "taxonomyLeaves": [
+        "cfg.mixins",
+        "shared.mixin_options_merge"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=messyMixins compared=2 eq=2 vsCold=1 viteSkipped=false reason=import-set-changed reasonCode=FULL_IMPORT_SET closureRebuild=",
+      "outputs": [
+        {
+          "path": "mixins/unifast-mixin.js",
+          "baselineSha256": "ec4dffc20cab03543539e959dea1ab3aa83735054b2fe1ba0add543a6581f339",
+          "optcSha256": "ec4dffc20cab03543539e959dea1ab3aa83735054b2fe1ba0add543a6581f339",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "pkg-risk/options-lit.js",
+          "baselineSha256": "66283a8088444948005e197080f73915b7ae157d8566e7d93d049f639bdf687c",
+          "optcSha256": "66283a8088444948005e197080f73915b7ae157d8566e7d93d049f639bdf687c",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-messy-mixins-baseline",
+        "optcReport": "box-hash-messy-mixins-optc-ext",
+        "step": "messyMixins",
+        "viteSkipped": false,
+        "reason": "import-set-changed",
+        "reasonCode": "FULL_IMPORT_SET",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pkg-risk/options-lit.js"
+        ],
+        "baselineMs": 1336.4114259999997,
+        "optcMs": 1339.2758210000002
+      }
+    },
+    {
+      "id": "hash-gap-messy-other",
+      "taxonomyLeaves": [
+        "other.script_literal"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=messyOtherScript compared=2 eq=2 vsCold=1 viteSkipped=false reason=import-set-changed reasonCode=FULL_IMPORT_SET closureRebuild=",
+      "outputs": [
+        {
+          "path": "modules/utils/unifast-probe-helper.js",
+          "baselineSha256": "77f5eec38c5ef075e11892244ccf9e249d82937e07401398df98319568775a17",
+          "optcSha256": "77f5eec38c5ef075e11892244ccf9e249d82937e07401398df98319568775a17",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "8c6119a50420864086ecf89bbb227d1e6cf827799d757e1a96eee8be759c820d",
+          "optcSha256": "8c6119a50420864086ecf89bbb227d1e6cf827799d757e1a96eee8be759c820d",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-messy-other-baseline",
+        "optcReport": "box-hash-messy-other-optc-ext",
+        "step": "messyOtherScript",
+        "viteSkipped": false,
+        "reason": "import-set-changed",
+        "reasonCode": "FULL_IMPORT_SET",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pages-tab/routeA/index.js"
+        ],
+        "baselineMs": 1336.0456960000001,
+        "optcMs": 1593.7674200000001
+      }
+    },
+    {
+      "id": "hash-gap-messy-provide",
+      "taxonomyLeaves": [
+        "messy.getCI_provide_inject"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=provideInjectTouch compared=1 eq=1 vsCold=1 viteSkipped=false reason=optc-emit-failed reasonCode=FULL_FAIL_CLOSED closureRebuild=",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "f1362b8616b3db2733a9632f8751439126f3110eb4ef3bd53f01a9d1ea034a71",
+          "optcSha256": "f1362b8616b3db2733a9632f8751439126f3110eb4ef3bd53f01a9d1ea034a71",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-messy-provide-baseline",
+        "optcReport": "box-hash-messy-provide-optc-ext",
+        "step": "provideInjectTouch",
+        "viteSkipped": false,
+        "reason": "optc-emit-failed",
+        "reasonCode": "FULL_FAIL_CLOSED",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pages-tab/routeA/index.js"
+        ],
+        "baselineMs": 1201.799363,
+        "optcMs": 1458.8848790000002
+      }
+    },
+    {
+      "id": "hash-gap-script1",
+      "taxonomyLeaves": [
+        "setup.ref_string_literal",
+        "build.dynamic_warm_optc_vs_baseline"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=script1 compared=1 eq=1 vsCold=1 viteSkipped=true reason=import-set-and-dep-content-stable reasonCode=FAST_PAGE closureRebuild=",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "76824488b6159358cb5ab7afd4e61bf899868df444071f3898715d46bc0740da",
+          "optcSha256": "76824488b6159358cb5ab7afd4e61bf899868df444071f3898715d46bc0740da",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-script1-baseline",
+        "optcReport": "box-hash-script1-optc-ext",
+        "step": "script1",
+        "viteSkipped": true,
+        "reason": "import-set-and-dep-content-stable",
+        "reasonCode": "FAST_PAGE",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pages-tab/routeA/index.js"
+        ],
+        "baselineMs": 1147.1994439999999,
+        "optcMs": 1.7656200000001263
+      }
+    },
+    {
+      "id": "hash-gap-setupbody",
+      "taxonomyLeaves": [
+        "setup.named_bool_num_null",
+        "struct.setup_body_complex"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=scriptSetupBody compared=1 eq=1 vsCold=1 viteSkipped=true reason=import-set-and-dep-content-stable reasonCode=FAST_PAGE closureRebuild=",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "38cbe333a1123649deb203f3cb6ecf02b8e8f6a6ad6eb0320ef0edaf8af5b1fa",
+          "optcSha256": "38cbe333a1123649deb203f3cb6ecf02b8e8f6a6ad6eb0320ef0edaf8af5b1fa",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-setupbody-baseline",
+        "optcReport": "box-hash-setupbody-optc-ext",
+        "step": "scriptSetupBody",
+        "viteSkipped": true,
+        "reason": "import-set-and-dep-content-stable",
+        "reasonCode": "FAST_PAGE",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pages-tab/routeA/index.js"
+        ],
+        "baselineMs": 1159.2373580000003,
+        "optcMs": 2.8113219999995636
+      }
+    },
+    {
+      "id": "hash-gap-imp-star",
+      "taxonomyLeaves": [
+        "imp.import_star"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=impStarShape compared=1 eq=1 vsCold=1 viteSkipped=true reason=import-set-and-dep-content-stable reasonCode=FAST_PAGE closureRebuild=",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "8c6119a50420864086ecf89bbb227d1e6cf827799d757e1a96eee8be759c820d",
+          "optcSha256": "8c6119a50420864086ecf89bbb227d1e6cf827799d757e1a96eee8be759c820d",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-imp-star-baseline",
+        "optcReport": "box-hash-imp-star-optc-ext",
+        "step": "impStarShape",
+        "viteSkipped": true,
+        "reason": "import-set-and-dep-content-stable",
+        "reasonCode": "FAST_PAGE",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pages-tab/routeA/index.js"
+        ],
+        "baselineMs": 1724.9923740000004,
+        "optcMs": 1.9576660000002448
+      }
+    },
+    {
+      "id": "hash-gap-imp-rel",
+      "taxonomyLeaves": [
+        "imp.relative_multihop"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=impRelativeMultihop compared=1 eq=1 vsCold=1 viteSkipped=false reason=import-set-changed reasonCode=FULL_IMPORT_SET closureRebuild=",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "8c6119a50420864086ecf89bbb227d1e6cf827799d757e1a96eee8be759c820d",
+          "optcSha256": "8c6119a50420864086ecf89bbb227d1e6cf827799d757e1a96eee8be759c820d",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-imp-rel-baseline",
+        "optcReport": "box-hash-imp-rel-optc-ext",
+        "step": "impRelativeMultihop",
+        "viteSkipped": false,
+        "reason": "import-set-changed",
+        "reasonCode": "FULL_IMPORT_SET",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pages-tab/routeA/index.js"
+        ],
+        "baselineMs": 1447.5245830000003,
+        "optcMs": 1499.058658
+      }
+    },
+    {
+      "id": "hash-gap-imp-barrel",
+      "taxonomyLeaves": [
+        "imp.barrel_reexport"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=impBarrelReexport compared=1 eq=1 vsCold=1 viteSkipped=false reason=import-set-changed reasonCode=FULL_IMPORT_SET closureRebuild=",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "8c6119a50420864086ecf89bbb227d1e6cf827799d757e1a96eee8be759c820d",
+          "optcSha256": "8c6119a50420864086ecf89bbb227d1e6cf827799d757e1a96eee8be759c820d",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-imp-barrel-baseline",
+        "optcReport": "box-hash-imp-barrel-optc-ext",
+        "step": "impBarrelReexport",
+        "viteSkipped": false,
+        "reason": "import-set-changed",
+        "reasonCode": "FULL_IMPORT_SET",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pages-tab/routeA/index.js"
+        ],
+        "baselineMs": 1170.3250189999999,
+        "optcMs": 1675.108405
+      }
+    },
+    {
+      "id": "hash-gap-imp-defnamed",
+      "taxonomyLeaves": [
+        "imp.default_plus_named"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=impDefaultPlusNamed compared=1 eq=1 vsCold=1 viteSkipped=false reason=import-set-changed reasonCode=FULL_IMPORT_SET closureRebuild=",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "8c6119a50420864086ecf89bbb227d1e6cf827799d757e1a96eee8be759c820d",
+          "optcSha256": "8c6119a50420864086ecf89bbb227d1e6cf827799d757e1a96eee8be759c820d",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-imp-defnamed-baseline",
+        "optcReport": "box-hash-imp-defnamed-optc-ext",
+        "step": "impDefaultPlusNamed",
+        "viteSkipped": false,
+        "reason": "import-set-changed",
+        "reasonCode": "FULL_IMPORT_SET",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pages-tab/routeA/index.js"
+        ],
+        "baselineMs": 1435.9602830000003,
+        "optcMs": 1643.276562
+      }
+    },
+    {
+      "id": "hash-gap-imp-require",
+      "taxonomyLeaves": [
+        "imp.require_in_setup"
+      ],
+      "method": "live-dual-gap-files.json",
+      "projectBacked": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=impRequireInSetup compared=1 eq=1 vsCold=1 viteSkipped=false reason=cjs-require-set-changed reasonCode=FULL_IMPORT_SET closureRebuild=",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "e46ca2488236e92ddce7dc17a4679d66b3883ce3c79fed2a3faafea754d3b480",
+          "optcSha256": "e46ca2488236e92ddce7dc17a4679d66b3883ce3c79fed2a3faafea754d3b480",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-hash-imp-require-baseline",
+        "optcReport": "box-hash-imp-require-optc-ext",
+        "step": "impRequireInSetup",
+        "viteSkipped": false,
+        "reason": "cjs-require-set-changed",
+        "reasonCode": "FULL_IMPORT_SET",
+        "closureRebuild": null,
+        "changedVsCold": [
+          "pages-tab/routeA/index.js"
+        ],
+        "baselineMs": 1214.8067759999994,
+        "optcMs": 1454.1533559999998
+      }
+    },
+    {
+      "id": "hash-gap-inlined-vs-chunk",
+      "taxonomyLeaves": [
+        "shared.inlined_vs_chunk"
+      ],
+      "method": "live-dual-chunk-sha",
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "util remains independent chunk (not inlined); baseline warm == optc warm chunk SHA after over-threshold full",
+      "outputs": [
+        {
+          "path": "modules/utils/unifast-probe.js",
+          "baselineSha256": "eab8221e163f96655483d20ae5c67f09ea142865af021eef8f4546d230e76c74",
+          "optcSha256": "eab8221e163f96655483d20ae5c67f09ea142865af021eef8f4546d230e76c74",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "note": "F16 true Rollup inline N/A on this toolchain; chunk path measured"
+      }
+    },
+    {
+      "id": "hash-hist-fixture-script1",
+      "taxonomyLeaves": [
+        "setup.ref_string_literal",
+        "build.dynamic_warm_optc_vs_baseline"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": false,
+      "nonCountingForHash": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=script1 paths=pages-tab/routeA/index.js",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "2819d949fad409bc4c1d6688728efcc79fbf41475c6910f3639562a4f584bd8f",
+          "optcSha256": "2819d949fad409bc4c1d6688728efcc79fbf41475c6910f3639562a4f584bd8f",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-fixture-baseline-real",
+        "optcReport": "box-fixture-optc-ext-v4"
+      }
+    },
+    {
+      "id": "hash-hist-fixture-callarg",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": false,
+      "nonCountingForHash": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=scriptLocalImport paths=pages-tab/routeA/index.js",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+          "optcSha256": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-fixture-f6-baseline-callarg",
+        "optcReport": "box-fixture-f6-optc-callarg"
+      }
+    },
+    {
+      "id": "hash-hist-fixture-setupbody",
+      "taxonomyLeaves": [
+        "struct.setup_body_complex",
+        "setup.named_bool_num_null"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": false,
+      "nonCountingForHash": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=scriptSetupBody paths=pages-tab/routeA/index.js",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "0dd2dfc330bd1bdd0cb17afdae8497b9e9dfa92f976477b8047c33fc90e5329c",
+          "optcSha256": "0dd2dfc330bd1bdd0cb17afdae8497b9e9dfa92f976477b8047c33fc90e5329c",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-fixture-baseline-setupbody-v2",
+        "optcReport": "box-fixture-optc-ext-transform-v3"
+      }
+    },
+    {
+      "id": "hash-hist-fixture-complex-f8a",
+      "taxonomyLeaves": [
+        "struct.setup_body_complex"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": false,
+      "nonCountingForHash": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=scriptComplexSetup paths=pages-tab/routeA/index.js",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "a0bfb44b9bafe7d51ef4fd52ff515ac91181bd564161915e13f5c1184bcde9d2",
+          "optcSha256": "a0bfb44b9bafe7d51ef4fd52ff515ac91181bd564161915e13f5c1184bcde9d2",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-fixture-f8a-baseline-complex",
+        "optcReport": "box-fixture-f8a-optc-natural"
+      }
+    },
+    {
+      "id": "hash-hist-fixture-localimport",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal",
+        "imp.at_alias"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": false,
+      "nonCountingForHash": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=scriptLocalImport paths=pages-tab/routeA/index.js",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+          "optcSha256": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-fixture-baseline-local-import",
+        "optcReport": "box-fixture-optc-ext-local-import"
+      }
+    },
+    {
+      "id": "hash-hist-project-script1",
+      "taxonomyLeaves": [
+        "setup.ref_string_literal",
+        "life.subpackage_page_edit"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": true,
+      "nonCountingForHash": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=script1 paths=pages-tab/routeA/index.js",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "d20dacc5c11cae58b44dac1a046145d871638c8b3d7eff118c6f5e8947980e7c",
+          "optcSha256": "d20dacc5c11cae58b44dac1a046145d871638c8b3d7eff118c6f5e8947980e7c",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-project-baseline-real",
+        "optcReport": "box-project-optc-ext-v3"
+      }
+    },
+    {
+      "id": "hash-hist-project-flaga-gold",
+      "taxonomyLeaves": [
+        "setup.named_bool_num_null",
+        "setup.call_arg_literal"
+      ],
+      "method": "anatomy-file-sha256",
+      "projectBacked": true,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "flagA false→true gold vs emit",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "4ff68d48e498260829b466b5a4dce648d7d3d4b6b4b042211f5b10ce97d77d2a",
+          "optcSha256": "4ff68d48e498260829b466b5a4dce648d7d3d4b6b4b042211f5b10ce97d77d2a",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "id": "hash-hist-project-strat-script1",
+      "taxonomyLeaves": [
+        "setup.ref_string_literal"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": true,
+      "nonCountingForHash": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=script1 paths=pages-tab/routeA/index.js",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "d20dacc5c11cae58b44dac1a046145d871638c8b3d7eff118c6f5e8947980e7c",
+          "optcSha256": "d20dacc5c11cae58b44dac1a046145d871638c8b3d7eff118c6f5e8947980e7c",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-project-strat-a-baseline",
+        "optcReport": "box-project-strat-a-optc-ext"
+      }
+    },
+    {
+      "id": "hash-hist-project-strat-namedBoolRouteA",
+      "taxonomyLeaves": [
+        "setup.named_bool_num_null"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": true,
+      "nonCountingForHash": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=namedBoolRouteA paths=pages-tab/routeA/index.js",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "4ff68d48e498260829b466b5a4dce648d7d3d4b6b4b042211f5b10ce97d77d2a",
+          "optcSha256": "4ff68d48e498260829b466b5a4dce648d7d3d4b6b4b042211f5b10ce97d77d2a",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-project-strat-a2-baseline",
+        "optcReport": "box-project-strat-a2-optc-ext"
+      }
+    },
+    {
+      "id": "hash-hist-project-strat-routeBNamedBool",
+      "taxonomyLeaves": [
+        "setup.named_bool_num_null"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": true,
+      "nonCountingForHash": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=routeBNamedBool paths=pages-tab/routeB/index.js",
+      "outputs": [
+        {
+          "path": "pages-tab/routeB/index.js",
+          "baselineSha256": "0de89cf7463a7fc5b7d1eadf983490ec58629bbe01c93e6985a267f0533305f8",
+          "optcSha256": "0de89cf7463a7fc5b7d1eadf983490ec58629bbe01c93e6985a267f0533305f8",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-project-strat-b-baseline",
+        "optcReport": "box-project-strat-b-optc-ext"
+      }
+    },
+    {
+      "id": "hash-hist-project-strat-stepE",
+      "taxonomyLeaves": [
+        "setup.named_bool_num_null"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": true,
+      "nonCountingForHash": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=stepE paths=pages-tab/routeE/list/index.js",
+      "outputs": [
+        {
+          "path": "pages-tab/routeE/list/index.js",
+          "baselineSha256": "9d411edde196de8fecb31a669a4805ebca20e12258c5a116abb00a65e18be168",
+          "optcSha256": "9d411edde196de8fecb31a669a4805ebca20e12258c5a116abb00a65e18be168",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-project-strat-b2-baseline",
+        "optcReport": "box-project-strat-b2-optc-ext"
+      }
+    },
+    {
+      "id": "hash-hist-project-strat-routeCToken",
+      "taxonomyLeaves": [
+        "setup.ref_string_literal"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": true,
+      "nonCountingForHash": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=routeCToken paths=pages-tab/routeC/index.js",
+      "outputs": [
+        {
+          "path": "pages-tab/routeC/index.js",
+          "baselineSha256": "53ddc00672fed4fc1581a9ea9b515901be9f2859956bbdd62f473c7e85eafb6b",
+          "optcSha256": "53ddc00672fed4fc1581a9ea9b515901be9f2859956bbdd62f473c7e85eafb6b",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-project-strat-c-baseline",
+        "optcReport": "box-project-strat-c-optc-ext"
+      }
+    },
+    {
+      "id": "hash-hist-project-strat-meAlipayNull",
+      "taxonomyLeaves": [
+        "setup.named_bool_num_null"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": true,
+      "nonCountingForHash": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=meAlipayNull paths=pages-tab/routeD/index.js",
+      "outputs": [
+        {
+          "path": "pages-tab/routeD/index.js",
+          "baselineSha256": "4d95f3759212a1fb62723578936d0af3655f265f040fd481ac4b39134fe020fc",
+          "optcSha256": "4d95f3759212a1fb62723578936d0af3655f265f040fd481ac4b39134fe020fc",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-project-strat-c2-baseline",
+        "optcReport": "box-project-strat-c2-optc-ext"
+      }
+    },
+    {
+      "id": "hash-hist-project-strat-popupVisible",
+      "taxonomyLeaves": [
+        "setup.named_bool_num_null",
+        "shared.vue_script_only_le_vue_max"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": true,
+      "nonCountingForHash": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=popupVisible paths=modules/components/shared-popup/index.js",
+      "outputs": [
+        {
+          "path": "modules/components/shared-popup/index.js",
+          "baselineSha256": "7e45c72f0b70de62b3c016192e53368a0a7e5417d60fa8a15755adfd1f6d698f",
+          "optcSha256": "7e45c72f0b70de62b3c016192e53368a0a7e5417d60fa8a15755adfd1f6d698f",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-project-strat-d-baseline",
+        "optcReport": "box-project-strat-d-optc-ext"
+      }
+    },
+    {
+      "id": "hash-hist-project-strat-spotProbeBody",
+      "taxonomyLeaves": [
+        "shared.leaf_util",
+        "shared.util_le_closure_max"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": true,
+      "nonCountingForHash": true,
+      "verdict": "HASH_DIFF_EXPECTED",
+      "detail": "step=spotProbeBody paths=modules/utils/unifast-spot-probe.js · EXPECTED DCE: baseline tree-shakes unused spotMul to \"use strict\"; optc option-a-export-add emits transform-cjs (cold export surface empty→add)",
+      "outputs": [
+        {
+          "path": "modules/utils/unifast-spot-probe.js",
+          "baselineSha256": "77f5eec38c5ef075e11892244ccf9e249d82937e07401398df98319568775a17",
+          "optcSha256": "2a4b2e91cc8e012ba3b85c9a9fc08e8e8b682e4a5507d8522439e5d2d1537846",
+          "equal": false,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-project-strat-d2-baseline",
+        "optcReport": "box-project-strat-d2-optc-ext"
+      }
+    },
+    {
+      "id": "hash-hist-project-strat-authShowFlow",
+      "taxonomyLeaves": [
+        "setup.named_bool_num_null",
+        "life.subpackage_page_edit"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": true,
+      "nonCountingForHash": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "step=authShowFlow paths=modules/pages/seg-036/index.js",
+      "outputs": [
+        {
+          "path": "modules/pages/seg-036/index.js",
+          "baselineSha256": "ef751e674bcf5a1dc83c2ff0f34a1430c004395e90284cdfbac36dc9c50cabf2",
+          "optcSha256": "ef751e674bcf5a1dc83c2ff0f34a1430c004395e90284cdfbac36dc9c50cabf2",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-project-strat-e-baseline",
+        "optcReport": "box-project-strat-e-optc-ext"
+      }
+    },
+    {
+      "id": "hash-hist-project-strat-template",
+      "taxonomyLeaves": [
+        "tpl.template_only"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": true,
+      "nonCountingForHash": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=template paths=pages-tab/routeA/index.wxml,pages-tab/routeA/index.js",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.wxml",
+          "baselineSha256": "ad23caac4025e7343a521e69cf390bb37be91ac7d1c33d07fbf4c6021695973c",
+          "optcSha256": "ad23caac4025e7343a521e69cf390bb37be91ac7d1c33d07fbf4c6021695973c",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "6a8dbfbb7251687ec25181a48405be0ff8f6d57db2d4fdf344b6814fc117f56d",
+          "optcSha256": "6a8dbfbb7251687ec25181a48405be0ff8f6d57db2d4fdf344b6814fc117f56d",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-project-strat-e2-baseline",
+        "optcReport": "box-project-strat-e2-optc-ext"
+      }
+    },
+    {
+      "id": "hash-hist-project-strat-style",
+      "taxonomyLeaves": [
+        "style.style_only"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": true,
+      "nonCountingForHash": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=style paths=pages-tab/routeA/index.wxss,pages-tab/routeA/index.js",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.wxss",
+          "baselineSha256": "fe65ec13d49410158aa4f1db3db1fce344c6f8a41866c700bbd4feaffcb0e289",
+          "optcSha256": "fe65ec13d49410158aa4f1db3db1fce344c6f8a41866c700bbd4feaffcb0e289",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "3c2b39ce6d5b2c8ef68252a45837bb06899ee79135632334f41a88a1d6a9d790",
+          "optcSha256": "3c2b39ce6d5b2c8ef68252a45837bb06899ee79135632334f41a88a1d6a9d790",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-project-strat-f-baseline",
+        "optcReport": "box-project-strat-f-optc-ext"
+      }
+    },
+    {
+      "id": "hash-hist-project-strat-sharedStyle",
+      "taxonomyLeaves": [
+        "style.scss_lang_deep",
+        "cfg.uni_scss"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": true,
+      "nonCountingForHash": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=sharedStyle paths=pages-tab/routeA/index.wxss,app.wxss",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.wxss",
+          "baselineSha256": "b8ba5d00ff60c18e970def0e28ac00c2742fcd67bf9bd605d1be0467cfe677fc",
+          "optcSha256": "b8ba5d00ff60c18e970def0e28ac00c2742fcd67bf9bd605d1be0467cfe677fc",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "app.wxss",
+          "baselineSha256": "fa517a92c0e92bba8937c3ddcccb8f4bd3f7515b88c3af6e47efd15b1d550993",
+          "optcSha256": "fa517a92c0e92bba8937c3ddcccb8f4bd3f7515b88c3af6e47efd15b1d550993",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-project-strat-f2-baseline",
+        "optcReport": "box-project-strat-f2-optc-ext"
+      }
+    },
+    {
+      "id": "hash-hist-project-strat-component",
+      "taxonomyLeaves": [
+        "shared.vue_template_or_style",
+        "imp.easycom_only"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": true,
+      "nonCountingForHash": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=component paths=modules/components/shared-popup/index.wxml,modules/components/shared-popup/index.js",
+      "outputs": [
+        {
+          "path": "modules/components/shared-popup/index.wxml",
+          "baselineSha256": "326ba91ee96277c91e21c32d53a8c757906ba3a3ba9ad647429f9239be4c57c4",
+          "optcSha256": "326ba91ee96277c91e21c32d53a8c757906ba3a3ba9ad647429f9239be4c57c4",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        },
+        {
+          "path": "modules/components/shared-popup/index.js",
+          "baselineSha256": "3bfb716fb61962099f364ce6b754d319d1ef4a248129ba6a8f09afb5364427b9",
+          "optcSha256": "3bfb716fb61962099f364ce6b754d319d1ef4a248129ba6a8f09afb5364427b9",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-project-strat-g-baseline",
+        "optcReport": "box-project-strat-g-optc-ext"
+      }
+    },
+    {
+      "id": "hash-hist-project-strat-appTouch",
+      "taxonomyLeaves": [
+        "cfg.app_vue"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": true,
+      "nonCountingForHash": false,
+      "verdict": "FAIL_CLOSED_HASH_MATCH",
+      "detail": "step=appTouch paths=app.js",
+      "outputs": [
+        {
+          "path": "app.js",
+          "baselineSha256": "0ebacc448dde6e0f11a9d3b0afa1caefd9f09a9a4b5e62a21f5673e997e75a6c",
+          "optcSha256": "0ebacc448dde6e0f11a9d3b0afa1caefd9f09a9a4b5e62a21f5673e997e75a6c",
+          "equal": true,
+          "missingBaseline": false,
+          "missingOptc": false
+        }
+      ],
+      "evidence": {
+        "baselineReport": "box-project-strat-g2-baseline",
+        "optcReport": "box-project-strat-g2-optc-ext"
+      }
+    },
+    {
+      "id": "hash-hist-fixture-cold",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "hist-files.json-full-tree",
+      "projectBacked": false,
+      "nonCountingForHash": true,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "fullTree equal=2009 diff=0 [quarantined-cold-dup]",
+      "outputs": [
+        {
+          "path": "*all*",
+          "baselineSha256": "bf33b1e1a4f211fd40c22287cf4eed0ab9b70bd401cec2621a2d5fc24d2ba6d9",
+          "optcSha256": "bf33b1e1a4f211fd40c22287cf4eed0ab9b70bd401cec2621a2d5fc24d2ba6d9",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "equalCount": 2009,
+        "diffCount": 0,
+        "baselineReport": "box-fixture-baseline-real",
+        "optcReport": "box-fixture-optc-ext-v4"
+      }
+    },
+    {
+      "id": "hash-live-log-routeA-call-arg",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "live-log-outSha",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "baseMs=854.0374079999983 optcMs=4.239413000000241",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+          "optcSha256": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "id": "hash-live-log-options-data-lit",
+      "taxonomyLeaves": [
+        "opt.data_literal"
+      ],
+      "method": "live-log-outSha",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "baseMs=1076.0534479999997 optcMs=11.849833999999646",
+      "outputs": [
+        {
+          "path": "pkg-risk/options-lit.js",
+          "baselineSha256": "13075b53061d97457e42f6e6e731bb0f0f1eed9e855031225d4a4fd26390e96f",
+          "optcSha256": "13075b53061d97457e42f6e6e731bb0f0f1eed9e855031225d4a4fd26390e96f",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "id": "hash-live-log-macros-default-lit",
+      "taxonomyLeaves": [
+        "macro.props_default_literal"
+      ],
+      "method": "live-log-outSha",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "detail": "baseMs=924.6452789999994 optcMs=6.830584999999701",
+      "outputs": [
+        {
+          "path": "pkg-risk/macros-props.js",
+          "baselineSha256": "674455b6d5d23d3446412a91bf438ed92a2aa016151caba3ae644b73b59f7643",
+          "optcSha256": "674455b6d5d23d3446412a91bf438ed92a2aa016151caba3ae644b73b59f7643",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "id": "hash-offline-options-data-vs-gold",
+      "taxonomyLeaves": [
+        "opt.data_literal"
+      ],
+      "method": "offline-emit+live-gold-sha",
+      "verdict": "IDENTICAL_HASH",
+      "detail": "emitClass=surgical-options-data",
+      "outputs": [
+        {
+          "path": "pkg-risk/options-lit.js",
+          "baselineSha256": "13075b53061d97457e42f6e6e731bb0f0f1eed9e855031225d4a4fd26390e96f",
+          "optcSha256": "13075b53061d97457e42f6e6e731bb0f0f1eed9e855031225d4a4fd26390e96f",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "id": "hash-offline-macros-default-vs-gold",
+      "taxonomyLeaves": [
+        "macro.props_default_literal"
+      ],
+      "method": "offline-emit+live-gold-sha",
+      "verdict": "IDENTICAL_HASH",
+      "detail": "emitClass=surgical-props-default",
+      "outputs": [
+        {
+          "path": "pkg-risk/macros-props.js",
+          "baselineSha256": "674455b6d5d23d3446412a91bf438ed92a2aa016151caba3ae644b73b59f7643",
+          "optcSha256": "674455b6d5d23d3446412a91bf438ed92a2aa016151caba3ae644b73b59f7643",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "id": "hash-extra-fixture-baseline-real-script1",
+      "taxonomyLeaves": [
+        "setup.ref_string_literal"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "2819d949fad409bc4c1d6688728efcc79fbf41475c6910f3639562a4f584bd8f",
+          "optcSha256": "2819d949fad409bc4c1d6688728efcc79fbf41475c6910f3639562a4f584bd8f",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "id": "hash-extra-fixture-f6-baseline-callarg-scriptLocalImport",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+          "optcSha256": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "id": "hash-extra-fixture-f8a-baseline-complex-scriptComplexSetup",
+      "taxonomyLeaves": [
+        "struct.setup_body_complex"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "a0bfb44b9bafe7d51ef4fd52ff515ac91181bd564161915e13f5c1184bcde9d2",
+          "optcSha256": "a0bfb44b9bafe7d51ef4fd52ff515ac91181bd564161915e13f5c1184bcde9d2",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "id": "hash-extra-project-baseline-real-script1",
+      "taxonomyLeaves": [
+        "setup.ref_string_literal"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": true,
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "d20dacc5c11cae58b44dac1a046145d871638c8b3d7eff118c6f5e8947980e7c",
+          "optcSha256": "d20dacc5c11cae58b44dac1a046145d871638c8b3d7eff118c6f5e8947980e7c",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "id": "hash-extra-fixture-baseline-local-import-scriptLocalImport",
+      "taxonomyLeaves": [
+        "setup.call_arg_literal"
+      ],
+      "method": "hist-files.json-sha256",
+      "projectBacked": false,
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+          "optcSha256": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "id": "hash-extra-cold-ixture-baseline-real--optc-ext-v4",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "hist-cold-merkle",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "d9911767cc490f92c8481b5efa671fe5d2e6a72a3dc82d2c72f9ac2d5ed02996",
+          "optcSha256": "d9911767cc490f92c8481b5efa671fe5d2e6a72a3dc82d2c72f9ac2d5ed02996",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "equalCount": 2009,
+        "diffCount": 0,
+        "files": 2009
+      },
+      "nonCountingForHash": true,
+      "detail": " [quarantined-cold-dup]"
+    },
+    {
+      "id": "hash-extra-cold-ixture-baseline-real--optc-ext-v3",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "hist-cold-merkle",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "d9911767cc490f92c8481b5efa671fe5d2e6a72a3dc82d2c72f9ac2d5ed02996",
+          "optcSha256": "d9911767cc490f92c8481b5efa671fe5d2e6a72a3dc82d2c72f9ac2d5ed02996",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "equalCount": 2009,
+        "diffCount": 0,
+        "files": 2009
+      },
+      "nonCountingForHash": true,
+      "detail": " [quarantined-cold-dup]"
+    },
+    {
+      "id": "hash-extra-cold-roject-baseline-real--optc-ext-v3",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "hist-cold-merkle",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "bd704a00f6e8468dc867424d2eff4215395a692d6d584ac4fb4ed7f4a2f15ca4",
+          "optcSha256": "bd704a00f6e8468dc867424d2eff4215395a692d6d584ac4fb4ed7f4a2f15ca4",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "equalCount": 10797,
+        "diffCount": 0,
+        "files": 10797
+      },
+      "nonCountingForHash": true,
+      "detail": " [quarantined-cold-dup]"
+    },
+    {
+      "id": "hash-extra-cold-ox-hash-tpl-baseline-tpl-optc-ext",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "hist-cold-merkle",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "equalCount": 2024,
+        "diffCount": 0,
+        "files": 2024
+      },
+      "nonCountingForHash": true,
+      "detail": " [quarantined-cold-dup]"
+    },
+    {
+      "id": "hash-extra-cold--hash-style-baseline-yle-optc-ext",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "hist-cold-merkle",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "equalCount": 2024,
+        "diffCount": 0,
+        "files": 2024
+      },
+      "nonCountingForHash": true,
+      "detail": " [quarantined-cold-dup]"
+    },
+    {
+      "id": "hash-anatomy-f8a-natural",
+      "taxonomyLeaves": [
+        "struct.setup_body_complex"
+      ],
+      "method": "anatomy-file-sha256",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "a0bfb44b9bafe7d51ef4fd52ff515ac91181bd564161915e13f5c1184bcde9d2",
+          "optcSha256": "a0bfb44b9bafe7d51ef4fd52ff515ac91181bd564161915e13f5c1184bcde9d2",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "id": "hash-anatomy-f8a-midpath",
+      "taxonomyLeaves": [
+        "struct.setup_body_complex"
+      ],
+      "method": "anatomy-file-sha256",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.js",
+          "baselineSha256": "a0bfb44b9bafe7d51ef4fd52ff515ac91181bd564161915e13f5c1184bcde9d2",
+          "optcSha256": "a0bfb44b9bafe7d51ef4fd52ff515ac91181bd564161915e13f5c1184bcde9d2",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "id": "hash-project-companion.json",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "hist-companion-sha",
+      "projectBacked": true,
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.json",
+          "baselineSha256": "4b4849f3e75628e1ff2de6f67dfcaae9462a625693b057cb85d223df77885cee",
+          "optcSha256": "4b4849f3e75628e1ff2de6f67dfcaae9462a625693b057cb85d223df77885cee",
+          "equal": true
+        }
+      ],
+      "nonCountingForHash": true,
+      "detail": " [quarantined-companion-mis-map]"
+    },
+    {
+      "id": "hash-project-companion.wxml",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "hist-companion-sha",
+      "projectBacked": true,
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.wxml",
+          "baselineSha256": "8b198f038073c98eb89d8c74699a9bcbfd82e34415aba14183f525bd2314f052",
+          "optcSha256": "8b198f038073c98eb89d8c74699a9bcbfd82e34415aba14183f525bd2314f052",
+          "equal": true
+        }
+      ],
+      "nonCountingForHash": true,
+      "detail": " [quarantined-companion-mis-map]"
+    },
+    {
+      "id": "hash-project-companion.wxss",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "hist-companion-sha",
+      "projectBacked": true,
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "pages-tab/routeA/index.wxss",
+          "baselineSha256": "b8ba5d00ff60c18e970def0e28ac00c2742fcd67bf9bd605d1be0467cfe677fc",
+          "optcSha256": "b8ba5d00ff60c18e970def0e28ac00c2742fcd67bf9bd605d1be0467cfe677fc",
+          "equal": true
+        }
+      ],
+      "nonCountingForHash": true,
+      "detail": " [quarantined-companion-mis-map]"
+    },
+    {
+      "id": "hash-cold-pair-tpl",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "live-dual-cold-merkle",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "diffCount": 0,
+        "files": 2024
+      },
+      "nonCountingForHash": true,
+      "detail": " [quarantined-cold-dup]"
+    },
+    {
+      "id": "hash-cold-pair-style",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "live-dual-cold-merkle",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "diffCount": 0,
+        "files": 2024
+      },
+      "nonCountingForHash": true,
+      "detail": " [quarantined-cold-dup]"
+    },
+    {
+      "id": "hash-cold-pair-combo",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "live-dual-cold-merkle",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "diffCount": 0,
+        "files": 2024
+      },
+      "nonCountingForHash": true,
+      "detail": " [quarantined-cold-dup]"
+    },
+    {
+      "id": "hash-cold-pair-opt-data",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "live-dual-cold-merkle",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "diffCount": 0,
+        "files": 2024
+      },
+      "nonCountingForHash": true,
+      "detail": " [quarantined-cold-dup]"
+    },
+    {
+      "id": "hash-cold-pair-macro",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "live-dual-cold-merkle",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "diffCount": 0,
+        "files": 2024
+      },
+      "nonCountingForHash": true,
+      "detail": " [quarantined-cold-dup]"
+    },
+    {
+      "id": "hash-cold-pair-callarg",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "live-dual-cold-merkle",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "diffCount": 0,
+        "files": 2024
+      },
+      "nonCountingForHash": true,
+      "detail": " [quarantined-cold-dup]"
+    },
+    {
+      "id": "hash-cold-pair-shared",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "live-dual-cold-merkle",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "diffCount": 0,
+        "files": 2024
+      },
+      "nonCountingForHash": true,
+      "detail": " [quarantined-cold-dup]"
+    },
+    {
+      "id": "hash-cold-pair-pkg",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "live-dual-cold-merkle",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "diffCount": 0,
+        "files": 2024
+      },
+      "nonCountingForHash": true,
+      "detail": " [quarantined-cold-dup]"
+    },
+    {
+      "id": "hash-cold-pair-pages",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "live-dual-cold-merkle",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "diffCount": 0,
+        "files": 2024
+      },
+      "nonCountingForHash": true,
+      "detail": " [quarantined-cold-dup]"
+    },
+    {
+      "id": "hash-cold-pair-ifdef",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "live-dual-cold-merkle",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "diffCount": 0,
+        "files": 2024
+      },
+      "nonCountingForHash": true,
+      "detail": " [quarantined-cold-dup]"
+    },
+    {
+      "id": "hash-cold-pair-slot",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "live-dual-cold-merkle",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+          "optcSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "diffCount": 0,
+        "files": 2025
+      },
+      "nonCountingForHash": true,
+      "detail": " [quarantined-cold-dup]"
+    },
+    {
+      "id": "hash-cold-pair-onload",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "live-dual-cold-merkle",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+          "optcSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "diffCount": 0,
+        "files": 2025
+      },
+      "nonCountingForHash": true,
+      "detail": " [quarantined-cold-dup]"
+    },
+    {
+      "id": "hash-cold-pair-store",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "live-dual-cold-merkle",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+          "optcSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "diffCount": 0,
+        "files": 2025
+      },
+      "nonCountingForHash": true,
+      "detail": " [quarantined-cold-dup]"
+    },
+    {
+      "id": "hash-cold-pair-addimport",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "live-dual-cold-merkle",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+          "optcSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "diffCount": 0,
+        "files": 2025
+      },
+      "nonCountingForHash": true,
+      "detail": " [quarantined-cold-dup]"
+    },
+    {
+      "id": "hash-cold-pair-app",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "live-dual-cold-merkle",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+          "optcSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "diffCount": 0,
+        "files": 2025
+      },
+      "nonCountingForHash": true,
+      "detail": " [quarantined-cold-dup]"
+    },
+    {
+      "id": "hash-cold-pair-easycom",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "live-dual-cold-merkle",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+          "optcSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "diffCount": 0,
+        "files": 2025
+      },
+      "nonCountingForHash": true,
+      "detail": " [quarantined-cold-dup]"
+    },
+    {
+      "id": "hash-cold-pair-concurrent",
+      "taxonomyLeaves": [
+        "build.static_cold_with_vs_without"
+      ],
+      "method": "live-dual-cold-merkle",
+      "verdict": "IDENTICAL_HASH",
+      "outputs": [
+        {
+          "path": "*merkle*",
+          "baselineSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+          "optcSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+          "equal": true
+        }
+      ],
+      "evidence": {
+        "diffCount": 0,
+        "files": 2025
+      },
+      "nonCountingForHash": true,
+      "detail": " [quarantined-cold-dup]"
+    },
+    {
+      "id": "hash-blocked-devtools-gui",
+      "taxonomyLeaves": [
+        "blocked.devtools_gui_hot_reload"
+      ],
+      "method": "blocked",
+      "verdict": "BLOCKED",
+      "detail": "WeChat DevTools GUI hot-reload not runnable on Linux box",
+      "outputs": [],
+      "nonCountingForHash": true
+    }
+  ],
+  "summary": {
+    "totalCases": 113,
+    "hashPairedCaseCount": 112,
+    "hashPairedCountingCaseCount": 85,
+    "byVerdict": {
+      "IDENTICAL_HASH": 69,
+      "FAIL_CLOSED_HASH_MATCH": 42,
+      "HASH_DIFF_EXPECTED": 1,
+      "BLOCKED": 1
+    },
+    "hashDiffBugs": [],
+    "reuseCasesStillCounting": [],
+    "projectBacked": 20,
+    "projectBackedStratifiedHash": 16,
+    "staticIdentical": true,
+    "taxonomyLeafCount": 76,
+    "taxonomyWeightSumExBlocked": 99.01
+  },
+  "hashWeightedCoverage": 100,
+  "leafCoverage": [
+    {
+      "id": "tpl.template_only",
+      "weight": 14.5294,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-tpl",
+        "hash-slot",
+        "hash-hist-project-strat-template"
+      ],
+      "cases": [
+        "hash-tpl",
+        "hash-slot",
+        "hash-hist-project-strat-template"
+      ]
+    },
+    {
+      "id": "opt.data_literal",
+      "weight": 10.3966,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-opt-data",
+        "hash-live-log-options-data-lit",
+        "hash-offline-options-data-vs-gold"
+      ],
+      "cases": [
+        "hash-opt-data",
+        "hash-live-log-options-data-lit",
+        "hash-offline-options-data-vs-gold"
+      ]
+    },
+    {
+      "id": "style.style_only",
+      "weight": 8.3547,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-style",
+        "hash-scss",
+        "hash-hist-project-strat-style"
+      ],
+      "cases": [
+        "hash-style",
+        "hash-scss",
+        "hash-hist-project-strat-style"
+      ]
+    },
+    {
+      "id": "tpl.template_plus_script",
+      "weight": 6.5748,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-combo"
+      ],
+      "cases": [
+        "hash-combo"
+      ]
+    },
+    {
+      "id": "macro.props_default_literal",
+      "weight": 6.0677,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-macro",
+        "hash-live-log-macros-default-lit",
+        "hash-offline-macros-default-vs-gold"
+      ],
+      "cases": [
+        "hash-macro",
+        "hash-live-log-macros-default-lit",
+        "hash-offline-macros-default-vs-gold"
+      ]
+    },
+    {
+      "id": "macro.other_macro_literal",
+      "weight": 4.9282,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-macro-emits"
+      ],
+      "cases": [
+        "hash-macro-emits"
+      ]
+    },
+    {
+      "id": "opt.other_literal_in_options",
+      "weight": 4.62,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-opt-methods"
+      ],
+      "cases": [
+        "hash-opt-methods"
+      ]
+    },
+    {
+      "id": "struct.import_add_remove_rename",
+      "weight": 2.7224,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-addimport"
+      ],
+      "cases": [
+        "hash-addimport"
+      ]
+    },
+    {
+      "id": "shared.util_le_closure_max",
+      "weight": 2.5957,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-shared"
+      ],
+      "cases": [
+        "hash-shared"
+      ]
+    },
+    {
+      "id": "struct.opt_methods_computed_watch",
+      "weight": 2.4137,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-opt-methods"
+      ],
+      "cases": [
+        "hash-opt-methods"
+      ]
+    },
+    {
+      "id": "setup.ref_string_literal",
+      "weight": 2.316,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-script1",
+        "hash-pkg",
+        "hash-gap-script1",
+        "hash-hist-fixture-script1",
+        "hash-hist-project-script1",
+        "hash-hist-project-strat-script1",
+        "hash-hist-project-strat-routeCToken",
+        "hash-extra-fixture-baseline-real-script1",
+        "hash-extra-project-baseline-real-script1"
+      ],
+      "cases": [
+        "hash-script1",
+        "hash-pkg",
+        "hash-gap-script1",
+        "hash-hist-fixture-script1",
+        "hash-hist-project-script1",
+        "hash-hist-project-strat-script1",
+        "hash-hist-project-strat-routeCToken",
+        "hash-extra-fixture-baseline-real-script1",
+        "hash-extra-project-baseline-real-script1"
+      ]
+    },
+    {
+      "id": "struct.setup_body_complex",
+      "weight": 1.9296,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-setupbody",
+        "hash-complex",
+        "hash-gap-setupbody",
+        "hash-hist-fixture-setupbody",
+        "hash-hist-fixture-complex-f8a",
+        "hash-extra-fixture-f8a-baseline-complex-scriptComplexSetup",
+        "hash-anatomy-f8a-natural",
+        "hash-anatomy-f8a-midpath"
+      ],
+      "cases": [
+        "hash-setupbody",
+        "hash-complex",
+        "hash-gap-setupbody",
+        "hash-hist-fixture-setupbody",
+        "hash-hist-fixture-complex-f8a",
+        "hash-extra-fixture-f8a-baseline-complex-scriptComplexSetup",
+        "hash-anatomy-f8a-natural",
+        "hash-anatomy-f8a-midpath"
+      ]
+    },
+    {
+      "id": "tpl.slot_vfor_vif_complex",
+      "weight": 1.8,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-tpl",
+        "hash-slot"
+      ],
+      "cases": [
+        "hash-tpl",
+        "hash-slot"
+      ]
+    },
+    {
+      "id": "shared.vue_script_only_le_vue_max",
+      "weight": 1.5592,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-vue-script",
+        "hash-hist-project-strat-popupVisible"
+      ],
+      "cases": [
+        "hash-vue-script",
+        "hash-hist-project-strat-popupVisible"
+      ]
+    },
+    {
+      "id": "build.ifdef_conditional_compile",
+      "weight": 1.4,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-ifdef",
+        "hash-gap-ifdef"
+      ],
+      "cases": [
+        "hash-ifdef",
+        "hash-gap-ifdef"
+      ]
+    },
+    {
+      "id": "struct.macro_type_or_shape",
+      "weight": 1.3636,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-macro-emits"
+      ],
+      "cases": [
+        "hash-macro-emits"
+      ]
+    },
+    {
+      "id": "struct.opt_add_remove_binding",
+      "weight": 1.3409,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-opt-methods"
+      ],
+      "cases": [
+        "hash-opt-methods"
+      ]
+    },
+    {
+      "id": "shared.composable_hook",
+      "weight": 1.287,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-shared"
+      ],
+      "cases": [
+        "hash-shared"
+      ]
+    },
+    {
+      "id": "shared.util_gt_closure_max",
+      "weight": 1.287,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-closure-over"
+      ],
+      "cases": [
+        "hash-gap-closure-over"
+      ]
+    },
+    {
+      "id": "setup.named_bool_num_null",
+      "weight": 1.2867,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-setupbody",
+        "hash-gap-setupbody",
+        "hash-hist-fixture-setupbody",
+        "hash-hist-project-flaga-gold",
+        "hash-hist-project-strat-namedBoolRouteA",
+        "hash-hist-project-strat-routeBNamedBool",
+        "hash-hist-project-strat-stepE",
+        "hash-hist-project-strat-meAlipayNull",
+        "hash-hist-project-strat-popupVisible",
+        "hash-hist-project-strat-authShowFlow"
+      ],
+      "cases": [
+        "hash-setupbody",
+        "hash-gap-setupbody",
+        "hash-hist-fixture-setupbody",
+        "hash-hist-project-flaga-gold",
+        "hash-hist-project-strat-namedBoolRouteA",
+        "hash-hist-project-strat-routeBNamedBool",
+        "hash-hist-project-strat-stepE",
+        "hash-hist-project-strat-meAlipayNull",
+        "hash-hist-project-strat-popupVisible",
+        "hash-hist-project-strat-authShowFlow"
+      ]
+    },
+    {
+      "id": "struct.setup_add_remove_binding",
+      "weight": 1.1027,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-nonlit"
+      ],
+      "cases": [
+        "hash-nonlit"
+      ]
+    },
+    {
+      "id": "life.page_onload_onshow_literal",
+      "weight": 1.1,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-onload"
+      ],
+      "cases": [
+        "hash-onload"
+      ]
+    },
+    {
+      "id": "setup.call_arg_literal",
+      "weight": 1.0294,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-callarg",
+        "hash-hist-fixture-callarg",
+        "hash-hist-fixture-localimport",
+        "hash-hist-project-flaga-gold",
+        "hash-live-log-routeA-call-arg",
+        "hash-extra-fixture-f6-baseline-callarg-scriptLocalImport",
+        "hash-extra-fixture-baseline-local-import-scriptLocalImport"
+      ],
+      "cases": [
+        "hash-callarg",
+        "hash-hist-fixture-callarg",
+        "hash-hist-fixture-localimport",
+        "hash-hist-project-flaga-gold",
+        "hash-live-log-routeA-call-arg",
+        "hash-extra-fixture-f6-baseline-callarg-scriptLocalImport",
+        "hash-extra-fixture-baseline-local-import-scriptLocalImport"
+      ]
+    },
+    {
+      "id": "shared.leaf_util",
+      "weight": 0.9652,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-shared"
+      ],
+      "cases": [
+        "hash-shared"
+      ]
+    },
+    {
+      "id": "style.scss_lang_deep",
+      "weight": 0.9,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-scss",
+        "hash-hist-project-strat-sharedStyle"
+      ],
+      "cases": [
+        "hash-scss",
+        "hash-hist-project-strat-sharedStyle"
+      ]
+    },
+    {
+      "id": "cfg.store_vuex",
+      "weight": 0.891,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-store"
+      ],
+      "cases": [
+        "hash-store"
+      ]
+    },
+    {
+      "id": "struct.export_add_rename",
+      "weight": 0.8712,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-addimport"
+      ],
+      "cases": [
+        "hash-addimport"
+      ]
+    },
+    {
+      "id": "shared.vue_template_or_style",
+      "weight": 0.8662,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-vue-tpl",
+        "hash-easycom",
+        "hash-hist-project-strat-component"
+      ],
+      "cases": [
+        "hash-vue-tpl",
+        "hash-easycom",
+        "hash-hist-project-strat-component"
+      ]
+    },
+    {
+      "id": "cfg.vuex_mapstate_edit",
+      "weight": 0.8,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-store"
+      ],
+      "cases": [
+        "hash-store"
+      ]
+    },
+    {
+      "id": "struct.setup_lifecycle_hooks",
+      "weight": 0.65,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-ifdef",
+        "hash-onload",
+        "hash-gap-ifdef"
+      ],
+      "cases": [
+        "hash-ifdef",
+        "hash-onload",
+        "hash-gap-ifdef"
+      ]
+    },
+    {
+      "id": "build.dynamic_warm_optc_vs_baseline",
+      "weight": 0.594,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-script1",
+        "hash-hist-fixture-script1"
+      ],
+      "cases": [
+        "hash-gap-script1",
+        "hash-hist-fixture-script1"
+      ]
+    },
+    {
+      "id": "life.new_never_seeded",
+      "weight": 0.5197,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-pages",
+        "hash-gap-messy-missing"
+      ],
+      "cases": [
+        "hash-pages",
+        "hash-gap-messy-missing"
+      ]
+    },
+    {
+      "id": "life.rename_delete_page",
+      "weight": 0.5197,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-pages"
+      ],
+      "cases": [
+        "hash-pages"
+      ]
+    },
+    {
+      "id": "shared.vue_script_only_gt_vue_max",
+      "weight": 0.5197,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-vue-gt"
+      ],
+      "cases": [
+        "hash-gap-vue-gt"
+      ]
+    },
+    {
+      "id": "setup.plain_const_literal",
+      "weight": 0.5147,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-complex"
+      ],
+      "cases": [
+        "hash-complex"
+      ]
+    },
+    {
+      "id": "life.form_submit_handler_literal",
+      "weight": 0.5,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-onload"
+      ],
+      "cases": [
+        "hash-onload"
+      ]
+    },
+    {
+      "id": "shared.mixin_options_merge",
+      "weight": 0.45,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-store",
+        "hash-gap-messy-mixins"
+      ],
+      "cases": [
+        "hash-store",
+        "hash-gap-messy-mixins"
+      ]
+    },
+    {
+      "id": "build.static_cold_with_vs_without",
+      "weight": 0.396,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-static-cold-with-vs-without",
+        "hash-hist-fixture-cold",
+        "hash-extra-cold-ixture-baseline-real--optc-ext-v4",
+        "hash-extra-cold-ixture-baseline-real--optc-ext-v3",
+        "hash-extra-cold-roject-baseline-real--optc-ext-v3",
+        "hash-extra-cold-ox-hash-tpl-baseline-tpl-optc-ext",
+        "hash-extra-cold--hash-style-baseline-yle-optc-ext",
+        "hash-project-companion.json",
+        "hash-project-companion.wxml",
+        "hash-project-companion.wxss",
+        "hash-cold-pair-tpl",
+        "hash-cold-pair-style",
+        "hash-cold-pair-combo",
+        "hash-cold-pair-opt-data",
+        "hash-cold-pair-macro",
+        "hash-cold-pair-callarg",
+        "hash-cold-pair-shared",
+        "hash-cold-pair-pkg",
+        "hash-cold-pair-pages",
+        "hash-cold-pair-ifdef",
+        "hash-cold-pair-slot",
+        "hash-cold-pair-onload",
+        "hash-cold-pair-store",
+        "hash-cold-pair-addimport",
+        "hash-cold-pair-app",
+        "hash-cold-pair-easycom",
+        "hash-cold-pair-concurrent"
+      ],
+      "cases": [
+        "hash-static-cold-with-vs-without"
+      ]
+    },
+    {
+      "id": "imp.at_alias",
+      "weight": 0.396,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-hist-fixture-localimport"
+      ],
+      "cases": [
+        "hash-hist-fixture-localimport"
+      ]
+    },
+    {
+      "id": "imp.easycom_only",
+      "weight": 0.396,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-easycom",
+        "hash-hist-project-strat-component"
+      ],
+      "cases": [
+        "hash-easycom",
+        "hash-hist-project-strat-component"
+      ]
+    },
+    {
+      "id": "cfg.pages_json",
+      "weight": 0.3712,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-pages"
+      ],
+      "cases": [
+        "hash-pages"
+      ]
+    },
+    {
+      "id": "messy.asi_no_semicolon",
+      "weight": 0.3564,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-nonlit"
+      ],
+      "cases": [
+        "hash-nonlit"
+      ]
+    },
+    {
+      "id": "messy.chart_canvas_map",
+      "weight": 0.35,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-easycom"
+      ],
+      "cases": [
+        "hash-easycom"
+      ]
+    },
+    {
+      "id": "shared.option_a_export_add_rename",
+      "weight": 0.3465,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-addimport"
+      ],
+      "cases": [
+        "hash-addimport"
+      ]
+    },
+    {
+      "id": "cfg.app_vue",
+      "weight": 0.297,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-app",
+        "hash-hist-project-strat-appTouch"
+      ],
+      "cases": [
+        "hash-app",
+        "hash-hist-project-strat-appTouch"
+      ]
+    },
+    {
+      "id": "life.concurrent_multi_page",
+      "weight": 0.297,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-concurrent"
+      ],
+      "cases": [
+        "hash-concurrent"
+      ]
+    },
+    {
+      "id": "cfg.main_js",
+      "weight": 0.2475,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-app"
+      ],
+      "cases": [
+        "hash-app"
+      ]
+    },
+    {
+      "id": "messy.optional_nullish",
+      "weight": 0.2376,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-complex"
+      ],
+      "cases": [
+        "hash-complex"
+      ]
+    },
+    {
+      "id": "cfg.manifest",
+      "weight": 0.198,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-pages"
+      ],
+      "cases": [
+        "hash-pages"
+      ]
+    },
+    {
+      "id": "cfg.uni_scss",
+      "weight": 0.198,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-scss",
+        "hash-hist-project-strat-sharedStyle"
+      ],
+      "cases": [
+        "hash-scss",
+        "hash-hist-project-strat-sharedStyle"
+      ]
+    },
+    {
+      "id": "imp.barrel_reexport",
+      "weight": 0.198,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-imp-barrel"
+      ],
+      "cases": [
+        "hash-gap-imp-barrel"
+      ]
+    },
+    {
+      "id": "imp.default_plus_named",
+      "weight": 0.198,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-imp-defnamed"
+      ],
+      "cases": [
+        "hash-gap-imp-defnamed"
+      ]
+    },
+    {
+      "id": "imp.relative_multihop",
+      "weight": 0.198,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-imp-rel"
+      ],
+      "cases": [
+        "hash-gap-imp-rel"
+      ]
+    },
+    {
+      "id": "messy.getCI_provide_inject",
+      "weight": 0.198,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-messy-getci",
+        "hash-gap-messy-provide"
+      ],
+      "cases": [
+        "hash-gap-messy-getci",
+        "hash-gap-messy-provide"
+      ]
+    },
+    {
+      "id": "messy.large_setup",
+      "weight": 0.198,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-complex"
+      ],
+      "cases": [
+        "hash-complex"
+      ]
+    },
+    {
+      "id": "shared.inlined_vs_chunk",
+      "weight": 0.1732,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-inlined-vs-chunk"
+      ],
+      "cases": [
+        "hash-gap-inlined-vs-chunk"
+      ]
+    },
+    {
+      "id": "imp.uni_modules",
+      "weight": 0.1584,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-messy-uni"
+      ],
+      "cases": [
+        "hash-gap-messy-uni"
+      ]
+    },
+    {
+      "id": "messy.defineExpose",
+      "weight": 0.1584,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-macro-emits"
+      ],
+      "cases": [
+        "hash-macro-emits"
+      ]
+    },
+    {
+      "id": "messy.empty_minimal_sfc",
+      "weight": 0.1584,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-nonlit"
+      ],
+      "cases": [
+        "hash-nonlit"
+      ]
+    },
+    {
+      "id": "messy.ts_as_enum_residue",
+      "weight": 0.1584,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-messy-ts"
+      ],
+      "cases": [
+        "hash-gap-messy-ts"
+      ]
+    },
+    {
+      "id": "cfg.mixins",
+      "weight": 0.1485,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-messy-mixins"
+      ],
+      "cases": [
+        "hash-gap-messy-mixins"
+      ]
+    },
+    {
+      "id": "life.subpackage_page_edit",
+      "weight": 0.1485,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-pkg",
+        "hash-concurrent",
+        "hash-hist-project-script1",
+        "hash-hist-project-strat-authShowFlow"
+      ],
+      "cases": [
+        "hash-pkg",
+        "hash-concurrent",
+        "hash-hist-project-script1",
+        "hash-hist-project-strat-authShowFlow"
+      ]
+    },
+    {
+      "id": "imp.import_star",
+      "weight": 0.1188,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-imp-star"
+      ],
+      "cases": [
+        "hash-gap-imp-star"
+      ]
+    },
+    {
+      "id": "imp.require_in_setup",
+      "weight": 0.1188,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-imp-require"
+      ],
+      "cases": [
+        "hash-gap-imp-require"
+      ]
+    },
+    {
+      "id": "imp.side_effect_import",
+      "weight": 0.1188,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-messy-side"
+      ],
+      "cases": [
+        "hash-gap-messy-side"
+      ]
+    },
+    {
+      "id": "messy.dual_script_wxs",
+      "weight": 0.099,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-messy-wxs"
+      ],
+      "cases": [
+        "hash-gap-messy-wxs"
+      ]
+    },
+    {
+      "id": "messy.iife_toplevel",
+      "weight": 0.099,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-complex"
+      ],
+      "cases": [
+        "hash-complex"
+      ]
+    },
+    {
+      "id": "messy.lang_ts_sfc",
+      "weight": 0.099,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-messy-langts"
+      ],
+      "cases": [
+        "hash-gap-messy-langts"
+      ]
+    },
+    {
+      "id": "messy.private_fields",
+      "weight": 0.099,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-messy-priv"
+      ],
+      "cases": [
+        "hash-gap-messy-priv"
+      ]
+    },
+    {
+      "id": "imp.import_type",
+      "weight": 0.0792,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-messy-imptype"
+      ],
+      "cases": [
+        "hash-gap-messy-imptype"
+      ]
+    },
+    {
+      "id": "messy.circular_dep",
+      "weight": 0.0792,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-messy-circ"
+      ],
+      "cases": [
+        "hash-gap-messy-circ"
+      ]
+    },
+    {
+      "id": "messy.default_import_multi_export",
+      "weight": 0.0792,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-messy-defmulti"
+      ],
+      "cases": [
+        "hash-gap-messy-defmulti"
+      ]
+    },
+    {
+      "id": "messy.dynamic_import",
+      "weight": 0.0792,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-messy-dyn"
+      ],
+      "cases": [
+        "hash-gap-messy-dyn"
+      ]
+    },
+    {
+      "id": "messy.missing_import",
+      "weight": 0.0792,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-messy-missing"
+      ],
+      "cases": [
+        "hash-gap-messy-missing"
+      ]
+    },
+    {
+      "id": "cfg.plugins",
+      "weight": 0.0742,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-app"
+      ],
+      "cases": [
+        "hash-app"
+      ]
+    },
+    {
+      "id": "other.script_literal",
+      "weight": 0.0397,
+      "hashCoveredMechanical": true,
+      "hashCoveredHonest": true,
+      "hashCovered": true,
+      "casesMechanical": [
+        "hash-gap-messy-other"
+      ],
+      "cases": [
+        "hash-gap-messy-other"
+      ]
+    }
+  ],
+  "hashWeightedCoverageMechanical": 100,
+  "hashWeightedCoverageHonest": 100,
+  "uncoveredLeaves": [],
+  "uncoveredWeightHonest": 0
+}

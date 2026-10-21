@@ -1,0 +1,115 @@
+{
+  "checkedAt": "2026-10-15T06:43:04.483Z",
+  "host": "box",
+  "label": "measured",
+  "pages": 500,
+  "BENCH_MODE": "page-inc",
+  "suite": "perf-script (v3) + shared component from perf-page-inc v2",
+  "heapMb": 6144,
+  "integration": {
+    "plugin": "compile-optimization/fixture/scripts/vite-plugins/page-incremental.mjs",
+    "pagesJsonPatch": "full-deps/.../pagesJson.js (cached importPagesCode fast path)",
+    "mechanism": "Opt B content fingerprint gate → filter importPagesCode to dirty page (Opt C-style page-only generate entry); emptyOutDir false leaves other outputs"
+  },
+  "baseline_ref": "verify/fixture-baseline-real.json",
+  "measured": {
+    "cold": {
+      "totalMs": 5327.622372,
+      "generated": 2009,
+      "transforms": 1515,
+      "pageInc": {
+        "path": "full",
+        "reason": "cold-seeded",
+        "dirtyPages": [],
+        "active": false,
+        "pageCount": 500,
+        "lastDecision": {
+          "path": "full",
+          "reason": "cold-seeded",
+          "dirtyPages": [],
+          "seededPages": 500,
+          "seededOk": 500,
+          "seededErr": 0,
+          "at": "2026-10-15T06:39:11.374Z"
+        }
+      }
+    },
+    "script1": {
+      "totalMs": 610.2104959999997,
+      "graphMs": 440.2604259999998,
+      "outputMs": 169.95006999999987,
+      "generated": 8,
+      "transforms": 2,
+      "changedContents": 2,
+      "updatedMtimes": 8,
+      "pageInc": {
+        "path": "incremental",
+        "reason": "import-set-and-dep-content-stable",
+        "dirtyPages": [
+          "pages-tab/routeA/index"
+        ],
+        "active": true,
+        "pageCount": 500,
+        "lastDecision": {
+          "path": "incremental",
+          "reason": "import-set-and-dep-content-stable",
+          "dirtyPages": [
+            "pages-tab/routeA/index"
+          ],
+          "pagePath": "pages-tab/routeA/index",
+          "pathStable": true,
+          "contentStable": true,
+          "at": "2026-10-15T06:39:11.711Z",
+          "pagesJsonFastPath": true,
+          "filteredImportCount": 1
+        }
+      },
+      "decisionPath": "incremental"
+    },
+    "sharedComponent_from_v2": {
+      "totalMs": 3937.461115,
+      "generated": 1505,
+      "transforms": 1499,
+      "pageInc": {
+        "path": "full",
+        "reason": "non-page-or-shared-changed",
+        "dirtyPages": [],
+        "active": false,
+        "pageCount": 500,
+        "lastDecision": {
+          "path": "full",
+          "reason": "non-page-or-shared-changed",
+          "dirtyPages": [],
+          "file": "modules/components/shared-popup/index.vue",
+          "at": "2026-10-15T06:32:42.348Z"
+        }
+      },
+      "decisionPath": "full",
+      "proves": "Opt B content / non-page change forces full rebuild (no false negative)"
+    }
+  },
+  "vsBaseline": {
+    "warmMs": {
+      "baseline": 1646.120988999999,
+      "pageInc": 610.2104959999997,
+      "speedup": 2.697628113233896
+    },
+    "generated": {
+      "baseline": 1006,
+      "pageInc": 8
+    }
+  },
+  "correctness": {
+    "pageEditPresent": true,
+    "vendorShaStable": true,
+    "routeAWxmlUntouched": true,
+    "routeAJsonUntouched": true,
+    "otherPageShaStable": true,
+    "otherPageMtimeStable": true
+  },
+  "verdict": "SUCCESS_ON_FIXTURE: incremental path fired; warm 1646→610ms (2.7×); generated 1006→8; shared component forces full",
+  "artifacts": {
+    "metrics_v3": "compile-optimization/reports/box-fixture-page-inc-v3/",
+    "metrics_v2_with_component": "compile-optimization/reports/box-fixture-page-inc-v2/"
+  }
+}

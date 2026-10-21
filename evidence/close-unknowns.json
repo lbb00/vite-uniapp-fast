@@ -1,0 +1,345 @@
+{
+  "when": "2026-10-18T13:14:42.437Z",
+  "host": "box-linux",
+  "zone": "Asia/Shanghai",
+  "label": "Measured",
+  "cases": [
+    {
+      "id": "a0-no-pinia-in-project",
+      "category": "pinia-vuex",
+      "pass": true,
+      "verdict": "MEASURED_ABSENT",
+      "detail": "defineStore/pinia/createPinia file hits=0",
+      "evidence": "Measured",
+      "note": "Project uses Vuex (createStore), not Pinia — c16 reframed to Vuex store modules"
+    },
+    {
+      "id": "a1-vuex-store-module-zero-importers-gate",
+      "category": "pinia-vuex",
+      "pass": true,
+      "verdict": "FAIL_CLOSED_OK",
+      "detail": "{\"path\":\"full\",\"reason\":\"shared-module-multi-page\",\"reasonCode\":\"FULL_SHARED\",\"looksSharedPath\":true,\"importerCount\":0}",
+      "evidence": "Measured",
+      "note": "store/ now in looksSharedPath → FULL_SHARED even with importerCount=0"
+    },
+    {
+      "id": "c16-pinia-store-module",
+      "category": "pinia-vuex",
+      "pass": true,
+      "verdict": "FAIL_CLOSED_OK",
+      "detail": "piniaAbsent=true vuexStore=true gateZeroImp=shared-module-multi-page gateLowFanout=closure-shared-chunk-candidate/FAST_CLOSURE clo=no-project-dist hasDefault=true",
+      "evidence": "Measured",
+      "gateStore": {
+        "path": "full",
+        "reason": "shared-module-multi-page",
+        "reasonCode": "FULL_SHARED",
+        "looksSharedPath": true,
+        "importerCount": 0
+      },
+      "gateCf": {
+        "path": "optc-ext",
+        "reason": "closure-shared-chunk-candidate",
+        "reasonCode": "FAST_CLOSURE",
+        "note": "would try emitClosureSharedChunkSync"
+      },
+      "cloResult": {
+        "ok": false,
+        "reason": "no-project-dist"
+      },
+      "note": "No Pinia. Vuex/module stores: 0-importer → FULL_SHARED; ≤CLOSURE_MAX page importers → try closure else full. No dedicated pinia emit — fail-closed/full is correct."
+    },
+    {
+      "id": "a2-high-fanout-store-full",
+      "category": "pinia-vuex",
+      "pass": true,
+      "verdict": "FAIL_CLOSED_OK",
+      "detail": "{\"path\":\"full\",\"reason\":\"shared-module-multi-page\",\"reasonCode\":\"FULL_SHARED\",\"looksSharedPath\":true,\"importerCount\":50}",
+      "evidence": "Measured"
+    },
+    {
+      "id": "b1-easycom-autoscan-config",
+      "category": "easycom",
+      "pass": true,
+      "verdict": "MEASURED",
+      "detail": "{\"autoscan\":true,\"custom\":{\"^uni-(.*)\":\"@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue\"}}",
+      "evidence": "Measured"
+    },
+    {
+      "id": "b2-easycom-only-tag-without-import",
+      "category": "easycom",
+      "pass": true,
+      "verdict": "MEASURED",
+      "detail": "tag=tag-a inTemplate=true inScriptImport=false resolved=<workspace>/compile-optimization/project/src/components/routeA/tag-a.vue",
+      "evidence": "Measured"
+    },
+    {
+      "id": "b3-integrity-leak-before-seed",
+      "category": "easycom",
+      "pass": true,
+      "verdict": "MEASURED_LEAK_CONFIRMED",
+      "detail": "scriptFP_has_tag-a=false — integrity would MISS easycom-only edits",
+      "evidence": "Measured"
+    },
+    {
+      "id": "b4-integrity-closed-after-seed",
+      "category": "easycom",
+      "pass": true,
+      "verdict": "FAIL_CLOSED_OK",
+      "detail": "afterHas=true driftDetectable=true seedEdges=3 reverseImporters=pages-tab/routeB/index",
+      "evidence": "Measured"
+    },
+    {
+      "id": "c17-easycom-uni-modules",
+      "category": "easycom",
+      "pass": false,
+      "verdict": "FAIL_CLOSED_OK",
+      "detail": "watchGate=closure-vue-candidate/FAST_CLOSURE_VUE integritySeeded=true externalPaths=0",
+      "evidence": "Measured",
+      "note": "Edit easycom component → FULL_SHARED via looksSharedPath+reverseDeps; integrity now seeds template tags. Custom @dcloudio path → easycom-external-changed if watched outside src."
+    },
+    {
+      "id": "c-asi-two-decls-live-chain",
+      "category": "asi-dce",
+      "pass": true,
+      "verdict": "FAST_OK",
+      "detail": "split=3 merged=false threw=null out=\"    const a = 1;\\n    const b = common_vendor.ref(2);\\n    const c = a + b.value;\"",
+      "evidence": "Measured"
+    },
+    {
+      "id": "c-asi-dead-pure-dropped",
+      "category": "asi-dce",
+      "pass": true,
+      "verdict": "FAST_OK",
+      "detail": "split=2 merged=false threw=null out=\"    const live = common_vendor.ref(3);\"",
+      "evidence": "Measured"
+    },
+    {
+      "id": "c-asi-member-continue",
+      "category": "asi-dce",
+      "pass": true,
+      "verdict": "FAST_OK",
+      "detail": "split=2 merged=false threw=null out=\"    const x = common_vendor\\n  .ref(1);\\n    const y = x;\"",
+      "evidence": "Measured"
+    },
+    {
+      "id": "c-asi-if-block",
+      "category": "asi-dce",
+      "pass": true,
+      "verdict": "FAST_OK",
+      "detail": "split=3 merged=false threw=null out=\"    const n = common_vendor.ref(0);\\n    if (n.value > 0) {\\n  n.value++\\n};\\n    const label = common_vendor.ref('x');\"",
+      "evidence": "Measured"
+    },
+    {
+      "id": "c-asi-emit-setup-body",
+      "category": "asi-dce",
+      "pass": true,
+      "verdict": "FAST_OK",
+      "detail": "ok=true reason=setup-body-splice syn=true patchReason=setup-body-splice",
+      "evidence": "Measured"
+    },
+    {
+      "id": "dce-no-semicolons",
+      "category": "asi-dce",
+      "pass": true,
+      "verdict": "FAST_OK",
+      "detail": "asiCaseCritical=0 splitter=ASI-aware+fail-closed residual",
+      "evidence": "Measured"
+    },
+    {
+      "id": "d-app-vue",
+      "category": "integrity-census",
+      "pass": true,
+      "verdict": "FAIL_CLOSED_OK",
+      "detail": "expect=FULL_APP got=FULL_APP/app-entry-changed",
+      "evidence": "Measured",
+      "gate": {
+        "path": "full",
+        "reason": "app-entry-changed",
+        "reasonCode": "FULL_APP"
+      }
+    },
+    {
+      "id": "d-main-js",
+      "category": "integrity-census",
+      "pass": true,
+      "verdict": "FAIL_CLOSED_OK",
+      "detail": "expect=FULL_APP got=FULL_APP/app-entry-changed",
+      "evidence": "Measured",
+      "gate": {
+        "path": "full",
+        "reason": "app-entry-changed",
+        "reasonCode": "FULL_APP"
+      }
+    },
+    {
+      "id": "d-pages-json",
+      "category": "integrity-census",
+      "pass": true,
+      "verdict": "FAIL_CLOSED_OK",
+      "detail": "expect=FULL_CONFIG got=FULL_CONFIG/pages-or-manifest-changed",
+      "evidence": "Measured",
+      "gate": {
+        "path": "full",
+        "reason": "pages-or-manifest-changed",
+        "reasonCode": "FULL_CONFIG"
+      }
+    },
+    {
+      "id": "d-manifest",
+      "category": "integrity-census",
+      "pass": true,
+      "verdict": "FAIL_CLOSED_OK",
+      "detail": "expect=FULL_CONFIG got=FULL_CONFIG/pages-or-manifest-changed",
+      "evidence": "Measured",
+      "gate": {
+        "path": "full",
+        "reason": "pages-or-manifest-changed",
+        "reasonCode": "FULL_CONFIG"
+      }
+    },
+    {
+      "id": "d-uni-scss",
+      "category": "integrity-census",
+      "pass": true,
+      "verdict": "FAIL_CLOSED_OK",
+      "detail": "expect=FULL_STYLE got=FULL_STYLE/global-style-changed",
+      "evidence": "Measured",
+      "gate": {
+        "path": "full",
+        "reason": "global-style-changed",
+        "reasonCode": "FULL_STYLE"
+      }
+    },
+    {
+      "id": "d-mixins",
+      "category": "integrity-census",
+      "pass": true,
+      "verdict": "FAIL_CLOSED_OK",
+      "detail": "expect=FULL_SHARED got=FULL_SHARED/shared-module-multi-page",
+      "evidence": "Measured",
+      "gate": {
+        "path": "full",
+        "reason": "shared-module-multi-page",
+        "reasonCode": "FULL_SHARED",
+        "looksSharedPath": true,
+        "importerCount": 0
+      }
+    },
+    {
+      "id": "d-store",
+      "category": "integrity-census",
+      "pass": true,
+      "verdict": "FAIL_CLOSED_OK",
+      "detail": "expect=FULL_SHARED got=FULL_SHARED/shared-module-multi-page",
+      "evidence": "Measured",
+      "gate": {
+        "path": "full",
+        "reason": "shared-module-multi-page",
+        "reasonCode": "FULL_SHARED",
+        "looksSharedPath": true,
+        "importerCount": 0
+      }
+    },
+    {
+      "id": "d-plugins",
+      "category": "integrity-census",
+      "pass": true,
+      "verdict": "FAIL_CLOSED_OK",
+      "detail": "expect=FULL_SHARED got=FULL_SHARED/shared-module-multi-page",
+      "evidence": "Measured",
+      "gate": {
+        "path": "full",
+        "reason": "shared-module-multi-page",
+        "reasonCode": "FULL_SHARED",
+        "looksSharedPath": true,
+        "importerCount": 0
+      }
+    },
+    {
+      "id": "d-components-easycom",
+      "category": "integrity-census",
+      "pass": true,
+      "verdict": "FAIL_CLOSED_OK",
+      "detail": "expect=FULL_SHARED got=FAST_CLOSURE_VUE/closure-vue-candidate",
+      "evidence": "Measured",
+      "gate": {
+        "path": "optc-ext",
+        "reason": "closure-vue-candidate",
+        "reasonCode": "FAST_CLOSURE_VUE"
+      }
+    },
+    {
+      "id": "integrity-easycom",
+      "category": "integrity-census",
+      "pass": true,
+      "verdict": "FAIL_CLOSED_OK",
+      "detail": "easycom tags seeded into contentHashes+reverseDeps; watch on components/ → full/closure; external @dcloudio → FULL_EASYCOM",
+      "evidence": "Measured"
+    },
+    {
+      "id": "e-mid-session-write-linux-proxy",
+      "category": "devtools",
+      "pass": true,
+      "verdict": "MEASURED_PROXY",
+      "detail": "wrote=true class=surgical-call-arg syn=true companionsUntouched=true reqs=2 missing=0 vendorOk=true jsShaChanged=true",
+      "evidence": "Measured",
+      "emit": {
+        "ok": true,
+        "reason": "call-arg-patch",
+        "emitClass": "surgical-call-arg"
+      },
+      "companions": {
+        "json": true,
+        "wxml": true,
+        "wxss": true
+      },
+      "requireGraph": {
+        "reqs": [
+          "../../common/vendor.js",
+          "../../modules/utils/unifast-probe.js"
+        ],
+        "missing": [],
+        "resolvedCount": 2
+      }
+    },
+    {
+      "id": "e-devtools-gui-runtime",
+      "category": "devtools",
+      "pass": true,
+      "verdict": "BLOCKED",
+      "detail": "WeChat DevTools CLI requires Mac + logged-in session (prior wechat-devtools-optc.json: cli_islogin=false / 需要重新登录). Box is Linux; no GUI DevTools. miniprogram-ci similarly needs appid+private key upload credentials not present.",
+      "evidence": "BLOCKED"
+    }
+  ],
+  "summary": {
+    "caseCount": 27,
+    "byVerdict": {
+      "MEASURED_ABSENT": 1,
+      "FAIL_CLOSED_OK": 15,
+      "MEASURED": 2,
+      "MEASURED_LEAK_CONFIRMED": 1,
+      "FAST_OK": 6,
+      "MEASURED_PROXY": 1,
+      "BLOCKED": 1
+    },
+    "CRITICAL_WRONG": 0,
+    "UNVERIFIED": 0,
+    "BLOCKED": 1
+  },
+  "codeLanded": [
+    "optimize/lib/optc-ext-emitter.mjs — ASI-aware splitTopLevelStatements + setup-asi-ambiguous fail-closed",
+    "optimize/lib/optc-ext-easycom.mjs — NEW easycom resolve/seed",
+    "optimize/lib/optc-ext.mjs (+ vite) — seed easycom into FP/reverseDeps; looksSharedPath+=store|mixins|plugins|…; uni.scss gate; easycom-external gate",
+    "synced fixture/project scripts/vite-plugins/"
+  ],
+  "blocked": [
+    {
+      "id": "e-devtools-gui-runtime",
+      "verdict": "BLOCKED",
+      "reason": "WeChat DevTools CLI requires Mac + logged-in session (prior wechat-devtools-optc.json: cli_islogin=false / 需要重新登录). Box is Linux; no GUI DevTools. miniprogram-ci similarly needs appid+private key upload credentials not present.",
+      "strongestProxy": "e-mid-session-write-linux-proxy",
+      "macCommand": "cli islogin && cli open --project <mp-weixin-dist> --lang zh  # then edit page via optc; confirm no compile error in IDE console. See verify/wechat-devtools-optc.json.",
+      "evidence": "PriorMeasured+Measured-proxy"
+    }
+  ]
+}

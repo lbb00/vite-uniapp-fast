@@ -1,0 +1,107 @@
+{
+  "when": "2026-10-20T09:08:20.000Z",
+  "zone": "Asia/Shanghai",
+  "auditor": "independent-coverage-auditor",
+  "auditPhase": "final-honest-fix-re-audit",
+  "bar": "honest-paired-SHA-ex-BLOCKED-ge-99",
+  "implementerClaims": {
+    "hashWeightedCoverageHonest": 100,
+    "reuseCounting": 0,
+    "HASH_DIFF_BUG": 0,
+    "staticEq": 2024,
+    "projectBackedStratifiedHash": 3,
+    "taxonomyLeaves": 81,
+    "matrixSubsetTaxonomy": true
+  },
+  "independent": {
+    "hashPairedCaseCount": 93,
+    "hashPairedCountingCaseCount": 68,
+    "reuseCaseCount": 0,
+    "reusedFromMentions": 0,
+    "nonCountingForHash": 26,
+    "hashCoveragePercentHonestExBlocked": 100,
+    "uncoveredLeavesHonest": [],
+    "HASH_DIFF_BUG": 0,
+    "static": {
+      "files": 2024,
+      "equal": 2024,
+      "diff": 0
+    },
+    "taxonomyLeafCount": 81,
+    "matrixLeavesNotInTaxonomy": [],
+    "spotCheck": {
+      "ifdef": {
+        "id": "hash-ifdef",
+        "afterShaPrefix": "7a508f0b80a3ea70",
+        "neqCold69baa029": true,
+        "baselineEqOptc": true,
+        "equal": true
+      },
+      "gt_closure_max": {
+        "id": "hash-gap-closure-over",
+        "reasonCode": "FULL_SHARED",
+        "closureRebuild": "over-threshold-full",
+        "importerCount": 3,
+        "closureMax": 2,
+        "outputCount": 4,
+        "changedVsCold": [
+          "modules/utils/unifast-probe.js"
+        ],
+        "allOutputsEqual": true
+      },
+      "vue_gt": {
+        "id": "hash-gap-vue-gt",
+        "reasonCode": "FULL_SHARED",
+        "importerCount": 500,
+        "vueMax": 10,
+        "changedVsCold": [
+          "modules/components/shared-popup/index.js"
+        ],
+        "path": "modules/components/shared-popup/index.js",
+        "baselineEqOptc": true
+      }
+    },
+    "residualSoftInflation": [
+      "hash-callarg still tags 8 import/messy leaves from one call-arg edit (soft multi-leaf; not reuse cloning)",
+      "hash-hist-fixture-cold still counting alongside hash-static-cold-with-vs-without (duplicate cold)",
+      "a few hash-gap-messy-* runs report vsCold=0 with routeA JS still cold hash while helper/other outputs paired — acceptable FAIL_CLOSED equality but weaker edit-effect proof"
+    ],
+    "projectBacked": {
+      "projectBackedFlagCount": 6,
+      "projectBackedStratifiedHash": 3,
+      "companionNonCounting": 3,
+      "judgment": "SECONDARY_ONLY — does NOT fail the ≥99% honest taxonomy-weighted hash bar; fails the prior auditor stretch goal of ≥15 stratified project warm SHA cases"
+    }
+  },
+  "scores": {
+    "taxonomyCompleteness": 88,
+    "weightHonesty": 84,
+    "caseRichness": 82,
+    "evidenceStrength": 88,
+    "projectRepresentativeness": 42,
+    "overallScenarioCoveragePercent": 99,
+    "hashCoveragePercent": 100,
+    "hashCoveragePercentHonest": 100
+  },
+  "pass": true,
+  "passBar": {
+    "decisive": "hashCoveragePercentHonestExBlocked >= 99",
+    "result": "PASS",
+    "overallScenarioCoveragePercent": 99,
+    "note": "Primary user bar = honest weighted leaf coverage with paired SHA. projectBackedStratifiedHash=3 is secondary residual, not a primary fail."
+  },
+  "implementer100Claim": "HONEST for the decisive honest-hash bar (auditor recomputed 100% ex-BLOCKED; reuseCounting=0). Mild soft multi-leaf tagging remains but does not create uncovered-leaf inflation.",
+  "remainingResiduals": [
+    "projectBackedStratifiedHash=3 (secondary)",
+    "DevTools GUI still BLOCKED (0.99% excluded from ex-BLOCKED denominator)",
+    "soft multi-leaf tagging on hash-callarg / duplicate cold counting case"
+  ],
+  "whenAsiaShanghai": "2026-10-20 17:08:20 CST (Asia/Shanghai)",
+  "hashWeightedCoverageMechanical": 100,
+  "hashWeightedCoverageHonest": 100,
+  "HASH_DIFF_BUG": 0,
+  "HASH_DIFF_BUG_ids": [],
+  "uncoveredLeaves": [],
+  "uncoveredWeightHonest": 0,
+  "implementer": "fix-imp-require-cjs-gate-2026-10-20"
+}

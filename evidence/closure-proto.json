@@ -1,0 +1,110 @@
+{
+  "when": "2026-10-15T17:23:25.917310+08:00",
+  "host": "box-linux",
+  "zone": "Asia/Shanghai",
+  "label": "Measured",
+  "mvp": "Option B \u2014 regenerate single shared dist chunk; pages untouched when export surface stable",
+  "threshold": "UNI_FAST_OPTC_CLOSURE_MAX default 3",
+  "fixture_note": "F8b: pkg0/p1 + pkg0/p2 now also import unifast-probe \u2192 importerCount=3 (routeA+p1+p2)",
+  "cases": [
+    {
+      "step": "sharedModule",
+      "file": "modules/utils/unifast-probe.js",
+      "importerCount": 3,
+      "importers": [
+        "pages-tab/routeA/index",
+        "pkg0/p1",
+        "pkg0/p2"
+      ],
+      "path": "optc-ext",
+      "reason": "closure-shared-chunk",
+      "emitClass": "closure-chunk",
+      "writeMode": "cold-body-patch",
+      "closureRebuild": "chunk-regen",
+      "totalMs": 2.265,
+      "generated": 1,
+      "viteSkipped": true,
+      "changedFiles": [
+        "modules/utils/unifast-probe.js"
+      ],
+      "pagesStable": true,
+      "run": "box-fixture-f8b-closure-multi",
+      "label": "Measured",
+      "note": "F8b multi-importer within threshold"
+    },
+    {
+      "step": "sharedModule",
+      "file": "modules/utils/unifast-probe.js",
+      "importerCount": 3,
+      "closureMax": 2,
+      "env": "UNI_FAST_OPTC_CLOSURE_MAX=2",
+      "path": "full",
+      "reason": "shared-module-multi-page",
+      "closureRebuild": "over-threshold-full",
+      "totalMs": 1638.303,
+      "generated": 1006,
+      "viteSkipped": false,
+      "changedFiles": [],
+      "changedNote": "full regen; comment-only body mark stripped by Rollup \u2192 probe bytes may equal cold (changedContents=0) but path=full Measured",
+      "run": "box-fixture-f8b-closure-over",
+      "label": "Measured"
+    },
+    {
+      "step": "component",
+      "file": "modules/components/shared-popup/index.vue",
+      "importerCount": 500,
+      "path": "full",
+      "reason": "shared-module-multi-page",
+      "closureRebuild": "over-threshold-full",
+      "totalMs": 1771.106,
+      "generated": 1007,
+      "viteSkipped": false,
+      "label": "Measured",
+      "hint": "Vue SFC + importerCount>3 \u2192 full (F7 residual)",
+      "run": "box-fixture-f7-optc-closure"
+    },
+    {
+      "step": "stretch-import",
+      "path": "n/a",
+      "result": {
+        "stretch": [
+          {
+            "case": "util-with-import",
+            "ok": false,
+            "reason": "closure-source-has-imports",
+            "verdict": "BLOCKED_DOCUMENTED"
+          },
+          {
+            "case": "emit-with-one-local-import",
+            "ok": false,
+            "reason": "closure-source-has-imports",
+            "verdict": "BLOCKED"
+          }
+        ]
+      },
+      "label": "Measured",
+      "verdict": "BLOCKED",
+      "why": "transformUtilEsmToCjs fail-closes on statement-level import/reexport/default; MVP does not emit require() preamble or resolve one local helper chunk. Cheap stretch: documented only \u2014 not implemented."
+    }
+  ],
+  "vs_full": {
+    "closure_multi_ms": 2.265,
+    "over_threshold_full_ms": 1638.303,
+    "ratio_full_over_closure": 723.3
+  },
+  "historical_f7_one_importer": {
+    "importerCount": 1,
+    "totalMs": 2.371,
+    "note": "Pre-F8b only routeA imported probe; superseded by multi=3 after backup p1/p2 import"
+  },
+  "blockers_honest": [
+    "Vue SFC shared components not in MVP (script util .js/.mjs/.ts only)",
+    "Export surface add/remove \u2192 forceFull (Measured fail-closed)",
+    "Source with imports/reexports/default export \u2192 full/fail-closed (F8b stretch BLOCKED Measured)",
+    "importerCount > CLOSURE_MAX \u2192 full (F8b Measured with max=2, count=3)",
+    "Does not regenerate importer pages (Option B)",
+    "Multi-chunk Rollup regen not implemented",
+    "WeChat DevTools runtime Unverified (no Mac)"
+  ],
+  "verdict": "ENABLE"
+}

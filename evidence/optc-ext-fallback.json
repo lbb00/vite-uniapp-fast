@@ -1,0 +1,50 @@
+{
+  "checkedAt": "2026-10-15T07:18:26.330Z",
+  "host": "box",
+  "label": "Measured",
+  "BENCH_MODE": "optc-ext",
+  "suite": "perf-optc-fallback (cold + scriptNonLiteral)",
+  "heapMb": 6144,
+  "report": "box-fixture-optc-ext-fallback",
+  "editClass": {
+    "name": "scriptNonLiteral",
+    "description": "Rename setup binding const label= → const labelRenamed= (template still references label). Imports/template/style unchanged so Opt B stays stable; emit cascade fails."
+  },
+  "measured": {
+    "cold": {
+      "totalMs": 5303.730255,
+      "generated": 2009,
+      "path": "full",
+      "reason": "cold-seeded"
+    },
+    "scriptNonLiteral": {
+      "totalMs": 1841.1809469999998,
+      "generated": 1006,
+      "transforms": 1,
+      "viteSkipped": false,
+      "path": "full",
+      "reason": "optc-emit-failed",
+      "emitReason": "emit-cascade-failed",
+      "surgicalReason": "no-ref-literal-change",
+      "setupBodyReason": "render-binding-removed",
+      "missingBindings": [
+        "label"
+      ],
+      "changedContents": 1,
+      "updatedMtimes": 1006
+    }
+  },
+  "assertions": {
+    "decisionFull": true,
+    "viteSkippedFalse": true,
+    "wallFullScale": true,
+    "generatedFullScale": true,
+    "emitCascadeFailed": true
+  },
+  "vsBaselineScript1": {
+    "note": "Full-scale warm comparable to fixture baseline script1 ~1646ms / generated ~1006",
+    "baselineScript1Ms": 1646,
+    "baselineGenerated": 1006
+  },
+  "verdict": "PASS — non-literal rename forces full rebuild via emit-cascade-failed (render-binding-removed)"
+}

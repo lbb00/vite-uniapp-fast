@@ -1,0 +1,44 @@
+{
+  "host": "box",
+  "node": "v20.19.2",
+  "checkedAt": "2026-10-15T06:09:39.133Z",
+  "cwd": "compile-optimization/fixture",
+  "pages": 500,
+  "BENCH_MODE": "baseline",
+  "BENCH_HEAP_MB": 6144,
+  "BENCH_BACKUP": "fixture-source-backup",
+  "privateDepsLinked": true,
+  "exit": 0,
+  "expectedStop": true,
+  "cold": {
+    "totalMs": 5740.184512,
+    "graphMs": 4820.089439,
+    "outputMs": 920.0950729999995,
+    "transformedModules": 1515,
+    "generated": 2009,
+    "outputFiles": 2009,
+    "changedContents": 2009,
+    "updatedMtimes": 2009,
+    "rss": 501276672,
+    "heapUsed": 343281328,
+    "processPeakRss": 501276672
+  },
+  "script1": {
+    "totalMs": 1646.120988999999,
+    "graphMs": 1050.7373329999991,
+    "outputMs": 595.383656,
+    "transformedModules": 1,
+    "generated": 1006,
+    "outputFiles": 2009,
+    "changedContents": 1,
+    "updatedMtimes": 1006,
+    "rss": 529903616,
+    "heapUsed": 274098064,
+    "processPeakRss": 589357056
+  },
+  "observation": "script1 transforms=1 and changedContents=1 but generated=1006 and updatedMtimes=1006 — full generate path still runs on ordinary page script edit",
+  "artifacts": {
+    "metrics": "verify/fixture-baseline-real/metrics.json",
+    "reportDir": "compile-optimization/reports/box-fixture-baseline-real"
+  }
+}

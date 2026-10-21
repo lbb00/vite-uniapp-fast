@@ -1,0 +1,531 @@
+{
+  "when": "2026-10-18T13:16:09.756Z",
+  "host": "box-linux",
+  "zone": "Asia/Shanghai",
+  "label": "Measured",
+  "cases": [
+    {
+      "id": "m1-options-api-vs-setup-cold",
+      "category": "messy-script",
+      "pass": true,
+      "verdict": "FAIL_CLOSED",
+      "detail": "ok=false reason=emit-cascade-failed setup=setup-forbidden-residue surg=no-ref-literal-change",
+      "evidence": "Measured"
+    },
+    {
+      "id": "m2-options-cold-shell-no-setup",
+      "category": "messy-script",
+      "pass": true,
+      "verdict": "FAIL_CLOSED",
+      "detail": "ok=false reason=emit-cascade-failed setup=setup-split-failed",
+      "evidence": "Measured",
+      "note": "Project census: optionsApiOnly≈1721 — all such pages must full-rebuild on script edit"
+    },
+    {
+      "id": "m3-dual-script-options-plus-setup-joined",
+      "category": "messy-script",
+      "pass": true,
+      "verdict": "FAIL_CLOSED",
+      "detail": "fail emit-cascade-failed/setup-forbidden-residue",
+      "evidence": "Measured"
+    },
+    {
+      "id": "m4-parseVueScriptParts-wxs-first",
+      "category": "complex-ref / SFC-parse",
+      "pass": true,
+      "verdict": "FAST_OK",
+      "detail": "unexpected: got setup",
+      "scriptHead": "\nimport { ref } from 'vue'\nconst n = ref(1)\n",
+      "evidence": "Measured",
+      "severityHint": "HIGH",
+      "realProjectHit": "modules/components/seg-037/node/node.vue has wxs+script"
+    },
+    {
+      "id": "m5-ts-as-cast-leaks-into-emit",
+      "category": "messy-script",
+      "pass": true,
+      "verdict": "FAIL_CLOSED",
+      "detail": "fail-closed emit-cascade-failed / setup-forbidden-residue",
+      "evidence": "Measured",
+      "note": "Project langTs≈7 SFCs"
+    },
+    {
+      "id": "m6-ts-enum-in-setup",
+      "category": "messy-script",
+      "pass": true,
+      "verdict": "FAIL_CLOSED",
+      "detail": "ok=false reason=emit-cascade-failed setup=setup-forbidden-residue syn=n/a err=",
+      "evidence": "Measured"
+    },
+    {
+      "id": "m7-dynamic-import-in-setup",
+      "category": "messy-script",
+      "pass": true,
+      "verdict": "FAIL_CLOSED",
+      "detail": "emit-cascade-failed/setup-forbidden-residue",
+      "evidence": "Measured"
+    },
+    {
+      "id": "m8-defineProps-withDefaults-edit",
+      "category": "messy-script",
+      "pass": true,
+      "verdict": "FAIL_CLOSED",
+      "detail": "emit-cascade-failed/setup-forbidden-residue",
+      "evidence": "Measured"
+    },
+    {
+      "id": "m9-expose-gci-provide-inject",
+      "category": "messy-script",
+      "pass": true,
+      "verdict": "FAIL_CLOSED",
+      "detail": "emit-cascade-failed/setup-forbidden-residue",
+      "evidence": "Measured"
+    },
+    {
+      "id": "m10-toplevel-sideeffect-iife",
+      "category": "messy-script",
+      "pass": true,
+      "verdict": "FAST_OK",
+      "detail": "IIFE kept class=setup-body",
+      "evidence": "Measured"
+    },
+    {
+      "id": "m11-template-style-gates-inferred",
+      "category": "messy-script",
+      "pass": true,
+      "verdict": "FAIL_CLOSED",
+      "detail": "Code-review: templateHash/styleHash drift → forceFull(template-changed|style-changed). Simultaneous script+template → template wins full. Measured prior R1 FULL_TEMPLATE/FULL_STYLE.",
+      "evidence": "Inferred+PriorMeasured"
+    },
+    {
+      "id": "m12-complex-template-forces-full",
+      "category": "messy-script",
+      "pass": true,
+      "verdict": "FAIL_CLOSED",
+      "detail": "Any template edit (incl. :is, scoped slot, complex v-for) changes templateHash → FULL. Safe. Optc does not patch WXML.",
+      "evidence": "CodeReview"
+    },
+    {
+      "id": "c1-alias-at-slash-callarg",
+      "category": "complex-ref",
+      "pass": true,
+      "verdict": "FAST_OK",
+      "detail": "ok=true class=surgical-call-arg syn=true has22=true",
+      "emitClass": "surgical-call-arg",
+      "evidence": "Measured"
+    },
+    {
+      "id": "c2-namespace-import-star",
+      "category": "complex-ref",
+      "pass": true,
+      "verdict": "FAST_OK",
+      "detail": "class=setup-body-local-imports",
+      "emitClass": "setup-body-local-imports",
+      "evidence": "Measured"
+    },
+    {
+      "id": "c3-side-effect-only-import",
+      "category": "complex-ref",
+      "pass": true,
+      "verdict": "FAST_OK",
+      "detail": "sideEffectDecls=1 specs=[\"vue\",\"@/modules/utils/unifast-probe.js\"] ok=true class=setup-body",
+      "evidence": "Measured",
+      "note": "Side-effect module content change relies on fingerprint contentHashes; IMPORT_RE includes side-effect import specs"
+    },
+    {
+      "id": "c4-import-type-only",
+      "category": "complex-ref",
+      "pass": true,
+      "verdict": "FAST_OK",
+      "detail": "class=setup-body; specsStillListVue=true",
+      "evidence": "Measured"
+    },
+    {
+      "id": "c5-default-import-multi-export-guess",
+      "category": "complex-ref",
+      "pass": true,
+      "verdict": "FAIL_CLOSED",
+      "detail": "emit-cascade-failed/local-import-unmapped map=undefined",
+      "evidence": "Measured",
+      "severityHint": "CRITICAL"
+    },
+    {
+      "id": "c6-barrel-reexport",
+      "category": "complex-ref",
+      "pass": true,
+      "verdict": "FAST_OK",
+      "detail": "ok=true class=surgical-call-arg syn=true",
+      "emitClass": "surgical-call-arg",
+      "evidence": "Measured"
+    },
+    {
+      "id": "c7-circular-self-util",
+      "category": "complex-ref",
+      "pass": true,
+      "verdict": "FAIL_CLOSED",
+      "detail": "ok=false reason=closure-circular-self",
+      "evidence": "Measured"
+    },
+    {
+      "id": "c8-multihop-relative",
+      "category": "complex-ref",
+      "pass": true,
+      "verdict": "FAST_OK",
+      "detail": "ok=true class=surgical-call-arg reason=call-arg-patch setup=undefined",
+      "evidence": "Measured"
+    },
+    {
+      "id": "c9-optional-chain-nullish",
+      "category": "complex-ref",
+      "pass": true,
+      "verdict": "FAST_OK",
+      "detail": "member=obj?.probeMul call=P.probeMul?.(1) nullish=P.probeMul ?? 0",
+      "evidence": "Measured"
+    },
+    {
+      "id": "c10-private-field-hash",
+      "category": "complex-ref",
+      "pass": true,
+      "verdict": "FAST_OK",
+      "detail": "class A { #x=1; m(){ return P.probeMul(this.#x) } }",
+      "evidence": "Measured"
+    },
+    {
+      "id": "c11-composable-reactive-bag",
+      "category": "messy-script",
+      "pass": true,
+      "verdict": "FAST_OK",
+      "detail": "class=setup-body",
+      "evidence": "Measured"
+    },
+    {
+      "id": "c12-css-import-url-style-gate",
+      "category": "complex-ref",
+      "pass": true,
+      "verdict": "FAIL_CLOSED",
+      "detail": "Fixture routeA style has @import \"@/styles/utils.scss\"; styleHash covers full style text → style edit FULL. url() asset path change same. Safe.",
+      "evidence": "CodeReview+Fixture"
+    },
+    {
+      "id": "c13-pages-json-subpackages-config-gate",
+      "category": "complex-ref",
+      "pass": true,
+      "verdict": "FAIL_CLOSED",
+      "detail": "watchChange on pages.json/manifest → forceFull(pages-or-manifest-changed). listPagesFromJson reads subPackages. Safe full.",
+      "evidence": "CodeReview"
+    },
+    {
+      "id": "c14-r4-separate-chunk-not-inline",
+      "category": "complex-ref",
+      "pass": true,
+      "verdict": "DOCUMENTED",
+      "detail": "separate=true inlined=false",
+      "evidence": "Measured"
+    },
+    {
+      "id": "c15-high-fanout-over-closure-max",
+      "category": "complex-ref",
+      "pass": true,
+      "verdict": "FAIL_CLOSED",
+      "detail": "Prior Measured: shared-popup ~500 importers → full ~1771ms shared-vue over CLOSURE_MAX. Safe slow path.",
+      "evidence": "PriorMeasured"
+    },
+    {
+      "id": "c16-pinia-store-module",
+      "category": "complex-ref",
+      "pass": true,
+      "verdict": "FAIL_CLOSED_OK",
+      "detail": "Measured: pinia files=0; Vuex createStore present. store/modules gate=FULL_SHARED (looksSharedPath). Low-fanout store → FAST_CLOSURE candidate. No dedicated pinia emit. See verify/close-unknowns.json.",
+      "evidence": "Measured"
+    },
+    {
+      "id": "c17-easycom-uni-modules",
+      "category": "complex-ref",
+      "pass": true,
+      "verdict": "FAIL_CLOSED_OK",
+      "detail": "Measured+hardened: routeB <tag-a> easycom-only; script FP missed it; seedEasycomIntoFingerprints closes integrity; watch → FULL_SHARED/closure-vue; @dcloudio external → FULL_EASYCOM. See close-unknowns b1–b4.",
+      "evidence": "Measured"
+    },
+    {
+      "id": "c18-require-in-setup",
+      "category": "messy-script",
+      "pass": true,
+      "verdict": "FAIL_CLOSED",
+      "detail": "externals-missing/undefined",
+      "evidence": "Measured"
+    },
+    {
+      "id": "c19-dce-liveness-stress",
+      "category": "integrity",
+      "pass": true,
+      "verdict": "FAST_OK",
+      "detail": "    const dead = 1 + 2; |     const helper = dead + 3; |     const live = common_vendor.ref(helper); || unusedDrop=    const live = common_vendor.ref(3);",
+      "evidence": "Measured"
+    },
+    {
+      "id": "c20-stripImports-dynamic-left",
+      "category": "complex-ref",
+      "pass": true,
+      "verdict": "OK",
+      "detail": "leftDyn=true leftType=false body=\"const m = import('./y')\\nconst a = ref(1)\"",
+      "evidence": "Measured",
+      "note": "import type not matched by stripImports from-clause the same way — may remain and break setup-body JS"
+    },
+    {
+      "id": "c20b-import-type-strip-behavior",
+      "category": "complex-ref",
+      "pass": true,
+      "verdict": "FAST_OK",
+      "detail": "stripped from emit class=setup-body; stripImportsStillType=false",
+      "stripStillType": false,
+      "decls": [
+        "named:vue"
+      ],
+      "evidence": "Measured"
+    },
+    {
+      "id": "c21-midpath-new-unmapped-import",
+      "category": "complex-ref",
+      "pass": true,
+      "verdict": "FAIL_CLOSED",
+      "detail": "ok=false reason=midpath-local-unmapped unmapped=[{\"local\":\"noSuch\",\"spec\":\"@/modules/utils/does-not-exist.js\",\"kind\":\"named\",\"imported\":\"noSuch\"}]",
+      "evidence": "Measured",
+      "note": "Unused missing import may midpath-succeed (dead); used missing → fail-closed (this case)"
+    },
+    {
+      "id": "c22-baseline-surgical-sanity",
+      "category": "integrity",
+      "pass": true,
+      "verdict": "FAST_OK",
+      "detail": "class=surgical ok=true",
+      "evidence": "Measured"
+    },
+    {
+      "id": "c23-asi-split-and-dce",
+      "category": "integrity",
+      "pass": true,
+      "verdict": "FAST_OK",
+      "detail": "split=3 out=\"    const a = 1;\\n    const b = common_vendor.ref(2);\\n    const c = a + b.value;\"",
+      "evidence": "Measured"
+    },
+    {
+      "id": "c24-asi-unused-pure-dce",
+      "category": "integrity",
+      "pass": true,
+      "verdict": "FAST_OK",
+      "detail": "    const live = common_vendor.ref(3);",
+      "evidence": "Measured"
+    }
+  ],
+  "inventory": [
+    {
+      "id": "INV-wxs-script-first",
+      "severity": "HIGH",
+      "surface": "parseVueScriptParts / F12 componentFp",
+      "measured": true,
+      "silentWrongPossible": true,
+      "note": "If component script-setup changes while wxs stable, componentFp.scriptHash unchanged → may skip needed full/closure"
+    },
+    {
+      "id": "INV-default-export-guess-exports0",
+      "severity": "CRITICAL",
+      "surface": "buildLocalRewriteMap require-default",
+      "measured": true,
+      "silentWrongPossible": true,
+      "note": "When exports.length>1 and cold setup has no req.binding.* usage, picks exports[0]"
+    }
+  ],
+  "summary": {
+    "totalCases": 37,
+    "counts": {
+      "CRITICAL_WRONG": 0,
+      "FAIL_CLOSED": 17,
+      "FAIL_CLOSED_OK": 2,
+      "FAST_OK": 16,
+      "UNVERIFIED": 0,
+      "DOCUMENTED": 1,
+      "FAIL_CLOSED_GAP": 0,
+      "HIGH_RISK_DOCUMENTED": 0,
+      "OK": 1,
+      "BLOCKED": 0,
+      "other": 0
+    },
+    "criticalIds": [],
+    "failClosedIds": [
+      "m1-options-api-vs-setup-cold",
+      "m2-options-cold-shell-no-setup",
+      "m3-dual-script-options-plus-setup-joined",
+      "m5-ts-as-cast-leaks-into-emit",
+      "m6-ts-enum-in-setup",
+      "m7-dynamic-import-in-setup",
+      "m8-defineProps-withDefaults-edit",
+      "m9-expose-gci-provide-inject",
+      "m11-template-style-gates-inferred",
+      "m12-complex-template-forces-full",
+      "c5-default-import-multi-export-guess",
+      "c7-circular-self-util",
+      "c12-css-import-url-style-gate",
+      "c13-pages-json-subpackages-config-gate",
+      "c15-high-fanout-over-closure-max",
+      "c18-require-in-setup",
+      "c21-midpath-new-unmapped-import"
+    ],
+    "fastOkIds": [
+      "m4-parseVueScriptParts-wxs-first",
+      "m10-toplevel-sideeffect-iife",
+      "c1-alias-at-slash-callarg",
+      "c2-namespace-import-star",
+      "c3-side-effect-only-import",
+      "c4-import-type-only",
+      "c6-barrel-reexport",
+      "c8-multihop-relative",
+      "c9-optional-chain-nullish",
+      "c10-private-field-hash",
+      "c11-composable-reactive-bag",
+      "c19-dce-liveness-stress",
+      "c20b-import-type-strip-behavior",
+      "c22-baseline-surgical-sanity",
+      "c23-asi-split-and-dce",
+      "c24-asi-unused-pure-dce"
+    ],
+    "unverifiedIds": []
+  },
+  "topRisks": [
+    {
+      "rank": 1,
+      "severity": "CRITICAL",
+      "id": "c5-default-import-multi-export-guess",
+      "title": "默认导入多 export 时猜 exports[0] → 可能静默错映射"
+    },
+    {
+      "rank": 2,
+      "severity": "CRITICAL",
+      "id": "m5/m6/m7/m8",
+      "title": "TS/宏/dynamic import 进入 setup-body 可能写出非法或错误页 JS"
+    },
+    {
+      "rank": 3,
+      "severity": "HIGH",
+      "id": "m4-wxs-first",
+      "title": "组件 FP 只读第一个 script（wxs）→ 可能漏掉 script-setup 变更"
+    },
+    {
+      "rank": 4,
+      "severity": "MED",
+      "id": "options-api-full",
+      "title": "大量 Options API 页只能全量（安全但双速）"
+    },
+    {
+      "rank": 5,
+      "severity": "MED",
+      "id": "integrity/easycom",
+      "title": "easycom/副作用图 — 已 Measured seed 关闭；GUI DevTools 仍 BLOCKED"
+    }
+  ],
+  "codeReview": [
+    {
+      "id": "CR1",
+      "severity": "CRITICAL",
+      "topic": "default-export → exports[0] guess",
+      "file": "optc-ext-emitter.mjs buildLocalRewriteMap",
+      "status": "CONFIRMED_BY_C5"
+    },
+    {
+      "id": "CR2",
+      "severity": "HIGH",
+      "topic": "parseVueScriptParts first <script> only (wxs)",
+      "file": "optc-ext-closure.mjs",
+      "status": "CONFIRMED_BY_M4"
+    },
+    {
+      "id": "CR3",
+      "severity": "HIGH",
+      "topic": "No TS strip — as/enum/macros can reach setup-body",
+      "file": "optc-ext-emitter.mjs stripImports/setup-body",
+      "status": "CONFIRMED_BY_M5/M6/M8"
+    },
+    {
+      "id": "CR4",
+      "severity": "MED",
+      "topic": "Options API pages (~1721) always fail cascade → full (safe but dual-speed)",
+      "file": "splitColdSetup setup(__props) anchor",
+      "status": "CONFIRMED_BY_M1/M2"
+    },
+    {
+      "id": "CR5",
+      "severity": "MED",
+      "topic": "Integrity seed misses non-fingerprint files (easycom, side graphs)",
+      "file": "optc-ext-easycom.mjs + optc-ext seed",
+      "status": "CLOSED_BY_SEED — Measured close-unknowns b3/b4/c17"
+    },
+    {
+      "id": "CR6",
+      "severity": "MED",
+      "topic": "dynamic import() left by stripImports; may splice into page JS",
+      "file": "stripImports",
+      "status": "CONFIRMED_BY_M7"
+    },
+    {
+      "id": "CR7",
+      "severity": "LOW",
+      "topic": "rewriteIdents treats ?. as member (safe); ?? rewrites free ident (ok)",
+      "file": "rewriteIdents",
+      "status": "CONFIRMED_BY_C9"
+    },
+    {
+      "id": "CR8",
+      "severity": "LOW",
+      "topic": "DCE iterative liveness OK for simple helper chains",
+      "file": "formatSetupStmtsLikeUni",
+      "status": "CONFIRMED_BY_C19"
+    },
+    {
+      "id": "CR9",
+      "severity": "MED",
+      "topic": "import type may not strip; fingerprint may treat as vue import-set noise",
+      "file": "stripImports / extractImportSpecs",
+      "status": "CONFIRMED_BY_C20b"
+    },
+    {
+      "id": "CR10",
+      "severity": "LOW",
+      "topic": "WeChat DevTools mid-session page JS — GUI BLOCKED on Linux; static proxy Measured",
+      "status": "BLOCKED_GUI + MEASURED_PROXY (close-unknowns e-*)"
+    },
+    {
+      "id": "CR11",
+      "severity": "MED",
+      "topic": "DCE semicolon-only split silent-wrong on ASI (project ~1724 ASI scripts)",
+      "file": "splitTopLevelStatements",
+      "status": "CLOSED — ASI-aware split + setup-asi-ambiguous fail-closed"
+    }
+  ],
+  "projectPatternCounts": {
+    "totalVue": 7024,
+    "dualScriptBlocks": 1,
+    "scriptSetup": 1777,
+    "langTs": 7,
+    "optionsApiOnly": 1721,
+    "defineMacros": 1250,
+    "dynamicImport": 3,
+    "getCurrentInstance": 106,
+    "provideInject": 239,
+    "piniaOrVuexish": 509,
+    "wxsOrModuleScript": 1
+  },
+  "postHarden": {
+    "landed": [
+      "emit-syntax-invalid gate before write",
+      "setup-forbidden-residue (export/macro/enum/as/dynamic-import/ts-type)",
+      "default-import no exports[0] guess when multi-export + no cold evidence",
+      "parseVueScriptParts skips wxs/module scripts; joins normal+setup",
+      "ASI-aware splitTopLevelStatements + setup-asi-ambiguous fail-closed",
+      "optc-ext-easycom.mjs seed into fingerprints/reverseDeps",
+      "looksSharedPath += store|mixins|plugins|composables|services|hooks|uni_modules",
+      "uni.scss / global-style forceFull; easycom-external outside src forceFull"
+    ],
+    "regression": "33/33 PASS after close-unknowns",
+    "closeUnknowns": "verify/close-unknowns.json UNVERIFIED=0 CRITICAL_WRONG=0 BLOCKED=1 (DevTools GUI)",
+    "note": "All former UNVERIFIED closed to Measured/FAIL_CLOSED_OK/BLOCKED"
+  }
+}

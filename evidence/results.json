@@ -1,0 +1,282 @@
+{
+  "meta": {
+    "generatedAt": "2026-10-14T10:01:44.771Z",
+    "box": {
+      "node": "v20.19.2",
+      "platform": "linux",
+      "arch": "x64",
+      "note": "User measured on macOS ARM64 Node 24.18.0 8GiB heap; full 495-page <private-app> not re-run on box (memory + private @private-scope deps)"
+    },
+    "paths": {
+      "report": "<workspace>/verify/REPORT.md",
+      "claims": "<workspace>/verify/claims.md",
+      "priority": "<workspace>/verify/priority.md",
+      "proto": "<workspace>/verify/proto-incremental/",
+      "protoResults": "<workspace>/verify/proto-incremental/proto-results.json",
+      "logs": "<workspace>/verify/logs/"
+    }
+  },
+  "claims": {
+    "A": {
+      "verdict": "确认",
+      "summary": "importPagesCode + uniPage:// full graph"
+    },
+    "B": {
+      "verdict": "确认",
+      "summary": "watch run → new Graph; cache skips transform; still bind/analyse/generate"
+    },
+    "C": {
+      "verdict": "确认",
+      "summary": "transformedModules=1, generated=5752 from cold-fast-summary"
+    },
+    "D": {
+      "verdict": "确认(OOM事件)/证据不足(泄漏归因)",
+      "summary": "3rd rebuild 8GiB OOM in WORKLOG; holder unknown"
+    },
+    "E": {
+      "verdict": "确认",
+      "summary": "cold-fast B-C-C-B no stable speedup despite skip writes"
+    },
+    "F": {
+      "verdict": "确认",
+      "summary": "no-tree 502 files differ; runtime unverified"
+    },
+    "G": {
+      "verdict": "确认(方向)/推断(脏页全图风险)",
+      "summary": "module-incremental preferred; dirty-only full rollup risky if deps change"
+    },
+    "H": {
+      "verdict": "确认",
+      "summary": "Rolldown lacks renderDynamicImport + shouldTransformCachedModule"
+    }
+  },
+  "priority": "module-level-incremental",
+  "prototype": {
+    "hypothesis": "For import/export-stable page script edit, module-scoped recompile can produce correct page JS without re-running full Rollup generate for all pages, and time does not grow linearly with N unrelated pages.",
+    "bypassFullGraph": "YES",
+    "verdictDetail": {
+      "bypassFullGraph": "YES",
+      "fullGrowthRatioLastOverFirst": 8.349598683217762,
+      "incGrowthRatioLastOverFirst": 1.0573557161781493,
+      "allOtherUntouched": true,
+      "allVendorStableInc": true,
+      "allHaveEdit": true,
+      "shaAllMatch": false,
+      "note": "SHA mismatch — inspect logs/page-*-N*.js; may still be semantically OK if bothHaveEdit",
+      "caveat": "Prototype proves Rollup full-graph generate CAN be bypassed for stable page script edits in a uni-like CJS+manualChunks topology. It does NOT prove uni Vue/WXML/WXSS/component JSON pipeline can run outside Rollup yet."
+    },
+    "scaling": [
+      {
+        "N": 10,
+        "coldMs": 72.95728,
+        "warmFullMs": 31.451213999999993,
+        "warmIncMs": 4.8908289999999965,
+        "speedupVsFull": 6.43065091827991,
+        "warmFullTransforms": 1,
+        "warmFullFilesGenerated": 13,
+        "correctness": {
+          "pageShaMatch": false,
+          "bothHaveEdit": true,
+          "incRequiresCommon": true,
+          "otherPagesTouched": 0,
+          "vendorChangedInc": [],
+          "vendorChangedFull": [],
+          "changedFilesFullCount": 1
+        }
+      },
+      {
+        "N": 50,
+        "coldMs": 96.62782199999998,
+        "warmFullMs": 52.23381599999999,
+        "warmIncMs": 3.5057410000000004,
+        "speedupVsFull": 14.89950797848443,
+        "warmFullTransforms": 1,
+        "warmFullFilesGenerated": 53,
+        "correctness": {
+          "pageShaMatch": false,
+          "bothHaveEdit": true,
+          "incRequiresCommon": true,
+          "otherPagesTouched": 0,
+          "vendorChangedInc": [],
+          "vendorChangedFull": [],
+          "changedFilesFullCount": 1
+        }
+      },
+      {
+        "N": 100,
+        "coldMs": 109.84462300000001,
+        "warmFullMs": 97.65533500000004,
+        "warmIncMs": 6.114789999999971,
+        "speedupVsFull": 15.970349758536353,
+        "warmFullTransforms": 1,
+        "warmFullFilesGenerated": 103,
+        "correctness": {
+          "pageShaMatch": false,
+          "bothHaveEdit": true,
+          "incRequiresCommon": true,
+          "otherPagesTouched": 0,
+          "vendorChangedInc": [],
+          "vendorChangedFull": [],
+          "changedFilesFullCount": 1
+        }
+      },
+      {
+        "N": 200,
+        "coldMs": 219.28178100000002,
+        "warmFullMs": 262.605015,
+        "warmIncMs": 5.171345999999858,
+        "speedupVsFull": 50.780786085480884,
+        "warmFullTransforms": 1,
+        "warmFullFilesGenerated": 203,
+        "correctness": {
+          "pageShaMatch": false,
+          "bothHaveEdit": true,
+          "incRequiresCommon": true,
+          "otherPagesTouched": 0,
+          "vendorChangedInc": [],
+          "vendorChangedFull": [],
+          "changedFilesFullCount": 1
+        }
+      }
+    ],
+    "sharedEdit": {
+      "N": 50,
+      "warmMs": 37.76501499999995,
+      "transforms": 1,
+      "changedFiles": [
+        "common/helpers.js"
+      ],
+      "note": "Shared edit must invalidate dependents; incremental-only-page path would be UNSAFE without dep graph — documented, not auto-applied"
+    },
+    "memoryTrend": {
+      "N": 100,
+      "points": [
+        {
+          "i": 0,
+          "totalMs": 88.21792399999981,
+          "transforms": 103,
+          "rss": 154701824,
+          "heapUsed": 24684080,
+          "heapTotal": 71643136,
+          "external": 2311236
+        },
+        {
+          "i": 1,
+          "totalMs": 67.99182999999994,
+          "transforms": 1,
+          "rss": 151326720,
+          "heapUsed": 36395320,
+          "heapTotal": 71643136,
+          "external": 2151524
+        },
+        {
+          "i": 2,
+          "totalMs": 61.665111000000024,
+          "transforms": 1,
+          "rss": 151719936,
+          "heapUsed": 46826576,
+          "heapTotal": 71643136,
+          "external": 2151524
+        },
+        {
+          "i": 3,
+          "totalMs": 65.3394139999998,
+          "transforms": 1,
+          "rss": 156438528,
+          "heapUsed": 45708648,
+          "heapTotal": 75575296,
+          "external": 2151524
+        },
+        {
+          "i": 4,
+          "totalMs": 69.87429600000019,
+          "transforms": 1,
+          "rss": 163479552,
+          "heapUsed": 57107272,
+          "heapTotal": 81866752,
+          "external": 2151524
+        }
+      ],
+      "note": "Synthetic graph much smaller than <private-app> 495 pages; cannot reproduce 8GiB OOM here. Trend is indicative only."
+    },
+    "shaMismatchReason": "Incremental emit uses module.exports + helpers_js binding names; full dynamic-entry emit uses exports.default + common_helpers. require() paths both ../common/* after fix. Semantic-equivalent for stable script edit; NOT byte-identical.",
+    "caveat": "Prototype proves Rollup full-graph generate CAN be bypassed for stable page script edits in a uni-like CJS+manualChunks topology. It does NOT prove uni Vue/WXML/WXSS/component JSON pipeline can run outside Rollup yet."
+  },
+  "userColdFastSummary": {
+    "scope": "app495page,Rollup4.64.6,unchangedUni,Vite,Node24,heap8GiB; serial B-C-C-B,2builds/run",
+    "baseline1": [
+      {
+        "step": "cold",
+        "totalMs": 51422.52925,
+        "graphMs": 31697.091332999997,
+        "outputMs": 19725.437917000003,
+        "transformedModules": 8615,
+        "generated": 10903,
+        "heapUsed": 3300090552
+      },
+      {
+        "step": "template",
+        "totalMs": 48380.054875,
+        "graphMs": 26988.787750000003,
+        "outputMs": 21391.267125,
+        "transformedModules": 1,
+        "generated": 5752,
+        "heapUsed": 7070642608
+      }
+    ],
+    "current1": [
+      {
+        "step": "cold",
+        "totalMs": 56204.214584,
+        "graphMs": 30376.993792,
+        "outputMs": 25827.220792,
+        "transformedModules": 8615,
+        "generated": 10903,
+        "disk": {
+          "attempts": 10903,
+          "written": 10903,
+          "skipped": 0,
+          "bytesWritten": 25396819,
+          "firstWriteChecksSkipped": 10903
+        },
+        "heapUsed": 3145118424
+      },
+      {
+        "step": "template",
+        "totalMs": 50278.809791,
+        "graphMs": 22380.206541,
+        "outputMs": 27898.60325,
+        "transformedModules": 1,
+        "generated": 5752,
+        "disk": {
+          "attempts": 5752,
+          "written": 3,
+          "skipped": 5749,
+          "bytesWritten": 909336,
+          "firstWriteChecksSkipped": 0
+        },
+        "heapUsed": 6956996504
+      }
+    ]
+  },
+  "measured": [
+    "Source citations for A/B/H on extracted uni/vite/rollup packages",
+    "Synthetic Rollup proto N=10,50,100,200 cold/warm-full/warm-inc timings",
+    "Proto correctness: other pages untouched, vendor stable on inc, edit present, ../common requires",
+    "Proto shared-module edit only changed helpers.js in full rebuild",
+    "Proto memory trend N=100 x5 rebuilds (small graph)"
+  ],
+  "inferred": [
+    "Dirty-page-only full Rollup unsafe when import/export/dep set changes (manualChunks/staticImportedByEntry)",
+    "Module-level path can reuse @dcloudio/uni-mp-compiler.compile but assembly/registration still coupled to vite plugins",
+    "<private-app> full rebuild wall time dominated by graph+output not by the single transform"
+  ],
+  "unverified": [
+    "Full 495-page <private-app> rebuild on this Linux box",
+    "WeChat DevTools runtime of incremental artifacts",
+    "Vue SFC / WXML / WXSS / component JSON incremental path",
+    "Memory leak holder identity",
+    "Rolldown adapted build speed",
+    "Byte-identical page JS between full and incremental emitters"
+  ]
+}

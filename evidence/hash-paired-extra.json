@@ -1,0 +1,615 @@
+[
+  {
+    "id": "hash-extra-fixture-baseline-real-script1",
+    "taxonomyLeaves": [
+      "setup.ref_string_literal"
+    ],
+    "method": "hist-files.json-sha256",
+    "projectBacked": false,
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "pages-tab/routeA/index.js",
+        "baselineSha256": "2819d949fad409bc4c1d6688728efcc79fbf41475c6910f3639562a4f584bd8f",
+        "optcSha256": "2819d949fad409bc4c1d6688728efcc79fbf41475c6910f3639562a4f584bd8f",
+        "equal": true
+      }
+    ]
+  },
+  {
+    "id": "hash-extra-fixture-f6-baseline-callarg-scriptLocalImport",
+    "taxonomyLeaves": [
+      "setup.call_arg_literal"
+    ],
+    "method": "hist-files.json-sha256",
+    "projectBacked": false,
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "pages-tab/routeA/index.js",
+        "baselineSha256": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+        "optcSha256": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+        "equal": true
+      }
+    ]
+  },
+  {
+    "id": "hash-extra-fixture-f8a-baseline-complex-scriptComplexSetup",
+    "taxonomyLeaves": [
+      "struct.setup_body_complex"
+    ],
+    "method": "hist-files.json-sha256",
+    "projectBacked": false,
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "pages-tab/routeA/index.js",
+        "baselineSha256": "a0bfb44b9bafe7d51ef4fd52ff515ac91181bd564161915e13f5c1184bcde9d2",
+        "optcSha256": "a0bfb44b9bafe7d51ef4fd52ff515ac91181bd564161915e13f5c1184bcde9d2",
+        "equal": true
+      }
+    ]
+  },
+  {
+    "id": "hash-extra-project-baseline-real-script1",
+    "taxonomyLeaves": [
+      "setup.ref_string_literal"
+    ],
+    "method": "hist-files.json-sha256",
+    "projectBacked": true,
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "pages-tab/routeA/index.js",
+        "baselineSha256": "d20dacc5c11cae58b44dac1a046145d871638c8b3d7eff118c6f5e8947980e7c",
+        "optcSha256": "d20dacc5c11cae58b44dac1a046145d871638c8b3d7eff118c6f5e8947980e7c",
+        "equal": true
+      }
+    ]
+  },
+  {
+    "id": "hash-extra-fixture-baseline-local-import-scriptLocalImport",
+    "taxonomyLeaves": [
+      "setup.call_arg_literal"
+    ],
+    "method": "hist-files.json-sha256",
+    "projectBacked": false,
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "pages-tab/routeA/index.js",
+        "baselineSha256": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+        "optcSha256": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+        "equal": true
+      }
+    ]
+  },
+  {
+    "id": "hash-extra-cold-ixture-baseline-real--optc-ext-v4",
+    "taxonomyLeaves": [
+      "build.static_cold_with_vs_without"
+    ],
+    "method": "hist-cold-merkle",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "*merkle*",
+        "baselineSha256": "d9911767cc490f92c8481b5efa671fe5d2e6a72a3dc82d2c72f9ac2d5ed02996",
+        "optcSha256": "d9911767cc490f92c8481b5efa671fe5d2e6a72a3dc82d2c72f9ac2d5ed02996",
+        "equal": true
+      }
+    ],
+    "evidence": {
+      "equalCount": 2009,
+      "diffCount": 0,
+      "files": 2009
+    }
+  },
+  {
+    "id": "hash-extra-cold-ixture-baseline-real--optc-ext-v3",
+    "taxonomyLeaves": [
+      "build.static_cold_with_vs_without"
+    ],
+    "method": "hist-cold-merkle",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "*merkle*",
+        "baselineSha256": "d9911767cc490f92c8481b5efa671fe5d2e6a72a3dc82d2c72f9ac2d5ed02996",
+        "optcSha256": "d9911767cc490f92c8481b5efa671fe5d2e6a72a3dc82d2c72f9ac2d5ed02996",
+        "equal": true
+      }
+    ],
+    "evidence": {
+      "equalCount": 2009,
+      "diffCount": 0,
+      "files": 2009
+    }
+  },
+  {
+    "id": "hash-extra-cold-roject-baseline-real--optc-ext-v3",
+    "taxonomyLeaves": [
+      "build.static_cold_with_vs_without"
+    ],
+    "method": "hist-cold-merkle",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "*merkle*",
+        "baselineSha256": "bd704a00f6e8468dc867424d2eff4215395a692d6d584ac4fb4ed7f4a2f15ca4",
+        "optcSha256": "bd704a00f6e8468dc867424d2eff4215395a692d6d584ac4fb4ed7f4a2f15ca4",
+        "equal": true
+      }
+    ],
+    "evidence": {
+      "equalCount": 10797,
+      "diffCount": 0,
+      "files": 10797
+    }
+  },
+  {
+    "id": "hash-extra-cold-ox-hash-tpl-baseline-tpl-optc-ext",
+    "taxonomyLeaves": [
+      "build.static_cold_with_vs_without"
+    ],
+    "method": "hist-cold-merkle",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "*merkle*",
+        "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "equal": true
+      }
+    ],
+    "evidence": {
+      "equalCount": 2024,
+      "diffCount": 0,
+      "files": 2024
+    }
+  },
+  {
+    "id": "hash-extra-cold--hash-style-baseline-yle-optc-ext",
+    "taxonomyLeaves": [
+      "build.static_cold_with_vs_without"
+    ],
+    "method": "hist-cold-merkle",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "*merkle*",
+        "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "equal": true
+      }
+    ],
+    "evidence": {
+      "equalCount": 2024,
+      "diffCount": 0,
+      "files": 2024
+    }
+  },
+  {
+    "id": "hash-anatomy-f8a-natural",
+    "taxonomyLeaves": [
+      "struct.setup_body_complex"
+    ],
+    "method": "anatomy-file-sha256",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "pages-tab/routeA/index.js",
+        "baselineSha256": "a0bfb44b9bafe7d51ef4fd52ff515ac91181bd564161915e13f5c1184bcde9d2",
+        "optcSha256": "a0bfb44b9bafe7d51ef4fd52ff515ac91181bd564161915e13f5c1184bcde9d2",
+        "equal": true
+      }
+    ]
+  },
+  {
+    "id": "hash-anatomy-f8a-midpath",
+    "taxonomyLeaves": [
+      "struct.setup_body_complex"
+    ],
+    "method": "anatomy-file-sha256",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "pages-tab/routeA/index.js",
+        "baselineSha256": "a0bfb44b9bafe7d51ef4fd52ff515ac91181bd564161915e13f5c1184bcde9d2",
+        "optcSha256": "a0bfb44b9bafe7d51ef4fd52ff515ac91181bd564161915e13f5c1184bcde9d2",
+        "equal": true
+      }
+    ]
+  },
+  {
+    "id": "hash-project-companion.json",
+    "taxonomyLeaves": [
+      "setup.ref_string_literal"
+    ],
+    "method": "hist-companion-sha",
+    "projectBacked": true,
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "pages-tab/routeA/index.json",
+        "baselineSha256": "4b4849f3e75628e1ff2de6f67dfcaae9462a625693b057cb85d223df77885cee",
+        "optcSha256": "4b4849f3e75628e1ff2de6f67dfcaae9462a625693b057cb85d223df77885cee",
+        "equal": true
+      }
+    ]
+  },
+  {
+    "id": "hash-project-companion.wxml",
+    "taxonomyLeaves": [
+      "setup.ref_string_literal"
+    ],
+    "method": "hist-companion-sha",
+    "projectBacked": true,
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "pages-tab/routeA/index.wxml",
+        "baselineSha256": "8b198f038073c98eb89d8c74699a9bcbfd82e34415aba14183f525bd2314f052",
+        "optcSha256": "8b198f038073c98eb89d8c74699a9bcbfd82e34415aba14183f525bd2314f052",
+        "equal": true
+      }
+    ]
+  },
+  {
+    "id": "hash-project-companion.wxss",
+    "taxonomyLeaves": [
+      "setup.ref_string_literal"
+    ],
+    "method": "hist-companion-sha",
+    "projectBacked": true,
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "pages-tab/routeA/index.wxss",
+        "baselineSha256": "b8ba5d00ff60c18e970def0e28ac00c2742fcd67bf9bd605d1be0467cfe677fc",
+        "optcSha256": "b8ba5d00ff60c18e970def0e28ac00c2742fcd67bf9bd605d1be0467cfe677fc",
+        "equal": true
+      }
+    ]
+  },
+  {
+    "id": "hash-cold-pair-tpl",
+    "taxonomyLeaves": [
+      "build.static_cold_with_vs_without"
+    ],
+    "method": "live-dual-cold-merkle",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "*merkle*",
+        "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "equal": true
+      }
+    ],
+    "evidence": {
+      "diffCount": 0,
+      "files": 2024
+    }
+  },
+  {
+    "id": "hash-cold-pair-style",
+    "taxonomyLeaves": [
+      "build.static_cold_with_vs_without"
+    ],
+    "method": "live-dual-cold-merkle",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "*merkle*",
+        "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "equal": true
+      }
+    ],
+    "evidence": {
+      "diffCount": 0,
+      "files": 2024
+    }
+  },
+  {
+    "id": "hash-cold-pair-combo",
+    "taxonomyLeaves": [
+      "build.static_cold_with_vs_without"
+    ],
+    "method": "live-dual-cold-merkle",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "*merkle*",
+        "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "equal": true
+      }
+    ],
+    "evidence": {
+      "diffCount": 0,
+      "files": 2024
+    }
+  },
+  {
+    "id": "hash-cold-pair-opt-data",
+    "taxonomyLeaves": [
+      "build.static_cold_with_vs_without"
+    ],
+    "method": "live-dual-cold-merkle",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "*merkle*",
+        "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "equal": true
+      }
+    ],
+    "evidence": {
+      "diffCount": 0,
+      "files": 2024
+    }
+  },
+  {
+    "id": "hash-cold-pair-macro",
+    "taxonomyLeaves": [
+      "build.static_cold_with_vs_without"
+    ],
+    "method": "live-dual-cold-merkle",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "*merkle*",
+        "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "equal": true
+      }
+    ],
+    "evidence": {
+      "diffCount": 0,
+      "files": 2024
+    }
+  },
+  {
+    "id": "hash-cold-pair-callarg",
+    "taxonomyLeaves": [
+      "build.static_cold_with_vs_without"
+    ],
+    "method": "live-dual-cold-merkle",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "*merkle*",
+        "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "equal": true
+      }
+    ],
+    "evidence": {
+      "diffCount": 0,
+      "files": 2024
+    }
+  },
+  {
+    "id": "hash-cold-pair-shared",
+    "taxonomyLeaves": [
+      "build.static_cold_with_vs_without"
+    ],
+    "method": "live-dual-cold-merkle",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "*merkle*",
+        "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "equal": true
+      }
+    ],
+    "evidence": {
+      "diffCount": 0,
+      "files": 2024
+    }
+  },
+  {
+    "id": "hash-cold-pair-pkg",
+    "taxonomyLeaves": [
+      "build.static_cold_with_vs_without"
+    ],
+    "method": "live-dual-cold-merkle",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "*merkle*",
+        "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "equal": true
+      }
+    ],
+    "evidence": {
+      "diffCount": 0,
+      "files": 2024
+    }
+  },
+  {
+    "id": "hash-cold-pair-pages",
+    "taxonomyLeaves": [
+      "build.static_cold_with_vs_without"
+    ],
+    "method": "live-dual-cold-merkle",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "*merkle*",
+        "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "equal": true
+      }
+    ],
+    "evidence": {
+      "diffCount": 0,
+      "files": 2024
+    }
+  },
+  {
+    "id": "hash-cold-pair-ifdef",
+    "taxonomyLeaves": [
+      "build.static_cold_with_vs_without"
+    ],
+    "method": "live-dual-cold-merkle",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "*merkle*",
+        "baselineSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "optcSha256": "07cea3da83b9460e93a28b155ac1da9e75e8bd77d4f06080c6ff4b794f4e7fc7",
+        "equal": true
+      }
+    ],
+    "evidence": {
+      "diffCount": 0,
+      "files": 2024
+    }
+  },
+  {
+    "id": "hash-cold-pair-slot",
+    "taxonomyLeaves": [
+      "build.static_cold_with_vs_without"
+    ],
+    "method": "live-dual-cold-merkle",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "*merkle*",
+        "baselineSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+        "optcSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+        "equal": true
+      }
+    ],
+    "evidence": {
+      "diffCount": 0,
+      "files": 2025
+    }
+  },
+  {
+    "id": "hash-cold-pair-onload",
+    "taxonomyLeaves": [
+      "build.static_cold_with_vs_without"
+    ],
+    "method": "live-dual-cold-merkle",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "*merkle*",
+        "baselineSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+        "optcSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+        "equal": true
+      }
+    ],
+    "evidence": {
+      "diffCount": 0,
+      "files": 2025
+    }
+  },
+  {
+    "id": "hash-cold-pair-store",
+    "taxonomyLeaves": [
+      "build.static_cold_with_vs_without"
+    ],
+    "method": "live-dual-cold-merkle",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "*merkle*",
+        "baselineSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+        "optcSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+        "equal": true
+      }
+    ],
+    "evidence": {
+      "diffCount": 0,
+      "files": 2025
+    }
+  },
+  {
+    "id": "hash-cold-pair-addimport",
+    "taxonomyLeaves": [
+      "build.static_cold_with_vs_without"
+    ],
+    "method": "live-dual-cold-merkle",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "*merkle*",
+        "baselineSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+        "optcSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+        "equal": true
+      }
+    ],
+    "evidence": {
+      "diffCount": 0,
+      "files": 2025
+    }
+  },
+  {
+    "id": "hash-cold-pair-app",
+    "taxonomyLeaves": [
+      "build.static_cold_with_vs_without"
+    ],
+    "method": "live-dual-cold-merkle",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "*merkle*",
+        "baselineSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+        "optcSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+        "equal": true
+      }
+    ],
+    "evidence": {
+      "diffCount": 0,
+      "files": 2025
+    }
+  },
+  {
+    "id": "hash-cold-pair-easycom",
+    "taxonomyLeaves": [
+      "build.static_cold_with_vs_without"
+    ],
+    "method": "live-dual-cold-merkle",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "*merkle*",
+        "baselineSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+        "optcSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+        "equal": true
+      }
+    ],
+    "evidence": {
+      "diffCount": 0,
+      "files": 2025
+    }
+  },
+  {
+    "id": "hash-cold-pair-concurrent",
+    "taxonomyLeaves": [
+      "build.static_cold_with_vs_without"
+    ],
+    "method": "live-dual-cold-merkle",
+    "verdict": "IDENTICAL_HASH",
+    "outputs": [
+      {
+        "path": "*merkle*",
+        "baselineSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+        "optcSha256": "ae4a2b47a316c44a31520a5b6c28b3b66c166b739049e2c41900eccf8ff8a3f7",
+        "equal": true
+      }
+    ],
+    "evidence": {
+      "diffCount": 0,
+      "files": 2025
+    }
+  }
+]

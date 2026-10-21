@@ -1,0 +1,89 @@
+{
+  "report": "wechat-devtools-optc",
+  "timestamp": "2026-10-15T15:28:53+08:00",
+  "host": {
+    "box": "fixture cold dist + tarball",
+    "mac_machineId": "<redacted>",
+    "cli": "/Applications/wechatwebdevtools.app/Contents/MacOS/cli",
+    "ide_http": "http://127.0.0.1:9420"
+  },
+  "artifacts": {
+    "box_dist": "<workspace>/compile-optimization/fixture/dist/dev/mp-weixin",
+    "box_tarball": "<workspace>/verify/fixture-mp-weixin-optc.tgz",
+    "mac_smoke": "<local-dir>/wechat-optc-smoke/mp-weixin",
+    "mac_logs": "<local-dir>/wechat-optc-smoke/"
+  },
+  "login": {
+    "cli_islogin": false,
+    "raw": "{\"login\":false}",
+    "verdict": "blocked_needs_login"
+  },
+  "open": {
+    "touristappid": {
+      "command": "cli open --project <smoke>/mp-weixin --lang zh",
+      "result": "fail",
+      "error_code": 10,
+      "message": "不存在此 AppID 请检查后重新输入",
+      "compile_error_observed": false
+    },
+    "local_appid_wx<redacted>": {
+      "note": "Borrowed from <local-dir>/miniprogram-1 for smoke open only; no upload",
+      "result": "fail",
+      "error_code": 10,
+      "message": "需要重新登录",
+      "compile_error_observed": false
+    },
+    "ide_only": {
+      "command": "cli open --lang zh",
+      "result": "ok"
+    },
+    "control_open_miniprogram1": {
+      "result": "fail",
+      "message": "需要重新登录",
+      "compile_error_observed": false
+    }
+  },
+  "preview": {
+    "touristappid": {
+      "result": "fail",
+      "error_code": 10,
+      "message": "不存在此 AppID 请检查后重新输入",
+      "compile_error_observed": false
+    },
+    "local_appid": {
+      "result": "fail",
+      "error_code": 10,
+      "message": "不存在此 AppID 请检查后重新输入",
+      "compile_error_observed": false
+    },
+    "verdict": "blocked_needs_login"
+  },
+  "optc_page_js_swap": {
+    "path": "pages-tab/routeA/index.js",
+    "edit": "probeMul(22) -> probeMul(99)",
+    "style": "optc-ext single-page overwrite (local-import setup-body class)",
+    "sha256_pre": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+    "sha256_post": "7c6a53a235319717e88dde9d6e06ceac064a1848ed49a46b103bcbac8d12609e",
+    "structure_after_swap": {
+      "routeA_in_app_json_pages": true,
+      "requires_resolved": ["../../common/vendor.js", "../../modules/utils/unifast-probe.js"],
+      "missing_requires": [],
+      "companions_present": ["index.js", "index.json", "index.wxml", "index.wxss"],
+      "app_vendor_present": true,
+      "node_Function_syntax_routeA": "OK",
+      "node_Function_syntax_vendor": "OK",
+      "node_Function_syntax_probe": "OK",
+      "node_Function_syntax_app": "OK",
+      "verdict": "STRUCTURE_OK"
+    },
+    "devtools_compile_error_from_swap": "Unverified — open/preview never reached compile; failures were AppID/login gated before compile"
+  },
+  "verdict": {
+    "open_project": "blocked_needs_login",
+    "preview": "blocked_needs_login",
+    "page_js_swap_broke_project_structure": false,
+    "page_js_swap_caused_compile_error": "Unverified (blocked before compile)",
+    "simulator_interaction": "Unverified",
+    "blocker": "WeChat DevTools CLI reports login:false. touristappid rejected (不存在此 AppID). Real local appid open requires re-login (需要重新登录). No production upload attempted."
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "checkedAt": "2026-10-15T07:12:41.339Z",
+  "host": "box",
+  "label": "measured",
+  "pages": 500,
+  "BENCH_MODE": "optc-ext",
+  "suite": "perf-page-inc (cold + script1 + component)",
+  "heapMb": 6144,
+  "report": "box-fixture-optc-ext-v4",
+  "mechanism": {
+    "gate": "Opt B content fingerprint (import-set + direct-dep content)",
+    "emit": "Surgical ref-literal patch on cold page JS (proven bench probe is string literal in page emit)",
+    "skip": "Throw unifast-optc-ext-skip in enforce:pre buildStart → Vite full/filtered rebuild aborted",
+    "externals": "common/* and other require() targets left on disk from cold"
+  },
+  "baseline_ref": {
+    "script1Ms": 1646,
+    "generated": 1006,
+    "source": "verify/fixture-baseline-real.json"
+  },
+  "page_inc_ref": {
+    "script1Ms": 610,
+    "generated": 8,
+    "source": "verify/page-inc-fixture.json"
+  },
+  "measured": {
+    "cold": {
+      "totalMs": 5235.82107,
+      "generated": 2009,
+      "transforms": 1515,
+      "path": "full",
+      "reason": "cold-seeded"
+    },
+    "script1": {
+      "totalMs": 1.6603880000002391,
+      "generated": 1,
+      "transforms": 0,
+      "viteSkipped": true,
+      "abortedRebuild": true,
+      "path": "optc-ext",
+      "reason": "import-set-and-dep-content-stable",
+      "emitMs": 1.269799000000603,
+      "filesWritten": 1,
+      "requireCount": 1,
+      "allExternalsOnDisk": true,
+      "changedContents": 1,
+      "updatedMtimes": 1
+    },
+    "component": {
+      "totalMs": 1605.990793,
+      "generated": 1007,
+      "transforms": 2,
+      "path": "full",
+      "reason": "non-page-or-shared-changed",
+      "viteSkipped": false
+    }
+  },
+  "vsBaseline": {
+    "script1_speedup": 991.3,
+    "generated_baseline": 1006,
+    "generated_optc": 1
+  },
+  "vsPageInc": {
+    "script1_speedup": 367.4,
+    "generated_page_inc": 8,
+    "generated_optc": 1
+  },
+  "correctness": {
+    "pageEditPresent": true,
+    "vendorShaStable": true,
+    "otherPageStable": true,
+    "wxmlUntouched": true,
+    "jsonUntouched": true,
+    "routeAJsChanged": true,
+    "sharedEditForcesFull": true
+  },
+  "byteShaNote": "Surgical patch of the same string uni would rewrite → page JS matches uni emit for this edit class (inferred; not byte-diffed against a parallel uni warm emit in this run).",
+  "artifacts": {
+    "metrics": "compile-optimization/reports/box-fixture-optc-ext-v4/",
+    "stdout": "verify/logs/fixture-optc-ext-v4-stdout.log"
+  }
+}

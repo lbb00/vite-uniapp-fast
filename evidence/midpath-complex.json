@@ -1,0 +1,53 @@
+{
+  "when": "2026-10-15T17:28:26.388+08:00",
+  "host": "box-linux",
+  "zone": "Asia/Shanghai",
+  "label": "Measured",
+  "verdict": "MATCH",
+  "edit": "scriptComplexSetup: const label=ref(probeMul(21)) \u2192 const _unifastBase=probeMul(21);const setupOnlyMark=ref(777);const label=ref(_unifastBase)",
+  "optB": "page-only script (template/style/import-set/dep-content stable)",
+  "fix": "formatSetupStmtsLikeUni: partial DCE unused setup-only bindings (drop const name, keep side-effect RHS) + uni multi-line `;\\n    ` format; shared by setup-body + midpath",
+  "baseline": {
+    "run": "box-fixture-f8a-baseline-complex",
+    "totalMs": 1694.3615959999997,
+    "generated": 1007,
+    "routeASha": "a0bfb44b9bafe7d51ef4fd52ff515ac91181bd564161915e13f5c1184bcde9d2",
+    "routeABytes": 735,
+    "notes": "uni keeps _unifastBase; partial DCE drops binding name setupOnlyMark but keeps common_vendor.ref(777);"
+  },
+  "optc_natural": {
+    "run": "box-fixture-f8a-optc-natural",
+    "totalMs": 9.292728999999781,
+    "generated": 1,
+    "viteSkipped": true,
+    "emitClass": "setup-body-local-imports",
+    "decisionReason": "import-set-and-dep-content-stable",
+    "routeASha": "a0bfb44b9bafe7d51ef4fd52ff515ac91181bd564161915e13f5c1184bcde9d2",
+    "routeABytes": 735,
+    "shaEqBaseline": true
+  },
+  "optc_midpath_forced": {
+    "run": "box-fixture-f8a-optc-midpath",
+    "env": "UNI_FAST_OPTC_FORCE_MIDPATH=1",
+    "totalMs": 5.452602000000297,
+    "generated": 1,
+    "viteSkipped": true,
+    "emitClass": "midpath-sync",
+    "decisionReason": "midpath-forced",
+    "routeASha": "a0bfb44b9bafe7d51ef4fd52ff515ac91181bd564161915e13f5c1184bcde9d2",
+    "routeABytes": 735,
+    "shaEqBaseline": true,
+    "shaEqNatural": true
+  },
+  "firstDiffOffset": null,
+  "byteIdentical": true,
+  "dce_format_notes": [
+    "uni + optc: `const _unifastBase = \u2026;\\n    common_vendor.ref(777);\\n    const label = \u2026`",
+    "setupOnlyMark binding name dropped (not live in render / other stmts); ref(777) side-effect kept",
+    "natural setup-body-local-imports and forced midpath-sync are BYTE-IDENTICAL to uni warm gold"
+  ],
+  "speedup_vs_baseline": {
+    "natural": 182.3,
+    "midpath": 310.7
+  }
+}

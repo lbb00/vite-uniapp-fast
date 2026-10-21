@@ -1,0 +1,62 @@
+{
+  "host": "box",
+  "node": "v20.19.2",
+  "checkedAt": "2026-10-15T06:25:46.892Z",
+  "cwd": "compile-optimization/project",
+  "app": "chaowanzu",
+  "routes": 479,
+  "BENCH_MODE": "baseline",
+  "BENCH_HEAP_MB": 8192,
+  "privateDepsLinked": true,
+  "pkgC": "1.6.0",
+  "uniappImport": "1.2.0",
+  "exit": 0,
+  "expectedStop": true,
+  "completed": 2,
+  "cold": {
+    "totalMs": 134496.784502,
+    "graphMs": 107847.852658,
+    "outputMs": 26648.931844000006,
+    "transformedModules": 8577,
+    "generated": 10707,
+    "outputFiles": 10797,
+    "changedContents": 10797,
+    "updatedMtimes": 10797,
+    "rss": 5862555648,
+    "heapUsed": 4716335304,
+    "processPeakRss": 5972004864
+  },
+  "script1": {
+    "totalMs": 58721.11573199998,
+    "graphMs": 43853.01685799999,
+    "outputMs": 14868.098873999988,
+    "transformedModules": 1,
+    "generated": 5658,
+    "outputFiles": 10797,
+    "changedContents": 3,
+    "updatedMtimes": 5658,
+    "rss": 7732764672,
+    "heapUsed": 6952628920,
+    "processPeakRss": 7948640256
+  },
+  "priorAttempt_heap6144": {
+    "status": "cold_ok_script1_oom",
+    "coldTotalMs": 133472.071106,
+    "coldTransformed": 8577,
+    "coldGenerated": 10707,
+    "note": "FATAL ERROR: Ineffective mark-compacts near heap limit during script1 after successful cold"
+  },
+  "macReference": {
+    "source": "compile-optimization/reports/cold-fast-summary.json",
+    "coldMs": 51422.5,
+    "templateWarmMs": 48380.1,
+    "warmTransforms": 1,
+    "warmGenerated": 5752
+  },
+  "observation": "script1 transforms=1 and changedContents=3 but generated=5658 and updatedMtimes=5658 — full generate path on real 479-route project; warm ~58.7s on box (Mac template warm was ~48s).",
+  "artifacts": {
+    "metrics": "verify/project-baseline-real/metrics.json",
+    "log": "verify/project-cold.log",
+    "reportDir": "compile-optimization/reports/box-project-baseline-real"
+  }
+}

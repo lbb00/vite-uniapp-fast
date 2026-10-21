@@ -1,0 +1,996 @@
+{
+  "when": "2026-10-19T10:18:28.900199Z",
+  "zone": "Asia/Shanghai",
+  "label": "Measured",
+  "weightDefinition": {
+    "surface": "warm-edit developer actions while watch/dev compile runs on <private-app> (project/src)",
+    "formula": "Pre-norm percentage points: EditPrior_pp(editClass)×StratumShare for script leaves; EditPrior_pp alone for template/style/shared/config/lifecycle/build/messy/import; blocked=1.0pp reserved. Then L1-normalize positive weights to 100%.",
+    "editPriorsPercentagePoints": {
+      "script_literal_expr": 35,
+      "script_structure": 11,
+      "template_only": 17,
+      "style_only": 9.5,
+      "template_plus_script": 7.5,
+      "shared_util_composable": 6.5,
+      "shared_vue_component": 3.5,
+      "store_global_config": 2.5,
+      "new_rename_delete_batch": 1.5,
+      "build_modes": 1,
+      "messy_extreme": 2,
+      "imports_refs_facets": 2,
+      "blocked_devtools": 1
+    },
+    "editPriorsSum": 100,
+    "stratumShares": {
+      "optionsOnly": 0.492559,
+      "setupNoMacro": 0.14854,
+      "setupMacro": 0.357756,
+      "other": 0.001145,
+      "scriptBearing": 3494,
+      "emptyScript": 3530
+    }
+  },
+  "census": {
+    "totalVue": 7024,
+    "optionsOnly": 1721,
+    "setupNoMacro": 519,
+    "setupMacro": 1250,
+    "emptyScript": 3530,
+    "other": 4,
+    "langTs": 7,
+    "wxs": 1,
+    "dualScript": 1,
+    "macrosProps": 1175,
+    "macrosEmits": 713,
+    "macrosExpose": 122,
+    "macrosWithDefaults": 0,
+    "dataFn": 696,
+    "methodsBlock": 977,
+    "computedBlock": 757,
+    "watchBlock": 203,
+    "atAlias": 2535,
+    "relativeImp": 1066,
+    "importStar": 569,
+    "importType": 0,
+    "sideEffectImp": 5,
+    "dynamicImport": 3,
+    "optionalChaining": 1595,
+    "nullish": 49,
+    "privateField": 241,
+    "getCI": 106,
+    "provide": 83,
+    "inject": 161,
+    "mapVuex": 413,
+    "useStore": 150,
+    "piniaish": 0,
+    "composableImp": 265,
+    "mixinImp": 87,
+    "storeImp": 605,
+    "noSemiHeavy": 2978,
+    "largeSetup": 426,
+    "hasStyle": 3050,
+    "hasTemplate": 3508,
+    "componentsPath": 5580,
+    "pagesPath": 4774,
+    "underModules": 4426,
+    "subpkgVue": 3444,
+    "scriptBearing": 3494,
+    "mainPages": 7,
+    "subPackages": 78,
+    "subPages": 472,
+    "routeTotal": 479,
+    "storeFiles": 79,
+    "mixinFiles": 66,
+    "pluginFiles": 3,
+    "i18nFiles": 0,
+    "utilJs": 329,
+    "easycom": {
+      "autoscan": true,
+      "customKeys": 1
+    },
+    "totalFilesUnderSrc": 10432
+  },
+  "leafCount": 81,
+  "weightSum": 100.0,
+  "blockedWeight": 0.99,
+  "naLeafCount": 4,
+  "leaves": [
+    {
+      "id": "tpl.template_only",
+      "category": "edit-kinds",
+      "weight": 14.5294,
+      "censusNote": "hasTemplate=3508",
+      "coveredByCaseIds": [
+        "ex-tpl-only"
+      ],
+      "measured": true
+    },
+    {
+      "id": "opt.data_literal",
+      "category": "page-script+edit",
+      "weight": 10.3966,
+      "censusNote": "Options=1721; data() literal warm tweak",
+      "coveredByCaseIds": [
+        "ex-options-data-lit",
+        "ex-pb-opt-classify-0",
+        "ex-pb-opt-classify-1",
+        "ex-pb-opt-classify-2",
+        "ex-pb-opt-classify-3",
+        "ex-pb-opt-data-lit-helper-4",
+        "ex-pb-route-25",
+        "ex-prior-options-data",
+        "ex-options-title-only",
+        "ex-options-count-only",
+        "ex-classify-helpers"
+      ],
+      "measured": true
+    },
+    {
+      "id": "style.style_only",
+      "category": "edit-kinds",
+      "weight": 8.3547,
+      "censusNote": "hasStyle=3050",
+      "coveredByCaseIds": [
+        "ex-style-only"
+      ],
+      "measured": true
+    },
+    {
+      "id": "tpl.template_plus_script",
+      "category": "edit-kinds",
+      "weight": 6.5748,
+      "censusNote": "template+script",
+      "coveredByCaseIds": [
+        "ex-tpl-plus-script"
+      ],
+      "measured": true
+    },
+    {
+      "id": "macro.props_default_literal",
+      "category": "page-script+edit",
+      "weight": 6.0677,
+      "censusNote": "setupMacro=1250; defineProps=1175",
+      "coveredByCaseIds": [
+        "ex-macros-default-lit",
+        "ex-pb-macro-10",
+        "ex-pb-macro-11",
+        "ex-pb-macro-12",
+        "ex-pb-macro-13",
+        "ex-pb-macro-14",
+        "ex-prior-props-default",
+        "ex-macros-default-alt",
+        "ex-classify-helpers"
+      ],
+      "measured": true
+    },
+    {
+      "id": "macro.other_macro_literal",
+      "category": "page-script+edit",
+      "weight": 4.9282,
+      "censusNote": "emits=713 expose=122 withDefaults=0",
+      "coveredByCaseIds": [
+        "ex-macros-other-shape",
+        "ex-macros-midpath-refuse"
+      ],
+      "measured": true
+    },
+    {
+      "id": "opt.other_literal_in_options",
+      "category": "page-script+edit",
+      "weight": 4.62,
+      "censusNote": "Options non-data literal",
+      "coveredByCaseIds": [
+        "ex-options-methods-change"
+      ],
+      "measured": true
+    },
+    {
+      "id": "struct.import_add_remove_rename",
+      "category": "edit-kinds",
+      "weight": 2.7224,
+      "censusNote": "import add/remove/rename",
+      "coveredByCaseIds": [
+        "ex-dynamic-import",
+        "ex-missing-import",
+        "ex-import-add-line",
+        "ex-import-remove-shared"
+      ],
+      "measured": true
+    },
+    {
+      "id": "shared.util_le_closure_max",
+      "category": "shared",
+      "weight": 2.5957,
+      "censusNote": "utilJs≈329",
+      "coveredByCaseIds": [
+        "ex-shared-util-le-max",
+        "ex-prior-closure-chunk",
+        "ex-transform-util-cjs"
+      ],
+      "measured": true
+    },
+    {
+      "id": "struct.opt_methods_computed_watch",
+      "category": "edit-kinds",
+      "weight": 2.4137,
+      "censusNote": "methods=977 computed=757 watch=203",
+      "coveredByCaseIds": [
+        "ex-options-methods-change",
+        "ex-opt-method-bumpX",
+        "ex-opt-method-bumpY",
+        "ex-opt-method-bumpZ"
+      ],
+      "measured": true
+    },
+    {
+      "id": "setup.ref_string_literal",
+      "category": "page-script+edit",
+      "weight": 2.316,
+      "censusNote": "setupNoMacro=519",
+      "coveredByCaseIds": [
+        "ex-setup-ref-string-via-callarg-shape",
+        "ex-pkg0-p1-literal",
+        "ex-pb-setup-5",
+        "ex-pb-setup-6",
+        "ex-pb-setup-7",
+        "ex-pb-setup-8",
+        "ex-pb-setup-9",
+        "ex-prior-surgical",
+        "ex-multi-ref"
+      ],
+      "measured": true
+    },
+    {
+      "id": "struct.setup_body_complex",
+      "category": "edit-kinds",
+      "weight": 1.9296,
+      "censusNote": "complex setup-body",
+      "coveredByCaseIds": [
+        "ex-setup-number-ref",
+        "ex-setup-complex-f8a-prior",
+        "ex-prior-setup-body"
+      ],
+      "measured": true
+    },
+    {
+      "id": "tpl.slot_vfor_vif_complex",
+      "category": "template",
+      "weight": 1.8,
+      "censusNote": "slot/v-for/v-if complex template",
+      "measured": true
+    },
+    {
+      "id": "shared.vue_script_only_le_vue_max",
+      "category": "shared",
+      "weight": 1.5592,
+      "censusNote": "componentsPath=5580",
+      "coveredByCaseIds": [
+        "ex-shared-vue-le-max",
+        "ex-prior-closure-vue"
+      ],
+      "measured": true
+    },
+    {
+      "id": "build.ifdef_conditional_compile",
+      "category": "build",
+      "weight": 1.4,
+      "censusNote": "#ifdef/#ifndef change → FULL conditional-compile-changed",
+      "measured": true
+    },
+    {
+      "id": "struct.macro_type_or_shape",
+      "category": "edit-kinds",
+      "weight": 1.3636,
+      "censusNote": "macro type/shape",
+      "coveredByCaseIds": [
+        "ex-macros-other-shape",
+        "ex-macros-midpath-refuse",
+        "ex-pb-macro-10",
+        "ex-pb-macro-11",
+        "ex-pb-macro-12",
+        "ex-pb-macro-13",
+        "ex-pb-macro-14",
+        "ex-macros-add-prop-key"
+      ],
+      "measured": true
+    },
+    {
+      "id": "struct.opt_add_remove_binding",
+      "category": "edit-kinds",
+      "weight": 1.3409,
+      "censusNote": "Options add/remove binding",
+      "coveredByCaseIds": [
+        "ex-options-add-binding"
+      ],
+      "measured": true
+    },
+    {
+      "id": "shared.composable_hook",
+      "category": "shared",
+      "weight": 1.287,
+      "censusNote": "composableImp≈265",
+      "coveredByCaseIds": [
+        "ex-composable-hook"
+      ],
+      "measured": true
+    },
+    {
+      "id": "shared.util_gt_closure_max",
+      "category": "shared",
+      "weight": 1.287,
+      "censusNote": "over CLOSURE_MAX",
+      "coveredByCaseIds": [
+        "ex-shared-util-gt-max"
+      ],
+      "measured": true
+    },
+    {
+      "id": "setup.named_bool_num_null",
+      "category": "page-script+edit",
+      "weight": 1.2867,
+      "censusNote": "named bool/num/null ref",
+      "coveredByCaseIds": [
+        "ex-setup-named-bool-add",
+        "ex-setup-number-ref",
+        "ex-pb-setup-5",
+        "ex-pb-setup-6",
+        "ex-pb-setup-7",
+        "ex-pb-setup-8",
+        "ex-pb-setup-9",
+        "ex-prior-surgical-named",
+        "ex-bool-t",
+        "ex-bool-f",
+        "ex-ref-null"
+      ],
+      "measured": true
+    },
+    {
+      "id": "struct.setup_add_remove_binding",
+      "category": "edit-kinds",
+      "weight": 1.1027,
+      "censusNote": "setup add/remove binding",
+      "coveredByCaseIds": [
+        "ex-setup-named-bool-add",
+        "ex-multi-ref"
+      ],
+      "measured": true
+    },
+    {
+      "id": "life.page_onload_onshow_literal",
+      "category": "lifecycle",
+      "weight": 1.1,
+      "censusNote": "onLoad/onShow literal probe",
+      "measured": true
+    },
+    {
+      "id": "setup.call_arg_literal",
+      "category": "page-script+edit",
+      "weight": 1.0294,
+      "censusNote": "call-arg",
+      "coveredByCaseIds": [
+        "ex-setup-call-arg",
+        "ex-pb-route-22",
+        "ex-pb-route-23",
+        "ex-pb-route-24",
+        "ex-prior-call-arg",
+        "ex-callarg-n22",
+        "ex-callarg-n23",
+        "ex-callarg-n24",
+        "ex-callarg-n25",
+        "ex-callarg-n30",
+        "ex-callarg-extra-31",
+        "ex-callarg-extra-32",
+        "ex-callarg-extra-33",
+        "ex-callarg-extra-34",
+        "ex-callarg-extra-35",
+        "ex-callarg-extra-40",
+        "ex-callarg-extra-41",
+        "ex-callarg-extra-42",
+        "ex-callarg-extra-50",
+        "ex-callarg-extra-100",
+        "ex-callarg-pad-201",
+        "ex-callarg-pad-202",
+        "ex-callarg-pad-203",
+        "ex-callarg-pad-204",
+        "ex-callarg-pad-205",
+        "ex-callarg-pad-206",
+        "ex-callarg-pad-207"
+      ],
+      "measured": true
+    },
+    {
+      "id": "blocked.devtools_gui_hot_reload",
+      "category": "blocked",
+      "weight": 0.99,
+      "censusNote": "WeChat DevTools GUI — BLOCKED (no Mac login)",
+      "coveredByCaseIds": [
+        "ex-blocked-devtools-gui"
+      ],
+      "blocked": true,
+      "measured": true
+    },
+    {
+      "id": "shared.leaf_util",
+      "category": "shared",
+      "weight": 0.9652,
+      "censusNote": "leaf util",
+      "coveredByCaseIds": [
+        "ex-shared-leaf-util",
+        "ex-prior-closure-multi"
+      ],
+      "measured": true
+    },
+    {
+      "id": "style.scss_lang_deep",
+      "category": "style",
+      "weight": 0.9,
+      "censusNote": "scss / deep style shared",
+      "measured": true
+    },
+    {
+      "id": "cfg.store_vuex",
+      "category": "config-global",
+      "weight": 0.891,
+      "censusNote": "storeFiles=79 mapVuex≈413",
+      "coveredByCaseIds": [
+        "ex-store",
+        "ex-pb-store-26",
+        "ex-pb-store-27",
+        "ex-pb-store-28"
+      ],
+      "measured": true
+    },
+    {
+      "id": "struct.export_add_rename",
+      "category": "edit-kinds",
+      "weight": 0.8712,
+      "censusNote": "export-add/rename",
+      "coveredByCaseIds": [
+        "ex-option-a-export-add",
+        "ex-extract-esm-exports"
+      ],
+      "measured": true
+    },
+    {
+      "id": "shared.vue_template_or_style",
+      "category": "shared",
+      "weight": 0.8662,
+      "censusNote": "shared vue tpl/style",
+      "coveredByCaseIds": [
+        "ex-shared-vue-template"
+      ],
+      "measured": true
+    },
+    {
+      "id": "cfg.vuex_mapstate_edit",
+      "category": "config",
+      "weight": 0.8,
+      "censusNote": "mapState/mapGetters; mapVuex=413",
+      "measured": true
+    },
+    {
+      "id": "struct.setup_lifecycle_hooks",
+      "category": "structure",
+      "weight": 0.65,
+      "censusNote": "setup lifecycle hooks add/change",
+      "measured": true
+    },
+    {
+      "id": "build.dynamic_warm_optc_vs_baseline",
+      "category": "build-modes",
+      "weight": 0.594,
+      "censusNote": "warm optc vs baseline",
+      "coveredByCaseIds": [
+        "ex-setup-call-arg",
+        "ex-setup-complex-f8a-prior",
+        "ex-atomic-write"
+      ],
+      "measured": true
+    },
+    {
+      "id": "life.new_never_seeded",
+      "category": "lifecycle",
+      "weight": 0.5197,
+      "censusNote": "new never-seeded",
+      "coveredByCaseIds": [
+        "ex-new-file"
+      ],
+      "measured": true
+    },
+    {
+      "id": "life.rename_delete_page",
+      "category": "lifecycle",
+      "weight": 0.5197,
+      "censusNote": "rename/delete",
+      "coveredByCaseIds": [
+        "ex-rename-delete"
+      ],
+      "measured": true
+    },
+    {
+      "id": "shared.vue_script_only_gt_vue_max",
+      "category": "shared",
+      "weight": 0.5197,
+      "censusNote": "high fanout Vue",
+      "coveredByCaseIds": [
+        "ex-shared-vue-gt-max"
+      ],
+      "measured": true
+    },
+    {
+      "id": "setup.plain_const_literal",
+      "category": "page-script+edit",
+      "weight": 0.5147,
+      "censusNote": "plain const",
+      "coveredByCaseIds": [
+        "ex-setup-plain-const",
+        "ex-prior-plain-literal"
+      ],
+      "measured": true
+    },
+    {
+      "id": "life.form_submit_handler_literal",
+      "category": "lifecycle",
+      "weight": 0.5,
+      "censusNote": "form submit handler literal",
+      "measured": true
+    },
+    {
+      "id": "shared.mixin_options_merge",
+      "category": "shared",
+      "weight": 0.45,
+      "censusNote": "mixin merge; mixinFiles=66",
+      "measured": true
+    },
+    {
+      "id": "build.static_cold_with_vs_without",
+      "category": "build-modes",
+      "weight": 0.396,
+      "censusNote": "cold with vs without",
+      "coveredByCaseIds": [
+        "ex-static-cold-with-vs-without"
+      ],
+      "measured": true
+    },
+    {
+      "id": "imp.at_alias",
+      "category": "imports-refs",
+      "weight": 0.396,
+      "censusNote": "atAlias≈2535",
+      "coveredByCaseIds": [
+        "ex-setup-call-arg",
+        "ex-imp-at-alias"
+      ],
+      "measured": true
+    },
+    {
+      "id": "imp.easycom_only",
+      "category": "imports-refs",
+      "weight": 0.396,
+      "censusNote": "easycom autoscan",
+      "coveredByCaseIds": [
+        "ex-easycom",
+        "ex-pb-easycom-19",
+        "ex-pb-easycom-20",
+        "ex-pb-easycom-21"
+      ],
+      "measured": true
+    },
+    {
+      "id": "cfg.pages_json",
+      "category": "config-global",
+      "weight": 0.3712,
+      "censusNote": "routes=479",
+      "coveredByCaseIds": [
+        "ex-pages-json"
+      ],
+      "measured": true
+    },
+    {
+      "id": "messy.asi_no_semicolon",
+      "category": "messy-extreme",
+      "weight": 0.3564,
+      "censusNote": "noSemiHeavy≈2978",
+      "coveredByCaseIds": [
+        "ex-asi-no-semicolon",
+        "ex-asi-splitter-unit"
+      ],
+      "measured": true
+    },
+    {
+      "id": "messy.chart_canvas_map",
+      "category": "messy",
+      "weight": 0.35,
+      "censusNote": "chart/canvas/map heavy components",
+      "measured": true
+    },
+    {
+      "id": "shared.option_a_export_add_rename",
+      "category": "shared",
+      "weight": 0.3465,
+      "censusNote": "Option A",
+      "coveredByCaseIds": [
+        "ex-option-a-export-add",
+        "ex-prior-option-a"
+      ],
+      "measured": true
+    },
+    {
+      "id": "cfg.app_vue",
+      "category": "config-global",
+      "weight": 0.297,
+      "censusNote": "App.vue",
+      "coveredByCaseIds": [
+        "ex-app"
+      ],
+      "measured": true
+    },
+    {
+      "id": "life.concurrent_multi_page",
+      "category": "lifecycle",
+      "weight": 0.297,
+      "censusNote": "multi-page batch",
+      "coveredByCaseIds": [
+        "ex-concurrent"
+      ],
+      "measured": true
+    },
+    {
+      "id": "cfg.main_js",
+      "category": "config-global",
+      "weight": 0.2475,
+      "censusNote": "main.js",
+      "coveredByCaseIds": [
+        "ex-main"
+      ],
+      "measured": true
+    },
+    {
+      "id": "messy.optional_nullish",
+      "category": "messy-extreme",
+      "weight": 0.2376,
+      "censusNote": "?.≈1595 ??≈49",
+      "coveredByCaseIds": [
+        "ex-setup-optional-nullish"
+      ],
+      "measured": true
+    },
+    {
+      "id": "cfg.manifest",
+      "category": "config-global",
+      "weight": 0.198,
+      "censusNote": "manifest",
+      "coveredByCaseIds": [
+        "ex-manifest"
+      ],
+      "measured": true
+    },
+    {
+      "id": "cfg.uni_scss",
+      "category": "config-global",
+      "weight": 0.198,
+      "censusNote": "uni.scss",
+      "coveredByCaseIds": [
+        "ex-uni-scss"
+      ],
+      "measured": true
+    },
+    {
+      "id": "imp.barrel_reexport",
+      "category": "imports-refs",
+      "weight": 0.198,
+      "censusNote": "barrel",
+      "coveredByCaseIds": [
+        "ex-imp-barrel"
+      ],
+      "measured": true
+    },
+    {
+      "id": "imp.default_plus_named",
+      "category": "imports-refs",
+      "weight": 0.198,
+      "censusNote": "default+named",
+      "coveredByCaseIds": [
+        "ex-default-import-sole-export"
+      ],
+      "measured": true
+    },
+    {
+      "id": "imp.relative_multihop",
+      "category": "imports-refs",
+      "weight": 0.198,
+      "censusNote": "relativeImp≈1066",
+      "coveredByCaseIds": [
+        "ex-imp-relative-multihop"
+      ],
+      "measured": true
+    },
+    {
+      "id": "messy.getCI_provide_inject",
+      "category": "messy-extreme",
+      "weight": 0.198,
+      "censusNote": "getCI=106",
+      "coveredByCaseIds": [
+        "ex-getci-provide-inject"
+      ],
+      "measured": true
+    },
+    {
+      "id": "messy.large_setup",
+      "category": "messy-extreme",
+      "weight": 0.198,
+      "censusNote": "largeSetup=426",
+      "coveredByCaseIds": [
+        "ex-large-setup"
+      ],
+      "measured": true
+    },
+    {
+      "id": "shared.inlined_vs_chunk",
+      "category": "shared",
+      "weight": 0.1732,
+      "censusNote": "F16 proxy vs separate chunk",
+      "coveredByCaseIds": [
+        "ex-inlined-vs-chunk",
+        "ex-prior-f16"
+      ],
+      "measured": true
+    },
+    {
+      "id": "imp.uni_modules",
+      "category": "imports-refs",
+      "weight": 0.1584,
+      "censusNote": "uni_modules",
+      "coveredByCaseIds": [
+        "ex-uni-modules"
+      ],
+      "measured": true
+    },
+    {
+      "id": "messy.defineExpose",
+      "category": "messy-extreme",
+      "weight": 0.1584,
+      "censusNote": "expose=122",
+      "coveredByCaseIds": [
+        "ex-defineExpose"
+      ],
+      "measured": true
+    },
+    {
+      "id": "messy.empty_minimal_sfc",
+      "category": "messy-extreme",
+      "weight": 0.1584,
+      "censusNote": "emptyScript=3530",
+      "coveredByCaseIds": [
+        "ex-empty-minimal"
+      ],
+      "measured": true
+    },
+    {
+      "id": "messy.ts_as_enum_residue",
+      "category": "messy-extreme",
+      "weight": 0.1584,
+      "censusNote": "langTs=7",
+      "coveredByCaseIds": [
+        "ex-ts-as-enum",
+        "ex-lang-ts-project-sample"
+      ],
+      "measured": true
+    },
+    {
+      "id": "cfg.mixins",
+      "category": "config-global",
+      "weight": 0.1485,
+      "censusNote": "mixinFiles=66",
+      "coveredByCaseIds": [
+        "ex-mixins"
+      ],
+      "measured": true
+    },
+    {
+      "id": "life.subpackage_page_edit",
+      "category": "lifecycle",
+      "weight": 0.1485,
+      "censusNote": "subpkg=78 subPages=472",
+      "coveredByCaseIds": [
+        "ex-pkg0-p1-literal",
+        "ex-pb-subpkg-15",
+        "ex-pb-subpkg-16",
+        "ex-pb-subpkg-17",
+        "ex-pb-subpkg-18",
+        "ex-pb-subroute-1",
+        "ex-pb-subroute-2",
+        "ex-pb-subroute-3",
+        "ex-pb-subroute-4",
+        "ex-pb-subroute-5",
+        "ex-pb-subroute-6",
+        "ex-pb-subroute-7",
+        "ex-pb-subroute-8"
+      ],
+      "measured": true
+    },
+    {
+      "id": "imp.import_star",
+      "category": "imports-refs",
+      "weight": 0.1188,
+      "censusNote": "importStar≈569",
+      "coveredByCaseIds": [
+        "ex-imp-star"
+      ],
+      "measured": true
+    },
+    {
+      "id": "imp.require_in_setup",
+      "category": "imports-refs",
+      "weight": 0.1188,
+      "censusNote": "require in setup",
+      "coveredByCaseIds": [
+        "ex-imp-require-in-setup"
+      ],
+      "measured": true
+    },
+    {
+      "id": "imp.side_effect_import",
+      "category": "imports-refs",
+      "weight": 0.1188,
+      "censusNote": "sideEffect≈5",
+      "coveredByCaseIds": [
+        "ex-imp-side-effect"
+      ],
+      "measured": true
+    },
+    {
+      "id": "messy.dual_script_wxs",
+      "category": "messy-extreme",
+      "weight": 0.099,
+      "censusNote": "dual=1 wxs=1",
+      "coveredByCaseIds": [
+        "ex-dual-wxs"
+      ],
+      "measured": true
+    },
+    {
+      "id": "messy.iife_toplevel",
+      "category": "messy-extreme",
+      "weight": 0.099,
+      "censusNote": "IIFE",
+      "coveredByCaseIds": [
+        "ex-iife"
+      ],
+      "measured": true
+    },
+    {
+      "id": "messy.lang_ts_sfc",
+      "category": "messy-extreme",
+      "weight": 0.099,
+      "censusNote": "langTs=7",
+      "coveredByCaseIds": [
+        "ex-ts-as-enum",
+        "ex-lang-ts-project-sample"
+      ],
+      "measured": true
+    },
+    {
+      "id": "messy.private_fields",
+      "category": "messy-extreme",
+      "weight": 0.099,
+      "censusNote": "privateField≈241",
+      "coveredByCaseIds": [
+        "ex-private-fields"
+      ],
+      "measured": true
+    },
+    {
+      "id": "imp.import_type",
+      "category": "imports-refs",
+      "weight": 0.0792,
+      "censusNote": "importType≈0",
+      "coveredByCaseIds": [
+        "ex-imp-type"
+      ],
+      "measured": true
+    },
+    {
+      "id": "messy.circular_dep",
+      "category": "messy-extreme",
+      "weight": 0.0792,
+      "censusNote": "circular",
+      "coveredByCaseIds": [
+        "ex-circular"
+      ],
+      "measured": true
+    },
+    {
+      "id": "messy.default_import_multi_export",
+      "category": "messy-extreme",
+      "weight": 0.0792,
+      "censusNote": "default import multi-export",
+      "coveredByCaseIds": [
+        "ex-default-import-multi"
+      ],
+      "measured": true
+    },
+    {
+      "id": "messy.dynamic_import",
+      "category": "messy-extreme",
+      "weight": 0.0792,
+      "censusNote": "dynamicImport=3",
+      "coveredByCaseIds": [
+        "ex-dynamic-import"
+      ],
+      "measured": true
+    },
+    {
+      "id": "messy.missing_import",
+      "category": "messy-extreme",
+      "weight": 0.0792,
+      "censusNote": "missing import",
+      "coveredByCaseIds": [
+        "ex-missing-import"
+      ],
+      "measured": true
+    },
+    {
+      "id": "cfg.plugins",
+      "category": "config-global",
+      "weight": 0.0742,
+      "censusNote": "pluginFiles=3",
+      "coveredByCaseIds": [
+        "ex-plugins"
+      ],
+      "measured": true
+    },
+    {
+      "id": "other.script_literal",
+      "category": "page-script+edit",
+      "weight": 0.0397,
+      "censusNote": "other=4",
+      "coveredByCaseIds": [
+        "ex-fill-other_script_literal"
+      ],
+      "measured": true
+    },
+    {
+      "id": "build.skyline_glass_easel",
+      "category": "build",
+      "weight": 0.0,
+      "na": true,
+      "censusNote": "N/A — no skyline/glass-easel in project manifest/src",
+      "measured": true
+    },
+    {
+      "id": "cfg.i18n",
+      "category": "config-global",
+      "weight": 0.0,
+      "censusNote": "i18nFiles=0",
+      "coveredByCaseIds": [
+        "ex-i18n-na"
+      ],
+      "na": true,
+      "measured": true
+    },
+    {
+      "id": "model.empty_script_sfc",
+      "category": "page-script-models",
+      "weight": 0.0,
+      "censusNote": "emptyScript=3530 weight in tpl/style",
+      "coveredByCaseIds": [
+        "ex-empty-script-population"
+      ],
+      "na": true,
+      "measured": true
+    },
+    {
+      "id": "style.script_plus_style",
+      "category": "edit-kinds",
+      "weight": 0.0,
+      "censusNote": "folded into style_only when style dirty",
+      "coveredByCaseIds": [
+        "ex-script-plus-style-fold"
+      ],
+      "na": true,
+      "measured": true
+    }
+  ],
+  "syncNote": "honest re-audit Asia/Shanghai: auditor leaves + skyline N/A; weights renormalized from large buckets"
+}

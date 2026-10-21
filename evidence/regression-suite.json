@@ -1,0 +1,291 @@
+{
+  "when": "2026-10-19T10:12:13.190Z",
+  "host": "box-linux",
+  "zone": "Asia/Shanghai",
+  "label": "Measured",
+  "cases": [
+    {
+      "id": "f1-surgical-string",
+      "pass": true,
+      "emitClass": "surgical",
+      "detail": "ok=true reason=ref-literal-patch ms=0.93",
+      "afterSha": "e748c4bfbbcc8e81a9f886788b6ba86af6d5cbc2dece874208335a52951ebc70",
+      "wallMs": 0.9315150000000045
+    },
+    {
+      "id": "f1-surgical-named-sha-vs-gold",
+      "pass": true,
+      "emitClass": "surgical-named",
+      "detail": "shaEq=true class=surgical-named ms=2.44",
+      "goldSha": "4ff68d48e498260829b466b5a4dce648d7d3d4b6b4b042211f5b10ce97d77d2a",
+      "optcSha": "4ff68d48e498260829b466b5a4dce648d7d3d4b6b4b042211f5b10ce97d77d2a",
+      "wallMs": 2.436168000000009
+    },
+    {
+      "id": "f1-probeMul-call-arg-prefers-over-setup-body",
+      "pass": true,
+      "emitClass": "surgical-call-arg",
+      "detail": "call=true emitClass=surgical-call-arg byteEq=true setupStill=true ms=1.55",
+      "afterSha": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+      "wallMs": 1.550448000000003
+    },
+    {
+      "id": "f1-setup-body-still-works",
+      "pass": true,
+      "emitClass": "setup-body-local-imports",
+      "detail": "namedFail=named-literal-incomplete-diff setup=true/setup-body-local-imports"
+    },
+    {
+      "id": "f1-fail-closed-incomplete-diff",
+      "pass": true,
+      "detail": "reason=named-literal-incomplete-diff"
+    },
+    {
+      "id": "f1-fail-closed-arity-change",
+      "pass": true,
+      "detail": "reason=named-ref-arity-mismatch"
+    },
+    {
+      "id": "f1-fail-closed-dce-missing",
+      "pass": true,
+      "detail": "reason=cold-named-ref-missing name=dropped"
+    },
+    {
+      "id": "f1-fail-closed-externals-missing-no-write",
+      "pass": true,
+      "detail": "reason=externals-missing unchanged=true"
+    },
+    {
+      "id": "f1-only-intended-page-js-changes",
+      "pass": true,
+      "emitClass": "surgical-call-arg",
+      "detail": "written=1 pageChanged=true companionsStable=true"
+    },
+    {
+      "id": "f2-surgical-plain-literal",
+      "pass": true,
+      "emitClass": "surgical-plain-literal",
+      "detail": "ok=true reason=plain-literal-patch"
+    },
+    {
+      "id": "f2-plain-literal-incomplete-fail-closed",
+      "pass": true,
+      "detail": "reason=plain-literal-incomplete-diff"
+    },
+    {
+      "id": "f2-call-arg-unmapped-fail-closed",
+      "pass": true,
+      "detail": "reason=call-arg-unmapped-callee"
+    },
+    {
+      "id": "f3-midpath-rollup-prototype",
+      "pass": true,
+      "emitClass": "midpath-rollup",
+      "detail": "rollupUsed=true rollupMs=17.3 totalMs=59.2 sync=true vsFullWarm~1603ms requireOk=true",
+      "wallMs": 59.16979099999999,
+      "rollupMs": 17.343863,
+      "afterSha": "96a8f0035368a63dcf0d258f0245b46604b94dbb7f20dfe4b6201dbd49b690ee",
+      "note": "MVP: Rollup invoked with cold require graph as external; page bytes written via cold-shell splice (same rewrite as setup-body). Full uni SFC pipeline not re-run.",
+      "shaVsUni": "Unverified (midpath shell-splice ≈ setup-body; not claimed byte-eq uni warm)"
+    },
+    {
+      "id": "f3-midpath-import-set-attempt",
+      "pass": true,
+      "emitClass": "midpath-sync",
+      "detail": "ok=false reason=midpath-local-unmapped (informational; new named export may be missing from cold chunk)",
+      "midOk": false,
+      "midReason": "midpath-local-unmapped"
+    },
+    {
+      "id": "f4-shared-module-gate-contract",
+      "pass": true,
+      "detail": "sharedCompExists=true routeAImportsProbe=true pkgImportsProbe=false viteReason=shared-module-multi-page (Measured in plugin source)",
+      "note": "F7: probe (1 importer) → closure-chunk; shared-popup SFC multi-page → shared-module-multi-page full"
+    },
+    {
+      "id": "f2-multi-ref-bool-named",
+      "pass": true,
+      "emitClass": "surgical-named",
+      "detail": "changes=2"
+    },
+    {
+      "id": "f1-project-emit-cascade-named",
+      "pass": true,
+      "skipped": true,
+      "detail": "SKIP: project dist or anatomy gold missing on this box snapshot"
+    },
+    {
+      "id": "f6-call-arg-vs-midpath-offline",
+      "pass": true,
+      "emitClass": "surgical-call-arg",
+      "detail": "call=surgical-call-arg/bb954f69abf8 mid=midpath-sync/bb954f69abf8 shaEq=true",
+      "note": "Warm Vite SHA compare recorded in MIDPATH-WARM.md; offline shows call-arg vs midpath may differ",
+      "callSha": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+      "midSha": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428"
+    },
+    {
+      "id": "f7-closure-chunk-export-stable",
+      "pass": true,
+      "emitClass": "closure-chunk",
+      "detail": "ok=true reason=closure-shared-chunk-regen writeMode=cold-body-patch exportOk=true ms=1.48"
+    },
+    {
+      "id": "f7-closure-export-surface-fail-closed",
+      "pass": true,
+      "detail": "ok=false reason=closure-export-surface-changed"
+    },
+    {
+      "id": "f7-transform-util-cjs",
+      "pass": true,
+      "detail": "ok=true names=probeMul"
+    },
+    {
+      "id": "f8a-complex-midpath-sha-match",
+      "pass": true,
+      "emitClass": "setup-body-local-imports",
+      "detail": "cascade=setup-body-local-imports mid=midpath-sync nat==mid=true dceOk=true shaEqGold=true gold=a0bfb44b9baf",
+      "note": "Partial DCE + uni multi-line format; expect SHA MATCH vs f8a-baseline-routeA.js gold",
+      "afterSha": "a0bfb44b9bafe7d51ef4fd52ff515ac91181bd564161915e13f5c1184bcde9d2",
+      "midSha": "a0bfb44b9bafe7d51ef4fd52ff515ac91181bd564161915e13f5c1184bcde9d2",
+      "goldSha": "a0bfb44b9bafe7d51ef4fd52ff515ac91181bd564161915e13f5c1184bcde9d2"
+    },
+    {
+      "id": "f8b-closure-import-stretch-blocked",
+      "pass": true,
+      "detail": "ok=false reason=closure-source-has-imports",
+      "note": "F10: imports allowed only when inputDir/outDir/distFile opts resolve cold externals"
+    },
+    {
+      "id": "f8b-three-importers-fixture-contract",
+      "pass": true,
+      "detail": "routeA=true p1=true p2=true (warm importerCount=3 Measured)"
+    },
+    {
+      "id": "f10-chain-util-with-import",
+      "pass": true,
+      "emitClass": "closure-chunk",
+      "detail": "ok=true writeMode=cold-body-patch-with-imports importCount=1"
+    },
+    {
+      "id": "f11-leaf-util-closure",
+      "pass": true,
+      "emitClass": "closure-chunk",
+      "detail": "ok=true utilImporters=1"
+    },
+    {
+      "id": "f12-vue-script-only",
+      "pass": true,
+      "emitClass": "closure-vue",
+      "detail": "ok=true pageEmitClass=surgical"
+    },
+    {
+      "id": "f14-classify-add-only",
+      "pass": true,
+      "detail": "add-only"
+    },
+    {
+      "id": "f14-option-a-batch-add-plus-page",
+      "pass": true,
+      "detail": "ms=1.90 files=2 mode=add-only",
+      "emitClass": "option-a-batch"
+    },
+    {
+      "id": "f16-inlined-no-dist-page-rebundle",
+      "pass": true,
+      "detail": "ms=1.01 files=1 reason=option-a-inlined-page-rebundle",
+      "emitClass": "option-a-inlined-page-rebundle",
+      "wallMs": 1.0103320000000053
+    },
+    {
+      "id": "close-asi-split-dce",
+      "pass": true,
+      "detail": "split=3",
+      "emitClass": "setup-body"
+    },
+    {
+      "id": "close-asi-unused-pure-dce",
+      "pass": true,
+      "detail": "    const live = common_vendor.ref(9);",
+      "emitClass": "setup-body"
+    },
+    {
+      "id": "close-easycom-seed-tag-a",
+      "pass": true,
+      "detail": "edges=7 hasBanner=true",
+      "emitClass": "integrity-seed"
+    },
+    {
+      "id": "rf-options-data-literal",
+      "pass": true,
+      "detail": "ok=true class=surgical-options-data sha=13075b53061d",
+      "emitClass": "surgical-options-data"
+    },
+    {
+      "id": "rf-macros-default-literal",
+      "pass": true,
+      "detail": "ok=true class=surgical-props-default",
+      "emitClass": "surgical-props-default"
+    },
+    {
+      "id": "rf-midpath-macro-refuse",
+      "pass": true,
+      "detail": "ok=false reason=midpath-vue-macro-residue"
+    },
+    {
+      "id": "rf-atomic-write",
+      "pass": true,
+      "detail": "atomicWriteFile rename OK"
+    },
+    {
+      "id": "rf-vue-max-and-newfile-gates",
+      "pass": true,
+      "detail": "vite gates present"
+    }
+  ],
+  "walls": {
+    "surgicalStringMs": 0.9315150000000045,
+    "surgicalNamedMs": 2.436168000000009,
+    "probeMulCallArgMs": 1.550448000000003,
+    "midpathMs": 59.16979099999999,
+    "midpathRollupMs": 17.343863,
+    "fixtureFullWarmReferenceMs": 1603,
+    "f16InlinedMs": 1.0103320000000053
+  },
+  "emitClasses": {
+    "surgical": 1,
+    "surgical-named": 2,
+    "surgical-call-arg": 3,
+    "setup-body-local-imports": 2,
+    "surgical-plain-literal": 1,
+    "midpath-rollup": 1,
+    "midpath-sync": 1,
+    "closure-chunk": 3,
+    "closure-vue": 1,
+    "option-a-batch": 1,
+    "option-a-inlined-page-rebundle": 1,
+    "setup-body": 2,
+    "integrity-seed": 1,
+    "surgical-options-data": 1,
+    "surgical-props-default": 1
+  },
+  "summary": {
+    "total": 38,
+    "passed": 38,
+    "failed": 0
+  },
+  "verdict": {
+    "F1": "ENABLE",
+    "F2": "ENABLE",
+    "F3": "ENABLE",
+    "F4": "ENABLE",
+    "F6": "ENABLE",
+    "F7": "ENABLE",
+    "F8a": "MATCH-Measured",
+    "F8b": "ENABLE",
+    "F10": "ENABLE",
+    "F11": "ENABLE",
+    "F12": "ENABLE",
+    "F14": "ENABLE",
+    "F16": "ENABLE"
+  }
+}

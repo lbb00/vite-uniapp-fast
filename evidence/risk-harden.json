@@ -1,0 +1,213 @@
+{
+  "when": "2026-10-18T10:12:54.866Z",
+  "host": "box-linux",
+  "zone": "Asia/Shanghai",
+  "label": "Measured",
+  "cases": [
+    {
+      "id": "r1-reason-codes-and-path-stats",
+      "pass": true,
+      "detail": "fastRatio=0.5 codes=10",
+      "pathDistribution": {
+        "suiteSize": 10,
+        "pathStats": {
+          "full": 5,
+          "optc-ext": 5
+        },
+        "reasonCounts": {
+          "FAST_PAGE": 1,
+          "FAST_MIDPATH": 1,
+          "FAST_CLOSURE": 1,
+          "FAST_CLOSURE_VUE": 1,
+          "FAST_OPTION_A": 1,
+          "FULL_TEMPLATE": 1,
+          "FULL_STYLE": 1,
+          "FULL_SHARED": 1,
+          "FULL_INTEGRITY": 1,
+          "FULL_CONFIG": 1
+        },
+        "fastRatio": 0.5,
+        "fullRatio": 0.5
+      }
+    },
+    {
+      "id": "r2-integrity-gate-wired",
+      "pass": true,
+      "detail": "wired=true vendorStable=true rounds=5"
+    },
+    {
+      "id": "r3-harder-dce-cases",
+      "pass": true,
+      "detail": "dce-unused-lit-and-ref:ok, dce-unused-pure-chain:ok, dce-helper-kept-via-live:ok, dce-setup-only-mark:ok",
+      "cases": [
+        {
+          "id": "dce-unused-lit-and-ref",
+          "pass": true,
+          "out": "    common_vendor.ref(777);\n    const live = common_vendor.ref(true);"
+        },
+        {
+          "id": "dce-unused-pure-chain",
+          "pass": true,
+          "out": "    const live = common_vendor.ref(1);"
+        },
+        {
+          "id": "dce-helper-kept-via-live",
+          "pass": true,
+          "out": "    const helper = 3;\n    const live = common_vendor.ref(helper);"
+        },
+        {
+          "id": "dce-setup-only-mark",
+          "pass": true,
+          "out": "    common_vendor.ref(999);\n    const live = common_vendor.ref(false);"
+        }
+      ]
+    },
+    {
+      "id": "r4-inline-util-real-uni",
+      "pass": true,
+      "detail": "SEPARATE_CHUNK (uni did not inline probeMul into page JS)",
+      "inlineUtil": {
+        "probeDistExists": true,
+        "routeARequiresSeparateChunk": true,
+        "routeAInlinesMulBody": false,
+        "verdict": "SEPARATE_CHUNK (uni did not inline probeMul into page JS)",
+        "note": "F16 option-a-inlined-page-rebundle remains a proxy for hypothetical Rollup inline; fixture cold dist keeps separate modules/utils/unifast-probe.js"
+      }
+    },
+    {
+      "id": "r5-long-session-20",
+      "pass": true,
+      "detail": "rounds=20 vendorStable=true coherent=true",
+      "longSession": {
+        "rounds": 20,
+        "vendorSha0": "946930e689d8297f",
+        "vendorStable": true,
+        "coherent": true,
+        "lastEmitClass": "surgical-call-arg",
+        "pageShaHead": [
+          "7a508f0b80a3",
+          "2dce2447edc1",
+          "682db0080798"
+        ],
+        "pageShaTail": [
+          "2fae3578ca81",
+          "f87d05e5df41",
+          "ff226276a79b"
+        ]
+      }
+    }
+  ],
+  "pathDistribution": {
+    "suiteSize": 10,
+    "pathStats": {
+      "full": 5,
+      "optc-ext": 5
+    },
+    "reasonCounts": {
+      "FAST_PAGE": 1,
+      "FAST_MIDPATH": 1,
+      "FAST_CLOSURE": 1,
+      "FAST_CLOSURE_VUE": 1,
+      "FAST_OPTION_A": 1,
+      "FULL_TEMPLATE": 1,
+      "FULL_STYLE": 1,
+      "FULL_SHARED": 1,
+      "FULL_INTEGRITY": 1,
+      "FULL_CONFIG": 1
+    },
+    "fastRatio": 0.5,
+    "fullRatio": 0.5
+  },
+  "inlineUtil": {
+    "probeDistExists": true,
+    "routeARequiresSeparateChunk": true,
+    "routeAInlinesMulBody": false,
+    "verdict": "SEPARATE_CHUNK (uni did not inline probeMul into page JS)",
+    "note": "F16 option-a-inlined-page-rebundle remains a proxy for hypothetical Rollup inline; fixture cold dist keeps separate modules/utils/unifast-probe.js"
+  },
+  "longSession": {
+    "rounds": 20,
+    "vendorSha0": "946930e689d8297f",
+    "vendorStable": true,
+    "coherent": true,
+    "lastEmitClass": "surgical-call-arg",
+    "pageShaHead": [
+      "7a508f0b80a3",
+      "2dce2447edc1",
+      "682db0080798"
+    ],
+    "pageShaTail": [
+      "2fae3578ca81",
+      "f87d05e5df41",
+      "ff226276a79b"
+    ]
+  },
+  "integrity": {
+    "wired": true,
+    "vendorSha0": "946930e689d8297f",
+    "vendorStableAcrossEmits": true,
+    "rounds": [
+      {
+        "i": 0,
+        "emitClass": "setup-body-local-imports",
+        "sha": "69baa029fed7"
+      },
+      {
+        "i": 1,
+        "emitClass": "surgical-call-arg",
+        "sha": "bb954f69abf8"
+      },
+      {
+        "i": 2,
+        "emitClass": "surgical-call-arg",
+        "sha": "fab5adb16363"
+      },
+      {
+        "i": 3,
+        "emitClass": "surgical-call-arg",
+        "sha": "d87a953764ba"
+      },
+      {
+        "i": 4,
+        "emitClass": "surgical-call-arg",
+        "sha": "cc112c56eb2b"
+      }
+    ]
+  },
+  "dce": {
+    "cases": [
+      {
+        "id": "dce-unused-lit-and-ref",
+        "pass": true,
+        "out": "    common_vendor.ref(777);\n    const live = common_vendor.ref(true);"
+      },
+      {
+        "id": "dce-unused-pure-chain",
+        "pass": true,
+        "out": "    const live = common_vendor.ref(1);"
+      },
+      {
+        "id": "dce-helper-kept-via-live",
+        "pass": true,
+        "out": "    const helper = 3;\n    const live = common_vendor.ref(helper);"
+      },
+      {
+        "id": "dce-setup-only-mark",
+        "pass": true,
+        "out": "    common_vendor.ref(999);\n    const live = common_vendor.ref(false);"
+      }
+    ]
+  },
+  "summary": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0
+  },
+  "verdict": {
+    "R1": "ENABLE",
+    "R2": "ENABLE",
+    "R3": "ENABLE",
+    "R4": "DOCUMENTED-SEPARATE-CHUNK",
+    "R5": "ENABLE"
+  }
+}

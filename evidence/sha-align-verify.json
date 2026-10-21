@@ -1,0 +1,124 @@
+{
+  "when": "2026-10-15T09:27:35.856Z",
+  "host": "box-linux",
+  "zone": "Asia/Shanghai",
+  "claim": "project local-import flagA false→true byte-SHA vs uni warm via surgical-named cold-guided patch",
+  "cases": [
+    {
+      "id": "project-flagA-named-vs-gold",
+      "pass": true,
+      "verdict": "MATCH_Measured",
+      "detail": "named=true/named-literal-patch after=4ff68d48e4982608 gold=4ff68d48e4982608 bytes=28714/28714",
+      "goldSha": "4ff68d48e498260829b466b5a4dce648d7d3d4b6b4b042211f5b10ce97d77d2a",
+      "optcSha": "4ff68d48e498260829b466b5a4dce648d7d3d4b6b4b042211f5b10ce97d77d2a",
+      "emitClass": "surgical-named",
+      "changes": [
+        {
+          "name": "flagA",
+          "from": "false",
+          "to": "true"
+        }
+      ],
+      "surgicalReason": "no-ref-literal-change"
+    },
+    {
+      "id": "project-emit-cascade-surgical-named",
+      "pass": true,
+      "verdict": "MATCH_Measured",
+      "detail": "ok=true class=surgical-named reason=named-literal-patch sha=4ff68d48e4982608 gen=1",
+      "emitClass": "surgical-named",
+      "afterSha": "4ff68d48e498260829b466b5a4dce648d7d3d4b6b4b042211f5b10ce97d77d2a",
+      "allExternalsOnDisk": true,
+      "requireCount": 19
+    },
+    {
+      "id": "fixture-style-string-surgical",
+      "pass": true,
+      "detail": "surgical=true/ref-literal-patch named=true/named-literal-patch",
+      "surgicalAfterSha": "ed1c70e8673e94ff07944bf226841a25c047b33021482e9363d1c558b99cf9e7",
+      "namedOk": true
+    },
+    {
+      "id": "local-import-bool-prefers-named-over-setup-body",
+      "pass": true,
+      "detail": "named=true setupBodyAlso=true byteEqExpected=true",
+      "namedReason": "named-literal-patch",
+      "setupBodyReason": "setup-body-local-imports"
+    },
+    {
+      "id": "multi-named-ref-literals",
+      "pass": true,
+      "detail": "changes=3 reason=named-literal-patch",
+      "changes": [
+        {
+          "name": "a",
+          "from": "1",
+          "to": "2"
+        },
+        {
+          "name": "b",
+          "from": "false",
+          "to": "true"
+        },
+        {
+          "name": "c",
+          "from": "'x'",
+          "to": "\"y\""
+        }
+      ]
+    },
+    {
+      "id": "named-fail-closed-arity-or-added",
+      "pass": true,
+      "detail": "reason=named-ref-arity-mismatch"
+    },
+    {
+      "id": "named-fail-closed-incomplete-diff",
+      "pass": true,
+      "detail": "reason=named-literal-incomplete-diff"
+    },
+    {
+      "id": "named-fail-closed-dce-missing",
+      "pass": true,
+      "detail": "reason=cold-named-ref-missing name=dropped"
+    },
+    {
+      "id": "externals-missing-fail-closed",
+      "pass": true,
+      "detail": "reason=externals-missing class=surgical-named"
+    },
+    {
+      "id": "fixture-local-import-probeMul-call-arg",
+      "pass": true,
+      "detail": "named=no-named-ref-literals call=call-arg-patch/surgical-call-arg setupFallback=setup-body-local-imports",
+      "callAfterSha": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+      "setupAfterSha": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428"
+    },
+    {
+      "id": "fixture-local-import-prior-reports-note",
+      "pass": true,
+      "detail": "Prior bench reports retained; probeMul class now surgical-call-arg (F2); setup-body is fallback",
+      "priorKeys": [
+        "baseline",
+        "optc"
+      ]
+    },
+    {
+      "id": "named-numeric-ref-flip",
+      "pass": true,
+      "detail": "reason=named-literal-patch codeHas43=true"
+    }
+  ],
+  "summary": {
+    "total": 12,
+    "passed": 12,
+    "failed": 0
+  },
+  "projectLocalImportByteSha": {
+    "verdict": "MATCH_Measured",
+    "goldSha": "4ff68d48e498260829b466b5a4dce648d7d3d4b6b4b042211f5b10ce97d77d2a",
+    "optcSha": "4ff68d48e498260829b466b5a4dce648d7d3d4b6b4b042211f5b10ce97d77d2a",
+    "emitClass": "surgical-named",
+    "mechanism": "cold-guided named ref(literal) in-place patch (preserves uni DCE+formatting)"
+  }
+}

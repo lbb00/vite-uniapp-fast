@@ -1,0 +1,100 @@
+{
+  "checkedAt": "2026-10-15T07:12:41.339Z",
+  "host": "box",
+  "label": "measured",
+  "routes": 479,
+  "BENCH_MODE": "optc-ext",
+  "suite": "perf-page-inc (cold + script1 + component)",
+  "heapMb": 8192,
+  "report": "box-project-optc-ext-v3",
+  "mechanism": {
+    "gate": "Opt B content fingerprint",
+    "emit": "Surgical ref-literal patch on cold pages-tab/routeA/index.js; 19 require() externals on disk",
+    "skip": "enforce:pre buildStart throws unifast-optc-ext-skip → no Vite/Rollup graph or generate"
+  },
+  "baseline_ref": {
+    "script1Ms": 58721,
+    "generated": 5658,
+    "graphMs": 43853,
+    "source": "verify/project-real.json"
+  },
+  "page_inc_ref": {
+    "script1Ms": 54490,
+    "generated": 546,
+    "graphMs": 4724,
+    "source": "verify/page-inc-project.json"
+  },
+  "measured": {
+    "cold": {
+      "totalMs": 120037.39249500001,
+      "generated": 10707,
+      "transforms": 8577,
+      "path": "full"
+    },
+    "script1": {
+      "totalMs": 4.086258000010275,
+      "generated": 1,
+      "transforms": 0,
+      "viteSkipped": true,
+      "abortedRebuild": true,
+      "path": "optc-ext",
+      "reason": "import-set-and-dep-content-stable",
+      "emitMs": 2.6300950000004377,
+      "filesWritten": 1,
+      "requireCount": 19,
+      "allExternalsOnDisk": true,
+      "changes": [
+        {
+          "from": "",
+          "to": "unifast-compile-probe-1"
+        }
+      ],
+      "afterSha": "d20dacc5c11cae58b44dac1a046145d871638c8b3d7eff118c6f5e8947980e7c",
+      "changedContents": 1,
+      "updatedMtimes": 1,
+      "peakRss": 5715234816
+    },
+    "component": {
+      "totalMs": 63919.855213,
+      "generated": 5659,
+      "transforms": 2,
+      "path": "full",
+      "reason": "non-page-or-shared-changed",
+      "viteSkipped": false
+    }
+  },
+  "vsBaseline": {
+    "script1_speedup": 14370,
+    "wall_ms_baseline": 58721,
+    "wall_ms_optc": 4.086258000010275,
+    "generated_baseline": 5658,
+    "generated_optc": 1
+  },
+  "vsPageInc": {
+    "script1_speedup": 13335,
+    "wall_ms_page_inc": 54490,
+    "wall_ms_optc": 4.086258000010275,
+    "generated_page_inc": 546,
+    "generated_optc": 1
+  },
+  "correctness": {
+    "pageEditPresent": true,
+    "vendorShaStable": true,
+    "wxmlUntouched": true,
+    "jsonUntouched": true,
+    "routeAJsChanged": true,
+    "otherPagesChecked": 8,
+    "otherPagesStable": 8,
+    "sharedEditForcesFull": true
+  },
+  "targetCheck": {
+    "wall_much_less_than_10s": true,
+    "wall_stretch_under_2s": true,
+    "generated_approx_1": true,
+    "vite_full_rebuild_skipped": true
+  },
+  "artifacts": {
+    "metrics": "compile-optimization/reports/box-project-optc-ext-v3/",
+    "stdout": "verify/logs/project-optc-ext-v3-stdout.log"
+  }
+}

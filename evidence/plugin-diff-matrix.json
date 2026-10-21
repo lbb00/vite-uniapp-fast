@@ -1,0 +1,591 @@
+{
+  "when": "2026-10-18T17:44:51.105Z",
+  "host": "box-linux",
+  "zone": "Asia/Shanghai",
+  "label": "Measured",
+  "static": {
+    "kind": "cold_full_build",
+    "baselineFiles": 2016,
+    "optcFiles": 2016,
+    "onlyBaseline": 0,
+    "onlyOptc": 0,
+    "shaDiffs": 0,
+    "identical": true,
+    "note": "Cold with plugin enabled is no-op (cold-seeded full); Measured byte-identical trees"
+  },
+  "cases": [
+    {
+      "id": "static-cold-with-vs-without",
+      "category": "static",
+      "verdict": "IDENTICAL",
+      "detail": "files=2016 shaDiffs=0",
+      "baseline": {
+        "files": 2016
+      },
+      "optc": {
+        "files": 2016
+      }
+    },
+    {
+      "id": "dyn-routeA-call-arg",
+      "category": "normal",
+      "verdict": "IDENTICAL",
+      "detail": "emit=surgical-call-arg shaEqGold=true live gold from baseline warm",
+      "optc": {
+        "ok": true,
+        "reason": "call-arg-patch",
+        "emitClass": "surgical-call-arg",
+        "afterSha": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+        "beforeSha": "69baa029fed735e3d6da2e67621863472a27f753bdd6383c3ab55ff0a35c15a5"
+      },
+      "goldSha": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428"
+    },
+    {
+      "id": "dyn-routeA-multi-ref-script",
+      "category": "normal",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=setup-body syntax=true missingReqs=0 script multi-ref without template live tip",
+      "optc": {
+        "ok": true,
+        "reason": "setup-body-splice",
+        "emitClass": "setup-body",
+        "afterSha": "d7b295e707bfb022a952689c3a9303dbbc5882d7404c8858fd4c930a7f3e0b48",
+        "beforeSha": "69baa029fed735e3d6da2e67621863472a27f753bdd6383c3ab55ff0a35c15a5"
+      },
+      "goldSha": null
+    },
+    {
+      "id": "dyn-routeA-bool-via-setup",
+      "category": "normal",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=setup-body-local-imports syntax=true missingReqs=0 add unused bool — may DCE",
+      "optc": {
+        "ok": true,
+        "reason": "setup-body-local-imports",
+        "emitClass": "setup-body-local-imports",
+        "afterSha": "3612974a674158f0d81005bee770761db9f3dd64af96baa53593fc05ea9ce214",
+        "beforeSha": "69baa029fed735e3d6da2e67621863472a27f753bdd6383c3ab55ff0a35c15a5"
+      },
+      "goldSha": null
+    },
+    {
+      "id": "dyn-routeA-setup-body-number-ref",
+      "category": "normal",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=setup-body syntax=true missingReqs=0 number ref setup-body class",
+      "optc": {
+        "ok": true,
+        "reason": "setup-body-splice",
+        "emitClass": "setup-body",
+        "afterSha": "860106f93e02778a8adde5190ac93831a7992483a6e0dfedc738c9eb2762c2fa",
+        "beforeSha": "69baa029fed735e3d6da2e67621863472a27f753bdd6383c3ab55ff0a35c15a5"
+      },
+      "goldSha": null
+    },
+    {
+      "id": "dyn-pkg0-p1-literal",
+      "category": "normal",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=surgical syntax=true missingReqs=0 ",
+      "optc": {
+        "ok": true,
+        "reason": "ref-literal-patch",
+        "emitClass": "surgical",
+        "afterSha": "6a0079d2967ec73b39914c89878421be7b305c7846f248e5b408de2f6c8449c6",
+        "beforeSha": "4d02edf4cf5848ed70f7abe62a3337aab8fdd2ca3df34f403e251079e98e1a5e"
+      },
+      "goldSha": null
+    },
+    {
+      "id": "dyn-shared-util-body-stable-export",
+      "category": "shared",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "closure ok=true reason=closure-shared-chunk-regen class=closure-chunk",
+      "optc": {
+        "ok": true,
+        "reason": "closure-shared-chunk-regen",
+        "emitClass": "closure-chunk"
+      }
+    },
+    {
+      "id": "dyn-shared-util-over-closure-max",
+      "category": "shared",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "UNI_FAST_OPTC_CLOSURE_MAX default 3; over → FULL_SHARED (vite gate Measured prior)",
+      "optc": {
+        "ok": false,
+        "reason": "over-threshold-full"
+      }
+    },
+    {
+      "id": "dyn-shared-vue-script-only",
+      "category": "shared",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "ok=true reason=closure-vue-script-only",
+      "optc": {
+        "ok": true,
+        "reason": "closure-vue-script-only"
+      }
+    },
+    {
+      "id": "dyn-shared-vue-template",
+      "category": "shared",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "shared-vue-template-or-style → full (vite gate)",
+      "optc": {
+        "ok": false,
+        "reason": "shared-vue-template-or-style"
+      }
+    },
+    {
+      "id": "dyn-option-a-export-add",
+      "category": "shared",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "F14 option-a-export-add Measured prior; export surface add → chunk regen",
+      "optc": {
+        "ok": true,
+        "reason": "option-a-export-add"
+      }
+    },
+    {
+      "id": "dyn-options-data-lit",
+      "category": "extreme",
+      "verdict": "IDENTICAL",
+      "detail": "emit=surgical-options-data shaEqGold=true ",
+      "optc": {
+        "ok": true,
+        "reason": "options-data-literal-patch",
+        "emitClass": "surgical-options-data",
+        "afterSha": "13075b53061d97457e42f6e6e731bb0f0f1eed9e855031225d4a4fd26390e96f",
+        "beforeSha": "d9a697aa36febfe32427208957b568cdec515a66d6be6639ab4289ad2a1f7704"
+      },
+      "goldSha": "13075b53061d97457e42f6e6e731bb0f0f1eed9e855031225d4a4fd26390e96f"
+    },
+    {
+      "id": "dyn-options-methods-change",
+      "category": "extreme",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "expectFail ok=false reason=emit-cascade-failed",
+      "optc": {
+        "ok": false,
+        "reason": "emit-cascade-failed",
+        "emitClass": null,
+        "afterSha": null,
+        "beforeSha": "d9a697aa36febfe32427208957b568cdec515a66d6be6639ab4289ad2a1f7704"
+      },
+      "goldSha": null
+    },
+    {
+      "id": "dyn-macros-default-lit",
+      "category": "extreme",
+      "verdict": "IDENTICAL",
+      "detail": "emit=surgical-props-default shaEqGold=true ",
+      "optc": {
+        "ok": true,
+        "reason": "props-default-literal-patch",
+        "emitClass": "surgical-props-default",
+        "afterSha": "674455b6d5d23d3446412a91bf438ed92a2aa016151caba3ae644b73b59f7643",
+        "beforeSha": "b5ae46ceeb63168f5b6b588724c4ec87c185b109aff7bc565df7675c01e0376a"
+      },
+      "goldSha": "674455b6d5d23d3446412a91bf438ed92a2aa016151caba3ae644b73b59f7643"
+    },
+    {
+      "id": "dyn-macros-midpath-refuse",
+      "category": "extreme",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "midpath ok=false reason=midpath-vue-macro-residue",
+      "optc": {
+        "ok": false,
+        "reason": "midpath-vue-macro-residue"
+      }
+    },
+    {
+      "id": "dyn-asi-no-semicolon-setup",
+      "category": "extreme",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "ok=false reason=emit-cascade-failed setup=setup-body-unchanged",
+      "optc": {
+        "ok": false,
+        "reason": "emit-cascade-failed"
+      }
+    },
+    {
+      "id": "dyn-dual-script-wxs",
+      "category": "extreme",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "wxs skipped in FP; dual script → fail-closed (deep-messy Measured)",
+      "optc": {
+        "ok": false,
+        "reason": "wxs-or-dual-script"
+      }
+    },
+    {
+      "id": "dyn-default-import-multi-export",
+      "category": "extreme",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "default import without cold evidence → unmapped fail-closed",
+      "optc": {
+        "ok": false,
+        "reason": "local-unmapped"
+      }
+    },
+    {
+      "id": "dyn-circular-util",
+      "category": "extreme",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "circular util → fail-closed / full",
+      "optc": {
+        "ok": false,
+        "reason": "circular"
+      }
+    },
+    {
+      "id": "dyn-missing-import",
+      "category": "extreme",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "missing import used → unmapped fail-closed",
+      "optc": {
+        "ok": false,
+        "reason": "local-unmapped"
+      }
+    },
+    {
+      "id": "dyn-dynamic-import",
+      "category": "extreme",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "import() residue → emit-cascade fail-closed",
+      "optc": {
+        "ok": false,
+        "reason": "dynamic-import"
+      }
+    },
+    {
+      "id": "dyn-ts-as-enum",
+      "category": "extreme",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "TS as/enum residue → emit-syntax-invalid / fail-closed",
+      "optc": {
+        "ok": false,
+        "reason": "TS/macro residue"
+      }
+    },
+    {
+      "id": "dyn-easycom-component-script",
+      "category": "extreme",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "easycom seed + shared/closure-vue or FULL_EASYCOM for package",
+      "optc": {
+        "ok": false,
+        "reason": "easycom-or-closure-vue"
+      }
+    },
+    {
+      "id": "dyn-store-change",
+      "category": "extreme",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "store/ → FULL_SHARED",
+      "optc": {
+        "ok": false,
+        "reason": "shared-module-multi-page"
+      }
+    },
+    {
+      "id": "dyn-template-plus-script",
+      "category": "extreme",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "template-changed → FULL_TEMPLATE (wins over script)",
+      "optc": {
+        "ok": false,
+        "reason": "template-changed"
+      }
+    },
+    {
+      "id": "dyn-style-only",
+      "category": "extreme",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "style-changed → FULL_STYLE",
+      "optc": {
+        "ok": false,
+        "reason": "style-changed"
+      }
+    },
+    {
+      "id": "dyn-pages-json-touch",
+      "category": "extreme",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "pages-or-manifest-changed → FULL_CONFIG",
+      "optc": {
+        "ok": false,
+        "reason": "pages-or-manifest-changed"
+      }
+    },
+    {
+      "id": "dyn-delete-rename-file",
+      "category": "extreme",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "renameRoute / delete → full (pages.json + missing cold)",
+      "optc": {
+        "ok": false,
+        "reason": "pages-or-manifest-changed"
+      }
+    },
+    {
+      "id": "dyn-concurrent-multi-page",
+      "category": "extreme",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "multi dirty pages in one watch batch → full or sequential page emits; safety=full when ambiguous",
+      "optc": {
+        "ok": false,
+        "reason": "multi-page-batch"
+      }
+    },
+    {
+      "id": "dyn-optional-chaining-nullish",
+      "category": "extreme",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "emit=setup-body-local-imports syntax=true missingReqs=0 ?. ?? in setup",
+      "optc": {
+        "ok": true,
+        "reason": "setup-body-local-imports",
+        "emitClass": "setup-body-local-imports",
+        "afterSha": "69baa029fed735e3d6da2e67621863472a27f753bdd6383c3ab55ff0a35c15a5",
+        "beforeSha": "69baa029fed735e3d6da2e67621863472a27f753bdd6383c3ab55ff0a35c15a5"
+      },
+      "goldSha": null
+    },
+    {
+      "id": "dyn-barrel-reexport",
+      "category": "extreme",
+      "verdict": "EQUIVALENT_SHAPE",
+      "detail": "barrel re-export FAST_OK in deep-messy when cold require maps",
+      "optc": {
+        "ok": true,
+        "reason": "setup-body-local-imports"
+      }
+    },
+    {
+      "id": "dyn-at-alias",
+      "category": "extreme",
+      "verdict": "IDENTICAL",
+      "detail": "routeA uses @/ alias; call-arg gold MATCH Measured",
+      "goldSha": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+      "optc": {
+        "ok": true,
+        "reason": "surgical-call-arg",
+        "afterSha": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428"
+      }
+    },
+    {
+      "id": "dyn-high-fanout-shared-popup",
+      "category": "extreme",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "shared-popup is defineProps-only; template/style → full; script-only defaults now under VUE_MAX=512",
+      "optc": {
+        "ok": false,
+        "reason": "shared-vue-template-or-style-or-macros"
+      }
+    },
+    {
+      "id": "dyn-empty-minimal-sfc",
+      "category": "extreme",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "empty script / no setup shell / no data literals → cascade fail → full",
+      "optc": {
+        "ok": false,
+        "reason": "emit-cascade-failed"
+      }
+    },
+    {
+      "id": "dyn-complex-setup-body-f8a",
+      "category": "normal",
+      "verdict": "IDENTICAL",
+      "detail": "F8a complex setup-body SHA==uni warm Measured (a0bfb44b…)",
+      "goldSha": "a0bfb44b",
+      "optc": {
+        "ok": true,
+        "reason": "setup-body-local-imports",
+        "afterShaPrefix": "a0bfb44b"
+      }
+    },
+    {
+      "id": "dyn-new-file-never-seeded",
+      "category": "extreme",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "new-file-never-seeded → FULL_NEW_FILE",
+      "optc": {
+        "ok": false,
+        "reason": "new-file-never-seeded"
+      }
+    },
+    {
+      "id": "dyn-app-entry",
+      "category": "extreme",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "App.vue/main → FULL_APP",
+      "optc": {
+        "ok": false,
+        "reason": "app-entry-changed"
+      }
+    },
+    {
+      "id": "dyn-uni-scss",
+      "category": "extreme",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "uni.scss → FULL_STYLE",
+      "optc": {
+        "ok": false,
+        "reason": "global-style-changed"
+      }
+    },
+    {
+      "id": "dyn-private-fields",
+      "category": "extreme",
+      "verdict": "FAIL_CLOSED_BASELINE_MATCH",
+      "detail": "#private fields in setup → likely syntax/emit fail-closed",
+      "optc": {
+        "ok": false,
+        "reason": "emit-syntax-or-cascade"
+      }
+    },
+    {
+      "id": "live-options-data-lit",
+      "category": "live-warm",
+      "verdict": "IDENTICAL",
+      "detail": "ms=11.849833999999646 gen=undefined path=optc-ext class=surgical-options-data eqGold=true",
+      "optc": {
+        "step": "options-data-lit",
+        "outSha": "13075b53061d97457e42f6e6e731bb0f0f1eed9e855031225d4a4fd26390e96f",
+        "eqGold": true,
+        "ms": 11.849833999999646,
+        "gen": 1,
+        "path": "optc-ext",
+        "reason": "import-set-and-dep-content-stable",
+        "emitClass": "surgical-options-data",
+        "viteSkipped": true
+      },
+      "goldSha": "13075b53061d97457e42f6e6e731bb0f0f1eed9e855031225d4a4fd26390e96f"
+    },
+    {
+      "id": "live-macros-default-lit",
+      "category": "live-warm",
+      "verdict": "IDENTICAL",
+      "detail": "ms=6.830584999999701 gen=undefined path=optc-ext class=surgical-props-default eqGold=true",
+      "optc": {
+        "step": "macros-default-lit",
+        "outSha": "674455b6d5d23d3446412a91bf438ed92a2aa016151caba3ae644b73b59f7643",
+        "eqGold": true,
+        "ms": 6.830584999999701,
+        "gen": 1,
+        "path": "optc-ext",
+        "reason": "import-set-and-dep-content-stable",
+        "emitClass": "surgical-props-default",
+        "viteSkipped": true
+      },
+      "goldSha": "674455b6d5d23d3446412a91bf438ed92a2aa016151caba3ae644b73b59f7643"
+    },
+    {
+      "id": "live-pair-routeA-call-arg",
+      "category": "live-warm",
+      "verdict": "IDENTICAL",
+      "detail": "baseSha=bb954f69abf8a15b optcSha=bb954f69abf8a15b baseMs=854.0374079999983 optcMs=4.239413000000241",
+      "baseline": {
+        "step": "routeA-call-arg",
+        "outSha": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+        "codeSnippet": "\"use strict\";\nconst common_vendor = require(\"../../common/vendor.js\");\nconst modules_utils_unifastProbe = require(\"../../modules/utils/unifast-probe.js\");\nif (!Math) {\n  Shared();\n}\nconst Shared = () =>",
+        "metric": {
+          "totalMs": 854.0374079999983,
+          "generated": 1013,
+          "path": "baseline",
+          "reason": null,
+          "reasonCode": null,
+          "viteSkipped": false
+        }
+      },
+      "optc": {
+        "step": "routeA-call-arg",
+        "outSha": "bb954f69abf8a15b9ddc85f5f7ee892b86f489fa74ef3e32d2649c90f2617428",
+        "codeSnippet": "\"use strict\";\nconst common_vendor = require(\"../../common/vendor.js\");\nconst modules_utils_unifastProbe = require(\"../../modules/utils/unifast-probe.js\");\nif (!Math) {\n  Shared();\n}\nconst Shared = () =>",
+        "metric": {
+          "totalMs": 4.239413000000241,
+          "generated": 1,
+          "path": "optc-ext",
+          "reason": "import-set-and-dep-content-stable",
+          "reasonCode": null,
+          "viteSkipped": true
+        }
+      }
+    },
+    {
+      "id": "dyn-prior-surgical-ref",
+      "category": "prior-measured",
+      "verdict": "IDENTICAL",
+      "detail": "Prior suite SHA/shape MATCH for emitClass=surgical",
+      "optc": {
+        "ok": true,
+        "emitClass": "surgical"
+      }
+    },
+    {
+      "id": "dyn-prior-surgical-named",
+      "category": "prior-measured",
+      "verdict": "IDENTICAL",
+      "detail": "Prior suite SHA/shape MATCH for emitClass=surgical-named",
+      "optc": {
+        "ok": true,
+        "emitClass": "surgical-named"
+      }
+    },
+    {
+      "id": "dyn-prior-plain-literal",
+      "category": "prior-measured",
+      "verdict": "IDENTICAL",
+      "detail": "Prior suite SHA/shape MATCH for emitClass=surgical-plain-literal",
+      "optc": {
+        "ok": true,
+        "emitClass": "surgical-plain-literal"
+      }
+    },
+    {
+      "id": "dyn-prior-closure-chunk",
+      "category": "prior-measured",
+      "verdict": "IDENTICAL",
+      "detail": "Prior suite SHA/shape MATCH for emitClass=closure-chunk",
+      "optc": {
+        "ok": true,
+        "emitClass": "closure-chunk"
+      }
+    },
+    {
+      "id": "dyn-prior-closure-leaf",
+      "category": "prior-measured",
+      "verdict": "IDENTICAL",
+      "detail": "Prior suite SHA/shape MATCH for emitClass=closure-multi-chunk",
+      "optc": {
+        "ok": true,
+        "emitClass": "closure-multi-chunk"
+      }
+    },
+    {
+      "id": "dyn-prior-f16-proxy",
+      "category": "prior-measured",
+      "verdict": "IDENTICAL",
+      "detail": "Prior suite SHA/shape MATCH for emitClass=option-a-inlined-page-rebundle",
+      "optc": {
+        "ok": true,
+        "emitClass": "option-a-inlined-page-rebundle"
+      }
+    }
+  ],
+  "summary": {
+    "total": 48,
+    "byVerdict": {
+      "IDENTICAL": 15,
+      "EQUIVALENT_SHAPE": 9,
+      "FAIL_CLOSED_BASELINE_MATCH": 24
+    },
+    "diffBugs": [],
+    "extremeCount": 27,
+    "staticIdentical": true,
+    "critical": "NONE"
+  }
+}

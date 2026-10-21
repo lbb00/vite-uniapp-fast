@@ -1,0 +1,176 @@
+{
+  "when": "2026-10-15T17:48:33.161960+08:00",
+  "host": "box-linux",
+  "zone": "Asia/Shanghai",
+  "f10": {
+    "verdict": "ENABLE",
+    "writeMode": "cold-body-patch-with-imports",
+    "wallMs": 1.2442950000000081,
+    "onlyChunkChanged": true
+  },
+  "f11": {
+    "verdict": "ENABLE",
+    "leafOnlyChunk": true,
+    "multiOk": true,
+    "optionA": "BLOCKED (documented: inlined-util rebundle not implemented)",
+    "wallMsLeaf": 0.5244860000000102,
+    "wallMsMulti": 1.0319559999999939
+  },
+  "f12": {
+    "verdict": "ENABLE",
+    "pageEmitClass": "surgical",
+    "wallMs": 1.564626000000004,
+    "note": "script-only surgical on component dist JS; template/style gate in vite plugin"
+  },
+  "cases": [
+    {
+      "id": "f10-parse-static-import",
+      "pass": true,
+      "detail": "imports=1"
+    },
+    {
+      "id": "f10-transform-without-opts-fail-closed",
+      "pass": true,
+      "detail": "reason=closure-source-has-imports"
+    },
+    {
+      "id": "f10-transform-with-requires",
+      "pass": true,
+      "detail": "ok=true importCount=1 mode=requires"
+    },
+    {
+      "id": "f10-closure-util-with-import",
+      "pass": true,
+      "emitClass": "closure-chunk",
+      "detail": "ok=true writeMode=cold-body-patch-with-imports importCount=1 onlyA=true ms=1.24",
+      "wallMs": 1.2442950000000081,
+      "beforeSha": "5099811347bc1445f8acec04a5918de39afa70491a27559fde8a46db5308a0e0",
+      "afterSha": "e2b2b5e9c2de3bc5757670f96ddc436ed8de371930d76a4d8aa12c51d5cc7386"
+    },
+    {
+      "id": "f10-unresolved-fail-closed",
+      "pass": true,
+      "detail": "reason=closure-unresolved-import"
+    },
+    {
+      "id": "f10-dynamic-import-fail-closed",
+      "pass": true,
+      "detail": "reason=closure-dynamic-import"
+    },
+    {
+      "id": "f11-find-util-importers",
+      "pass": true,
+      "detail": "importers=unifast-chain-a.js"
+    },
+    {
+      "id": "f11-leaf-chunk-only",
+      "pass": true,
+      "detail": "ok=true writeMode=cold-body-patch onlyB=true ms=0.52",
+      "wallMs": 0.5244860000000102
+    },
+    {
+      "id": "f11-multi-chunk-regen",
+      "pass": true,
+      "detail": "ok=true filesWritten=2 class=closure-multi-chunk ms=1.03",
+      "wallMs": 1.0319559999999939
+    },
+    {
+      "id": "f11-option-a-candidate-dist-missing",
+      "pass": true,
+      "detail": "reason=closure-dist-chunk-missing optionACandidate=true"
+    },
+    {
+      "id": "f12-vue-script-only-surgical",
+      "pass": true,
+      "detail": "ok=true pageEmitClass=surgical writeMode=surgical ms=1.56",
+      "wallMs": 1.564626000000004
+    },
+    {
+      "id": "f12-vue-imports-sfc-fail-closed",
+      "pass": true,
+      "detail": "reason=closure-vue-imports-sfc"
+    },
+    {
+      "id": "f10-fixture-dist-dryrun",
+      "pass": true,
+      "detail": "ok=true reason=closure-shared-chunk-regen writeMode=cold-body-patch-with-imports importCount=1"
+    },
+    {
+      "id": "f11-fixture-util-importers",
+      "pass": true,
+      "detail": "count=1"
+    }
+  ],
+  "walls": {
+    "f10_offline_ms": 1.2442950000000081,
+    "f11_leaf_ms": 0.5244860000000102,
+    "f12_offline_ms": 1.564626000000004
+  },
+  "fixtureDist": {
+    "chainA": true,
+    "chainB": true,
+    "miniJs": true,
+    "chainASrc": true,
+    "miniVue": true
+  },
+  "summary": {
+    "passed": 14,
+    "failed": 0,
+    "total": 14
+  },
+  "verdict": {
+    "F10": "ENABLE",
+    "F11": "ENABLE",
+    "F12": "ENABLE"
+  },
+  "warm": {
+    "f10": {
+      "report": "box-fixture-f10-chain",
+      "coldMs": 4962.868442999999,
+      "warmMs": 2.2814909999997326,
+      "generated": 1,
+      "changedContents": 1,
+      "viteSkipped": true,
+      "writeMode": "cold-body-patch-with-imports",
+      "emitClass": "closure-chunk",
+      "importerCount": 2,
+      "onlyChunk": "modules/utils/unifast-chain-a.js"
+    },
+    "f11": {
+      "report": "box-fixture-f11-leaf",
+      "warmMs": 2.025270000001001,
+      "generated": 1,
+      "changedContents": 1,
+      "viteSkipped": true,
+      "emitClass": "closure-multi-chunk",
+      "closureRebuild": "leaf-chunk-regen",
+      "importerCount": 0,
+      "utilImporterCount": 1,
+      "onlyChunk": "modules/utils/unifast-chain-b.js"
+    },
+    "f12": {
+      "report": "box-fixture-f12-vue",
+      "warmMs": 2.1224730000003547,
+      "generated": 1,
+      "changedContents": 1,
+      "viteSkipped": true,
+      "emitClass": "closure-vue",
+      "pageEmitClass": "surgical",
+      "importerCount": 2,
+      "onlyChunk": "modules/components/mini-shared/index.js"
+    },
+    "f12_template_full": {
+      "report": "box-fixture-f12-vue-tpl",
+      "warmMs": 1572.46353,
+      "reason": "shared-vue-template-or-style",
+      "generated": 1011,
+      "viteSkipped": false
+    }
+  },
+  "honestBlockers": [
+    "F11 Option A (inlined-util page rebundle) \u2014 BLOCKED / fail-closed to full",
+    "Vue SFC with template/style change \u2014 full (Measured gate)",
+    "Vue SFC importerCount > CLOSURE_MAX (e.g. shared-popup ~500) \u2014 full",
+    "WeChat DevTools runtime \u2014 Unverified (box-only constraint)"
+  ]
+}

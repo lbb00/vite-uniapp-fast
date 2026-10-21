@@ -1,0 +1,79 @@
+{
+  "when": "2026-10-18T18:12:54.950290+08:00",
+  "host": "box-linux",
+  "zone": "Asia/Shanghai",
+  "label": "Measured",
+  "npm": {
+    "@dcloudio/uni-app-x": {
+      "version": "0.7.137",
+      "published": "2026-10-14",
+      "description": "uni-app x types",
+      "isCompiler": false,
+      "isTypesOnly": true
+    }
+  },
+  "docs": {
+    "cliCreate": false,
+    "createVia": "HBuilderX only (ask.dcloud 2026-09)",
+    "webCompile": "Vite inside HBuilderX (on-demand)",
+    "projectLayout": "root source + unpackage out; no src/dist CLI layout",
+    "pageExt": ".uvue",
+    "logicLang": "UTS (.uts) / vapor mode"
+  },
+  "helloUniAppX": {
+    "helloPath": "<workspace>/hello-uni-app-x",
+    "hasViteConfig": false,
+    "hasPackageJson": true,
+    "hasManifestUniAppX": false,
+    "engines": {
+      "HBuilderX": "^3.99"
+    },
+    "dependencies": {},
+    "devDependencies": null,
+    "scripts": {
+      "check-commit": "node ./git-hooks/check-commit.cjs"
+    },
+    "uvueCount": 582,
+    "vueCount": 11,
+    "utsCount": 70,
+    "mainEntry": "main.ts",
+    "samplePageExt": null,
+    "manifestHasUniAppXNode": true,
+    "manifestSnippet": [
+      "\"uni-app-x\": {",
+      "\"vapor\": true,"
+    ],
+    "samplePages": [
+      "pages/index.uvue",
+      "pages/ad-drama-component-demo/ad-drama-component-demo.uvue",
+      "pages/ad-drama-demo/ad-drama-demo.uvue"
+    ],
+    "samplePageHead": "<template>\n  <view class=\"page\">\n    <text class=\"title\">convert2AbsFullPath \u6f14\u793a</text>\n    <text class=\"desc\">\u5c06\u9879\u76ee\u76f8\u5bf9\u8def\u5f84\u8f6c\u6362\u4e3a\u8fd0\u884c\u671f\u7edd\u5bf9\u8def\u5f84</text>\n\n    <view class=\"field\">\n      <text class=\"label\">\u8f93\u5165\u8def\u5f84</text>\n      <input class=\"input\" v-model=\"inputPath\" type=\"text\" placeholder=\"\u4f8b\u5982\uff1astatic/logo.png\" />\n    </view>\n\n    <button class=\"btn\" type=\"primary\" @click=\"onConvert\">\u8f6c\u6362</button>\n\n    <view class=\"resul"
+  },
+  "optcExtAssumptions": [
+    "Vue3 SFC .vue pages",
+    "Vite watch graph with createOptCExtPlugin in vite.config",
+    "mp-weixin dist pages/**/*.js with require(common/vendor.js)",
+    "Cold Rollup chunk graph for externals / closure"
+  ],
+  "mountAttempt": {
+    "viteConfigPresent": false,
+    "npmCompilerDepsPresent": false,
+    "hbuilderxOnBox": false,
+    "pageFileCandidatesSupportsUvue": false,
+    "couldRunColdBuildOnLinux": false,
+    "reason": "Official hello-uni-app-x has empty dependencies, engines.HBuilderX only, no vite.config; compiler lives in HBuilderX. Box has no HBuilderX. npm @dcloudio/uni-app-x is typings only."
+  },
+  "verdict": "NOT_APPLICABLE",
+  "verdictDetail": "optc-ext targets uni-app vue3 vite mp-weixin. uni-app-x uses HBuilderX+UTS+.uvue; no mountable Vite watch graph on Linux CLI. Do not claim ENABLE.",
+  "partialNotes": [
+    "Docs say uni-app x supports vite.config.js/ts when present (community Q&A 2025-06), but official hello template has none and is not CLI-runnable.",
+    "Web target uses Vite inside HBuilderX \u2014 still not the mp-weixin Rollup page-JS model optc patches.",
+    "<private-app> project today remains uni-app vue3 vite mp-weixin, not uni-x."
+  ],
+  "clarification": {
+    "date": "2026-10-18",
+    "note": "NOT_APPLICABLE is for uni-app-x only. Classic vite-plugin-uni upgrade tracked in uni-vite-latest.json as ENABLE.",
+    "classicLatest": "verify/uni-vite-latest.json"
+  }
+}

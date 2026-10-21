@@ -1,0 +1,109 @@
+{
+  "mode": "baseline",
+  "toolchain": {
+    "vitePluginUni": "3.0.0-alpha-5030220261016001",
+    "uniMpWeixin": "3.0.0-alpha-5030220261016001",
+    "vite": "5.2.8",
+    "vue": "3.5.44",
+    "node": "v20.19.2",
+    "compilerBanner": "5.32（vue3）"
+  },
+  "coldMs": 2833,
+  "warm": {
+    "wallEditMs": 355,
+    "bench": {
+      "round": 2,
+      "mode": "baseline",
+      "rollupVersion": "4.64.9",
+      "totalMs": 349.6966520000001,
+      "graphMs": 294.435387,
+      "outputMs": 55.261265000000094,
+      "transformedModules": 1,
+      "generated": 6,
+      "viteSkipped": false,
+      "memory": {
+        "rss": 299077632,
+        "heapUsed": 151281808,
+        "processPeakRss": 299077632
+      },
+      "pageInc": null,
+      "optcExt": null
+    },
+    "emit": null,
+    "decision": null
+  },
+  "product": {
+    "cold": {
+      "hasPageJs": true,
+      "hasVendor": true,
+      "pageBytes": 447,
+      "vendorBytes": 211375,
+      "pageSha": "3b7c7981ae403dda",
+      "vendorSha": "79a35cf8ffa8b31e",
+      "requires": [
+        "../../common/vendor.js"
+      ],
+      "hasCommonVendorAlias": true,
+      "hasProbe": true,
+      "probeMatch": "unifast-compile-probe-0",
+      "pageHead": "\"use strict\";\nconst common_vendor = require(\"../../common/vendor.js\");\nconst _sfc_main = {\n  __name: \"index\",\n  setup(__props) {\n    const label = common_vendor.ref(\"unifast-compile-probe-0\");\n    return (_ctx, _cache) => {\n      return {\n        a: common_vendor.t(label.value)\n      };\n    };\n  }\n};\nconst MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [[\"__scopeId\", \"data-v"
+    },
+    "warm": {
+      "hasPageJs": true,
+      "hasVendor": true,
+      "pageBytes": 447,
+      "vendorBytes": 211375,
+      "pageSha": "aa424b2e24cb6d38",
+      "vendorSha": "79a35cf8ffa8b31e",
+      "requires": [
+        "../../common/vendor.js"
+      ],
+      "hasCommonVendorAlias": true,
+      "hasProbe": true,
+      "probeMatch": "unifast-compile-probe-1",
+      "pageHead": "\"use strict\";\nconst common_vendor = require(\"../../common/vendor.js\");\nconst _sfc_main = {\n  __name: \"index\",\n  setup(__props) {\n    const label = common_vendor.ref(\"unifast-compile-probe-1\");\n    return (_ctx, _cache) => {\n      return {\n        a: common_vendor.t(label.value)\n      };\n    };\n  }\n};\nconst MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [[\"__scopeId\", \"data-v"
+    },
+    "vendorUnchanged": true,
+    "pageChanged": true
+  },
+  "allResults": [
+    {
+      "type": "bench",
+      "round": 1,
+      "mode": "baseline",
+      "rollupVersion": "4.64.9",
+      "totalMs": 1742.2883019999997,
+      "graphMs": 621.0718499999998,
+      "outputMs": 1121.216452,
+      "transformedModules": 14,
+      "generated": 9,
+      "viteSkipped": false,
+      "memory": {
+        "rss": 250122240,
+        "heapUsed": 111781144,
+        "processPeakRss": 271548416
+      },
+      "pageInc": null,
+      "optcExt": null
+    },
+    {
+      "type": "bench",
+      "round": 2,
+      "mode": "baseline",
+      "rollupVersion": "4.64.9",
+      "totalMs": 349.6966520000001,
+      "graphMs": 294.435387,
+      "outputMs": 55.261265000000094,
+      "transformedModules": 1,
+      "generated": 6,
+      "viteSkipped": false,
+      "memory": {
+        "rss": 299077632,
+        "heapUsed": 151281808,
+        "processPeakRss": 299077632
+      },
+      "pageInc": null,
+      "optcExt": null
+    }
+  ]
+}
